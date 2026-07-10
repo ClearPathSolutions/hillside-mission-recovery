@@ -5,6 +5,7 @@ import { site } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import Clarion from "@/components/Clarion";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +48,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+      <head>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src="//264810.tctm.co/t.js"></script>
+      </head>
       <body>
         <script
           type="application/ld+json"
@@ -89,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <Reveal />
+        <Clarion />
       </body>
     </html>
   );

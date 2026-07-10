@@ -21,6 +21,12 @@ export const site = {
   establishedYear: 2015,
   peopleHelped: "1,000+",
   beds: 6,
+  widgets: {
+    clarion: {
+      siteKey: "cpx_BvGkgX4XjEvkRANLmWPB_PVosbpJggwl",
+      api: "https://api.clarionlabs.ai",
+    },
+  },
 } as const;
 
 export type Site = typeof site;

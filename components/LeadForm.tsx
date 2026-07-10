@@ -1,19 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { IconArrow, IconCheck, IconShield } from "@/components/Icons";
+
+declare global {
+  interface Window {
+    ClarionForms?: {
+      submit: (opts: { form_key?: string; data?: Record<string, unknown> }) => Promise<Response>;
+    };
+  }
+}
 
 type Variant = "contact" | "insurance";
 
+// Keys must match the form keys configured in the Clarion dashboard.
+const CLARION_FORM_KEY: Record<Variant, string> = {
+  insurance: "insurance_verification",
+  contact: "contact",
+};
+
 export default function LeadForm({ variant = "contact" }: { variant?: Variant }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const inFlight = useRef(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (inFlight.current) return;
+    inFlight.current = true;
     setStatus("sending");
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     try {
+      // Best-effort capture into Clarion — never blocks our own submit.
+      try {
+        await window.ClarionForms?.submit({
+          form_key: CLARION_FORM_KEY[variant],
+          data: { ...data, variant },
+        });
+      } catch {}
+
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -24,6 +49,8 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
       form.reset();
     } catch {
       setStatus("error");
+    } finally {
+      inFlight.current = false;
     }
   }
 
@@ -55,6 +82,7 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
 
       {variant === "insurance" && (
         <div className="grid gap-4 sm:grid-cols-2">
+          <Field label="Date of birth" name="dob" type="date" required autoComplete="bday" />
           <Field label="Insurance provider" name="insurer" placeholder="e.g. Anthem, Aetna, Cigna" />
           <div>
             <label className="mb-1.5 block text-sm font-medium text-ink/80">Who needs help?</label>
