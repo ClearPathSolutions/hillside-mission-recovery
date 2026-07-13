@@ -25,6 +25,7 @@ export const site = {
     clarion: {
       siteKey: "cpx_BvGkgX4XjEvkRANLmWPB_PVosbpJggwl",
       api: "https://api.clarionlabs.ai",
+      blogEmbed: "https://www.clarionlabs.ai/blog-embed.v1.js",
     },
   },
 } as const;

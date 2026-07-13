@@ -4,6 +4,7 @@ import Image from "next/image";
 import { getAllPosts, CATEGORIES } from "@/lib/content";
 import PageHero from "@/components/PageHero";
 import BlogList from "@/components/BlogList";
+import ClarionBlog from "@/components/ClarionBlog";
 import { InsuranceBand } from "@/components/CTABands";
 import { IconArrow, IconClock } from "@/components/Icons";
 
@@ -72,6 +73,22 @@ export default function BlogPage() {
       <section className="bg-cream pb-20 md:pb-28">
         <div className="container-x">
           <BlogList posts={rest} categories={usedCategories} />
+        </div>
+      </section>
+
+      {/* Clarion-managed feed — new posts published from Clarion appear here */}
+      <section className="bg-cream-deep">
+        <div className="container-x py-16 md:py-24">
+          <div className="reveal max-w-2xl">
+            <span className="text-sm font-semibold text-teal">Fresh off the press</span>
+            <h2 className="mt-1 text-2xl md:text-3xl">More from our team</h2>
+            <p className="mt-3 text-ink/70">
+              The latest articles and updates from Hillside Mission Recovery.
+            </p>
+          </div>
+          <div className="reveal mt-10">
+            <ClarionBlog />
+          </div>
         </div>
       </section>
 
