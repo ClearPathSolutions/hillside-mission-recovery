@@ -106,5 +106,58 @@ export function clarionCategory(p: ClarionFeedPost): string {
   return deriveClarionCategory(`${p.title} ${p.excerpt} ${p.slug}`);
 }
 
+export type TocItem = { id: string; text: string };
+
+// Same slug logic as ContentBlocks.slugifyHeading, kept local to avoid a
+// lib -> components import. Must stay in sync so anchors match site convention.
+function slugifyHeading(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .slice(0, 60);
+}
+
+/** Strip tags and decode the handful of entities Clarion emits, for TOC text. */
+function headingText(inner: string): string {
+  return inner
+    .replace(/<[^>]+>/g, "")
+    .replace(/&mdash;/g, "—")
+    .replace(/&ndash;/g, "–")
+    .replace(/&amp;/g, "&")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#39;|&rsquo;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&[a-z]+;/gi, "")
+    .trim();
+}
+
+/**
+ * Inject `id` + `scroll-mt` onto <h2>/<h3> in the feed's body_html so the
+ * sidebar TOC can link to them, and return the level-2 TOC (matching the
+ * curated ArticlePage, which lists only h2 sections). Ids are deduped.
+ */
+export function processBodyHtml(html: string): { html: string; toc: TocItem[] } {
+  const toc: TocItem[] = [];
+  const seen = new Map<string, number>();
+
+  const withIds = html.replace(
+    /<(h2|h3)([^>]*)>([\s\S]*?)<\/\1>/gi,
+    (_m, tag: string, attrs: string, inner: string) => {
+      const text = headingText(inner);
+      let id = slugifyHeading(text) || "section";
+      const n = seen.get(id) ?? 0;
+      seen.set(id, n + 1);
+      if (n > 0) id = `${id}-${n}`;
+      if (tag.toLowerCase() === "h2") toc.push({ id, text });
+      // Preserve any existing attrs; add our id + scroll offset for the sticky header.
+      return `<${tag}${attrs} id="${id}" style="scroll-margin-top:7rem">${inner}</${tag}>`;
+    },
+  );
+
+  return { html: withIds, toc };
+}
+
 // Referenced so a future taxonomy change to CATEGORIES stays in sync here.
 export const CLARION_CATEGORIES = CATEGORIES;

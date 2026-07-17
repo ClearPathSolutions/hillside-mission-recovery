@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getClarionPost, clarionCategory } from "@/lib/clarion";
+import { getClarionPost, clarionCategory, processBodyHtml } from "@/lib/clarion";
 import { getAllPosts } from "@/lib/content";
 import { site } from "@/lib/site";
 import PostCard from "@/components/PostCard";
+import { ContentSidebar } from "@/components/Sidebar";
 import { InsuranceBand } from "@/components/CTABands";
 import { IconClock, IconArrow } from "@/components/Icons";
 
@@ -55,6 +56,8 @@ export default async function ClarionArticlePage({
   const words = post.body_html.replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length;
   const readMins = Math.max(1, Math.round(words / 200));
   const related = getAllPosts().slice(0, 3);
+  // Inject heading ids + build the "On this page" TOC from the raw body_html.
+  const { html: bodyHtml, toc } = processBodyHtml(post.body_html);
 
   return (
     <>
@@ -98,23 +101,25 @@ export default async function ClarionArticlePage({
         </div>
       </section>
 
-      {/* Body */}
+      {/* Body — two-column layout matching the curated ArticlePage */}
       <section className="bg-cream">
-        <div className="container-x py-16 md:py-20">
-          <article
-            className="clarion-prose reveal mx-auto min-w-0 max-w-2xl"
-            dangerouslySetInnerHTML={{ __html: post.body_html }}
-          />
-          <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-line bg-white p-7">
-            <h3 className="text-xl text-ink">Ready to take the next step?</h3>
-            <p className="mt-2 text-ink/65">
-              If you or someone you love is struggling, Hillside Mission is here to help —
-              confidentially, 24/7.
-            </p>
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-              <a href={site.phoneHref} className="btn btn-primary">Call {site.phone}</a>
-              <Link href="/admissions" className="btn btn-ghost">Verify insurance</Link>
+        <div className="container-x grid gap-12 py-16 md:py-20 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14">
+          <article className="reveal min-w-0 max-w-2xl">
+            <div className="clarion-prose" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            <div className="mt-12 rounded-2xl border border-line bg-white p-7">
+              <h3 className="text-xl text-ink">Ready to take the next step?</h3>
+              <p className="mt-2 text-ink/65">
+                If you or someone you love is struggling, Hillside Mission is here to help —
+                confidentially, 24/7.
+              </p>
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href={site.phoneHref} className="btn btn-primary">Call {site.phone}</a>
+                <Link href="/admissions" className="btn btn-ghost">Verify insurance</Link>
+              </div>
             </div>
+          </article>
+          <div className="reveal">
+            <ContentSidebar toc={toc} />
           </div>
         </div>
       </section>
