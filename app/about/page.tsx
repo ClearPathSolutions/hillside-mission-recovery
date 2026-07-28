@@ -6,6 +6,7 @@ import { gallery, staffPhotos } from "@/lib/media";
 import PageHero from "@/components/PageHero";
 import { InsuranceBand } from "@/components/CTABands";
 import { IconStaff, IconCare, IconLuxury, IconLeaf, IconArrow } from "@/components/Icons";
+import { extraStaff } from "@/lib/staff-feed";
 
 export const metadata: Metadata = {
   title: "About Hillside Mission — Who We Are",
@@ -37,7 +38,9 @@ const team = [
   },
 ];
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  // Local entries win; the portal only contributes people not listed above.
+  const roster = [...team, ...(await extraStaff("hillside-mission-recovery", team))];
   return (
     <>
       <PageHero
@@ -116,10 +119,16 @@ export default function AboutPage() {
             <p className="mt-4 text-ink/70">The people who make recovery at Hillside Mission personal.</p>
           </div>
           <div className="mx-auto mt-14 grid max-w-4xl gap-8 sm:grid-cols-2">
-            {team.map((m) => (
+            {roster.map((m) => (
               <div key={m.slug} className="reveal card overflow-hidden">
                 <div className="relative aspect-[4/3] bg-cream-deep">
-                  <Image src={m.photo} alt={m.name} fill sizes="(min-width:640px) 45vw, 90vw" className="object-cover object-top" />
+                  {m.photo ? (
+                    <Image src={m.photo} alt={m.name} fill sizes="(min-width:640px) 45vw, 90vw" className="object-cover object-top" />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-teal/10 font-semibold text-4xl text-teal">
+                      {m.name.replace(/^(Dr|Mr|Mrs|Ms)\.?\s+/i, "").split(/\s+/).slice(0, 2).map((w) => w[0]).join("")}
+                    </div>
+                  )}
                 </div>
                 <div className="p-7">
                   <h3 className="text-xl text-ink">{m.name}</h3>
