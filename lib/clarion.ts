@@ -1,4 +1,5 @@
 import { site } from "@/lib/site";
+import { facilityPhotoFor } from "@/lib/media";
 import type { PostMeta } from "@/lib/content";
 import { CATEGORIES } from "@/lib/content";
 
@@ -68,6 +69,15 @@ function toMeta(p: ClarionFeedPost, bodyForEstimate = ""): PostMeta {
   };
 }
 
+/**
+ * Clarion authors pick their own cover art (currently Unsplash), but every
+ * photograph on this site has to come from the approved facility set, so the
+ * cover is swapped for a deterministic approved photo keyed on the post slug.
+ */
+function approveCover<T extends ClarionFeedPost>(p: T): T {
+  return { ...p, cover_image_url: facilityPhotoFor(p.slug) };
+}
+
 /** Fetch the Clarion feed and normalize to the site's PostMeta shape. Never throws. */
 export async function getClarionPosts(): Promise<PostMeta[]> {
   try {
@@ -76,7 +86,7 @@ export async function getClarionPosts(): Promise<PostMeta[]> {
     });
     if (!res.ok) return [];
     const data = (await res.json()) as { posts?: ClarionFeedPost[] };
-    return (data.posts ?? []).map((p) => toMeta(p));
+    return (data.posts ?? []).map((p) => toMeta(approveCover(p)));
   } catch {
     return [];
   }
@@ -90,7 +100,7 @@ export async function getClarionPost(slug: string): Promise<ClarionFullPost | nu
       { next: { revalidate: REVALIDATE_SECONDS } },
     );
     if (!res.ok) return null;
-    return (await res.json()) as ClarionFullPost;
+    return approveCover((await res.json()) as ClarionFullPost);
   } catch {
     return null;
   }

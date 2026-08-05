@@ -8,6 +8,13 @@
   --color-teal: #2e9e8f;
   --color-teal-bright: #38b6a2;
   --color-teal-soft: #d9ede9;
+  /* A3 — white on --color-teal is only 3.28:1, below the 4.5:1 AA threshold for
+     normal text, and the brand teal is the sitewide CTA. These two are the
+     button-only shades: 4.97:1 at rest, 6.33:1 on hover (hover darkens rather
+     than lightens, so the focus/hover state can't drop below AA). --color-teal
+     itself is unchanged so accents, borders and icons keep the brand read. */
+  --color-teal-cta: #1f7d70;
+  --color-teal-cta-hover: #1a6b60;
   --color-cream: #f8f5ef;
   --color-cream-deep: #f1ece1;
   --color-sand: #eae2d3;
@@ -84,14 +91,14 @@
   .btn:active { transform: translateY(1px) scale(0.99); }
 
   .btn-primary {
-    background: var(--color-teal);
+    background: var(--color-teal-cta);
     color: #fff;
-    box-shadow: 0 8px 20px rgba(46, 158, 143, 0.28);
+    box-shadow: 0 8px 20px rgba(31, 125, 112, 0.28);
   }
   .btn-primary:hover {
-    background: var(--color-teal-bright);
+    background: var(--color-teal-cta-hover);
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(46, 158, 143, 0.36);
+    box-shadow: 0 12px 28px rgba(31, 125, 112, 0.36);
   }
 
   .btn-ghost {

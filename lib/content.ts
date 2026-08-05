@@ -6,7 +6,11 @@ export type Block =
   | { type: "list"; ordered: boolean; items: string[] }
   | { type: "quote"; text: string }
   | { type: "table"; rows: string[][] }
-  | { type: "image"; src: string; alt: string; caption: string };
+  // R10 — width/height are the image's true intrinsic size, baked in from the
+  // files in public/images so the layout reserves the right box. They were
+  // previously hard-coded to 1200x800 for every image, which is wrong for most
+  // of them (e.g. ministry-youth.jpg is 588x570, MonicaHMS-scaled.jpeg is portrait).
+  | { type: "image"; src: string; alt: string; caption: string; width?: number; height?: number };
 
 export type Doc = {
   slug: string;
@@ -31,6 +35,10 @@ export const HANDBUILT = new Set([
   "home", "", "about", "contact", "admissions", "tour", "blog", "404-2",
 ]);
 
+// A6 — conversion pages should neither rank nor pollute conversion tracking.
+// Kept here so app/sitemap.ts and the catch-all metadata agree on one list.
+export const NOINDEX_SLUGS = new Set(["thank-you"]);
+
 export function keyToSlug(key: string): string {
   return key === "home" ? "" : key;
 }
@@ -49,10 +57,19 @@ export function getDocBySegments(segments: string[]): Doc | null {
 const CTA_HEADING = /^(help for myself|help for (a )?loved.?-?one|(your )?health insurance can pay for rehab)/i;
 const CTA_KICKER = /^(did you know\??|don.?t wait\.?|we.?re here for you\.?)$/i;
 
+// R6 — "Don't Wait Any Longer" headed a CALL NOW / TEXT US button band on the
+// WordPress original. The scrape kept the heading but dropped the buttons, so it
+// renders as a stray line of body text on 27 pages. The replacement the row asks
+// for — the "You don't have to do this alone." section — is the sitewide footer
+// CTA, which already appears on every page.
+const DROP_LINE = /^don.?t wait any longer\.?$/i;
+
 export function cleanContentBlocks(blocks: Block[]): Block[] {
   const out: Block[] = [];
   let skipping = false;
   for (const b of blocks) {
+    if (b.type === "paragraph" && DROP_LINE.test(b.text.trim())) continue;
+    if (b.type === "heading" && DROP_LINE.test(b.text.trim())) continue;
     if (b.type === "heading") {
       if (CTA_HEADING.test(b.text)) {
         skipping = true;
@@ -84,6 +101,26 @@ export function deriveCategory(doc: Doc): string {
 }
 
 export const CATEGORIES = ["Addiction", "Recovery", "Treatment", "Mental Health", "Paying for Rehab"];
+
+// V0061 — blog pagination arithmetic, shared by /blog, /blog/page/[page] and
+// the sitemap so no post falls between the index and the archive.
+//
+// /blog server-renders INDEX_COUNT posts (1 featured + BLOG_LIST_INITIAL cards
+// in BlogList); the archive picks up from there at PER_PAGE per page.
+export const BLOG_LIST_INITIAL = 9;
+export const INDEX_COUNT = 1 + BLOG_LIST_INITIAL;
+export const PER_PAGE = 12;
+
+/** Total pages including /blog itself as page 1. */
+export function archiveTotalPages(totalPosts: number): number {
+  return 1 + Math.max(0, Math.ceil((totalPosts - INDEX_COUNT) / PER_PAGE));
+}
+
+/** Posts shown on archive page `n` (n >= 2). */
+export function archiveSlice<T>(posts: T[], n: number): T[] {
+  const start = INDEX_COUNT + (n - 2) * PER_PAGE;
+  return posts.slice(start, start + PER_PAGE);
+}
 
 export type PostMeta = {
   slug: string;

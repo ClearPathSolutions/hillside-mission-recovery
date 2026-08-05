@@ -7,7 +7,7 @@
     "description": "If you know someone who is dealing with mental health and addiction-related issues, it is important to get them the help they need. Contact us today!",
     "date": "2021-06-09T20:38:57+00:00",
     "modified": "2021-06-09T20:38:59+00:00",
-    "ogImage": "/images/shutterstock_372656629-scaled.jpg",
+    "ogImage": "/images/DSC_0673.jpg",
     "category": null,
     "excerpt": "Many people suffer from mental illness and are unsure as to where to go to get help. In fact, some people turn to substance abuse as a means to cope with mental illness. In other cases, mental illness",
     "readMins": 3,
@@ -154,7 +154,7 @@
     "description": "Hillside Mission Recovery provides accredited medical detox and residential addiction treatment in Mission Viejo. Professional, private care in Orange County.",
     "date": null,
     "modified": "2026-06-11T21:04:17+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-68-scaled-1.jpg",
+    "ogImage": "/images/DSC_0575.jpg",
     "category": null,
     "excerpt": "Better your life at our alcohol & drug rehab in Mission Viejothat offers addiction treatment options that work by people who care.",
     "readMins": 3,
@@ -220,57 +220,75 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-61-scaled-1.jpg",
+        "src": "/images/DSC_0615.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-2-scaled-1.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-48-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1545,
+        "height": 924
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-10-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-49-scaled-1.jpg",
         "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-33-scaled-1.jpg",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-16-scaled-1.jpg",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-57-scaled-1.jpg",
-        "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1321,
+        "height": 924
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-55-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1386,
+        "height": 924
+      },
+      {
+        "type": "image",
+        "src": "/images/MISSION-HILLS-HOUSE-68-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1637,
+        "height": 924
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-51-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1450,
+        "height": 924
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0573.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0560.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0566.jpg",
+        "alt": "",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "paragraph",
@@ -283,9 +301,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0569.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -299,7 +319,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "heading",
@@ -317,9 +337,11 @@
       },
       {
         "type": "image",
-        "src": "/images/shutterstock_2259920271.jpg",
+        "src": "/images/DSC_0702.jpg",
         "alt": "Effective Therapies for Managing Anxiety and Panic Attacks",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -337,9 +359,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0575.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -357,27 +381,35 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-45-scaled-1.jpg",
+        "src": "/images/DSC_0674.jpg",
         "alt": "MISSION-HILLS-HOUSE-45",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-42-scaled-1.jpg",
+        "src": "/images/DSC_0596.jpg",
         "alt": "MISSION-HILLS-HOUSE-42",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-56-scaled-1.jpg",
+        "src": "/images/DSC_0615.jpg",
         "alt": "MISSION-HILLS-HOUSE-56",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-59-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-48-scaled-1.jpg",
         "alt": "MISSION-HILLS-HOUSE-59",
-        "caption": ""
+        "caption": "",
+        "width": 1545,
+        "height": 924
       },
       {
         "type": "paragraph",
@@ -455,9 +487,11 @@
       },
       {
         "type": "image",
-        "src": "/images/DSC_0635.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-49-scaled-1.jpg",
         "alt": "hillside mission, luxury facility near san clemente",
-        "caption": ""
+        "caption": "",
+        "width": 1321,
+        "height": 924
       },
       {
         "type": "heading",
@@ -466,9 +500,11 @@
       },
       {
         "type": "image",
-        "src": "/images/Hillside-Mission-Blog-2-What-are-the-Signs-of-a-Fentanyl-Overdose.edited.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-55-scaled-1.jpg",
         "alt": "What Are the Signs of a Fentanyl Overdose?",
-        "caption": ""
+        "caption": "",
+        "width": 1386,
+        "height": 924
       },
       {
         "type": "heading",
@@ -477,9 +513,11 @@
       },
       {
         "type": "image",
-        "src": "/images/shutterstock_2007048371.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-68-scaled-1.jpg",
         "alt": "Residential methamphetamine rehab and dual diagnosis support at Hillside Mission Recovery.",
-        "caption": ""
+        "caption": "",
+        "width": 1637,
+        "height": 924
       },
       {
         "type": "heading",
@@ -531,27 +569,35 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-60-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
         "alt": "Hilllside Mission Luxury Facility",
-        "caption": ""
+        "caption": "",
+        "width": 1202,
+        "height": 924
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-55-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1202,
+        "height": 924
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1202,
+        "height": 924
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-49-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
         "alt": "orange county substance abuse treatment center",
-        "caption": ""
+        "caption": "",
+        "width": 1202,
+        "height": 924
       },
       {
         "type": "paragraph",
@@ -610,19 +656,23 @@
       {
         "type": "image",
         "src": "/images/MonicaHMS-scaled-rkzgo5c4ipi3hekr4l4k6aoo6ua36wzx55gu2pnhww.jpeg",
-        "alt": "Monica Olivires, CADII - Program Director",
-        "caption": ""
+        "alt": "Monica Olivares, CADC II - Clinical Supervisor",
+        "caption": "",
+        "width": 400,
+        "height": 600
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Monica Olivires, CADII"
+        "text": "Monica Olivares, CADC II"
       },
       {
         "type": "image",
         "src": "/images/Phillip-Carter-rkzgnyr96v9384ub70a66ucg156ip19ss8wfprx94g.png",
         "alt": "Phillip Carter - Director of Operations",
-        "caption": ""
+        "caption": "",
+        "width": 400,
+        "height": 600
       },
       {
         "type": "heading",
@@ -657,7 +707,7 @@
     "description": "Addiction impacts more than just one person. Learn more about addiction support groups for families in your area.",
     "date": "2022-06-20T15:24:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-4-Are-There-Addiction-Support-Groups-for-Families.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0694.jpg",
     "category": null,
     "excerpt": "When we talk about addiction and the recovery process, much of the focus is placed on the person struggling with addiction, its impact on their lives, and the ongoing recovery process. While this is i",
     "readMins": 4,
@@ -741,7 +791,7 @@
     "description": "Start your recovery at Hillside Mission Recovery. Private insurance verification and seamless admissions for detox and residential care in Mission Viejo.",
     "date": null,
     "modified": "2026-06-11T21:00:05+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-60-scaled-1.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-1-scaled-1.jpg",
     "category": null,
     "excerpt": "Most major insurance providers will assist in covering the cost of treatment at Hillside Mission Recovery.",
     "readMins": 1,
@@ -792,7 +842,7 @@
     "description": "Alcohol rehab in Mission Viejo CA offers detox and residential care in a private setting. Learn how treatment works and start your recovery today.",
     "date": "2026-03-24T20:31:39+00:00",
     "modified": "2026-03-24T20:33:03+00:00",
-    "ogImage": "/images/shutterstock_2591099075-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-60-scaled-1.jpg",
     "category": null,
     "excerpt": "Alcohol addiction can take control of your life over time. What may start as occasional drinking can turn into dependence that affects your health, relationships, and daily function.",
     "readMins": 3,
@@ -1013,7 +1063,7 @@
     "description": "Hillside Mission Recovery is an Orange County alcohol rehab center that offers detoxification, inpatient rehab, and aftercare options.",
     "date": null,
     "modified": "2024-01-24T14:37:17+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+    "ogImage": "/images/DSC_0674.jpg",
     "category": null,
     "excerpt": "Approximately 10% of Americans are living with an alcohol use disorder today, according to the National Center for Drug Abuse Statistics (NCDAS). The NCDAS reported that over 140,000 Americans die fro",
     "readMins": 7,
@@ -1061,13 +1111,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0667.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1085,9 +1137,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0701.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1293,7 +1347,7 @@
     "description": "If you or a loved one is looking for an Anaheim drug rehab center, we got you covered. Contact us today to learn more!",
     "date": null,
     "modified": "2024-01-24T14:42:41+00:00",
-    "ogImage": "/images/cropped-Hillside-Mission-Recovery-White-Logo-1.png",
+    "ogImage": "/images/DSC_0635.jpg",
     "category": null,
     "excerpt": "While there have been changes in which substances are being abused over time, the common thread is that individuals who struggle with the use of drugs and alcohol continue to do so until they stop usi",
     "readMins": 7,
@@ -1339,9 +1393,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0631.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1355,13 +1411,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0668.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1379,9 +1437,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0700.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1545,7 +1605,7 @@
     "description": "If you or a loved one is looking for an Orange County Anthem drug rehab center, we are here for you. Read further to learn more!",
     "date": null,
     "modified": "2026-06-11T21:15:56+00:00",
-    "ogImage": "/images/cropped-Hillside-Mission-Recovery-White-Logo-1.png",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-44-scaled-1.jpg",
     "category": null,
     "excerpt": "The National Survey on Drug Use and Health estimates that approximately 19.7 million Americans are living with a substance use disorder. Orange County’s Healthier Together organization reported that 1",
     "readMins": 7,
@@ -1587,9 +1647,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0654.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1603,13 +1665,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0672.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1627,9 +1691,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0702.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -1786,7 +1852,7 @@
     "description": "Beginning your journey at our in network BCBS drug rehab will create a firm foundation for your recovery. Read further to learn more! - Many programs provide",
     "date": null,
     "modified": "2026-06-11T21:15:24+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-47-scaled-1.jpg",
     "category": null,
     "excerpt": "Blue Cross Blue Shield is a large healthcare company in the United States that works with healthcare providers across the country. BCBS is estimated to have 111 million members and 1.7 million doctors",
     "readMins": 6,
@@ -1850,13 +1916,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1386,
+        "height": 924
       },
       {
         "type": "heading",
@@ -1874,9 +1942,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-26-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1403,
+        "height": 924
       },
       {
         "type": "heading",
@@ -2033,7 +2103,7 @@
     "description": "If you’re thinking about going to rehab in Orange County, you can start picturing what it would look like with nice weather, great beaches, and a salty breeze. ",
     "date": "2020-08-28T20:59:07+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_1041646966-scaled-1.jpg",
+    "ogImage": "/images/DSC_0654.jpg",
     "category": null,
     "excerpt": "Orange County is home to beautiful coastlines in California, making it the perfect place to manage addictions and begin a new life. Orange County is also a culturally diverse county out on the west co",
     "readMins": 3,
@@ -2151,7 +2221,7 @@
     "description": "Benzodiazepine addiction can affect every aspect of one's life negatively. Learn about Benzodiazepine rehabs.",
     "date": "2021-02-23T20:01:00+00:00",
     "modified": "2021-02-23T20:01:02+00:00",
-    "ogImage": "/images/shutterstock_1507989551-1-scaled.jpg",
+    "ogImage": "/images/DSC_0580.jpg",
     "category": null,
     "excerpt": "The important thing about addiction treatment, regardless of the substance involved, is to know when to get help. If you or your loved one is battling a benzodiazepine addiction, don’t wait to seek pr",
     "readMins": 3,
@@ -2261,7 +2331,7 @@
     "description": "Learn how long-term benzodiazepine use can affect anxiety, mood, emotional health, and daily functioning, and when professional treatment may help.",
     "date": "2026-06-03T21:35:52+00:00",
     "modified": "2026-06-03T21:37:04+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-2-What-are-the-Signs-of-a-Fentanyl-Overdose.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0573.jpg",
     "category": null,
     "excerpt": "Benzodiazepines are commonly prescribed to help manage anxiety, panic disorders, insomnia, and other conditions involving stress and nervous system overactivity.",
     "readMins": 3,
@@ -2537,7 +2607,7 @@
     "description": "As the ideal addiction treatment center in Orange County, Hillside Mission offers inpatient and benzo addiction treatment.",
     "date": null,
     "modified": "2026-03-23T23:53:44+00:00",
-    "ogImage": "/images/cropped-Hillside-Mission-Recovery-White-Logo-1.png",
+    "ogImage": "/images/DSC_0686.jpg",
     "category": null,
     "excerpt": "Benzodiazepines are controlled substances that can be used to treat the symptoms associated with a variety of anxiety disorders. As with other controlled substances, using this medication does come wi",
     "readMins": 7,
@@ -2575,9 +2645,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0686.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -2591,13 +2663,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0660.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -2615,9 +2689,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-59-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1370,
+        "height": 924
       },
       {
         "type": "heading",
@@ -2858,7 +2934,7 @@
     "description": "When searching for the best inpatient alcohol rehabs near you, it can be difficult to know what to look for. This blog should help.",
     "date": "2021-07-28T18:26:55+00:00",
     "modified": "2021-07-28T18:27:43+00:00",
-    "ogImage": "/images/dim-hou-2P6Q7_uiDr0-unsplash-scaled.jpg",
+    "ogImage": "/images/DSC_0639.jpg",
     "category": null,
     "excerpt": "If you know someone suffering from an alcohol addiction it can be difficult to know what to do. The first step is always to get them to agree to get the help they need to treat their addiction. As man",
     "readMins": 3,
@@ -3029,7 +3105,7 @@
     "description": "If you or a loved one is looking for a cocaine drug rehab in Orange County, contact us today. Our professionals are here for you!",
     "date": null,
     "modified": "2026-03-23T23:46:23+00:00",
-    "ogImage": "/images/cropped-Hillside-Mission-Recovery-White-Logo-1.png",
+    "ogImage": "/images/DSC_0688.jpg",
     "category": null,
     "excerpt": "Regardless of what substance is being abused, drug addiction can have a devastating and lasting impact on a person’s life. You are at risk for a variety of physical and mental health concerns. Additio",
     "readMins": 7,
@@ -3063,9 +3139,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0688.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -3079,13 +3157,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0664.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -3103,9 +3183,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-8-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1246
       },
       {
         "type": "heading",
@@ -3310,7 +3392,7 @@
     "description": "Read here to learn more about the connection between mental health and addiction and how Hillside Mission can help with treatment.",
     "date": "2023-10-13T15:25:47+00:00",
     "modified": "2023-10-27T15:27:48+00:00",
-    "ogImage": "/images/shutterstock_2291512991-scaled.jpg",
+    "ogImage": "/images/DSC_0699.jpg",
     "category": null,
     "excerpt": "Co-occurring disorders represent a demographic of individuals who struggle with mental health and addiction. The connection between mental health and addiction goes back and forth.",
     "readMins": 4,
@@ -3485,7 +3567,7 @@
     "description": "Contact the Hillside Mission Recovery admissions team in Mission Viejo. 24/7 confidential support for detox, residential rehab, and insurance verification.",
     "date": null,
     "modified": "2026-06-11T21:01:18+00:00",
-    "ogImage": "/images/anthem-black.png",
+    "ogImage": "/images/DSC_0655.jpg",
     "category": null,
     "excerpt": "If you have a question or want to learn more about Hillside Mission Recovery fill out the form below.",
     "readMins": 1,
@@ -3550,7 +3632,7 @@
     "description": "Hillside Mission Recovery provides accredited detox and residential rehab for Costa Mesa residents. 100% private and confidential care.",
     "date": null,
     "modified": "2026-03-24T12:50:36+00:00",
-    "ogImage": "/images/shutterstock_2025890150-scaled.jpg",
+    "ogImage": "/images/DSC_0629.jpg",
     "category": null,
     "excerpt": "Addiction is a chronic and progressive disease that thrives off of isolation. The Orange County Health Care Agency reported a significant increase in alcohol and drug-related deaths during the first y",
     "readMins": 7,
@@ -3588,9 +3670,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0649.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -3604,13 +3688,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0667.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -3628,9 +3714,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0694.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -3786,7 +3874,7 @@
     "description": "Learn about the importance of creating a support network to help you in your recovery from addiction. Contact Hillside Mission Recovery to learn about our treatment programs.",
     "date": "2023-12-26T23:04:08+00:00",
     "modified": "2023-12-26T23:04:10+00:00",
-    "ogImage": "/images/shutterstock_2224847331.jpg",
+    "ogImage": "/images/DSC_0675.jpg",
     "category": null,
     "excerpt": "When overcoming addiction, establishing a support network plays a vital role in achieving lasting success. The experience of addiction can often feel isolating and solitary. By fostering community and",
     "readMins": 4,
@@ -3861,7 +3949,7 @@
     "description": "Pick up the phone and call our Dana Point, CA rehab. Our expert staff will explain the methods of treatment so you know exactly what to expect.",
     "date": null,
     "modified": "2026-03-24T13:08:26+00:00",
-    "ogImage": "/images/DSC_0674-scaled.jpg",
+    "ogImage": "/images/DSC_0647.jpg",
     "category": null,
     "excerpt": "Addiction is a condition in which a person is unable to stop using a substance. They may start using the drug for recreational purposes, but in time they become physically and mentally addicted. If th",
     "readMins": 8,
@@ -3907,9 +3995,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-61-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 924,
+        "height": 1273
       },
       {
         "type": "heading",
@@ -3923,13 +4013,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0668.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -3947,9 +4039,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0690.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -4182,7 +4276,7 @@
     "description": "Many people struggle in alcohol, but in different ways. Learn about the difference between alcoholism and problematic drinking here.",
     "date": "2022-02-18T14:43:11+00:00",
     "modified": "2022-02-18T14:45:27+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-3-What-is-the-Difference-Between-Alcoholism-and-Problematic-Drinking.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0690.jpg",
     "category": null,
     "excerpt": "In the United States, alcohol is one of the most widely available and widely abused substances. For anyone over the age of 21, it is possible to obtain alcohol. The problem is that alcohol is addictiv",
     "readMins": 4,
@@ -4275,7 +4369,7 @@
     "description": "Different levels of treatment can be effective for different people. Learn the difference between outpatient and inpatient treatment.",
     "date": "2022-06-10T15:15:00+00:00",
     "modified": "2022-06-14T15:18:11+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-2-What-is-the-Difference-Between-Outpatient-and-Inpatient-Treatment.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0659.jpg",
     "category": null,
     "excerpt": "Most of us know what rehab is, but not everyone understands that not all treatment facilities and treatment types are the same. There are, in fact, multiple options depending on the specific needs of",
     "readMins": 4,
@@ -4362,7 +4456,7 @@
     "description": "Different types of addiction support groups may have varying levels of effectiveness, based on a person's needs. Learn more here.",
     "date": "2022-05-06T18:07:00+00:00",
     "modified": "2022-05-31T18:11:12+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-1-What-are-the-Different-Types-of-Addiction-Support-Groups.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0582.jpg",
     "category": null,
     "excerpt": "When most of us think about addiction, we think about a person going into rehab and getting treatment for their addiction, or we think about things like withdrawal and detox and how it affects people.",
     "readMins": 4,
@@ -4437,7 +4531,7 @@
     "description": "Anxiety can be an disruptive disorder to live with, but may manifest in different ways. Learn the different types of anxiety disorder here.",
     "date": "2022-03-15T15:19:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-3-What-are-the-Different-Types-of-Anxiety-Disorder.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0560.jpg",
     "category": null,
     "excerpt": "When it comes to dealing with mental health issues, millions of people struggle every day. One of the most common types of disorder is an anxiety disorder. What’s worse is that these disorders can occ",
     "readMins": 4,
@@ -4524,7 +4618,7 @@
     "description": "If you have ever had to wonder 'does my wife have a drinking problem', you may need to know the signs of addiction. Read here to get help now",
     "date": "2021-11-05T15:09:00+00:00",
     "modified": "2021-11-29T15:15:33+00:00",
-    "ogImage": "/images/Hillside-Blog-image-Does-My-Wife-Have-a-Drinking-Problem.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0632.jpg",
     "category": null,
     "excerpt": "Millions of Americans deal with substance and alcohol abuse problems every day. Addiction is a disease that controls the lives of many of these people until they can get the help they need to get clea",
     "readMins": 3,
@@ -4599,7 +4693,7 @@
     "description": "Knowing how drug or alcohol addiction occurs will help teach you how to beat it and get your life back! Let's define drug and alcohol addiction, shall we?",
     "date": "2020-09-28T20:46:13+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_689390650-scaled-1.jpg",
+    "ogImage": "/images/DSC_0704.jpg",
     "category": null,
     "excerpt": "What is drug addiction characterized by? When an individual yields to the grip of addiction, it becomes difficult to quit. Knowing how drug or alcohol addiction occurs will help teach you how to beat",
     "readMins": 4,
@@ -4766,7 +4860,7 @@
     "description": "If you are looking for drug rehab centers in Orange County, Hillside Mission is here to help, day or night.",
     "date": "2021-07-08T17:02:14+00:00",
     "modified": "2021-07-08T17:12:02+00:00",
-    "ogImage": "/images/shutterstock_165529670-scaled.jpg",
+    "ogImage": "/images/DSC_0673.jpg",
     "category": null,
     "excerpt": "At Hillside Mission, we understand that finding the right treatment for drug addiction can be a long and difficult process. It doesn’t have to be though. It starts with understanding the signs and eff",
     "readMins": 3,
@@ -4870,7 +4964,7 @@
     "description": "Drug rehabs that take Aetna insurance allow their clients to have multiple treatment options when looking to seek help for addiction. Learn more.",
     "date": "2020-12-15T01:16:35+00:00",
     "modified": "2020-12-15T01:16:37+00:00",
-    "ogImage": "/images/shutterstock_1726799161-1.jpg",
+    "ogImage": "/images/DSC_0693.jpg",
     "category": null,
     "excerpt": "Insurance and knowing how to pay for addiction treatment is an important part of the recovery journey for many addicts. Paying for addiction treatment out of pocket is often not workable, so many addi",
     "readMins": 3,
@@ -4979,7 +5073,7 @@
     "description": "It is only natural to experience withdrawal symptoms after ceasing to use a particular substance. Learn what drug withdrawal syndome is.",
     "date": "2020-11-18T23:34:59+00:00",
     "modified": "2020-11-18T23:35:01+00:00",
-    "ogImage": "/images/shutterstock_96799804-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-38-scaled-1.jpg",
     "category": null,
     "excerpt": "Addiction withdrawal occurs because the brain functions like a spring. Alcohol and drugs are brain depressant that compresses the spring – it’s just like repressing the brain’s production of noradrena",
     "readMins": 3,
@@ -5078,7 +5172,7 @@
     "description": "People don't know when recreational drinking becomes alcoholism. There are some red flags to look out for. Learn the early signs of alcoholism.",
     "date": "2020-10-28T15:24:41+00:00",
     "modified": "2020-11-10T23:51:53+00:00",
-    "ogImage": "/images/shutterstock_536563018-1-scaled.jpg",
+    "ogImage": "/images/DSC_0585.jpg",
     "category": null,
     "excerpt": "Evan didn’t notice the early signs of alcoholism in college because he didn’t know what to look out for. After all, getting drunk and waking up hungover from drinking too much beer at a frat party is",
     "readMins": 4,
@@ -5207,7 +5301,7 @@
     "description": "Family therapy is often an essential aspect to recovery. Click here to find family therapy programs in Southern California.",
     "date": "2022-07-15T16:46:00+00:00",
     "modified": "2022-07-26T16:51:01+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-3-How-to-Find-Family-Therapy-Programs-in-Southern-California.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0566.jpg",
     "category": null,
     "excerpt": "Most of what we know of rehab and treatment is having a person go to a rehab facility to get counseling and therapy sessions. While these are certainly an essential part of the treatment process for a",
     "readMins": 4,
@@ -5285,12 +5379,12 @@
   "fentanyl": {
     "slug": "fentanyl",
     "type": "page",
-    "title": "Fentanyl Drug Rehab & Detox in Mission Viejo, CA Hillside Mission",
+    "title": "Fentanyl Drug Rehab & Detox in Mission Viejo, CA",
     "h1": "fentanyl",
     "description": "Accredited fentanyl detox and residential rehab in Mission Viejo. We provide 24/7 medical supervision and family support throughout Orange County.",
     "date": null,
     "modified": "2026-03-24T13:08:14+00:00",
-    "ogImage": "/images/shutterstock_2442098411-scaled.jpg",
+    "ogImage": "/images/DSC_0674.jpg",
     "category": null,
     "excerpt": "It is estimated that over 70,000 individuals died due to a fatal overdose in 2021 caused by a synthetic opioid, most of which is believed to be fentanyl. Fentanyl is a growing concern around the Unite",
     "readMins": 7,
@@ -5328,9 +5422,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0675.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -5344,13 +5440,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0672.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -5368,9 +5466,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0693.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -5587,7 +5687,7 @@
     "description": "Whether you have struggled with addiction yourself or not, 12 step recovery programs are something you may have heard of in your life. Find 12 step recovery in Orange County at Hillside Mission today.",
     "date": "2021-07-26T16:34:10+00:00",
     "modified": "2021-07-26T16:34:11+00:00",
-    "ogImage": "/images/shutterstock_1020758239-scaled.jpg",
+    "ogImage": "/images/DSC_0631.jpg",
     "category": null,
     "excerpt": "Many of us, even those of us who have never struggled with addiction have likely heard of a 12 step recovery program. 12 step recovery programs come in all shapes and sizes to help people with a varie",
     "readMins": 3,
@@ -5666,7 +5766,7 @@
     "description": "Find a holistic alcohol rehab today if you or your loved one need your mind, body, spirit, and social environment incorporated into your healing process. Don’t take chances with another treatment center, contact us.",
     "date": "2021-09-15T17:20:38+00:00",
     "modified": "2021-09-15T17:20:39+00:00",
-    "ogImage": "/images/shutterstock_1131155369-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-10-scaled-1.jpg",
     "category": null,
     "excerpt": "Alcohol addiction and substance use disorder are more common than ever today in society. While it is important to get treatment for the addiction, it’s also important to get the right kind of treatmen",
     "readMins": 3,
@@ -5736,7 +5836,7 @@
     "description": "Community support groups have helped many addicts stick to their sobriety while also improving the quality of their lives. Find your drug support group.",
     "date": "2020-11-24T23:29:28+00:00",
     "modified": "2020-11-24T23:29:30+00:00",
-    "ogImage": "/images/shutterstock_356402423-scaled.jpg",
+    "ogImage": "/images/DSC_0686.jpg",
     "category": null,
     "excerpt": "Most recovering addicts would tell you that the road to recovery is a long and somewhat difficult one. Among the many things that help make this road easier is belonging to drug support groups.",
     "readMins": 3,
@@ -5918,7 +6018,7 @@
     "description": "The condition craves urgent attention and is best handled by inpatient drug rehab centers. Let us help you find addiction treatment in inpatient rehab centers.",
     "date": "2020-09-30T22:22:19+00:00",
     "modified": null,
-    "ogImage": "/images/mcr-uhc.png",
+    "ogImage": "/images/DSC_0695.jpg",
     "category": null,
     "excerpt": "It’s generally common for addicts to turn up their noses when loved ones suggest inpatient drug facilities as a solution to their drug or alcohol problem. This is due to the fact that it’s often very",
     "readMins": 3,
@@ -6036,7 +6136,7 @@
     "description": "To overcome a heroin addiction, you need to know what heroin addiction is and how to battle it. Let us help you find heroin treatment in Orange County.",
     "date": "2020-11-12T23:57:44+00:00",
     "modified": "2020-11-12T23:57:46+00:00",
-    "ogImage": "/images/shutterstock_1316614289-1-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-1-scaled-1.jpg",
     "category": null,
     "excerpt": "A 2019 statistic revealed that 605,000 Americans ages 12 and older had abused heroin at least once in the year before being surveyed. The statistics indicate the prevalence of heroin addiction and how",
     "readMins": 3,
@@ -6139,7 +6239,7 @@
     "description": "It’s 2021 and the opioid epidemic is continuing to harm Americans around the country. Get help finding the best opiate treatment centers from Hillside Mission Recovery.",
     "date": "2021-07-14T16:35:14+00:00",
     "modified": "2021-07-14T16:45:57+00:00",
-    "ogImage": "/images/shutterstock_593324582-scaled.jpg",
+    "ogImage": "/images/DSC_0580.jpg",
     "category": null,
     "excerpt": "Dealing with a loved one who is struggling with addiction is a difficult and trying experience. This is especially true if they are suffering from an opiate addiction. Opiate addiction has been on the",
     "readMins": 3,
@@ -6228,7 +6328,7 @@
     "description": "Beginning your journey at our First Health Network addiction treatment program will provide a good base for your recovery. Call us today!",
     "date": null,
     "modified": "2026-06-11T21:16:59+00:00",
-    "ogImage": "/images/First-Health-for-rehab-hillside.webp",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-44-scaled-1.jpg",
     "category": null,
     "excerpt": "The California Health Care Foundation reported in its 2022 report that there was a 10-fold increase in the prevalence of fentanyl-related deaths in California. Hillside Mission is an inpatient treatme",
     "readMins": 6,
@@ -6258,9 +6358,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0655.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -6274,13 +6376,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1386,
+        "height": 924
       },
       {
         "type": "heading",
@@ -6298,9 +6402,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0695.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -6486,7 +6592,7 @@
     "description": "Learn how Hillside Mission’s first responders addiction treatment program in Mission Viejo helps police, firefighters, and EMTs recover in a confidential and supportive environment.",
     "date": "2026-03-09T21:03:47+00:00",
     "modified": "2026-03-09T21:06:35+00:00",
-    "ogImage": "/images/rehab-for-firefighters-scaled.jpg",
+    "ogImage": "/images/DSC_0569.jpg",
     "category": null,
     "excerpt": "First responders dedicate their lives to protecting others. Police officers, firefighters, paramedics, and emergency personnel face intense pressure every day while responding to emergencies and traum",
     "readMins": 3,
@@ -6628,7 +6734,7 @@
     "description": "Confidential addiction treatment for first responders in Mission Viejo. Specialized detox and residential rehab for police, fire, and EMS professionals.",
     "date": null,
     "modified": "2026-03-24T13:55:56+00:00",
-    "ogImage": "/images/logan-weaver-lgnwvr-dPYXnNIz0IQ-unsplash-scaled.jpg",
+    "ogImage": "/images/DSC_0697.jpg",
     "category": null,
     "excerpt": "When an emergency or crisis occurs, First Responders are the individuals who run into danger to help others. When we talk about First Responders, we include Law Enforcement, EMTs, and Fire Fighters in",
     "readMins": 7,
@@ -6666,9 +6772,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0697.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -6682,13 +6790,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0660.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -6706,9 +6816,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0701.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -6890,7 +7002,7 @@
     "description": "For many entering recovery, support groups are an essential aspect of recovery. Click here to find groups for recovering addicts.",
     "date": "2022-04-25T15:38:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-4-How-to-Find-Groups-for-Recovering-Addicts.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0649.jpg",
     "category": null,
     "excerpt": "If you’ve never dealt with addiction yourself, you might not realize what a life-altering experience it can be. While treatment is the all-important first step, it is not all there is to living a life",
     "readMins": 5,
@@ -6978,7 +7090,7 @@
     "description": "After treatment ends, the journey must continue. Learn about healthy habits in recovery and how to avoid relapse.",
     "date": "2022-07-29T15:59:00+00:00",
     "modified": "2022-08-02T16:03:04+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-4-What-are-Healthy-Habits-in-Recovery.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0699.jpg",
     "category": null,
     "excerpt": "Most of us know a thing or two about what rehab is and why it is vital to the recovery process, but unless you’re in recovery yourself and have learned the skills necessary to stay sober, the chances",
     "readMins": 4,
@@ -7105,7 +7217,7 @@
     "description": "Wondering what symptoms you can look for when you're detoxing from heroin? Contact Hillside Mission Recovery to help you get on the path to recovery.",
     "date": "2021-03-23T21:48:27+00:00",
     "modified": "2021-03-24T15:36:58+00:00",
-    "ogImage": "/images/shutterstock_572107339-scaled.jpg",
+    "ogImage": "/images/DSC_0675.jpg",
     "category": null,
     "excerpt": "Heroin is one of the strongest and most addictive substances out there. If you’ve found yourself addicted to heroin and are trying to get clean, knowing what to look for in terms of detoxing is crucia",
     "readMins": 4,
@@ -7209,7 +7321,7 @@
     "description": "Accredited heroin detox and residential rehab in Mission Viejo. We provide 24/7 medical supervision, MAT protocols, and long-term clinical stabilization.",
     "date": null,
     "modified": "2026-03-24T13:55:52+00:00",
-    "ogImage": "/images/shutterstock_2291512991-scaled.jpg",
+    "ogImage": "/images/DSC_0688.jpg",
     "category": null,
     "excerpt": "The Orange County Heroin Task Force was established in 2016 in response to the opioid epidemic. When the Heroin Task Force was established, there were 66 heroin-related deaths. At the time, it was exp",
     "readMins": 7,
@@ -7243,9 +7355,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0673.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -7259,13 +7373,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0664.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -7283,9 +7399,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0700.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -7504,12 +7622,12 @@
   "hillside-mission-your-sanctuary-for-recovery-in-mission-viejo": {
     "slug": "hillside-mission-your-sanctuary-for-recovery-in-mission-viejo",
     "type": "post",
-    "title": "Hillside Mission: Your Sanctuary for Recovery in Mission Viejo",
+    "title": "Your Sanctuary for Recovery in Mission Viejo",
     "h1": "Hillside Mission: Your Sanctuary for Recovery in Mission Viejo",
     "description": "Nestled in the tranquil setting of Mission Viejo, Hillside Mission emerges as a premier destination for individuals seeking freedom from substance abuse. Our medical detoxification process transcends traditional methods, offering a serene and healing environment where individuals can begin their journey towards recovery with dignity and respect. At Hillside Mission, we understand the complexities of […]",
     "date": "2024-04-04T20:56:11+00:00",
     "modified": "2024-04-04T20:56:12+00:00",
-    "ogImage": "/images/medical-detox-needs.jpg",
+    "ogImage": "/images/DSC_0701.jpg",
     "category": null,
     "excerpt": "At Hillside Mission, our goal is to provide high quality, evidence-based care that leads to long-term sustainable recovery for each client that walks in our doors.",
     "readMins": 1,
@@ -7579,7 +7697,7 @@
     "description": "Holistic treatment is an effective alternative or addition to traditional treatment. Find holistic addiction treatment near Los Angeles now.",
     "date": "2022-05-13T18:11:00+00:00",
     "modified": "2022-05-31T18:18:41+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-2-What-is-Holistic-Addiction-Treatment.edited-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-47-scaled-1.jpg",
     "category": null,
     "excerpt": "Millions of people deal with addiction every day, and for most of those struggling with addiction either don’t get the help they need or get cookie-cutter treatment plans from average facilities. Addi",
     "readMins": 4,
@@ -7667,7 +7785,7 @@
     "description": "Dual diagnosis is often a vital aspect of successful treatment. Learn how does a dual diagnosis treatment program work and call Hillside now.",
     "date": "2023-08-23T16:14:34+00:00",
     "modified": "2023-09-02T16:16:28+00:00",
-    "ogImage": "/images/shutterstock_1130729834-scaled.jpg",
+    "ogImage": "/images/DSC_0582.jpg",
     "category": null,
     "excerpt": "At Hillside Mission Recovery, we understand that individuals battling addiction often face complex challenges. Many people struggling with substance abuse also grapple with underlying mental health is",
     "readMins": 3,
@@ -7747,7 +7865,7 @@
     "description": "By learning how does depression affect addiction, treatment can be better personalized to an individual. Click to learn more.",
     "date": "2022-01-17T16:30:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-3-How-Does-Depression-Affect-Addiction.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0596.jpg",
     "category": null,
     "excerpt": "While most of us know that addiction is a disease that millions of Americans struggle with every day of their lives, what most don’t know is just how complex addiction truly is and how mental health c",
     "readMins": 4,
@@ -7827,7 +7945,7 @@
     "description": "Understanding \"how is addiction a disease?\" is the first step to getting the proper treatment your loved ones need. Contact us today to learn more.",
     "date": "2021-04-22T21:07:49+00:00",
     "modified": "2021-04-22T21:07:51+00:00",
-    "ogImage": "/images/shutterstock_1929123371-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-61-scaled-1.jpg",
     "category": null,
     "excerpt": "Millions of people struggle with addiction every day. Part of dealing with addiction is understanding that addiction is not a medical disorder or problem that can be treated temporarily and goes away.",
     "readMins": 4,
@@ -7922,7 +8040,7 @@
     "description": "Group therapy can play a major role in addiction treatment, as peer support is used to heal from addiction. Find group therapy near you.",
     "date": "2022-03-04T17:46:00+00:00",
     "modified": "2022-03-07T17:49:51+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-1-How-is-Group-Therapy-Used-in-Addiction-Treatment.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0704.jpg",
     "category": null,
     "excerpt": "We all know that therapy is a large part of the recovery process when a person enters treatment for addiction. Most of the time, though, when we think about therapy, we think about one-on-one sessions",
     "readMins": 4,
@@ -8034,7 +8152,7 @@
     "description": "Learn how meth addiction can rapidly affect behavior, emotional health, relationships, and daily functioning over time.",
     "date": "2026-05-20T13:17:18+00:00",
     "modified": "2026-05-20T13:20:02+00:00",
-    "ogImage": "/images/shutterstock_2007048371-scaled.jpg",
+    "ogImage": "/images/DSC_0673.jpg",
     "category": null,
     "excerpt": "Methamphetamine addiction often affects far more than physical health.",
     "readMins": 3,
@@ -8352,7 +8470,7 @@
     "description": "When looking at substance abuse treatment centers in Orange County, it's important to choose one that you can trust. Find the right one!",
     "date": "2021-03-15T23:38:04+00:00",
     "modified": "2021-03-15T23:38:05+00:00",
-    "ogImage": "/images/shutterstock_1477336769-1-scaled.jpg",
+    "ogImage": "/images/DSC_0700.jpg",
     "category": null,
     "excerpt": "If you or someone you know is suffering from addiction to drugs or alcohol in Orange County, then one of the many substance abuse treatment centers in Orange County can help you get on the path to rec",
     "readMins": 4,
@@ -8438,12 +8556,12 @@
   "how-the-6-bed-patient-census-at-hillside-mission-ensures-individualized-success-in-mission-viejo": {
     "slug": "how-the-6-bed-patient-census-at-hillside-mission-ensures-individualized-success-in-mission-viejo",
     "type": "post",
-    "title": "How the 6-Bed Patient Census at Hillside Mission Ensures Individualized Success in Mission Viejo",
+    "title": "How Our 6-Bed Census Ensures Individualized Success",
     "h1": "How the 6-Bed Patient Census at Hillside Mission Ensures Individualized Success in Mission Viejo",
     "description": "Learn how to support a loved one in recovery during the holidays and reduce relapse risk. And understand when professional help matters.",
     "date": "2026-01-27T21:55:10+00:00",
     "modified": "2026-02-25T02:42:40+00:00",
-    "ogImage": "/images/helena-lopes-PGnqT0rXWLs-unsplash-scaled.jpg",
+    "ogImage": "/images/DSC_0654.jpg",
     "category": null,
     "excerpt": "The holiday season is a time filled with joy, celebration, and family gatherings. However, it can also be a challenging period for those recovering from addiction. Whether your loved one is battling a",
     "readMins": 4,
@@ -8523,9 +8641,11 @@
       },
       {
         "type": "image",
-        "src": "/images/Hillside-Mission-Blog-1-image-Signs-You-Need-Inpatient-Rehab-Treatment-for-Heroin-Addiction.edited.jpg",
+        "src": "/images/DSC_0659.jpg",
         "alt": "Signs You Need Inpatient Rehab Treatment For Heroin Addiction",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "paragraph",
@@ -8565,9 +8685,11 @@
       },
       {
         "type": "image",
-        "src": "/images/Hillside-Mission-Blog-4-How-to-Find-Groups-for-Recovering-Addicts.edited.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-38-scaled-1.jpg",
         "alt": "How to Find Groups for Recovering Addicts",
-        "caption": ""
+        "caption": "",
+        "width": 1091,
+        "height": 924
       }
     ]
   },
@@ -8579,7 +8701,7 @@
     "description": "If someone you know is abusing drugs, it is vital to know how to get them help. Read here for tips how to convince someone to go to rehab.",
     "date": "2022-04-18T15:31:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-3-How-to-Convince-Someone-to-Go-to-Rehab.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0585.jpg",
     "category": null,
     "excerpt": "Even for people who have never had to face addiction, most understand the important role rehab centers and treatment play in recovery. However, wanting someone to get clean and convincing them to seek",
     "readMins": 5,
@@ -8650,15 +8772,15 @@
       }
     ]
   },
-  "how-to-detoc-from-xanax": {
-    "slug": "how-to-detoc-from-xanax",
+  "how-to-detox-from-xanax": {
+    "slug": "how-to-detox-from-xanax",
     "type": "post",
     "title": "How to Detox From Xanax",
     "h1": "How to Detox From Xanax",
     "description": "Detoxing from Xanax requires the right type of treatment from a trained, professional facility like ours. Read on to learn how we can help you detox safely from Xanax.",
     "date": "2021-10-07T22:04:37+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_428226637-scaled.jpg",
+    "ogImage": "/images/DSC_0625.jpg",
     "category": null,
     "excerpt": "There are hundreds of drugs that are prescribed to patients every day, but most of them have the potential to become addictive even when we use them properly. The trouble is, it can be difficult to kn",
     "readMins": 4,
@@ -8742,7 +8864,7 @@
     "description": "Cocaine is a highly addictive substance that can cause severe withdrawal symptoms. Learn how to safely detox from cocaine and get help now.",
     "date": "2022-02-03T16:52:41+00:00",
     "modified": "2022-02-03T18:55:40+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-3-How-Does-Depression-Affect-Addiction.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0615.jpg",
     "category": null,
     "excerpt": "Millions of people deal with addiction every day. Part of the reason that many of them continue to struggle with their addiction is that they cannot safely stop using drugs or alcohol. For drugs like",
     "readMins": 4,
@@ -8850,7 +8972,7 @@
     "description": "Interventions are used to get loved ones into treatment when in need. Learn how to do an intervention for drug addiction today.",
     "date": "2022-05-31T18:51:21+00:00",
     "modified": "2022-05-31T18:51:22+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-4-How-to-Do-an-Intervention-for-Drug-Addiction.edited-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-10-scaled-1.jpg",
     "category": null,
     "excerpt": "Dealing with a loved one with a drug addiction is a difficult situation. Often, once we notice that our loved one has a drug addiction, it has already progressed to the point that they need the help o",
     "readMins": 4,
@@ -8934,7 +9056,7 @@
     "description": "It’s not easy to approach your friend about their addiction. Learn how to get a friend help with their drug addiction.",
     "date": "2020-10-19T20:43:05+00:00",
     "modified": "2020-11-10T23:50:39+00:00",
-    "ogImage": "/images/shutterstock_500192191-scaled.jpg",
+    "ogImage": "/images/DSC_0674.jpg",
     "category": null,
     "excerpt": "Do you know how to convince someone to go to rehab? Perhaps your friend is addicted to drugs? If so, you might be wondering what you can do to help them?",
     "readMins": 3,
@@ -9091,7 +9213,7 @@
     "description": "Figuring out how to get someone into rehab can be challenging. If you know someone suffering from addiction, we can help with the first steps.",
     "date": "2021-10-21T21:39:50+00:00",
     "modified": "2021-10-21T23:22:20+00:00",
-    "ogImage": "/images/shutterstock_1316614289-1-scaled.jpg",
+    "ogImage": "/images/DSC_0702.jpg",
     "category": null,
     "excerpt": "Millions of people deal with addiction every day. The trouble is that there are many factors that affect how and why they use drugs. Figuring out whether or not your loved one has an addiction can be",
     "readMins": 3,
@@ -9161,7 +9283,7 @@
     "description": "Xanax is easy to become addicted to if too many are taken, find the right help to do it safely. Contact Hillside Mission Recovery today",
     "date": "2021-03-09T21:58:43+00:00",
     "modified": "2021-03-09T22:06:04+00:00",
-    "ogImage": "/images/Screen-Shot-2021-03-09-at-1.59.54-PM.png",
+    "ogImage": "/images/DSC_0655.jpg",
     "category": null,
     "excerpt": "Drug addiction can be a harrowing experience, as can the process of detoxing from a drug when attempting to get clean. But have no fear, getting clean doesn’t have to be difficult and terrifying.",
     "readMins": 3,
@@ -9253,7 +9375,7 @@
     "description": "An addiction intervention can be staged by anyone that knows someone struggling with addiction. Contact Hillside Mission Recovery today!",
     "date": "2021-05-19T19:53:41+00:00",
     "modified": "2021-05-19T19:53:43+00:00",
-    "ogImage": "/images/shutterstock_1455412715-scaled.jpg",
+    "ogImage": "/images/DSC_0580.jpg",
     "category": null,
     "excerpt": "Many of us have likely heard of an intervention. You’ve likely seen them on TV or in movies, maybe you’ve been to one before for a person you know. The trouble is many people don’t know where to turn",
     "readMins": 3,
@@ -9332,7 +9454,7 @@
     "description": "Learn how to support a loved one in recovery during the holidays and reduce relapse risk. And understand when professional help matters.",
     "date": "2025-12-22T15:23:10+00:00",
     "modified": "2025-12-22T15:27:01+00:00",
-    "ogImage": "/images/helena-lopes-PGnqT0rXWLs-unsplash-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-48-scaled-1.jpg",
     "category": null,
     "excerpt": "The holiday season is a time filled with joy, celebration, and family gatherings. However, it can also be a challenging period for those recovering from addiction. Whether your loved one is battling a",
     "readMins": 4,
@@ -9412,9 +9534,11 @@
       },
       {
         "type": "image",
-        "src": "/images/Hillside-Mission-Blog-1-image-Signs-You-Need-Inpatient-Rehab-Treatment-for-Heroin-Addiction.edited.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-51-scaled-1.jpg",
         "alt": "Signs You Need Inpatient Rehab Treatment For Heroin Addiction",
-        "caption": ""
+        "caption": "",
+        "width": 1450,
+        "height": 924
       },
       {
         "type": "paragraph",
@@ -9454,9 +9578,11 @@
       },
       {
         "type": "image",
-        "src": "/images/Hillside-Mission-Blog-4-How-to-Find-Groups-for-Recovering-Addicts.edited.jpg",
+        "src": "/images/DSC_0573.jpg",
         "alt": "How to Find Groups for Recovering Addicts",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       }
     ]
   },
@@ -9468,7 +9594,7 @@
     "description": "Getting a loved one the help they need is rarely easy. Click here to learn how to talk to someone who needs to go to rehab.",
     "date": "2022-01-24T16:39:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-4-How-to-Talk-to-Someone-Who-Needs-to-Go-to-Rehab.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0626.jpg",
     "category": null,
     "excerpt": "If you have a family member or loved one struggling with addiction, you likely know how difficult it is for them to ask for help. There is a ton of shame and anguish that comes with having an addictio",
     "readMins": 4,
@@ -9547,7 +9673,7 @@
     "description": "Hillside Mission Recovery provides accredited detox and residential rehab for Irvine residents. Private clinical care located nearby in Mission Viejo.",
     "date": null,
     "modified": "2026-03-24T13:53:53+00:00",
-    "ogImage": "/images/DSC_0615-scaled.jpg",
+    "ogImage": "/images/DSC_0627.jpg",
     "category": null,
     "excerpt": "The Orange County Health Care Agency provided a report in 2022 that investigated the causes of substance-related overdoses within Orange County, CA. This report showed that there was a 45% increase in",
     "readMins": 6,
@@ -9585,9 +9711,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0625.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -9601,13 +9729,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0667.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -9625,9 +9755,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-26-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1403,
+        "height": 924
       },
       {
         "type": "heading",
@@ -9779,7 +9911,7 @@
     "description": "\"Is addiction an illness?” is a question that is asked fairly often. Learn the answer, as well as how to get help.",
     "date": "2021-01-29T17:30:05+00:00",
     "modified": "2021-01-29T17:30:07+00:00",
-    "ogImage": "/images/shutterstock_654377656-scaled.jpg",
+    "ogImage": "/images/DSC_0699.jpg",
     "category": null,
     "excerpt": "“Is addiction an illness?” is a question that is asked fairly often. Although there is a lot of accurate information available to those researching addiction, there are still a lot of common misconcep",
     "readMins": 4,
@@ -9961,7 +10093,7 @@
     "description": "There are many risk factors that can make it more likely for someone to experience addiction. Click to learn is addiction genetic.",
     "date": "2022-01-07T14:25:39+00:00",
     "modified": "2022-01-07T14:25:40+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-1-Is-Addiction-Genetic.edited.jpg",
+    "ogImage": "/images/DSC_0686.jpg",
     "category": null,
     "excerpt": "Though most of us know what addiction is, many still don’t know how pervasive addiction is, that it is a disease, or for those that suffer from addiction that it is a lifelong struggle. This leads man",
     "readMins": 4,
@@ -10037,7 +10169,7 @@
     "description": "For many concerned about prescription drug abuse, you may wonder is Klonopin addictive? Read to learn about the dangers of Klonopin abuse.",
     "date": "2021-11-12T15:15:00+00:00",
     "modified": "2021-11-29T15:26:17+00:00",
-    "ogImage": "/images/Hillside-Blog-image-Is-Klonopin-Addictive.edited-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-26-scaled-1.jpg",
     "category": null,
     "excerpt": "Addiction can occur at any time and to any person. Unfortunately, many addiction disorders in America result from drugs prescribed to people to treat particular diseases or medical issues. Knowing wha",
     "readMins": 3,
@@ -10127,7 +10259,7 @@
     "description": "Unfortunately, answering the question “ is MDMA addictive?” is not as simple as with other drugs. Contact us! We can give you the best information possible.",
     "date": "2021-04-26T21:00:01+00:00",
     "modified": "2021-04-26T21:00:04+00:00",
-    "ogImage": "/images/shutterstock_1389141389-scaled.jpg",
+    "ogImage": "/images/DSC_0659.jpg",
     "category": null,
     "excerpt": "Understanding different drugs and how they work is crucial to getting the help you or a loved one need to get clean of the addiction. We here at Hillside Mission Recovery want to give you the best inf",
     "readMins": 3,
@@ -10219,7 +10351,7 @@
     "description": "Xanax is an anti-anxiety medication that can be highly addictive. Read more about Xanax and learn is Xanax addictive and how to find help.",
     "date": "2022-06-03T14:23:00+00:00",
     "modified": "2022-06-08T14:25:30+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-1-Is-Xanax-Addictive.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0582.jpg",
     "category": null,
     "excerpt": "Most of the time, prescription medications are given to us for our own good. They are used to treat or cure a specific ailment, and the side effects are safe enough for regular use. However, what is l",
     "readMins": 4,
@@ -10315,7 +10447,7 @@
     "description": "Some general signs that a person is in need of detox include an escalation in abuse of the drug beyond what was previous. Contact us today!",
     "date": "2021-05-26T00:48:56+00:00",
     "modified": "2021-05-26T00:48:58+00:00",
-    "ogImage": "/images/shutterstock_652604278-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-49-scaled-1.jpg",
     "category": null,
     "excerpt": "Many of us have known someone who is struggling with addiction. The trouble with struggling with or knowing someone struggling with addiction is that it is difficult to tell when a problem has gone fr",
     "readMins": 3,
@@ -10390,7 +10522,7 @@
     "description": "Our comprehensive care will help you leave your demons behind so you can lead a happier, healthier life. Get in touch with our drug rehab near Lake Forest, CA.",
     "date": null,
     "modified": "2026-03-24T13:53:54+00:00",
-    "ogImage": "/images/DSC_0582-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-60-scaled-1.jpg",
     "category": null,
     "excerpt": "Addiction is a disease that affects far too many people. It can ruin relationships; it can cause financial and legal issues and it can even be fatal. According to DrugAbuse.gov, there were 67,367 over",
     "readMins": 8,
@@ -10441,9 +10573,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0626.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -10457,13 +10591,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0668.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -10481,9 +10617,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-59-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1370,
+        "height": 924
       },
       {
         "type": "heading",
@@ -10723,7 +10861,7 @@
     "description": "Learn what happens after rehab, including challenges, relapse risks, and how aftercare programs support long-term recovery.",
     "date": "2026-04-21T20:27:03+00:00",
     "modified": "2026-04-21T20:29:16+00:00",
-    "ogImage": "/images/shutterstock_2619458799.jpg",
+    "ogImage": "/images/DSC_0635.jpg",
     "category": null,
     "excerpt": "Finishing a rehab program is a major milestone. But for many people, it also raises an important question:",
     "readMins": 2,
@@ -10981,7 +11119,7 @@
     "description": "Hillside Mission Recovery provides accredited detox and residential rehab for Long Beach residents. Private clinical care located nearby in Mission Viejo.",
     "date": null,
     "modified": "2026-03-24T13:59:40+00:00",
-    "ogImage": "/images/DSC_0654-scaled.jpg",
+    "ogImage": "/images/DSC_0639.jpg",
     "category": null,
     "excerpt": "Alcohol and drug addictions are public health concerns that have a significant impact on Americans. An estimated 2.7 million Californians struggle with a Substance Use Disorder, according to the Subst",
     "readMins": 7,
@@ -11027,9 +11165,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0627.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -11043,13 +11183,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0672.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -11067,9 +11209,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-8-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1246
       },
       {
         "type": "heading",
@@ -11225,7 +11369,7 @@
     "description": "Use your Magellan insurance for detox and residential rehab in Mission Viejo. Confidential verification and coverage analysis for Magellan PPO plans.",
     "date": null,
     "modified": "2026-06-11T21:18:00+00:00",
-    "ogImage": "/images/DSC_0629-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-38-scaled-1.jpg",
     "category": null,
     "excerpt": "A report from the Orange County Health Care Agency showed that an estimated 5% of Orange County adults reported using illicit drugs in the past month. Approximately 8% of Orange County adults reported",
     "readMins": 7,
@@ -11263,9 +11407,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-1-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -11279,13 +11425,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1386,
+        "height": 924
       },
       {
         "type": "heading",
@@ -11303,9 +11451,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0694.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -11496,7 +11646,7 @@
     "description": "Learn about the importance of managing anxiety and panic attacks and how Hillside Mission can help with dual diagnosis therapy.",
     "date": "2023-10-04T15:22:54+00:00",
     "modified": "2023-10-27T15:25:12+00:00",
-    "ogImage": "/images/shutterstock_2259920271.jpg",
+    "ogImage": "/images/DSC_0704.jpg",
     "category": null,
     "excerpt": "Anxiety can strike at any time, with symptoms severe enough to disrupt daily function. Finding professional anxiety therapy can help you manage symptoms and prevent panic attacks from spiraling out of",
     "readMins": 4,
@@ -11666,7 +11816,7 @@
     "description": "Medical detox in Mission Viejo CA offers safe, supervised withdrawal from drugs and alcohol. Learn what to expect and start recovery today.",
     "date": "2026-04-07T20:13:24+00:00",
     "modified": "2026-04-07T20:14:24+00:00",
-    "ogImage": "/images/DSC_0750-scaled.jpg",
+    "ogImage": "/images/DSC_0629.jpg",
     "category": null,
     "excerpt": "Detox is the first step for many individuals beginning recovery from drug or alcohol addiction. It is the process of clearing substances from the body while managing withdrawal symptoms in a safe sett",
     "readMins": 4,
@@ -11917,7 +12067,7 @@
     "description": "Contact Hillside Mission Recovery today to learn about the benefits for medical treatment for addiction and how we can help.",
     "date": "2023-08-11T18:48:33+00:00",
     "modified": "2023-08-31T18:51:37+00:00",
-    "ogImage": "/images/shutterstock_2154471629-scaled.jpg",
+    "ogImage": "/images/DSC_0688.jpg",
     "category": null,
     "excerpt": "The fight against addiction has found an essential ally in medical treatment, guiding individuals toward recovery by amalgamating science, empathy, and optimism. The intricate nature of addiction, imp",
     "readMins": 3,
@@ -11993,7 +12143,7 @@
     "description": "Medication can be beneficial in withdrawal and detox management. Learn how medications used in rehab can help your recovery journey.",
     "date": "2022-07-22T16:39:00+00:00",
     "modified": "2022-07-26T16:45:57+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-2-How-are-Medications-Used-in-Rehab.edited-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-59-scaled-1.jpg",
     "category": null,
     "excerpt": "Most of us know about rehab and how it is necessary for someone with an addiction to go through rehab to truly recover, but you may not know the role that medications play in the rehabilitation proces",
     "readMins": 4,
@@ -12076,7 +12226,7 @@
     "description": "If you are looking for a men's rehab center in Orange County, Hillside Mission Recovery can help. Get in touch today!",
     "date": null,
     "modified": "2022-09-28T22:33:22+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-8-scaled-1.jpg",
     "category": null,
     "excerpt": "If you are one of the millions of people who are ready to put the challenges of drug and alcohol addiction in the past, you are not alone. Annually, hundreds of thousands of youth and adults take the",
     "readMins": 5,
@@ -12124,13 +12274,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0660.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -12148,9 +12300,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0690.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -12308,7 +12462,7 @@
     "description": "Specialized methamphetamine detox and residential rehab in Mission Viejo. 24/7 medical stabilization and dual diagnosis care for stimulant recovery.",
     "date": null,
     "modified": "2026-03-24T13:59:17+00:00",
-    "ogImage": "/images/shutterstock_2007048371-scaled.jpg",
+    "ogImage": "/images/DSC_0675.jpg",
     "category": null,
     "excerpt": "Methamphetamine is a highly addictive, synthetic drug that can cause physical and psychological dependence. Meth can be injected, smoked, and snorted.",
     "readMins": 7,
@@ -12346,9 +12500,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0686.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -12362,13 +12518,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0664.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -12386,9 +12544,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0693.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -12612,7 +12772,7 @@
     "description": "Many programs provide coverage for addiction and mental health treatment to varying levels. Read further to learn more about MHN Health Net Rehab!",
     "date": null,
     "modified": "2026-03-24T14:05:07+00:00",
-    "ogImage": "/images/DSC_0737-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-1-scaled-1.jpg",
     "category": null,
     "excerpt": "Acknowledging an unhealthy relationship with drugs or alcohol is only the first step toward beginning your journey to sobriety. The next step is to choose an addiction treatment program where you can",
     "readMins": 6,
@@ -12641,9 +12801,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-44-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 924,
+        "height": 1380
       },
       {
         "type": "heading",
@@ -12657,13 +12819,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0667.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -12681,9 +12845,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0695.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -12890,12 +13056,12 @@
   "mission-viejo-addiction-treatment-guide": {
     "slug": "mission-viejo-addiction-treatment-guide",
     "type": "post",
-    "title": "How Hillside Mission Recovery Supports Lasting Recovery",
+    "title": "How We Support Lasting Recovery in Mission Viejo",
     "h1": "Mission Viejo Addiction Treatment: How Hillside Mission Recovery Supports Lasting Recovery",
     "description": "Learn how Mission Viejo addiction treatment at Hillside Mission Recovery delivers medically supervised detox, residential rehab, and personalized care to support lasting recovery in Orange County.",
     "date": "2026-02-25T03:14:32+00:00",
     "modified": "2026-02-25T03:17:16+00:00",
-    "ogImage": "/images/Palmtrees-scaled.jpg",
+    "ogImage": "/images/DSC_0647.jpg",
     "category": null,
     "excerpt": "Starting addiction treatment can be one of the most important choices a person makes in their life. For individuals in Mission Viejo, California, high-quality clinical care combined with compassionate",
     "readMins": 2,
@@ -13005,7 +13171,7 @@
     "description": "Drug and alcohol rehab in Mission Viejo offering medical detox and residential treatment. 24/7 care, dual diagnosis support. Most insurances accepted.",
     "date": null,
     "modified": "2026-06-11T20:53:23+00:00",
-    "ogImage": "/images/DSC_0569-scaled.jpg",
+    "ogImage": "/images/DSC_0632.jpg",
     "category": null,
     "excerpt": "Located in the heart of Mission Viejo, Hillside Mission Recovery provides a serene, high-end rehab environment for those seeking to break the cycle of addiction without leaving Orange County.",
     "readMins": 6,
@@ -13043,9 +13209,11 @@
       },
       {
         "type": "image",
-        "src": "/images/image-154.webp",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-60-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1434,
+        "height": 924
       },
       {
         "type": "paragraph",
@@ -13071,17 +13239,19 @@
       {
         "type": "image",
         "src": "/images/MonicaHMS-scaled.jpeg",
-        "alt": "Monica Olivires, CADII - Program Director",
-        "caption": ""
+        "alt": "Monica Olivares, CADC II - Clinical Supervisor",
+        "caption": "",
+        "width": 1920,
+        "height": 2560
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Medically Reviewed by Monica Olivires, CADC II"
+        "text": "Medically Reviewed by Monica Olivares, CADC II"
       },
       {
         "type": "paragraph",
-        "text": "Program Director at Hillside, Monica Olivires brings 11+ years of experience in detox and residential addiction care and co-occurring disorders."
+        "text": "Clinical Supervisor for Quadrant Health Group’s California facilities, Monica Olivares brings 11+ years of experience in detox and residential addiction care and co-occurring disorders."
       },
       {
         "type": "paragraph",
@@ -13107,9 +13277,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0635.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -13127,9 +13299,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0639.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -13147,9 +13321,11 @@
       },
       {
         "type": "image",
-        "src": "/images/DSC_0699-scaled.jpg",
+        "src": "/images/DSC_0697.jpg",
         "alt": "kitchen of hillside mission, luxury rehab in orange county",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -13167,9 +13343,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0629.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -13348,7 +13526,7 @@
     "description": "Our drug rehab Newport Beach offers effective treatments, accommodations and aftercare that will help you say goodbye to addiction for good. Learn more!",
     "date": null,
     "modified": "2026-03-24T14:04:47+00:00",
-    "ogImage": "/images/DSC_0699-scaled.jpg",
+    "ogImage": "/images/DSC_0631.jpg",
     "category": null,
     "excerpt": "Addiction is all too common of a problem in America and all over the world. It ruins relationships, destroys families and it can even take lives. It is a disease that is hard to deal with and difficul",
     "readMins": 7,
@@ -13394,9 +13572,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0647.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -13410,13 +13590,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0668.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -13434,9 +13616,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0701.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -13722,7 +13906,7 @@
     "description": "California has one of the most advanced drug addiction treatment centers in the United States. Find the right Orange County alcohol treatment center!",
     "date": "2021-01-20T22:27:24+00:00",
     "modified": "2021-01-20T22:30:44+00:00",
-    "ogImage": "/images/shutterstock_379408036-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-44-scaled-1.jpg",
     "category": null,
     "excerpt": "Drug abuse, misuse, and addiction can all lead to both long-term and short-term health effects. Drug and alcohol addiction affects many people globally, and this includes people in Orange County, Cali",
     "readMins": 3,
@@ -13893,7 +14077,7 @@
     "description": "Hillside Mission examines the current extent of Orange County behavioral health disorders and ways to address them. Learn about our top-rated services!",
     "date": null,
     "modified": "2021-10-07T21:07:35+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-47-scaled-1.jpg",
     "category": null,
     "excerpt": "Residents in Orange County face many behavioral health disorders. Having access to local resources and services is key to helping individuals deal with these issues and get on the path to recovery.",
     "readMins": 9,
@@ -13968,13 +14152,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1386,
+        "height": 924
       },
       {
         "type": "heading",
@@ -13992,9 +14178,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0702.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -14269,7 +14457,7 @@
     "description": "Leading drug rehab and medical detox center in Orange County. Providing 24/7 clinical care and residential treatment in a private Mission Viejo setting.",
     "date": null,
     "modified": "2026-06-11T21:02:18+00:00",
-    "ogImage": "/images/DSC_0693-scaled.jpg",
+    "ogImage": "/images/DSC_0649.jpg",
     "category": null,
     "excerpt": "Life is full of stressful situations, and everyone has different ways of dealing with them. Some people meditate, some punch a punching bag, others may turn to recreational drugs and alcohol to numb t",
     "readMins": 8,
@@ -14315,9 +14503,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0632.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -14331,13 +14521,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0672.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -14355,9 +14547,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0700.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -14586,7 +14780,7 @@
     "description": "The only way to safely beat alcoholism is with professional help through alcohol rehab programs in recovery. Contact us today!",
     "date": "2021-06-03T01:35:46+00:00",
     "modified": "2021-06-03T01:35:47+00:00",
-    "ogImage": "/images/shutterstock_1929807467-scaled.jpg",
+    "ogImage": "/images/DSC_0585.jpg",
     "category": null,
     "excerpt": "Alcoholism is a chronic illness that can have devastating consequences, both for the person addicted to alcohol and their family. It is important to know what alcoholism looks like so that you know wh",
     "readMins": 4,
@@ -14694,7 +14888,7 @@
     "description": "Learn more about how to overcome guilt and shame to put yourself on a path to sustained sobriety. Speak to our admissions team to learn more about the therapy offered by our Mission Viejo luxury drug rehab center.",
     "date": "2023-11-20T16:55:24+00:00",
     "modified": "2023-11-30T16:56:11+00:00",
-    "ogImage": "/images/shutterstock_2184679453-2-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-55-scaled-1.jpg",
     "category": null,
     "excerpt": "Navigating the challenges of addiction entails confronting a myriad of obstacles, and among them, the emotional rollercoaster stands out prominently. Throughout the journey to recovery, individuals gr",
     "readMins": 3,
@@ -14761,7 +14955,7 @@
     "description": "The Oxycontin addiction signs to look out for can include changes in mood, anxiety and or depression. If you or someone you know is showing signs of oxycontin addiction, contact us today.",
     "date": "2021-09-07T19:36:26+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_1294019884-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-61-scaled-1.jpg",
     "category": null,
     "excerpt": "There are many different kinds of drugs out there and it can be nearly impossible to know the signs and symptoms of addiction for each one. What’s truly distressing for many people is that addiction i",
     "readMins": 3,
@@ -14844,7 +15038,7 @@
     "description": "You might experience hindrances to your treatment, but a lack of finances will not be one of them. Learn about paying for rehab.",
     "date": "2020-10-30T23:03:46+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_689390650-scaled-1.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-10-scaled-1.jpg",
     "category": null,
     "excerpt": "Right after deciding to go to rehab and choosing a treatment center that suits you, the next thing you may be thinking of is how to pay for treatment. Paying for drug rehab is unfortunately a big deci",
     "readMins": 3,
@@ -14973,7 +15167,7 @@
     "description": "If you or a loved one is looking for prescription drug addiction treatment in Orange County, contact us today to learn more. Detox, Residential Programs.",
     "date": null,
     "modified": "2026-03-24T14:06:41+00:00",
-    "ogImage": "/images/shutterstock_2105316818-scaled.jpg",
+    "ogImage": "/images/DSC_0673.jpg",
     "category": null,
     "excerpt": "Prescription medications can be used to manage a variety of health concerns, including chronic pain, attention-deficit disorders, sleep disorders, and anxiety disorders—however, there is a high risk a",
     "readMins": 7,
@@ -15011,9 +15205,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0688.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -15027,13 +15223,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0660.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -15051,9 +15249,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-26-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1403,
+        "height": 924
       },
       {
         "type": "heading",
@@ -15236,33 +15436,15 @@
     "type": "page",
     "title": "Privacy Policy",
     "h1": "Privacy Policy",
-    "description": "Hillside Mission’s Privacy Policy Home how we manage your data privacy policy These terms and conditions (the “Terms”) govern your access to and use of Hillside Mission’s websites and mobile applications that link to or reference these Terms (“Site”). By accessing or using the Site, you are agreeing to these Terms and concluding a legally […]",
+    "description": "How Hillside Mission Recovery manages your data, and the terms governing your access to and use of our website.",
     "date": null,
     "modified": "2021-01-04T22:17:40+00:00",
     "ogImage": null,
     "category": null,
     "excerpt": "These terms and conditions (the “Terms”) govern your access to and use of Hillside Mission’s websites and mobile applications that link to or reference these Terms (“Site”). By accessing or using the",
     "readMins": 25,
-    "blockCount": 127,
+    "blockCount": 123,
     "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Hillside Mission’s"
-      },
-      {
-        "type": "heading",
-        "level": 1,
-        "text": "Privacy Policy"
-      },
-      {
-        "type": "paragraph",
-        "text": "how we manage your data"
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "privacy policy"
-      },
       {
         "type": "paragraph",
         "text": "These terms and conditions (the “Terms”) govern your access to and use of Hillside Mission’s websites and mobile applications that link to or reference these Terms (“Site”). By accessing or using the Site, you are agreeing to these Terms and concluding a legally binding contract with Hillside Mission, a California corporation headquartered in Mission Viejo, California (“Hillside Mission“). Do not access or use the Site if you are unwilling or unable to be bound by the Terms."
@@ -15893,7 +16075,7 @@
     "description": "Contact Hillside Mission today to learn how to better understand the psychological triggers of addiction and recieve comprehensive therapy.",
     "date": "2023-10-27T15:30:21+00:00",
     "modified": "2023-11-20T21:11:06+00:00",
-    "ogImage": "/images/shutterstock_2079591592-scaled.jpg",
+    "ogImage": "/images/DSC_0674.jpg",
     "category": null,
     "excerpt": "Addiction is a mental health disorder that is multi-dimensional. It has several psychological, social, and biological contributors. Genetics, neurobiology, cognitive traits, and environment can contri",
     "readMins": 4,
@@ -16040,7 +16222,7 @@
     "description": "You can find addiction and trauma treatment today by reaching out to Aspire Treatment Solutions. We will give you the support you need.",
     "date": "2021-08-30T19:47:23+00:00",
     "modified": "2021-08-30T19:47:24+00:00",
-    "ogImage": "/images/nik-shuliahin-BuNWp1bL0nc-unsplash-1-scaled.jpg",
+    "ogImage": "/images/DSC_0694.jpg",
     "category": null,
     "excerpt": "Knowing where to go for help with addiction can be scary. First of all, are there places that treat both alcohol and drug addiction? How do these treatment programs work? Are there rehab programs in O",
     "readMins": 3,
@@ -16127,7 +16309,7 @@
     "description": "Heroin is one the most addictive drugs available, and requires intensive treatment. Click here to find inpatient rehab treatment for heroin.",
     "date": "2021-12-07T16:29:10+00:00",
     "modified": "2021-12-08T14:59:09+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-1-image-Signs-You-Need-Inpatient-Rehab-Treatment-for-Heroin-Addiction.edited.jpg",
+    "ogImage": "/images/DSC_0654.jpg",
     "category": null,
     "excerpt": "Even though not everyone understands it, addiction is one of the most difficult diseases to overcome. Many people who become addicted to drugs or alcohol try many times unsuccessfully to quit. This is",
     "readMins": 4,
@@ -16215,7 +16397,7 @@
     "description": "Relapse prevention programs are designed to help support long-term sobriety after treatment ends. Click to find relapse prevention near you.",
     "date": "2021-12-22T17:13:52+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-3-The-Importance-of-Relapse-Prevention-Programs.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0580.jpg",
     "category": null,
     "excerpt": "Millions of people deal with addiction every day. Even though many of them do successfully enter recovery, there are still a large number of people who struggle with sobriety and continue to relapse.",
     "readMins": 4,
@@ -16299,7 +16481,7 @@
     "description": "Hillside Mission Recovery provides accredited detox and residential rehab for San Clemente residents. Private clinical care, 100% confidential.",
     "date": null,
     "modified": "2026-03-24T14:08:01+00:00",
-    "ogImage": "/images/DSC_0635-scaled.jpg",
+    "ogImage": "/images/DSC_0625.jpg",
     "category": null,
     "excerpt": "Drug and alcohol use research showed an increase in deaths caused by",
     "readMins": 7,
@@ -16341,9 +16523,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0631.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -16357,13 +16541,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0664.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -16381,9 +16567,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-59-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1370,
+        "height": 924
       },
       {
         "type": "heading",
@@ -16539,7 +16727,7 @@
     "description": "Life is too short to throw away addiction. Call our San Juan Capistrano rehab to get the help you need to put addiction behind you.",
     "date": null,
     "modified": "2026-03-24T14:10:54+00:00",
-    "ogImage": "/images/DSC_0625-scaled.jpg",
+    "ogImage": "/images/DSC_0626.jpg",
     "category": null,
     "excerpt": "Drugs and alcohol are used by many for recreation, and they are part of a ‘live fast, die young’ attitude that is often glamorized. But once you see the ugly face of addiction, you’ll realize it’s any",
     "readMins": 8,
@@ -16585,9 +16773,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0649.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -16601,13 +16791,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0667.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -16625,9 +16817,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-8-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1246
       },
       {
         "type": "heading",
@@ -16865,7 +17059,7 @@
     "description": "Accredited medical detox and residential rehab serving the Seal Beach community. Call today to get the help you deserve.",
     "date": null,
     "modified": "2026-03-24T14:10:40+00:00",
-    "ogImage": "/images/DSC_0647-scaled.jpg",
+    "ogImage": "/images/DSC_0627.jpg",
     "category": null,
     "excerpt": "Addiction can cause a chain reaction that impacts various aspects of a person’s life. This can include their health, mental health, financial status, relationships, and career success. While there are",
     "readMins": 7,
@@ -16907,9 +17101,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/MISSION-HILLS-HOUSE-61-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 924,
+        "height": 1273
       },
       {
         "type": "heading",
@@ -16923,13 +17119,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0668.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -16947,9 +17145,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0694.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -17109,7 +17309,7 @@
     "description": "It is vital to know the signs of a fentanyl overdose to get help as soon as possible. Read more about the dangers of fentanyl overdoses.",
     "date": "2022-01-12T16:30:13+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-2-What-are-the-Signs-of-a-Fentanyl-Overdose.edited-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-68-scaled-1.jpg",
     "category": null,
     "excerpt": "There are thousands of different drugs that are on the market or that are prescribed to patients. In recent years there have even been new developments where stronger drugs can be made. In some cases,",
     "readMins": 4,
@@ -17189,7 +17389,7 @@
     "description": "Understanding the signs of addict behavior in relationships will help you better understand the behavior of your loved one. You may not recognize addict behavior when it happens, let us help.",
     "date": "2021-09-16T15:30:43+00:00",
     "modified": "2021-09-16T15:30:44+00:00",
-    "ogImage": "/images/shutterstock_1792344691-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-60-scaled-1.jpg",
     "category": null,
     "excerpt": "Millions of people everyday deal with the struggle of addiction. The trouble is that many people in relationships may not recognize addict behavior when it happens and this can make continuing to be i",
     "readMins": 3,
@@ -17264,7 +17464,7 @@
     "description": "For those abusing benzos, detox may be needed before treatment begins. Learn the signs of benzo withdrawal and how to find treatment.",
     "date": "2022-04-08T13:57:07+00:00",
     "modified": "2022-04-08T13:57:09+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-1-What-are-the-Signs-of-Benzo-Withdrawal.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0699.jpg",
     "category": null,
     "excerpt": "Most of the time, when we are prescribed a drug, it is to treat a particular condition that we have. This is the case for colds, injuries, and mental disorders. However, not everyone realizes that man",
     "readMins": 4,
@@ -17345,7 +17545,7 @@
     "description": "Opioids are a class of highly addictive drug that are causing an epidemic in this country. Learn the signs of opioid use and how to get help.",
     "date": "2022-02-07T18:55:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-2-What-are-the-Signs-of-Opioid-Use.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0686.jpg",
     "category": null,
     "excerpt": "We all know that millions of Americans struggle with drug addiction every day. One of the most prevalent addictive drugs out there today is the drug category known as opioids. Widely prescribed for al",
     "readMins": 4,
@@ -17429,7 +17629,7 @@
     "description": "You may not know the signs of someone smoking Roxicet, also known as Oxycodone. Contact us today and we can help you with signs to look for and more.",
     "date": "2021-08-11T20:51:24+00:00",
     "modified": "2021-08-11T20:53:37+00:00",
-    "ogImage": "/images/shutterstock_1181318608-scaled.jpg",
+    "ogImage": "/images/DSC_0690.jpg",
     "category": null,
     "excerpt": "Addiction is something that millions of Americans struggle with every day. Unfortunately, addiction can often be caused by prescribed medication or medication intended for legitimate use. It can be di",
     "readMins": 3,
@@ -17525,7 +17725,7 @@
     "description": "If you are suffering from addiction, you may be missing many signs you need inpatient rehab treatment. Read here about the signs and get help",
     "date": "2021-11-29T15:40:22+00:00",
     "modified": "2021-12-08T14:56:23+00:00",
-    "ogImage": "/images/Hillside-Blog-image-Signs-You-Need-Inpatient-Rehab-Treatment-for-Heroin-Addiction.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0655.jpg",
     "category": null,
     "excerpt": "If you have struggled with heroin addiction, it is important to recognize the signs that you need inpatient rehab treatment.",
     "readMins": 4,
@@ -17657,7 +17857,7 @@
     "description": "When in recovery, hobbies can play a major role in staying sober. Click here to find sober hobbies in recovery and stay on the path.",
     "date": "2022-06-14T15:23:43+00:00",
     "modified": "2022-06-14T15:23:44+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-3-What-is-the-Importance-of-Sober-Hobbies-in-Recovery.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0582.jpg",
     "category": null,
     "excerpt": "Almost everyone knows how vital treatment is in addiction recovery, but when we think of treatment, we first think of rehab and detox. While it is true how necessary these steps are, there are more th",
     "readMins": 3,
@@ -17732,7 +17932,7 @@
     "description": "Sober living offers a transition between rehab and a return to normal life. Click here to find sober living in Mission Viejo CA.",
     "date": "2021-12-14T08:34:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-2-image-Finding-Sober-Living-in-Mission-Viejo-CA.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0635.jpg",
     "category": null,
     "excerpt": "Addiction is a crippling disease that can really damage a person’s life. The only way to combat addiction and truly get sober is to seek treatment at a licensed treatment facility. Sometimes though, t",
     "readMins": 4,
@@ -17800,17 +18000,17 @@
       }
     ]
   },
-  "staff/monica-olivires": {
-    "slug": "staff/monica-olivires",
+  "staff/monica-olivares": {
+    "slug": "staff/monica-olivares",
     "type": "staff",
-    "title": "Monica Olivares, CADC II - Program Director",
-    "h1": "Monica Olivires, CADII",
-    "description": "Program Director Monica Olivares, CADC II, brings 11+ years in behavioral health and lived recovery experience.",
+    "title": "Monica Olivares, CADC II - Clinical Supervisor",
+    "h1": "Monica Olivares, CADC II",
+    "description": "Clinical Supervisor Monica Olivares, CADC II, brings 11+ years in behavioral health and lived recovery experience across Quadrant Health Group’s California facilities.",
     "date": null,
     "modified": "2026-03-20T16:18:26+00:00",
     "ogImage": "/images/MonicaHMS-scaled.jpeg",
     "category": null,
-    "excerpt": "Hi, I’m Monica Olivares — Program Director at Hillside Mission and a firm believer that healing doesn’t have to be boring. With over 11 years in the behavioral health field, I bring clinical experienc",
+    "excerpt": "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral health field and a deeply personal passion f",
     "readMins": 1,
     "blockCount": 6,
     "blocks": [
@@ -17821,23 +18021,23 @@
       {
         "type": "heading",
         "level": 1,
-        "text": "Monica Olivires, CADII"
+        "text": "Monica Olivares, CADC II"
       },
       {
         "type": "paragraph",
-        "text": "Hi, I’m Monica Olivares — Program Director at Hillside Mission and a firm believer that healing doesn’t have to be boring. With over 11 years in the behavioral health field, I bring clinical experience, leadership, humor, heart, and a whole lot of hustle to the work I love. I’ve worked in just about every setting imaginable — Detox, Residential, IOP, PHP, OP — and in nearly every role, from graveyard tech, lead tech, biofeedback therapy, to case manager, assistant manager, program manager, and now, program director."
+        "text": "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral health field and a deeply personal passion for recovery and healing. Throughout her career, Monica has worked across nearly every level of care — including Detox, Residential, IOP, PHP, and Outpatient programs — while holding a wide range of roles from Behavioral Health Technician and Case Manager to Program Manager and Program Director."
       },
       {
         "type": "paragraph",
-        "text": "I hold a CADC II certification and have a background of working with clients facing substance use, co-occurring disorders, and eating disorders. But more than anything, I bring my lived experience: I’ve been clean and sober for 13 years, and this work is deeply personal to me. I speak the language of recovery from the heart, and I’m passionate about reaching people in a way that makes them feel truly seen, heard, and supported."
+        "text": "Monica holds a CADC II certification and has extensive experience supporting individuals struggling with substance use disorders, co-occurring mental health conditions, and eating disorders. Her leadership style is rooted in compassion, authenticity, accountability, and connection, helping create treatment environments where clients feel genuinely supported, understood, and empowered throughout their recovery journey."
       },
       {
         "type": "paragraph",
-        "text": "At Hillside, we’re more than just a treatment center — we’re a family. Our home-like environment is warm, real, and full of life. We believe in laughing when we can, crying when we need to, and always showing up for our clients with compassion and honesty. We don’t do cookie-cutter care — we do soul work, and we take it seriously."
+        "text": "In addition to her professional experience, Monica brings 13 years of personal recovery experience to the work she does each day. Her lived experience allows her to connect with clients on a deeper level while helping foster hope, trust, and meaningful change. She believes recovery should be individualized, engaging, and centered around human connection, emphasizing that healing can happen while still embracing joy, humor, and community."
       },
       {
         "type": "paragraph",
-        "text": "Outside of work, I’m a proud mom, wife, sister, and daughter. I love animals, nature, music festivals, escape rooms, movies, and adventures that make great stories later. I live life out loud and love helping others do the same. Recovery gave me my life back — and I’m here to help others find theirs."
+        "text": "Known for her energy, heart, and dedication, Monica is passionate about helping both clients and staff grow while cultivating strong, supportive treatment teams across the California programs. Outside of work, she enjoys spending time with her family, being outdoors, attending music festivals, exploring escape rooms, traveling, and creating memorable life experiences."
       }
     ]
   },
@@ -17851,9 +18051,9 @@
     "modified": "2026-03-20T16:22:14+00:00",
     "ogImage": "/images/Phillip-Carter.png",
     "category": null,
-    "excerpt": "Hi, I’m Monica Olivares — Program Director at Hillside Mission and a firm believer that healing doesn’t have to be boring. With over 11 years in the behavioral health field, I bring clinical experienc",
+    "excerpt": "Phillip Carter serves as the Director of Operations at Hillside Mission Recovery, bringing extensive experience in criminal justice, behavioral health, and recovery support. He began his career with t",
     "readMins": 1,
-    "blockCount": 6,
+    "blockCount": 5,
     "blocks": [
       {
         "type": "paragraph",
@@ -17866,19 +18066,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Hi, I’m Monica Olivares — Program Director at Hillside Mission and a firm believer that healing doesn’t have to be boring. With over 11 years in the behavioral health field, I bring clinical experience, leadership, humor, heart, and a whole lot of hustle to the work I love. I’ve worked in just about every setting imaginable — Detox, Residential, IOP, PHP, OP — and in nearly every role, from graveyard tech, lead tech, biofeedback therapy, to case manager, assistant manager, program manager, and now, program director."
+        "text": "Phillip Carter serves as the Director of Operations at Hillside Mission Recovery, bringing extensive experience in criminal justice, behavioral health, and recovery support. He began his career with the Indiana Department of Corrections, where he spent eight years working in state parole, case management, crisis intervention, and employment placement. During that time, he developed a strong foundation in meeting individuals where they are, navigating high-pressure situations with steadiness, and helping people recognize their potential—even when they struggle to see it themselves."
       },
       {
         "type": "paragraph",
-        "text": "I hold a CADC II certification and have a background of working with clients facing substance use, co-occurring disorders, and eating disorders. But more than anything, I bring my lived experience: I’ve been clean and sober for 13 years, and this work is deeply personal to me. I speak the language of recovery from the heart, and I’m passionate about reaching people in a way that makes them feel truly seen, heard, and supported."
+        "text": "Phillip joined Hillside Mission Recovery as a Behavioral Health Technician and steadily advanced through leadership roles including Lead Tech and Case Manager before stepping into his current position as Director of Operations. He also spent two years managing sober living homes, an experience that strengthened his commitment to supporting individuals as they rebuild their lives with structure, accountability, and hope."
       },
       {
         "type": "paragraph",
-        "text": "At Hillside, we’re more than just a treatment center — we’re a family. Our home-like environment is warm, real, and full of life. We believe in laughing when we can, crying when we need to, and always showing up for our clients with compassion and honesty. We don’t do cookie-cutter care — we do soul work, and we take it seriously."
-      },
-      {
-        "type": "paragraph",
-        "text": "Outside of work, I’m a proud mom, wife, sister, and daughter. I love animals, nature, music festivals, escape rooms, movies, and adventures that make great stories later. I live life out loud and love helping others do the same. Recovery gave me my life back — and I’m here to help others find theirs."
+        "text": "As Director of Operations, Phillip leads with integrity, grit, and compassion. He is deeply invested in cultivating a strong team culture and empowering staff to grow into their strengths. Seeing both clients and team members develop confidence, resilience, and purpose is what fuels his passion for the work. Phillip remains dedicated to helping create an environment where lasting recovery and meaningful transformation are possible."
       }
     ]
   },
@@ -17890,7 +18086,7 @@
     "description": "For those with severe drinking problems, withdrawal can be difficult. Learn the symptoms of alcohol withdrawal and how to detox safely.",
     "date": "2022-02-24T16:11:43+00:00",
     "modified": "2022-02-24T16:11:44+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-4-What-are-the-Symptoms-of-Alcohol-Withdrawal.edited-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-51-scaled-1.jpg",
     "category": null,
     "excerpt": "Most of us know that alcohol addiction is a serious problem that millions suffer from every day. While it is relatively well known what constitutes alcohol addiction and when a person has a problem an",
     "readMins": 4,
@@ -17978,7 +18174,7 @@
     "description": "Heroin is a highly addictive opioid. Click here to learn more about symptoms of heroin use and how to find treatment.",
     "date": "2022-07-08T17:32:00+00:00",
     "modified": "2022-07-21T17:35:48+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-1-What-are-the-Symptoms-of-Heroin-Use.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0639.jpg",
     "category": null,
     "excerpt": "Many of us know that addiction can be a terrible and life-altering experience. If you haven’t dealt with someone with an addiction before, you may not know just how bad addiction can get in terms of s",
     "readMins": 3,
@@ -18065,7 +18261,7 @@
   "thank-you": {
     "slug": "thank-you",
     "type": "page",
-    "title": "Thank You FB",
+    "title": "Thank You",
     "h1": "Thank You!",
     "description": "Help is on the Way! Thank You! Home We Will Contact You Shortly! Your Free Assessment is On the Way!",
     "date": null,
@@ -18104,7 +18300,7 @@
     "description": "Over 130 people die every day in the United States from an opioid overdose. Learn the devastating truth about the U.S. Opioid crisis.",
     "date": "2020-09-17T18:48:13+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_747676462-1-scaled-1.jpg",
+    "ogImage": "/images/DSC_0704.jpg",
     "category": null,
     "excerpt": "Over 130 people die every day in the United States from an opioid overdose. If that doesn’t scare you enough, then maybe this will. 10.3 million people misused opioid prescriptions in one year.",
     "readMins": 3,
@@ -18236,7 +18432,7 @@
     "description": "There are different rehab options that are available in Orange County. Contact us to see about our treatment accommodations that will help you!",
     "date": "2021-06-29T19:24:34+00:00",
     "modified": "2021-06-29T19:24:35+00:00",
-    "ogImage": "/images/shutterstock_1347105503-scaled.jpg",
+    "ogImage": "/images/DSC_0688.jpg",
     "category": null,
     "excerpt": "For those that aren’t addiction specialists, it is easy to not be aware that there are multiple options available for rehab in Orange County. The truth is, there are a few different rehab options that",
     "readMins": 3,
@@ -18334,7 +18530,7 @@
     "description": "The signs that a person is using or addicted to heroin can be hard to detect. We help by explaining some of these signs! Contact us today.",
     "date": "2021-05-10T17:42:13+00:00",
     "modified": "2021-05-10T17:42:14+00:00",
-    "ogImage": "/images/shutterstock_1183391278-scaled.jpg",
+    "ogImage": "/images/DSC_0693.jpg",
     "category": null,
     "excerpt": "Most of us have at least heard of heroin and know that it is one of the most dangerous addictive substances that exist. What many may not know are the signs that someone is on heroin.",
     "readMins": 4,
@@ -18448,7 +18644,7 @@
     "description": "The truth about meth addiction is that it affects everyone. If you or someone you know is suffering from a meth addiction, contact Hillside Mission Recovery today!",
     "date": "2021-08-26T15:03:49+00:00",
     "modified": "2021-08-26T15:03:50+00:00",
-    "ogImage": "/images/shutterstock_543016171-1-scaled.jpg",
+    "ogImage": "/images/DSC_0659.jpg",
     "category": null,
     "excerpt": "For those that haven’t dealt with it themselves, understanding addiction can be difficult. Specific addictions have a whole range of causes and effects that are unknown to many people but when it come",
     "readMins": 4,
@@ -18547,7 +18743,7 @@
     "description": "Opioids are a class of highly addictive drugs, that often require detox. Learn about the timeline for opioid withdrawal and get help today.",
     "date": "2022-05-20T18:29:00+00:00",
     "modified": "2022-05-31T18:47:28+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-3-What-is-the-Timeline-for-Opioid-Withdrawal.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0585.jpg",
     "category": null,
     "excerpt": "When most of us go to the doctor, it is to treat a specific condition. This is especially for those with chronic illnesses or who have suffered an injury and need help managing the pain. Most of the t",
     "readMins": 4,
@@ -18648,7 +18844,7 @@
     "description": "Take a virtual tour of our private Mission Viejo rehab facility. View our modern detox units, residential suites, and clinical therapy spaces.",
     "date": null,
     "modified": "2026-03-24T14:14:31+00:00",
-    "ogImage": "/images/DSC_0694-scaled.jpg",
+    "ogImage": "/images/DSC_0629.jpg",
     "category": null,
     "excerpt": "The key to achieving long-term recovery is choosing the right addiction treatment facility. Hillside Mission Recovery provides holistic treatment for addiction and co-occurring disorders in a luxuriou",
     "readMins": 1,
@@ -18683,87 +18879,115 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-68-scaled-1.jpg",
+        "src": "/images/DSC_0625.jpg",
         "alt": "MISSION-HILLS-HOUSE-68",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-47-scaled-1.jpg",
+        "src": "/images/DSC_0626.jpg",
         "alt": "MISSION-HILLS-HOUSE-47",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-48-scaled-1.jpg",
+        "src": "/images/DSC_0627.jpg",
         "alt": "MISSION-HILLS-HOUSE-48",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/MISSION-HILLS-HOUSE-60-scaled-1.jpg",
+        "alt": "MISSION-HILLS-HOUSE-61",
+        "caption": "",
+        "width": 1434,
+        "height": 924
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0635.jpg",
+        "alt": "MISSION-HILLS-HOUSE-59",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0639.jpg",
+        "alt": "MISSION-HILLS-HOUSE-51",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0629.jpg",
+        "alt": "MISSION-HILLS-HOUSE-58",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0647.jpg",
+        "alt": "MISSION-HILLS-HOUSE-38",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0632.jpg",
+        "alt": "MISSION-HILLS-HOUSE-23",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0631.jpg",
+        "alt": "MISSION-HILLS-HOUSE-44",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "type": "image",
+        "src": "/images/DSC_0649.jpg",
+        "alt": "MISSION-HILLS-HOUSE-26",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-61-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-61",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-59-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-59",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-51-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-51",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-58",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-38-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-38",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-23-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-23",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-44-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-44",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-26-scaled-1.jpg",
-        "alt": "MISSION-HILLS-HOUSE-26",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-8-scaled-1.jpg",
         "alt": "MISSION-HILLS-HOUSE-8",
-        "caption": ""
+        "caption": "",
+        "width": 924,
+        "height": 1273
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-10-scaled-1.jpg",
+        "src": "/images/DSC_0625.jpg",
         "alt": "MISSION-HILLS-HOUSE-10",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-1-scaled-1.jpg",
+        "src": "/images/DSC_0626.jpg",
         "alt": "MISSION-HILLS-HOUSE-1",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "paragraph",
@@ -18784,7 +19008,7 @@
     "description": "Learn more about the importance of addressing the risk of transfer addiction during treatment and how Hillside Mission can help.",
     "date": "2023-09-22T15:18:14+00:00",
     "modified": "2023-09-22T15:18:15+00:00",
-    "ogImage": "/images/shutterstock_1294756591-scaled.jpg",
+    "ogImage": "/images/DSC_0573.jpg",
     "category": null,
     "excerpt": "If you or someone close to you has struggled with addiction, getting the right kind of help is essential to avoid things like transfer addiction. You might notice that old habits are starting to take",
     "readMins": 4,
@@ -18966,7 +19190,7 @@
     "description": "For those with addiction and mental health issues, its vital to find treatment for co-occurring disorders. Learn more here and get help now.",
     "date": "2022-03-09T15:18:46+00:00",
     "modified": "2022-03-09T15:18:47+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-2-How-to-Find-Treatment-for-Co-Occurring-Disorders.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0647.jpg",
     "category": null,
     "excerpt": "While most people know what addiction is, many don’t know just how complex of a disease it is. Unfortunately for the millions suffering from it, addiction can stem from a number of causes and even cau",
     "readMins": 4,
@@ -19082,7 +19306,7 @@
     "description": "Explore our comprehensive addiction treatment services in Mission Viejo. Accredited medical detox, residential rehab, and specialized dual diagnosis care.",
     "date": null,
     "modified": "2026-06-11T20:41:29+00:00",
-    "ogImage": "/images/DSC_0659-scaled.jpg",
+    "ogImage": "/images/DSC_0560.jpg",
     "category": null,
     "excerpt": "Addiction is a disorder that affects the brain which causes an individual’s compulsive habits to force them to search for any type of stimulation that makes them feel good despite negative consequence",
     "readMins": 6,
@@ -19117,9 +19341,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0560.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19133,13 +19359,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0672.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19157,9 +19385,11 @@
       },
       {
         "type": "image",
-        "src": "/images/shutterstock_2259920271.jpg",
+        "src": "/images/DSC_0690.jpg",
         "alt": "Effective Therapies for Managing Anxiety and Panic Attacks",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19177,9 +19407,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0566.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19392,7 +19624,7 @@
     "description": "Continued treatment by using aftercare planning can almost double your chance of staying sober. Learn about our aftercare program.",
     "date": null,
     "modified": "2026-06-11T20:44:33+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+    "ogImage": "/images/DSC_0675.jpg",
     "category": null,
     "excerpt": "Attending a substance abuse program starts you on the path to recovery, but an aftercare program helps keep you on the right track. Aftercare programs are crucial to one who is looking not only to get",
     "readMins": 6,
@@ -19432,13 +19664,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
         "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1386,
+        "height": 924
       },
       {
         "type": "heading",
@@ -19456,9 +19690,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0693.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19635,7 +19871,7 @@
     "description": "Everyone has different detox needs. The team at our drug & alcohol detox in Orange County, CA understands that. Get top quality care.",
     "date": null,
     "modified": "2026-06-11T20:53:39+00:00",
-    "ogImage": "/images/m1.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
     "category": null,
     "excerpt": "Drug and alcohol abuse can devastate all aspects of a person’s life. Treatment is available that can help you to get back on your feet and deal with the underlying issues that can cause substance abus",
     "readMins": 8,
@@ -19669,9 +19905,11 @@
       },
       {
         "type": "image",
-        "src": "/images/image-154.webp",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0660.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "paragraph",
@@ -19697,17 +19935,19 @@
       {
         "type": "image",
         "src": "/images/MonicaHMS-scaled.jpeg",
-        "alt": "Monica Olivires, CADII - Program Director",
-        "caption": ""
+        "alt": "Monica Olivares, CADC II - Clinical Supervisor",
+        "caption": "",
+        "width": 1920,
+        "height": 2560
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Medically Reviewed by Monica Olivires, CADC II"
+        "text": "Medically Reviewed by Monica Olivares, CADC II"
       },
       {
         "type": "paragraph",
-        "text": "Program Director at Hillside, Monica Olivires brings 11+ years of experience in detox and residential addiction care and co-occurring disorders."
+        "text": "Clinical Supervisor for Quadrant Health Group’s California facilities, Monica Olivares brings 11+ years of experience in detox and residential addiction care and co-occurring disorders."
       },
       {
         "type": "paragraph",
@@ -19724,9 +19964,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0664.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19740,13 +19982,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0667.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19764,9 +20008,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0695.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -19895,7 +20141,7 @@
     "description": "Hillside Mission Recovery provides integrated dual diagnosis treatment in Mission Viejo. Medically supervised detox and residential care for co-occurring disorders.",
     "date": null,
     "modified": "2026-06-11T20:43:11+00:00",
-    "ogImage": "/images/shutterstock_2619458799.jpg",
+    "ogImage": "/images/DSC_0673.jpg",
     "category": null,
     "excerpt": "Healing the connection between addiction and mental health. Our private Mission Viejo center provides integrated care for anxiety, depression, and trauma alongside expert medical detox and residential",
     "readMins": 6,
@@ -19985,9 +20231,11 @@
       },
       {
         "type": "image",
-        "src": "/images/shutterstock_1130729834.jpg",
+        "src": "/images/DSC_0675.jpg",
         "alt": "How Does a Dual Diagnosis Treatment Program Work?",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20014,9 +20262,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0673.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20034,9 +20284,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0668.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20054,9 +20306,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0697.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20144,9 +20398,11 @@
       },
       {
         "type": "image",
-        "src": "/images/image-154.webp",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0674.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20198,7 +20454,7 @@
     "description": "Confidential executive rehab in Mission Viejo. Private suites, workspace access, and high-acuity clinical care for professionals in Orange County.",
     "date": null,
     "modified": "2026-03-24T14:21:36+00:00",
-    "ogImage": "/images/shutterstock_2659843253-scaled.jpg",
+    "ogImage": "/images/DSC_0695.jpg",
     "category": null,
     "excerpt": "There are often barriers to seeking treatment for many of the 21 million Americans who struggle with addiction. For some, one of the primary obstacles is that they feel they cannot leave or take time",
     "readMins": 7,
@@ -20240,9 +20496,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0701.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20256,13 +20514,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0672.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20280,9 +20540,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0700.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20459,7 +20721,7 @@
     "description": "Our excellent staff are here to help you in a luxurious setting, and quality care is our #1 goal of our inpatient treatment in Orange County. Get help.",
     "date": null,
     "modified": "2026-06-11T20:58:04+00:00",
-    "ogImage": "/images/goldseal_national-1.png",
+    "ogImage": "/images/DSC_0660.jpg",
     "category": null,
     "excerpt": "Hillside Mission Recovery provides medication assisted detox services in Orange County to those suffering from substance abuse or co-occurring disorders. We provide a safe, secure, and home-like addic",
     "readMins": 7,
@@ -20493,9 +20755,11 @@
       },
       {
         "type": "image",
-        "src": "/images/image-154.webp",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1386,
+        "height": 924
       },
       {
         "type": "paragraph",
@@ -20513,17 +20777,19 @@
       {
         "type": "image",
         "src": "/images/MonicaHMS-scaled.jpeg",
-        "alt": "Monica Olivires, CADII - Program Director",
-        "caption": ""
+        "alt": "Monica Olivares, CADC II - Clinical Supervisor",
+        "caption": "",
+        "width": 1920,
+        "height": 2560
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Medically Reviewed by Monica Olivires, CADC II"
+        "text": "Medically Reviewed by Monica Olivares, CADC II"
       },
       {
         "type": "paragraph",
-        "text": "Program Director at Hillside, Monica Olivires brings 11+ years of experience in detox and residential addiction care and co-occurring disorders."
+        "text": "Clinical Supervisor for Quadrant Health Group’s California facilities, Monica Olivares brings 11+ years of experience in detox and residential addiction care and co-occurring disorders."
       },
       {
         "type": "paragraph",
@@ -20540,9 +20806,11 @@
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+        "src": "/images/DSC_0660.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20556,13 +20824,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0664.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20580,9 +20850,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/DSC_0702.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -20783,7 +21055,7 @@
     "description": "Upscale addiction rehab offers luxury accommodations combined with professional, quality comprehensive treatment. Click to find upscale rehab",
     "date": "2021-12-27T12:14:00+00:00",
     "modified": "2021-12-27T17:51:32+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-4-What-is-Upscale-Addiction-Rehab.edited-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-10-scaled-1.jpg",
     "category": null,
     "excerpt": "Most of us have dealt with addiction firsthand or know someone struggling with addiction. When it comes to getting sober and staying that way, most people can agree that the best way to do that is by",
     "readMins": 4,
@@ -20874,7 +21146,7 @@
     "description": "What are examples of club drugs? Knowing this information can help you understand addiction to these substances. Contact us today to combat drug addiction.",
     "date": "2021-09-02T18:29:32+00:00",
     "modified": "2021-09-02T18:29:33+00:00",
-    "ogImage": "/images/shutterstock_405977956-scaled.jpg",
+    "ogImage": "/images/DSC_0674.jpg",
     "category": null,
     "excerpt": "Every day more people become addicted to drugs and there are so many different types of drugs available that it can be difficult to figure out what kinds of drugs are popular, and how to get proper he",
     "readMins": 3,
@@ -20973,7 +21245,7 @@
     "description": "To understand drug abuse and how to get treatment, we need to know what the most abused drugs in the U.S. are and how they are classified.",
     "date": "2021-03-03T00:57:20+00:00",
     "modified": "2021-03-03T00:57:22+00:00",
-    "ogImage": "/images/shutterstock_125982872-scaled.jpg",
+    "ogImage": "/images/DSC_0697.jpg",
     "category": null,
     "excerpt": "It’s easy to believe that the majority of drugs that are abused in the U.S. are illicit and illegal substances. We also believe that everything we are prescribed by our doctors and pharmacists is safe",
     "readMins": 4,
@@ -21064,7 +21336,7 @@
     "description": "Learn more about cocaine, the possible symptoms of a cocaine addiction, and how to help someone struggling with a cocaine addiction.",
     "date": "2021-02-16T20:11:44+00:00",
     "modified": "2021-02-16T20:11:45+00:00",
-    "ogImage": "/images/shutterstock_556924744-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-38-scaled-1.jpg",
     "category": null,
     "excerpt": "You have worries that your loved one is struggling with a cocaine addiction. The whitish powdery substance you have seen a few times on their nose has intensified your suspicion. They keep asking to b",
     "readMins": 3,
@@ -21193,7 +21465,7 @@
     "description": "Learn what comprehensive addiction treatment involves, why recovery requires more than detox, and how personalized care supports long-term success.",
     "date": "2026-06-17T20:15:01+00:00",
     "modified": "2026-06-17T20:17:46+00:00",
-    "ogImage": "/images/DSC_0635-scaled.jpg",
+    "ogImage": "/images/DSC_0580.jpg",
     "category": null,
     "excerpt": "When people think about addiction treatment, they often picture detox or simply stopping drugs and alcohol.",
     "readMins": 4,
@@ -21487,7 +21759,7 @@
     "description": "What does a Xanax pill look like? The two most common forms of Xanax come as small oval-shaped pills that are usually blue. Contact us today. We can help!",
     "date": "2021-06-17T20:56:55+00:00",
     "modified": "2021-06-17T20:57:40+00:00",
-    "ogImage": "/images/shutterstock_225802213-scaled.jpg",
+    "ogImage": "/images/DSC_0566.jpg",
     "category": null,
     "excerpt": "One of the most difficult parts of getting your loved ones the help they need with drug addiction is identifying the signs and symptoms of addiction and figuring out what exactly they are addicted to.",
     "readMins": 3,
@@ -21574,7 +21846,7 @@
     "description": "Group therapy is not only beneficial to addicts, but also to those around them. Click here to learn what is Al-Anon and how it can help.",
     "date": "2022-03-22T15:24:00+00:00",
     "modified": null,
-    "ogImage": "/images/Hillside-Mission-Blog-4-What-is-Al-Anon-and-How-Can-it-Help.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0632.jpg",
     "category": null,
     "excerpt": "Alcohol addiction is one of the most prevalent types of addiction in America, with millions suffering from it every day. One of the main reasons that alcohol addiction is so prevalent is because alcoh",
     "readMins": 4,
@@ -21659,7 +21931,7 @@
     "description": "Alcohol withdrawal - how do you know when you’re going through it and what exactly does it entail? Learn what alcohol withdrawal is.",
     "date": "2020-08-25T22:18:56+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_1095874334-scaled-1.jpg",
+    "ogImage": "/images/DSC_0699.jpg",
     "category": null,
     "excerpt": "Alcohol withdrawal – how do you know when you’re going through it? It can be difficult to determine an addiction to alcohol vs. someone who likes to drink a lot, due to the social nature of drinking a",
     "readMins": 3,
@@ -21778,7 +22050,7 @@
     "description": "During drug detox, the brain will gradually adjust to the drug's absence in the system. Learn what drug detox is.",
     "date": "2021-02-12T00:55:10+00:00",
     "modified": "2021-02-12T00:55:12+00:00",
-    "ogImage": "/images/shutterstock_126648689-scaled.jpg",
+    "ogImage": "/images/DSC_0686.jpg",
     "category": null,
     "excerpt": "When it comes to addiction and recovery, drug detox is a phrase you will hear often. But what is drug detox, and how well do you know about the drug detox process? Let’s find out, shall we?",
     "readMins": 4,
@@ -21952,7 +22224,7 @@
     "description": "Are you an addict or a recovering addict considering group therapy (also known as group psychotherapy)? If so, that's great! Learn what group therapy is.",
     "date": "2020-08-17T23:10:02+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_689390650-scaled-1.jpg",
+    "ogImage": "/images/DSC_0701.jpg",
     "category": null,
     "excerpt": "Are you an addict or a recovering addict considering group therapy (also known as group psychotherapy)? If so, that’s great! This therapy comes with a lot of benefits. But before we delve into that, l",
     "readMins": 3,
@@ -22077,7 +22349,7 @@
     "description": "What is rehab like? What does rehab look like? Do you want to seek help with your addiction and wonder what happens in rehab?",
     "date": "2020-10-13T21:37:05+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_1656777370-scaled-1.jpg",
+    "ogImage": "/images/DSC_0582.jpg",
     "category": null,
     "excerpt": "What is rehab like? What does rehab look like? Do you want to seek help with your addiction and wonder what happens in rehab? No doubts, you need to check yourself into a rehab facility when faced wit",
     "readMins": 3,
@@ -22199,7 +22471,7 @@
     "description": "Read to learn what is the definition of co-occurring disorders and how they play a role in addiction treatment options for you.",
     "date": "2021-11-19T15:27:00+00:00",
     "modified": "2021-11-29T15:33:01+00:00",
-    "ogImage": "/images/Hillside-Blog-image-What-is-the-Definition-of-Co-Occurring-Disorders.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0569.jpg",
     "category": null,
     "excerpt": "Even though millions of Americans suffer from addiction every day, many people still don’t understand the true nature of addiction, its role in mental health, or how it is interrelated. When it comes",
     "readMins": 3,
@@ -22261,7 +22533,7 @@
     "description": "If your loved one is a recovering alcoholic, and you think they may have relapsed, keep reading to learn some tips on what to do and how to help them.",
     "date": "2021-01-27T00:42:26+00:00",
     "modified": "2021-01-27T00:42:28+00:00",
-    "ogImage": "/images/shutterstock_1492615529-4-scaled.jpg",
+    "ogImage": "/images/DSC_0631.jpg",
     "category": null,
     "excerpt": "“What to do when an alcoholic relapses.” Many people have Googled this in a panic when a loved one suddenly veers off the road of recovery.",
     "readMins": 4,
@@ -22382,7 +22654,7 @@
     "description": "If you are confused about where to seek drug addiction treatment, don't worry. Learn where to seek drug addiction therapy.",
     "date": "2020-11-30T12:31:00+00:00",
     "modified": "2020-12-02T20:12:11+00:00",
-    "ogImage": "/images/shutterstock_526087603-4-scaled.jpg",
+    "ogImage": "/images/DSC_0704.jpg",
     "category": null,
     "excerpt": "Congratulations! If you’re reading this article right now, you’re probably thinking about pursuing drug addiction therapy. Choosing to get sober and stay off drugs is an important decision that will c",
     "readMins": 3,
@@ -22509,7 +22781,7 @@
     "description": "In this article, we explain why drug or alcohol addiction is considered a chronic relapsing illness. Learn how we can help you or someone you love fight chronic relapse.",
     "date": "2021-10-28T18:54:34+00:00",
     "modified": "2021-10-28T19:49:54+00:00",
-    "ogImage": "/images/shutterstock_793940824-scaled.jpg",
+    "ogImage": "/images/DSC_0688.jpg",
     "category": null,
     "excerpt": "Even though many Americans are in recovery today and many more are battling addiction and trying to get sober, it continues to be a constant struggle that goes on for the rest of their lives in most c",
     "readMins": 3,
@@ -22576,7 +22848,7 @@
     "description": "Learn why a supportive treatment environment can play an important role in addiction recovery, emotional healing, and long-term sobriety.",
     "date": "2026-05-08T16:08:21+00:00",
     "modified": "2026-05-08T16:08:25+00:00",
-    "ogImage": "/images/DSC_0573-scaled.jpg",
+    "ogImage": "/images/DSC_0700.jpg",
     "category": null,
     "excerpt": "When people think about addiction treatment, they often focus on therapy, detox, or medical care.",
     "readMins": 3,
@@ -22831,7 +23103,7 @@
     "description": "If you want to learn more about 12-step rehabs or other addiction treatment methods, get in touch in Hillside today.",
     "date": "2021-02-22T00:55:39+00:00",
     "modified": "2021-03-03T00:58:11+00:00",
-    "ogImage": "/images/shutterstock_1451107145-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-44-scaled-1.jpg",
     "category": null,
     "excerpt": "Addiction is a disease of the mind, body, and soul. It is not a moral weakness and is best treated with professional help. If you or someone you know is struggling with addiction, don’t wait to reach",
     "readMins": 4,
@@ -22997,7 +23269,7 @@
     "description": "\"Why is cocaine addictive?\" is a question that many people have found themselves asking before. Learn more.",
     "date": "2020-12-18T22:55:15+00:00",
     "modified": "2020-12-18T22:55:18+00:00",
-    "ogImage": "/images/shutterstock_734845696-scaled.jpg",
+    "ogImage": "/images/DSC_0585.jpg",
     "category": null,
     "excerpt": "“Why is cocaine addictive?” is a question that many people have found themselves asking before. Whether you are currently addicted to cocaine and struggling to stay clean, or unsure if your cocaine us",
     "readMins": 3,
@@ -23138,7 +23410,7 @@
     "description": "Prescription drugs are commonly used, but remain a risk. Click here to learn if prescription drug addiction is common in the United States.",
     "date": "2022-04-12T15:31:11+00:00",
     "modified": "2022-04-12T15:31:12+00:00",
-    "ogImage": "/images/Hillside-Mission-Blog-2-Why-is-Prescription-Drug-Addiction-So-Common.edited-scaled.jpg",
+    "ogImage": "/images/DSC_0575.jpg",
     "category": null,
     "excerpt": "Most of us know that prescription drug addiction is a significant factor in many people’s lives. Prescription drugs can be used to treat a variety of conditions. Contrary to what we think, many of the",
     "readMins": 5,
@@ -23222,7 +23494,7 @@
     "description": "While prescription pills can heal us, if used the wrong way, they can become addictive. Learn why prescription pill addiction treatment is necessary.",
     "date": "2021-01-18T19:29:06+00:00",
     "modified": "2021-01-18T19:29:08+00:00",
-    "ogImage": "/images/shutterstock_549397639-scaled.jpg",
+    "ogImage": "/images/DSC_0649.jpg",
     "category": null,
     "excerpt": "People often associate substance abuse with alcohol or street drugs like heroin. However, people also abuse and become addicted to legal drugs such as prescription pills.",
     "readMins": 4,
@@ -23427,7 +23699,7 @@
     "description": "Couples rehab can provide couples with a place to turn to other than individual programs. If you or a loved one are dealing with addiction, read more!",
     "date": "2021-06-21T21:27:41+00:00",
     "modified": "2021-06-21T21:27:42+00:00",
-    "ogImage": "/images/jakob-owens-o_cqBHwKnWg-unsplash-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-10-scaled-1.jpg",
     "category": null,
     "excerpt": "Couples rehab is a type of treatment for couples who are struggling with addiction. It can be difficult to find the right help to get sober, particularly if you’re dealing with issues of codependency",
     "readMins": 3,
@@ -23524,7 +23796,7 @@
     "description": "Because every person and addiction is different, it’s imperative to detox at a professional facility. Discover why you should attend a drug detox facility.",
     "date": "2020-08-21T21:31:06+00:00",
     "modified": null,
-    "ogImage": "/images/shutterstock_736552108-scaled-1.jpg",
+    "ogImage": "/images/DSC_0675.jpg",
     "category": null,
     "excerpt": "Before seeking addiction treatment therapy, an addict may start their recovery journey at a detox facility. Detoxification is usually the first step to overcoming any drug or alcohol addiction, depend",
     "readMins": 3,
@@ -23645,7 +23917,7 @@
     "description": "Why luxury drug treatment centers? How are they different from other drug rehabilitation facilities? Discover why you should go to a luxury drug rehab.",
     "date": "2020-09-09T20:07:59+00:00",
     "modified": "2021-01-11T18:49:55+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-68-scaled-1.jpg",
+    "ogImage": "/images/DSC_0702.jpg",
     "category": null,
     "excerpt": "Do you suffer addiction or any substance abuse disorder? Try not to feel down – you are not the only one. NCDAS, National Center for Drug Abuse Statistics, reported that 165 million Americans were add",
     "readMins": 3,
@@ -23802,7 +24074,7 @@
     "description": "While individuals who are addicted to Valium are not typically at risk for overdose, Valium is still highly dangerous. Find Valium addiction treatment today. We’re here to help.",
     "date": "2021-10-05T19:40:00+00:00",
     "modified": "2021-11-04T18:06:30+00:00",
-    "ogImage": "/images/shutterstock_1294019884-scaled.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-47-scaled-1.jpg",
     "category": null,
     "excerpt": "Millions of people become addicted to drugs every year, sometimes to illegal substances and sometimes accidentally due to prescription medications. It’s important once you or a loved one has become ad",
     "readMins": 3,
@@ -23900,7 +24172,7 @@
     "description": "There are several reasons why you shouldn't pursue drug addiction detox at home. Our team can walk you through the benefits of a proper detox treatment.",
     "date": "2021-08-17T20:15:20+00:00",
     "modified": "2021-08-17T20:15:21+00:00",
-    "ogImage": "/images/ball-park-brand-VgqQfWKHR-4-unsplash-scaled.jpg",
+    "ogImage": "/images/DSC_0580.jpg",
     "category": null,
     "excerpt": "Many people who suffer from addiction don’t know where to turn to get help and don’t know that getting clean means safely getting rid of the addictive substance from the body. Most people suffering fr",
     "readMins": 3,
@@ -23983,7 +24255,7 @@
     "description": "Contact Hillside Mission Recovery today to learn more about our Orange County substance abuse treatment programs for women.",
     "date": null,
     "modified": "2022-09-28T22:42:19+00:00",
-    "ogImage": "/images/MISSION-HILLS-HOUSE-58-scaled-1.jpg",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-26-scaled-1.jpg",
     "category": null,
     "excerpt": "Gender-specific or gender-focused addiction programs are drug and alcohol treatment programs designed to treat the unique needs of men and women in separate treatment programs. Because women and men u",
     "readMins": 6,
@@ -24045,13 +24317,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Veijo facility."
+        "text": "Detox offers a state-of-the-art drug & alcohol detox program that is safe & effective at our Mission Viejo facility."
       },
       {
         "type": "image",
-        "src": "/images/MISSION-HILLS-HOUSE-40-2-scaled-1.jpg",
+        "src": "/images/DSC_0667.jpg",
         "alt": "",
-        "caption": ""
+        "caption": "",
+        "width": 1920,
+        "height": 1280
       },
       {
         "type": "heading",
@@ -24069,9 +24343,11 @@
       },
       {
         "type": "image",
-        "src": "/images/ministry-youth.jpg",
-        "alt": "",
-        "caption": ""
+        "src": "/images/MISSION-HILLS-HOUSE-26-scaled-1.jpg",
+        "alt": "Hillside Mission Recovery in Mission Viejo, CA",
+        "caption": "",
+        "width": 1403,
+        "height": 924
       },
       {
         "type": "heading",
@@ -24242,6 +24518,227 @@
         "type": "heading",
         "level": 2,
         "text": "Health Insurance Can Pay for Rehab."
+      }
+    ]
+  },
+  "what-is-narcan": {
+    "slug": "what-is-narcan",
+    "type": "post",
+    "title": "What Is Narcan? How It Works & How to Use It",
+    "h1": "What Is Narcan? How It Works & How to Use It",
+    "description": "What is Narcan? Learn how the opioid-overdose reversal spray works, where to get it, and how to use it—guidance from Hillside Mission Recovery",
+    "date": "2026-07-17T00:27:11+00:00",
+    "modified": "2026-07-17T00:27:49+00:00",
+    "ogImage": "/images/MISSION-HILLS-HOUSE-1-scaled-1.jpg",
+    "category": null,
+    "excerpt": "Narcan is a needle-free nasal spray that can reverse an opioid overdose in minutes. It is safe, legal, and available over the counter. So if you love someone who uses opioids, keeping it nearby could ",
+    "readMins": 6,
+    "blockCount": 43,
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "TL;DR"
+      },
+      {
+        "type": "paragraph",
+        "text": "Narcan is a needle-free nasal spray that can reverse an opioid overdose in minutes. It is safe, legal, and available over the counter. So if you love someone who uses opioids, keeping it nearby could save their life. Below, we walk you through what Narcan is, how it works, and how to use it when seconds matter."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "What is Narcan? A single spray can stand between a fatal overdose and a second chance at life. That reality is why so many families quietly search, late at night, for a clear answer to one urgent question: what is Narcan, and could it save someone I love? At Hillside Mission Recovery, we hear that question often, so we want you to have an honest, unflinching answer."
+      },
+      {
+        "type": "paragraph",
+        "text": "In plain terms, Narcan is a needle-free nasal spray that can reverse an opioid overdose within minutes. It is safe, legal, and now available over the counter. Because opioids like fentanyl are so unpredictable, keeping Narcan within reach could genuinely save a life. Below, we explain what Narcan is, how it works, how to use it, and where to get it, without the jargon."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What Is Narcan, Exactly?"
+      },
+      {
+        "type": "paragraph",
+        "text": "So, what is Narcan, exactly? Narcan is the original brand name for naloxone, a medication that rapidly reverses an opioid overdose. It comes most commonly as a 4 mg nasal spray, though naloxone also exists in injectable forms. Importantly, Narcan only works on opioids, such as heroin, fentanyl, oxycodone, and morphine. Therefore, it will not reverse an overdose from cocaine, methamphetamine, or alcohol alone. Still, giving it during any suspected overdose is considered safe [1]."
+      },
+      {
+        "type": "paragraph",
+        "text": "The medication earned over-the-counter approval from the FDA in 2023, which means you no longer need a prescription [3]. As a result, it now sits on pharmacy shelves beside everyday first-aid supplies. In short, this once-clinical rescue drug has become something any household can keep on hand."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How Does Narcan Work?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Simply put, Narcan works as an opioid antagonist, a fancy way of saying it blocks opioids from doing their damage. Picture your brain’s opioid receptors as locks. Opioids fit those locks and, at high doses, slow your breathing until it stops. Naloxone, however, muscles those opioids off the receptors and takes their place [5]. Consequently, breathing can restart within two to three minutes. This lifesaving effect is exactly why understanding what is Narcan matters so much."
+      },
+      {
+        "type": "paragraph",
+        "text": "The rescue is powerful, yet it is temporary. The effect lasts only 30 to 90 minutes, while many opioids linger far longer in the body [1]. Because of this mismatch, an overdose can return once the medication wears off. For that reason, you must always call 911, even after someone wakes up."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Narcan vs. Naloxone: Clearing Up the Confusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Many people use “Narcan” and “naloxone” interchangeably, and that is understandable. Naloxone is the generic drug itself. By contrast, Narcan is simply the best-known brand, much like Kleenex is a brand of tissue. Other naloxone products now exist too, including RiVive and Kloxxado. Whatever the label says, the active ingredient does the same heroic job."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How to Spot an Opioid Overdose"
+      },
+      {
+        "type": "paragraph",
+        "text": "Recognizing an overdose quickly is half the battle. Opioid overdoses often look like a deep, unwakeable sleep, so trust your instincts if something feels wrong. Common warning signs include:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Pinpoint pupils",
+          "Slow, shallow, or stopped breathing",
+          "Blue or gray lips and fingernails",
+          "A limp body",
+          "Choking or gurgling sounds"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "If you notice these signs, act immediately rather than waiting to be certain [2]."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How to Use Narcan"
+      },
+      {
+        "type": "paragraph",
+        "text": "Using Narcan requires no medical training, which is precisely the point. The steps below apply to the standard nasal spray."
+      },
+      {
+        "type": "paragraph",
+        "text": "Because fentanyl is so potent, one dose is sometimes not enough. Therefore, having more than one device on hand is wise. Meanwhile, rescue breaths or CPR can help if you are trained [4]."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Where to Get Narcan — and What It Costs"
+      },
+      {
+        "type": "paragraph",
+        "text": "Access has improved dramatically, though cost still varies by location. Over-the-counter Narcan generally runs under $50 for a two-dose box. However, many people pay nothing at all. The table below breaks down your options."
+      },
+      {
+        "type": "paragraph",
+        "text": "In addition, some states distribute Narcan through vending machines, libraries, and mail programs. When in doubt, search your city plus “naloxone access” to find free supplies nearby."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Is Narcan Safe? Side Effects to Know"
+      },
+      {
+        "type": "paragraph",
+        "text": "Reassuringly, Narcan is remarkably safe, which is part of what makes it so valuable. Side effects are uncommon, and giving it to someone who has not taken opioids will not harm them. That said, if the person is opioid-dependent, Narcan can trigger sudden withdrawal. Symptoms may include nausea, sweating, agitation, and body aches. Although withdrawal feels miserable, it is rarely life-threatening [1]. In other words, the risk of doing nothing is always greater."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Why Narcan Matters More in the Fentanyl Era"
+      },
+      {
+        "type": "paragraph",
+        "text": "The stakes have never been higher, largely because of fentanyl. This synthetic opioid is many times stronger than heroin, and it now contaminates much of the illicit drug supply. Consequently, people overdose faster and harder than ever before. Fortunately, Narcan remains one of the few tools proven to pull someone back from that brink. Knowing what is Narcan, then, is no longer niche knowledge; it is basic safety."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Narcan Buys Time. Recovery Does the Rest."
+      },
+      {
+        "type": "paragraph",
+        "text": "Here is the truth we tell every family: Narcan buys time, but it does not treat addiction. It reverses a single overdose, yet the underlying opioid use disorder remains. Real recovery begins afterward, with medical detox, therapy, and steady dual-diagnosis support. That is the work we do every day at Hillside Mission Recovery, a drug and alcohol treatment center in Mission Viejo. If someone you love keeps Narcan nearby, please know that a fuller life beyond survival is possible. When you are ready to take that next step, contact us, and we will walk beside you."
+      },
+      {
+        "type": "paragraph",
+        "text": "Surviving is step one. Let’s build step two together."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "heading",
+        "level": 4,
+        "text": "Is it legal to carry Narcan?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Yes. Narcan is legal to buy, carry, and use in all 50 states, and Good Samaritan laws protect people who use it in good faith during an emergency."
+      },
+      {
+        "type": "heading",
+        "level": 4,
+        "text": "Can Narcan hurt someone who is not overdosing?"
+      },
+      {
+        "type": "paragraph",
+        "text": "No. If opioids are not in their system, Narcan has no real effect, so it is always safer to give it when unsure."
+      },
+      {
+        "type": "heading",
+        "level": 4,
+        "text": "How many doses of Narcan do I need?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Often one works, but fentanyl overdoses may require several. Keeping at least two devices on hand is smart."
+      },
+      {
+        "type": "heading",
+        "level": 4,
+        "text": "Does Narcan expire?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Yes. Check the printed expiration date periodically and replace any expired spray so it is ready when you need it."
+      },
+      {
+        "type": "heading",
+        "level": 4,
+        "text": "What should I do after giving Narcan?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Call 911, stay with the person, and monitor their breathing, because the overdose can return once the medication wears off."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Sources"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "National Institute on Drug Abuse. (2022). Naloxone DrugFacts. nida.nih.gov",
+          "Centers for Disease Control and Prevention. (2025). 5 Things to Know About Naloxone. cdc.gov",
+          "U.S. Food and Drug Administration. FDA Approves First Over-the-Counter Naloxone Nasal Spray. fda.gov",
+          "Nemours KidsHealth. (2024). What Is Narcan (Naloxone)? kidshealth.org",
+          "Jordan, M. R., et al. (2023). Naloxone. StatPearls. ncbi.nlm.nih.gov",
+          "Substance Abuse and Mental Health Services Administration. National Helpline. samhsa.gov"
+        ]
       }
     ]
   }

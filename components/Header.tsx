@@ -169,7 +169,7 @@ export default function Header() {
                     </Link>
                     {item.columns.map((col) => (
                       <div key={col.heading} className="mb-3">
-                        <p className="mb-1 mt-2 text-xs font-semibold uppercase tracking-widest text-ink/45">
+                        <p className="mb-1 mt-2 text-xs font-semibold uppercase tracking-widest text-ink/70">
                           {col.heading}
                         </p>
                         <ul>

@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { facilityFoyer } from "@/lib/media";
 import PageHero from "@/components/PageHero";
 import LeadForm from "@/components/LeadForm";
 import { IconPhone, IconMail, IconPin, IconClock } from "@/components/Icons";
 
+const description =
+  "Reach out to Hillside Mission Recovery in Mission Viejo, CA. Call (866) 393-5174 for a confidential conversation, or send us a message — help is available 24/7.";
+
 export const metadata: Metadata = {
   title: "Contact Admissions",
-  description:
-    "Reach out to Hillside Mission Recovery in Mission Viejo, CA. Call (866) 393-5174 for a confidential conversation, or send us a message — help is available 24/7.",
+  description,
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Admissions",
+    description,
+    images: [facilityFoyer],
+  },
 };
 
 export default function ContactPage() {
@@ -37,9 +46,9 @@ export default function ContactPage() {
                   <div className="grid h-11 w-11 place-items-center rounded-xl bg-teal-soft text-teal">
                     <d.Icon className="h-6 w-6" />
                   </div>
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-ink/45">{d.label}</p>
+                  <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-ink/70">{d.label}</p>
                   <p className="mt-1 font-medium text-ink">{d.value}</p>
-                  <p className="text-sm text-ink/55">{d.note}</p>
+                  <p className="text-sm text-ink/70">{d.note}</p>
                 </>
               );
               return d.href ? (
@@ -58,7 +67,7 @@ export default function ContactPage() {
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <div className="reveal card p-7 md:p-9">
               <h2 className="text-2xl md:text-3xl">Send us a message</h2>
-              <p className="mt-2 text-ink/65">
+              <p className="mt-2 text-ink/70">
                 Have a question or want to learn more about {site.fullName}? Fill out the form and we&apos;ll
                 be in touch.
               </p>
