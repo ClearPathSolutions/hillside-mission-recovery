@@ -27,7 +27,7 @@ export function InsuranceBand() {
             </div>
           </div>
           <div className="flex flex-col justify-center gap-6 border-t border-line bg-white p-8 md:border-l md:border-t-0 md:p-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-ink/45">
+            <p className="text-xs font-semibold uppercase tracking-widest text-ink/70">
               In-network &amp; accepted plans
             </p>
             <div className="grid grid-cols-3 items-center gap-x-6 gap-y-5">
@@ -101,7 +101,7 @@ export function HelpBand() {
 /** Accreditation / trust strip */
 export function TrustStrip({ dark = false }: { dark?: boolean }) {
   return (
-    <div className={dark ? "text-cream/70" : "text-ink/60"}>
+    <div className={dark ? "text-cream/70" : "text-ink/70"}>
       <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
         {accreditations.map((l) => (
           <Image

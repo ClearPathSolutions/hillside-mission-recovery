@@ -53,6 +53,15 @@ export default function Footer() {
               <span className="text-teal-bright">◆</span> {site.address.full}
             </p>
           </div>
+          <a
+            href={site.reviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-cream transition-colors hover:border-teal-bright hover:text-white"
+          >
+            <span className="text-gold" aria-hidden="true">★★★★★</span>
+            Review us on Google
+          </a>
         </div>
 
         {/* Nav columns */}

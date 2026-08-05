@@ -30,13 +30,13 @@ export function ContentSidebar({ toc }: { toc?: TocItem[] }) {
       {/* On this page */}
       {toc && toc.length > 2 && (
         <nav className="rounded-2xl border border-line bg-white p-6" aria-label="On this page">
-          <p className="text-xs font-semibold uppercase tracking-widest text-ink/45">On this page</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-ink/70">On this page</p>
           <ul className="mt-4 space-y-2.5 border-l border-line">
             {toc.map((t) => (
               <li key={t.id}>
                 <a
                   href={`#${t.id}`}
-                  className="-ml-px block border-l-2 border-transparent pl-4 text-sm leading-snug text-ink/65 transition hover:border-teal hover:text-teal"
+                  className="-ml-px block border-l-2 border-transparent pl-4 text-sm leading-snug text-ink/70 transition hover:border-teal hover:text-teal"
                 >
                   {t.text}
                 </a>

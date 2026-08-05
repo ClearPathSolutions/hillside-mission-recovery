@@ -18,7 +18,8 @@ export const site = {
   },
   // Google Maps embed for the facility area
   mapQuery: "23371+Rockrose,+Mission+Viejo,+CA+92692",
-  establishedYear: 2015,
+  reviewUrl: "https://g.page/r/CcJyF5dadvR0EAI/review",
+  establishedYear: 2020,
   peopleHelped: "1,000+",
   beds: 6,
   widgets: {

@@ -1,27 +1,68 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { IconArrow, IconCheck, IconShield } from "@/components/Icons";
-
-declare global {
-  interface Window {
-    ClarionForms?: {
-      submit: (opts: { form_key?: string; data?: Record<string, unknown> }) => Promise<Response>;
-    };
-  }
-}
+import { site } from "@/lib/site";
 
 type Variant = "contact" | "insurance";
 
-// Keys must match the form keys configured in the Clarion dashboard.
-const CLARION_FORM_KEY: Record<Variant, string> = {
-  insurance: "insurance_verification",
-  contact: "contact",
-};
+// Attribution keys shared with Clarion's forms-capture snippet, so a lead
+// submitted through this form carries the same first-touch data the widget
+// would have recorded.
+const FT_LANDING = "clarion_ft_landing";
+const FT_REFERRER = "clarion_ft_referrer";
+
+function session(key: string, value?: string): string | null {
+  try {
+    if (value !== undefined) {
+      sessionStorage.setItem(key, value);
+      return value;
+    }
+    return sessionStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+/** Record first-touch landing page + referrer once per session. */
+function rememberFirstTouch() {
+  if (session(FT_LANDING) != null) return;
+  session(FT_LANDING, location.href);
+  const ref = document.referrer || "";
+  session(FT_REFERRER, ref && ref.indexOf(location.origin) !== 0 ? ref : "");
+}
+
+function collectAttribution() {
+  if (typeof window === "undefined") return {};
+  rememberFirstTouch();
+
+  let params: URLSearchParams | null = null;
+  try {
+    params = new URLSearchParams(location.search);
+  } catch {}
+
+  const utm: Record<string, string> = {};
+  for (const k of ["source", "medium", "campaign", "term", "content"]) {
+    const v = params?.get(`utm_${k}`);
+    if (v) utm[k] = v;
+  }
+
+  const referrer = session(FT_REFERRER);
+  return {
+    pageUrl: location.href,
+    landingPageUrl: session(FT_LANDING) || location.href,
+    referrer: referrer || null,
+    utm: Object.keys(utm).length ? utm : null,
+    gclid: params?.get("gclid") || null,
+  };
+}
 
 export default function LeadForm({ variant = "contact" }: { variant?: Variant }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const inFlight = useRef(false);
+  // Unique per instance so two forms on one page don't emit duplicate ids.
+  const uid = useId();
+  const fieldId = (name: string) => `${uid}-${name}`;
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -31,20 +72,18 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     try {
-      // Best-effort capture into Clarion — never blocks our own submit.
-      try {
-        await window.ClarionForms?.submit({
-          form_key: CLARION_FORM_KEY[variant],
-          data: { ...data, variant },
-        });
-      } catch {}
-
+      // Delivery is server-side (see app/api/lead/route.ts). We deliberately do
+      // NOT call window.ClarionForms.submit() here — the server posts to Clarion
+      // itself, so an ad blocker can't lose the lead and Clarion isn't sent the
+      // same submission twice.
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, variant }),
+        body: JSON.stringify({ ...data, variant, attribution: collectAttribution() }),
       });
-      if (!res.ok) throw new Error("failed");
+      const json = (await res.json().catch(() => null)) as { ok?: boolean } | null;
+      // Only claim success when the server confirms a channel accepted the lead.
+      if (!res.ok || !json?.ok) throw new Error("undelivered");
       setStatus("sent");
       form.reset();
     } catch {
@@ -72,21 +111,29 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="First name" name="firstName" required autoComplete="given-name" />
-        <Field label="Last name" name="lastName" required autoComplete="family-name" />
+        <Field id={fieldId("firstName")} label="First name" name="firstName" required autoComplete="given-name" />
+        <Field id={fieldId("lastName")} label="Last name" name="lastName" required autoComplete="family-name" />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Phone" name="phone" type="tel" required autoComplete="tel" />
-        <Field label="Email" name="email" type="email" required autoComplete="email" />
+        <Field id={fieldId("phone")} label="Phone" name="phone" type="tel" required autoComplete="tel" />
+        <Field id={fieldId("email")} label="Email" name="email" type="email" required autoComplete="email" />
       </div>
 
       {variant === "insurance" && (
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Date of birth" name="dob" type="date" required autoComplete="bday" />
-          <Field label="Insurance provider" name="insurer" placeholder="e.g. Anthem, Aetna, Cigna" />
+          <Field id={fieldId("dob")} label="Date of birth" name="dob" type="date" required autoComplete="bday" />
+          <Field
+            id={fieldId("insurer")}
+            label="Insurance provider"
+            name="insurer"
+            placeholder="e.g. Anthem, Aetna, Cigna"
+          />
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-ink/80">Who needs help?</label>
+            <label htmlFor={fieldId("who")} className="mb-1.5 block text-sm font-medium text-ink/80">
+              Who needs help?
+            </label>
             <select
+              id={fieldId("who")}
               name="who"
               className="w-full rounded-xl border border-line bg-white px-4 py-3 text-ink outline-none transition focus:border-teal focus:ring-2 focus:ring-teal/30"
             >
@@ -99,14 +146,14 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
       )}
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink/80">
-          How can we help? {variant === "contact" && <span className="text-ink/40">(optional)</span>}
+        <label htmlFor={fieldId("message")} className="mb-1.5 block text-sm font-medium text-ink/80">
+          How can we help? {variant === "contact" && <span className="text-ink/70">(optional)</span>}
         </label>
         <textarea
-          id="message"
+          id={fieldId("message")}
           name="message"
           rows={4}
-          className="w-full resize-none rounded-xl border border-line bg-white px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-teal focus:ring-2 focus:ring-teal/30"
+          className="w-full resize-none rounded-xl border border-line bg-white px-4 py-3 text-ink outline-none transition placeholder:text-ink/70 focus:border-teal focus:ring-2 focus:ring-teal/30"
           placeholder="Tell us a little about your situation…"
         />
       </div>
@@ -122,12 +169,16 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
       </button>
 
       {status === "error" && (
-        <p className="text-sm text-red-600">
-          Something went wrong. Please call us directly at (866) 393-5174 and we&apos;ll help right away.
+        <p role="alert" className="text-sm text-red-700">
+          We couldn&apos;t send your message. Please call us directly at{" "}
+          <a href={site.phoneHref} className="font-semibold underline">
+            {site.phone}
+          </a>{" "}
+          and we&apos;ll help right away.
         </p>
       )}
 
-      <p className="flex items-start gap-2 pt-1 text-xs leading-relaxed text-ink/50">
+      <p className="flex items-start gap-2 pt-1 text-xs leading-relaxed text-ink/70">
         <IconShield className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
         Your information is 100% confidential and protected. Submitting this form does not create a
         provider-patient relationship.
@@ -137,6 +188,7 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
 }
 
 function Field({
+  id,
   label,
   name,
   type = "text",
@@ -144,6 +196,7 @@ function Field({
   placeholder,
   autoComplete,
 }: {
+  id: string;
   label: string;
   name: string;
   type?: string;
@@ -153,17 +206,17 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-1.5 block text-sm font-medium text-ink/80">
+      <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-ink/80">
         {label} {required && <span className="text-teal">*</span>}
       </label>
       <input
-        id={name}
+        id={id}
         name={name}
         type={type}
         required={required}
         placeholder={placeholder}
         autoComplete={autoComplete}
-        className="w-full rounded-xl border border-line bg-white px-4 py-3 text-ink outline-none transition placeholder:text-ink/35 focus:border-teal focus:ring-2 focus:ring-teal/30"
+        className="w-full rounded-xl border border-line bg-white px-4 py-3 text-ink outline-none transition placeholder:text-ink/70 focus:border-teal focus:ring-2 focus:ring-teal/30"
       />
     </div>
   );

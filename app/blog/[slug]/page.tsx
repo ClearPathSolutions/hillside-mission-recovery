@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getClarionPost, clarionCategory, processBodyHtml } from "@/lib/clarion";
 import { getAllPosts } from "@/lib/content";
+import { isOptimizableImage } from "@/lib/image-hosts";
 import { site } from "@/lib/site";
 import PostCard from "@/components/PostCard";
 import { ContentSidebar } from "@/components/Sidebar";
@@ -65,14 +66,24 @@ export default async function ClarionArticlePage({
       <section className="relative isolate overflow-hidden bg-ink text-white">
         {post.cover_image_url && (
           <>
-            <Image
-              src={post.cover_image_url}
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover opacity-25"
-            />
+            {isOptimizableImage(post.cover_image_url) ? (
+              <Image
+                src={post.cover_image_url}
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover opacity-25"
+              />
+            ) : (
+              // Host isn't in the optimizer allowlist — render unoptimized rather than throw.
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={post.cover_image_url}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover opacity-25"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/80 to-ink" />
           </>
         )}
@@ -108,7 +119,7 @@ export default async function ClarionArticlePage({
             <div className="clarion-prose" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
             <div className="mt-12 rounded-2xl border border-line bg-white p-7">
               <h3 className="text-xl text-ink">Ready to take the next step?</h3>
-              <p className="mt-2 text-ink/65">
+              <p className="mt-2 text-ink/70">
                 If you or someone you love is struggling, Hillside Mission is here to help —
                 confidentially, 24/7.
               </p>

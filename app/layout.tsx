@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
+import { defaultOgImage } from "@/lib/media";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
@@ -32,6 +33,14 @@ export const metadata: Metadata = {
     siteName: site.fullName,
     title: `${site.tagline} | ${site.name}`,
     description: site.description,
+    images: [defaultOgImage],
+  },
+  // A5 — was defaulting to the small "summary" card.
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.tagline} | ${site.name}`,
+    description: site.description,
+    images: [defaultOgImage],
   },
   icons: {
     icon: "/icon.svg",
@@ -81,6 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "Aftercare & Alumni Program",
               ],
               areaServed: "Orange County, California",
+              foundingDate: String(site.establishedYear),
             }),
           }}
         />

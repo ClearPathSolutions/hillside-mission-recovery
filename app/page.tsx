@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { services } from "@/lib/services";
-import { facilityHero, gallery } from "@/lib/media";
+import { facilityHero, facilityCommunity, gallery, defaultOgImage } from "@/lib/media";
 import { getRecentPosts } from "@/lib/content";
 import { InsuranceBand, HelpBand, TrustStrip } from "@/components/CTABands";
 import PostCard from "@/components/PostCard";
@@ -17,14 +18,24 @@ import {
   IconClock,
 } from "@/components/Icons";
 
+// V0058 — the homepage template emitted no canonical. A5 — and no og:image.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: `${site.tagline} | ${site.name}`,
+    description: site.description,
+    images: [defaultOgImage],
+  },
+};
+
 export default function HomePage() {
   const posts = getRecentPosts(3);
 
   const heroFeatures = ["Private Accommodations", "Serene Pool & Spa", "Chef-Prepared Meals"];
 
   const stats = [
-    { value: "1,000+", label: "People helped since 2015" },
-    { value: "6-Bed", label: "Intimate, private census" },
+    { value: site.peopleHelped, label: `People helped since ${site.establishedYear}` },
+    { value: `${site.beds}-Bed`, label: "Intimate, private census" },
     { value: "24/7", label: "Clinical & medical support" },
     { value: "100%", label: "Individualized care plans" },
   ];
@@ -117,7 +128,7 @@ export default function HomePage() {
               />
             </div>
             <div className="absolute -bottom-6 -right-4 hidden w-56 rounded-2xl bg-ink p-6 text-white shadow-lift sm:block md:-right-8">
-              <p className="font-display text-4xl text-teal-bright">Est. 2015</p>
+              <p className="font-display text-4xl text-teal-bright">Est. {site.establishedYear}</p>
               <p className="mt-1 text-sm text-cream/70">Trusted Orange County recovery.</p>
             </div>
           </div>
@@ -170,7 +181,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="mt-5 text-xl text-ink">{s.title}</h3>
                 <p className="mt-1 text-sm font-medium text-teal">{s.tagline}</p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/65">{s.text}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/70">{s.text}</p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink transition-all group-hover:gap-2.5 group-hover:text-teal">
                   Learn more <IconArrow className="h-4 w-4" />
                 </span>
@@ -224,7 +235,7 @@ export default function HomePage() {
                     <d.Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-4 text-lg text-ink">{d.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/65">{d.text}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink/70">{d.text}</p>
                 </div>
               ))}
             </div>
@@ -234,7 +245,7 @@ export default function HomePage() {
 
       {/* ============ TESTIMONIAL ============ */}
       <section className="relative isolate overflow-hidden bg-ink-700 text-white">
-        <Image src={gallery[4].src} alt="" fill sizes="100vw" className="object-cover opacity-15" />
+        <Image src={facilityCommunity} alt="" fill sizes="100vw" className="object-cover opacity-15" />
         <div className="absolute inset-0 bg-ink/80" />
         <div className="container-x relative py-20 text-center md:py-28">
           <p className="reveal eyebrow eyebrow-center justify-center !text-teal-bright">A few words from our alumni</p>

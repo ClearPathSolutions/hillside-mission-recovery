@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { gallery, facilityHero } from "@/lib/media";
+import { gallery, facilityHero, facilityExterior } from "@/lib/media";
 import PageHero from "@/components/PageHero";
 import Gallery from "@/components/Gallery";
 import { InsuranceBand } from "@/components/CTABands";
 import { IconArrow } from "@/components/Icons";
 
+const description =
+  "Explore Hillside Mission Recovery — a luxury drug & alcohol rehab in Mission Viejo, CA. Take a photo tour of our private, home-like residence and grounds.";
+
 export const metadata: Metadata = {
   title: "Tour Our Facility — Photos & Virtual Tour",
-  description:
-    "Explore Hillside Mission Recovery — a luxury drug & alcohol rehab in Mission Viejo, CA. Take a photo tour of our private, home-like residence and grounds.",
+  description,
+  alternates: { canonical: "/tour" },
+  openGraph: {
+    title: "Tour Our Facility — Photos & Virtual Tour",
+    description,
+    images: [facilityExterior],
+  },
 };
 
 export default function TourPage() {

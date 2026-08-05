@@ -1,10 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { PostMeta } from "@/lib/content";
+import { BLOG_LIST_INITIAL, type PostMeta } from "@/lib/content";
 import PostCard from "@/components/PostCard";
 
-const PAGE = 9;
+// Kept in sync with the archive arithmetic in lib/content.ts (V0061).
+const PAGE = BLOG_LIST_INITIAL;
 
 export default function BlogList({ posts, categories }: { posts: PostMeta[]; categories: string[] }) {
   const [cat, setCat] = useState<string>("All");
@@ -46,7 +47,7 @@ export default function BlogList({ posts, categories }: { posts: PostMeta[]; cat
         </div>
         <div className="relative w-full lg:w-72">
           <svg
-            className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
+            className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/70"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -70,7 +71,7 @@ export default function BlogList({ posts, categories }: { posts: PostMeta[]; cat
 
       {/* Results */}
       {shown.length === 0 ? (
-        <p className="py-20 text-center text-ink/50">No articles match your search.</p>
+        <p className="py-20 text-center text-ink/70">No articles match your search.</p>
       ) : (
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((p) => (
@@ -84,7 +85,7 @@ export default function BlogList({ posts, categories }: { posts: PostMeta[]; cat
           <button type="button" onClick={() => setVisible((v) => v + PAGE)} className="btn btn-ghost">
             Load more articles
           </button>
-          <p className="mt-3 text-sm text-ink/45">
+          <p className="mt-3 text-sm text-ink/70">
             Showing {shown.length} of {filtered.length}
           </p>
         </div>

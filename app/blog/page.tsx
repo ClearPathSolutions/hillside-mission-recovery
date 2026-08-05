@@ -1,17 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllPosts, CATEGORIES, type PostMeta } from "@/lib/content";
+import { getAllPosts, CATEGORIES, archiveTotalPages, type PostMeta } from "@/lib/content";
 import { getClarionPosts } from "@/lib/clarion";
+import { facilityCommunity } from "@/lib/media";
 import PageHero from "@/components/PageHero";
 import BlogList from "@/components/BlogList";
+import Pagination from "@/components/Pagination";
 import { InsuranceBand } from "@/components/CTABands";
 import { IconArrow, IconClock } from "@/components/Icons";
 
+const description =
+  "Insights on addiction, recovery, treatment, and mental health from the team at Hillside Mission Recovery in Mission Viejo, CA.";
+
 export const metadata: Metadata = {
   title: "Blog — Addiction, Recovery & Mental Health",
-  description:
-    "Insights on addiction, recovery, treatment, and mental health from the team at Hillside Mission Recovery in Mission Viejo, CA.",
+  description,
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog — Addiction, Recovery & Mental Health",
+    description,
+    images: [facilityCommunity],
+  },
 };
 
 export default async function BlogPage() {
@@ -54,7 +64,7 @@ export default async function BlogPage() {
                 )}
               </div>
               <div className="flex flex-col justify-center p-8 md:p-12">
-                <div className="flex items-center gap-3 text-xs text-ink/50">
+                <div className="flex items-center gap-3 text-xs text-ink/70">
                   <span className="rounded-full bg-teal-soft px-3 py-1 font-semibold text-teal">
                     {featured.category}
                   </span>
@@ -78,6 +88,9 @@ export default async function BlogPage() {
       <section className="bg-cream pb-20 md:pb-28">
         <div className="container-x">
           <BlogList posts={rest} categories={usedCategories} />
+          {/* V0061 — the list above is client-filtered and shows 9 at a time, so
+              these plain links are what make every article crawlable. */}
+          <Pagination current={1} total={archiveTotalPages(posts.length)} />
         </div>
       </section>
 

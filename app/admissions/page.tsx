@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/lib/site";
-import { insuranceLogos } from "@/lib/media";
+import { insuranceLogos, facilityFoyer } from "@/lib/media";
 import PageHero from "@/components/PageHero";
 import LeadForm from "@/components/LeadForm";
 import { IconPhone, IconPlan, IconShield, IconCare } from "@/components/Icons";
 
+const description =
+  "Starting treatment at Hillside Mission is simple. Verify your insurance in minutes — most major providers help cover the cost of rehab in Mission Viejo, CA.";
+
 export const metadata: Metadata = {
   title: "Admissions & Insurance Verification",
-  description:
-    "Starting treatment at Hillside Mission is simple. Verify your insurance in minutes — most major providers help cover the cost of rehab in Mission Viejo, CA.",
+  description,
+  alternates: { canonical: "/admissions" },
+  openGraph: {
+    title: "Admissions & Insurance Verification",
+    description,
+    images: [facilityFoyer],
+  },
 };
 
 const steps = [
@@ -44,7 +52,7 @@ export default function AdmissionsPage() {
                   <s.Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 text-lg text-ink">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink/65">{s.text}</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink/70">{s.text}</p>
               </div>
             ))}
           </div>
@@ -64,7 +72,13 @@ export default function AdmissionsPage() {
             </p>
 
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-cream/50">
+              {/* R7 — the named "Health Insurance Can Pay for Rehab." section.
+                  The other 8 pages in that row get it from <InsuranceBand />;
+                  /admissions is the verification page itself, so the heading is
+                  added here over the existing logos rather than duplicating the
+                  whole band (which would repeat the logos and self-link). */}
+              <h3 className="text-xl text-white">Your health insurance can pay for rehab.</h3>
+              <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-cream/70">
                 Accepted providers include
               </p>
               <div className="mt-4 grid grid-cols-3 items-center gap-x-6 gap-y-5 sm:grid-cols-5">
@@ -93,7 +107,7 @@ export default function AdmissionsPage() {
 
           <div className="reveal rounded-2xl bg-cream p-7 text-ink md:p-9">
             <h3 className="text-2xl">Verify my benefits</h3>
-            <p className="mt-2 text-ink/65">Takes about 2 minutes. A specialist will follow up personally.</p>
+            <p className="mt-2 text-ink/70">Takes about 2 minutes. A specialist will follow up personally.</p>
             <div className="mt-6">
               <LeadForm variant="insurance" />
             </div>

@@ -127,6 +127,8 @@ export const footerNav: NavColumn[] = [
       { label: "Meth", href: "/meth" },
       { label: "Benzodiazepines", href: "/benzos" },
       { label: "Fentanyl", href: "/fentanyl" },
+      // V0056 — the footer listed 6 of the 7 live condition pages.
+      { label: "Prescription Drugs", href: "/prescription-drugs" },
     ],
   },
   {

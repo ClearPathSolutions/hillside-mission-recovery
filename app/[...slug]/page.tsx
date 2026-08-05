@@ -7,10 +7,11 @@ import {
   getCatchAllSlugs,
   getRelatedPosts,
   deriveCategory,
+  NOINDEX_SLUGS,
   type Doc,
 } from "@/lib/content";
 import { site } from "@/lib/site";
-import { staffPhotos } from "@/lib/media";
+import { staffPhotos, defaultOgImage } from "@/lib/media";
 import PageHero from "@/components/PageHero";
 import ContentBlocks, { getTOC } from "@/components/ContentBlocks";
 import { ContentSidebar } from "@/components/Sidebar";
@@ -38,10 +39,13 @@ export async function generateMetadata({
     openGraph: {
       title: doc.title,
       description: doc.description || doc.excerpt,
-      images: doc.ogImage ? [doc.ogImage] : undefined,
+      // A5 — fall back to the facility image so no page ships a blank preview.
+      images: [doc.ogImage || defaultOgImage],
       type: doc.type === "post" ? "article" : "website",
     },
     alternates: { canonical: `/${doc.slug}` },
+    // A6 — /thank-you is a conversion page; keep it out of the index.
+    ...(NOINDEX_SLUGS.has(doc.slug) ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -72,7 +76,7 @@ function ContentPage({ doc }: { doc: Doc }) {
       <section className="bg-cream">
         <div className="container-x grid gap-12 py-16 md:py-20 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14">
           <article className="reveal min-w-0 max-w-2xl">
-            <ContentBlocks blocks={doc.blocks} />
+            <ContentBlocks blocks={doc.blocks} currentPath={`/${doc.slug}`} />
           </article>
           <div className="reveal">
             <ContentSidebar toc={toc} />
@@ -133,10 +137,10 @@ function ArticlePage({ doc }: { doc: Doc }) {
       <section className="bg-cream">
         <div className="container-x grid gap-12 py-16 md:py-20 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14">
           <article className="reveal min-w-0 max-w-2xl">
-            <ContentBlocks blocks={doc.blocks} />
+            <ContentBlocks blocks={doc.blocks} currentPath={`/${doc.slug}`} />
             <div className="mt-12 rounded-2xl border border-line bg-white p-7">
               <h3 className="text-xl text-ink">Ready to take the next step?</h3>
-              <p className="mt-2 text-ink/65">
+              <p className="mt-2 text-ink/70">
                 If you or someone you love is struggling, Hillside Mission is here to help — confidentially,
                 24/7.
               </p>
@@ -180,7 +184,8 @@ function ArticlePage({ doc }: { doc: Doc }) {
 function StaffPage({ doc }: { doc: Doc }) {
   const key = doc.slug.split("/").pop() || "";
   const photo = staffPhotos[key];
-  const role = /monica/i.test(doc.slug) ? "Program Director" : "Director of Operations";
+  // Titles follow the QHG directory / staff portal (issues.md DOC-02).
+  const role = /monica/i.test(doc.slug) ? "Clinical Supervisor" : "Director of Operations";
   const name = doc.h1 || doc.title;
 
   return (
@@ -208,7 +213,7 @@ function StaffPage({ doc }: { doc: Doc }) {
             <p className="text-sm font-semibold text-teal">{role}</p>
             <h2 className="mt-1 text-3xl md:text-4xl">{name}</h2>
             <div className="mt-6">
-              <ContentBlocks blocks={doc.blocks} />
+              <ContentBlocks blocks={doc.blocks} currentPath={`/${doc.slug}`} />
             </div>
           </article>
         </div>
