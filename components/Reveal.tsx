@@ -25,7 +25,13 @@ export default function Reveal() {
           }
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+      // threshold MUST stay 0. A fractional threshold is unsatisfiable for any
+      // element taller than the viewport — the article body on the substance
+      // pages is ~10,000px, so 8% of it (~850px) never fits on a phone screen,
+      // `isIntersecting` never fired, and the whole page stayed at opacity 0
+      // while still occupying its full height. The negative bottom rootMargin
+      // is what delays the trigger, so the effect is unchanged for small cards.
+      { rootMargin: "0px 0px -8% 0px", threshold: 0 }
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
