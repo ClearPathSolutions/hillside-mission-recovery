@@ -87,12 +87,14 @@ type Member = {
   role: string;
   group: GroupKey;
   photo?: string;
-  bio: string;
+  /** Paragraphs, verbatim from the QHG bio directory. */
+  bio: string[];
 };
 
-// NOTE (issues.md DOC-04): no headshots exist for these yet — the portal
-// returns photoUrl: null and there are no local assets. The card falls back to
-// initials, so they can be added later without touching this file.
+// Bios are the directory's full text, not an excerpt — voice included. Shawn
+// Young's and Michael McArthur's are written in the first person and the rest
+// in the third; that is how they were authored, and nobody's professional bio
+// gets rewritten here (issues.md DOC-06).
 const team: Member[] = [
   {
     slug: "phillip-carter",
@@ -100,47 +102,11 @@ const team: Member[] = [
     role: "Director of Operations",
     group: "facility",
     photo: staffPhotos["phillip-carter"],
-    bio: "Phillip Carter serves as the Director of Operations at Hillside Mission Recovery, bringing extensive experience in criminal justice, behavioral health, and recovery support. He began his career with the Indiana Department of Corrections, where he spent eight years working in state parole, case management, crisis intervention, and employment placement. During that time, he developed a strong foundation in meeting individuals where they are, navigating high-pressure situations with steadiness, and helping people recognize their potential\u2014even when they struggle to see it themselves.",
-  },
-  {
-    slug: "monica-olivares",
-    name: "Monica Olivares, CADC II",
-    role: "Clinical Supervisor, California",
-    group: "california",
-    photo: staffPhotos["monica-olivares"],
-    bio: "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group's California facilities, bringing over 11 years of experience in the behavioral health field and a deeply personal passion for recovery and healing. Throughout her career, Monica has worked across nearly every level of care \u2014 including Detox, Residential, IOP, PHP, and Outpatient programs \u2014 while holding a wide range of roles from Behavioral Health Technician and Case Manager to Program Manager and Program Director.",
-  },
-  {
-    slug: "shawn-young",
-    name: "Shawn Young",
-    role: "Executive Director, Southern California",
-    group: "california",
-    photo: staffPhotos["shawn-young"],
-    bio: "As the Executive Director of Southern California, I have the privilege of leading a team of dedicated professionals across several substance abuse treatment facilities — but at the heart of what I do is people. Whether it’s helping a client take their first step toward recovery or supporting a staff member as they grow into leadership, my passion lies in developing others and building environments where people can thrive.",
-  },
-  {
-    slug: "michael-mcarthur",
-    name: "Michael McArthur",
-    role: "Nursing Director, California",
-    group: "california",
-    photo: staffPhotos["michael-mcarthur"],
-    bio: "I am the Director of Nursing for California facilities, overseeing all medical staff and client care operations. My journey into nursing was inspired by a personal desire to provide hope and compassion during life’s most challenging moments. Watching nurses care for my family during a difficult time, I realized how powerful a little hope and dedicated care can be. This inspired me to pursue a career in nursing, knowing I could make a difference when people need it most.",
-  },
-  {
-    slug: "riky-hanaumi",
-    name: "Erika “Riky” Hanaumi, LCSW",
-    role: "Clinical Director, California",
-    group: "california",
-    photo: staffPhotos["riky-hanaumi"],
-    bio: "Erika “Riky” Hanaumi is a Licensed Clinical Social Worker with more than 20 years of experience in behavioral health and addiction treatment. She currently serves as Clinical Director for Quadrant Health Group’s California facilities, where she oversees clinical programming, mentors and supports therapists in developing effective treatment strategies, and ensures the delivery of compassionate, individualized, and clinically sound care. Her leadership focuses on promoting evidence-based practices, clinical excellence, and positive treatment outcomes for individuals with co-occurring mental health and substance use disorders.",
-  },
-  {
-    slug: "jacob-cameron",
-    name: "Jacob Cameron, SUDCC I",
-    role: "Client Care Director",
-    group: "california",
-    photo: staffPhotos["jacob-cameron"],
-    bio: "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about helping individuals navigate the recovery process, Jacob is dedicated to creating a treatment experience that is both meaningful and engaging. He believes that lasting recovery is built through genuine connection, compassionate support, and an environment where clients feel valued every step of the way.",
+    bio: [
+      "Phillip Carter serves as the Director of Operations at Hillside Mission Recovery, bringing extensive experience in criminal justice, behavioral health, and recovery support. He began his career with the Indiana Department of Corrections, where he spent eight years working in state parole, case management, crisis intervention, and employment placement. During that time, he developed a strong foundation in meeting individuals where they are, navigating high-pressure situations with steadiness, and helping people recognize their potential—even when they struggle to see it themselves.",
+      "Phillip joined Hillside Mission Recovery as a Behavioral Health Technician and steadily advanced through leadership roles including Lead Tech and Case Manager before stepping into his current position as Director of Operations. He also spent two years managing sober living homes, an experience that strengthened his commitment to supporting individuals as they rebuild their lives with structure, accountability, and hope.",
+      "As Director of Operations, Phillip leads with integrity, grit, and compassion. He is deeply invested in cultivating a strong team culture and empowering staff to grow into their strengths. Seeing both clients and team members develop confidence, resilience, and purpose is what fuels his passion for the work. Phillip remains dedicated to helping create an environment where lasting recovery and meaningful transformation are possible.",
+    ],
   },
   {
     slug: "justin-white",
@@ -148,7 +114,11 @@ const team: Member[] = [
     role: "Program Director",
     group: "socal",
     photo: staffPhotos["justin-white"],
-    bio: "Justin White serves as Program Director for Quadrant Health Group's Southern California facilities, providing operational leadership and program oversight across the organization's behavioral health treatment centers. In this role, he works closely with multidisciplinary teams to ensure each facility delivers high-quality, individualized care while maintaining excellence in clinical programming, regulatory compliance, and day-to-day operations.",
+    bio: [
+      "Justin White serves as Program Director for Quadrant Health Group's Southern California facilities, providing operational leadership and program oversight across the organization's behavioral health treatment centers. In this role, he works closely with multidisciplinary teams to ensure each facility delivers high-quality, individualized care while maintaining excellence in clinical programming, regulatory compliance, and day-to-day operations.",
+      "A Registered Addiction Counselor, Justin brings extensive experience in both detoxification and residential treatment settings. His leadership is rooted in the belief that recovery is never one-size-fits-all, and he is committed to fostering treatment environments where every client feels respected, supported, and empowered throughout their healing journey.",
+      "Known for his compassionate and collaborative leadership style, Justin is passionate about developing strong teams and creating programs that promote lasting recovery. He believes meaningful change begins with genuine human connection and is dedicated to helping both clients and staff reach their fullest potential. Through his leadership, he continues to advance Quadrant Health Group's mission of providing exceptional, evidence-based behavioral healthcare across Southern California.",
+    ],
   },
   {
     slug: "elizabeth-wald",
@@ -156,7 +126,11 @@ const team: Member[] = [
     role: "Program Director",
     group: "socal",
     photo: staffPhotos["elizabeth-wald"],
-    bio: "Elizabeth Wald serves as Program Director for Quadrant Health Group's Southern California facilities, where she oversees program operations, clinical coordination, and day-to-day management across the organization's behavioral health treatment centers. She works closely with multidisciplinary teams to ensure each program delivers exceptional, individualized care while maintaining the highest standards of quality, compliance, and operational excellence.",
+    bio: [
+      "Elizabeth Wald serves as Program Director for Quadrant Health Group's Southern California facilities, where she oversees program operations, clinical coordination, and day-to-day management across the organization's behavioral health treatment centers. She works closely with multidisciplinary teams to ensure each program delivers exceptional, individualized care while maintaining the highest standards of quality, compliance, and operational excellence.",
+      "Since entering the behavioral health field in 2021, Elizabeth has been an integral part of Quadrant Health Group's growth, beginning with the opening of one of its Northern California facilities. Her leadership has been instrumental in fostering compassionate, client-centered treatment environments where individuals receive personalized support throughout every stage of their recovery journey.",
+      "Elizabeth's passion for behavioral healthcare is deeply rooted in her own lived experience in recovery. She believes that meaningful healing begins by meeting individuals where they are, building genuine connections, and empowering them with the tools, education, and support needed to achieve lasting recovery. Her leadership is driven by empathy, authenticity, and an unwavering commitment to helping others reclaim their lives while supporting her teams in delivering the highest level of care.",
+    ],
   },
   {
     slug: "jeremiah-ross",
@@ -164,7 +138,10 @@ const team: Member[] = [
     role: "Nursing Supervisor",
     group: "socal",
     photo: staffPhotos["jeremiah-ross"],
-    bio: "Jeremiah Ross, is a dedicated healthcare professional with more than 10 years of patient care experience and a strong background in substance use disorder treatment, client care coordination, and clinical team leadership. As the Nursing Supervisor, Jeremiah plays an integral role in supporting both clients and staff, helping oversee day-to-day clinical operations, medication-assisted treatment (MAT) protocols, documentation compliance, staff development, and multidisciplinary collaboration to ensure the highest standards of care.",
+    bio: [
+      "Jeremiah Ross, is a dedicated healthcare professional with more than 10 years of patient care experience and a strong background in substance use disorder treatment, client care coordination, and clinical team leadership. As the Nursing Supervisor, Jeremiah plays an integral role in supporting both clients and staff, helping oversee day-to-day clinical operations, medication-assisted treatment (MAT) protocols, documentation compliance, staff development, and multidisciplinary collaboration to ensure the highest standards of care.",
+      "Passionate about helping individuals navigate the recovery process, Jeremiah is committed to creating a safe, supportive, and structured treatment environment where clients can build stability, develop healthy coping skills, and work toward lasting recovery. His leadership style emphasizes compassion, accountability, and teamwork, helping foster positive outcomes for both clients and clinical staff.",
+    ],
   },
   {
     slug: "alanna-mcmurtrey",
@@ -172,7 +149,77 @@ const team: Member[] = [
     role: "Lead Case Manager",
     group: "socal",
     photo: staffPhotos["alanna-mcmurtrey"],
-    bio: "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management services and supports clients through detox and residential levels of care. In her role, she coordinates client care, provides leadership and clinical support to case management staff, and helps ensure that each individual receives consistent, structured, and personalized support throughout their treatment journey.",
+    bio: [
+      "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management services and supports clients through detox and residential levels of care. In her role, she coordinates client care, provides leadership and clinical support to case management staff, and helps ensure that each individual receives consistent, structured, and personalized support throughout their treatment journey.",
+      "With several years of experience in behavioral health and addiction treatment, Alanna has developed a strong passion for helping individuals overcome substance use disorders and co-occurring mental health challenges. She is dedicated to fostering engagement in treatment, promoting personal growth, and supporting clients as they work toward sustainable, long-term recovery.",
+      "Alanna takes a client-centered, strengths-based approach to care, meeting individuals where they are and helping them build upon their unique strengths. She is committed to creating a safe, respectful, and supportive environment where clients feel heard, valued, and empowered to make meaningful changes in their lives. Through collaboration, compassion, and clinical consistency, she strives to help clients develop the skills, confidence, and stability needed to achieve lasting recovery and improved well-being.",
+    ],
+  },
+  {
+    slug: "shawn-young",
+    name: "Shawn Young",
+    role: "Executive Director, Southern California",
+    group: "california",
+    photo: staffPhotos["shawn-young"],
+    bio: [
+      "As the Executive Director of Southern California, I have the privilege of leading a team of dedicated professionals across several substance abuse treatment facilities — but at the heart of what I do is people. Whether it’s helping a client take their first step toward recovery or supporting a staff member as they grow into leadership, my passion lies in developing others and building environments where people can thrive.",
+      "I didn’t get here by accident. I worked my way up through this field — from cooking in the kitchen and working as a tech, to becoming a clinician, and now serving in executive leadership. That journey gave me a deep understanding of what this work really takes — grit, heart, and an unwavering commitment to showing up for people when they need it most.",
+      "I believe recovery is more than just treatment — it’s a life long journey that we have the privilege of helping people build that foundation.",
+      "At the end of the day, I’m a husband and a father. My family is my foundation and the reason I lead with heart. The way I show up at home is how I try to show up in this work — grounded, honest, and fully present.",
+      "This isn’t just a job to me — it’s a calling, and I’m all in.",
+    ],
+  },
+  {
+    slug: "michael-mcarthur",
+    name: "Michael McArthur",
+    role: "Nursing Director, California",
+    group: "california",
+    photo: staffPhotos["michael-mcarthur"],
+    bio: [
+      "I am the Director of Nursing for California facilities, overseeing all medical staff and client care operations. My journey into nursing was inspired by a personal desire to provide hope and compassion during life’s most challenging moments. Watching nurses care for my family during a difficult time, I realized how powerful a little hope and dedicated care can be. This inspired me to pursue a career in nursing, knowing I could make a difference when people need it most.",
+      "I love working in addiction recovery because it allows me to witness clients grow and thrive within our walls. Our staff’s client-focused approach creates a positive, motivating environment that makes coming to work truly rewarding.",
+      "Outside of my professional life, I am a proud father of four wonderful kids. They are my greatest inspiration—teaching me patience, resilience, and the importance of hope every day. My personal recovery journey has also strengthened my understanding of overcoming adversity, and it fuels my dedication to helping others find their path to healing.",
+      "I work in this industry because I believe that substance use disorder and behavioral health are underserved populations that deserve attention, compassion, and support. I am excited to be on the front lines helping to reduce stigma and provide clients with genuine opportunities for recovery.",
+      "Personally, I am passionate about my family, continuous improvement in patient care through scientific and technological advances, and my love for the Los Angeles Lakers. My goal is to make a meaningful difference, one life at a time, with hope, compassion, and unwavering dedication.",
+    ],
+  },
+  {
+    slug: "riky-hanaumi",
+    name: "Erika “Riky” Hanaumi, LCSW",
+    role: "Clinical Director, California",
+    group: "california",
+    photo: staffPhotos["riky-hanaumi"],
+    bio: [
+      "Erika “Riky” Hanaumi is a Licensed Clinical Social Worker with more than 20 years of experience in behavioral health and addiction treatment. She currently serves as Clinical Director for Quadrant Health Group’s California facilities, where she oversees clinical programming, mentors and supports therapists in developing effective treatment strategies, and ensures the delivery of compassionate, individualized, and clinically sound care. Her leadership focuses on promoting evidence-based practices, clinical excellence, and positive treatment outcomes for individuals with co-occurring mental health and substance use disorders.",
+      "Riky began her career working with individuals experiencing homelessness, providing intensive support, advocacy, and resource coordination to help clients overcome barriers and access essential services. This experience fueled her passion for serving vulnerable populations and inspired her to pursue a Master of Social Work degree from California State University, Fullerton, which she earned in 2013\\.",
+      "Throughout her career, Riky has worked in both inpatient and outpatient settings, providing therapy, crisis intervention, case management, and recovery-oriented services. She has extensive experience supporting adults with complex behavioral health needs, including co-occurring mental health and substance use disorders, while helping individuals navigate the challenges of recovery and major life transitions.",
+      "Riky is trained in evidence-based treatment modalities, including Cognitive Behavioral Therapy (CBT) and Dialectical Behavior Therapy (DBT). She is passionate about helping clients build resilience, strengthen coping skills, improve interpersonal relationships, and achieve lasting recovery.",
+      "At the heart of Riky’s work is a belief in the power of human connection and personal transformation. She is committed to empowering individuals to recognize their strengths, cultivate self-worth, and build fulfilling lives grounded in purpose, integrity, and hope.",
+    ],
+  },
+  {
+    slug: "monica-olivares",
+    name: "Monica Olivares, CADC II",
+    role: "Clinical Supervisor, California",
+    group: "california",
+    photo: staffPhotos["monica-olivares"],
+    bio: [
+      "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral health field and a deeply personal passion for recovery and healing. Throughout her career, Monica has worked across nearly every level of care — including Detox, Residential, IOP, PHP, and Outpatient programs — while holding a wide range of roles from Behavioral Health Technician and Case Manager to Program Manager and Program Director.",
+      "Monica holds a CADC II certification and has extensive experience supporting individuals struggling with substance use disorders, co-occurring mental health conditions, and eating disorders. Her leadership style is rooted in compassion, authenticity, accountability, and connection, helping create treatment environments where clients feel genuinely supported, understood, and empowered throughout their recovery journey.",
+      "In addition to her professional experience, Monica brings 13 years of personal recovery experience to the work she does each day. Her lived experience allows her to connect with clients on a deeper level while helping foster hope, trust, and meaningful change. She believes recovery should be individualized, engaging, and centered around human connection, emphasizing that healing can happen while still embracing joy, humor, and community.",
+      "Known for her energy, heart, and dedication, Monica is passionate about helping both clients and staff grow while cultivating strong, supportive treatment teams across the California programs. Outside of work, she enjoys spending time with her family, being outdoors, attending music festivals, exploring escape rooms, traveling, and creating memorable life experiences.",
+    ],
+  },
+  {
+    slug: "jacob-cameron",
+    name: "Jacob Cameron, SUDCC I",
+    role: "Client Care Director",
+    group: "california",
+    photo: staffPhotos["jacob-cameron"],
+    bio: [
+      "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about helping individuals navigate the recovery process, Jacob is dedicated to creating a treatment experience that is both meaningful and engaging. He believes that lasting recovery is built through genuine connection, compassionate support, and an environment where clients feel valued every step of the way.",
+      "In his role, Jacob works to ensure that each client receives personalized care and experiences a sense of belonging throughout their treatment journey. His goal is to help individuals not only achieve recovery but also discover that life in recovery can be fulfilling, rewarding, and enjoyable. Through his commitment to client-centered care, Jacob strives to make a lasting positive impact on the lives of those he serves.",
+    ],
   },
 ];
 
@@ -190,6 +237,7 @@ export default async function AboutPage() {
       ...e,
       group: "facility" as const,
       photo: e.photo ?? staffPhotos[e.slug] ?? undefined,
+      bio: [e.bio],
     })),
   ];
   return (
@@ -281,22 +329,41 @@ export default async function AboutPage() {
                     <h3 className="font-display text-2xl text-ink">{g.label}</h3>
                     <p className="mt-1 text-sm text-ink/70">{g.blurb}</p>
                   </div>
-                  <div className="mt-8 grid gap-8 sm:grid-cols-2">
+                  {/* Full-width rows rather than a two-column card grid: these
+                      are the directory's complete bios, up to five paragraphs,
+                      which a narrow card can't hold without going very tall and
+                      leaving the shorter entries ragged beside it. */}
+                  <div className="mt-8 space-y-8">
                     {members.map((m) => (
-                      <div key={m.slug} className="reveal card overflow-hidden">
-                        <div className="relative aspect-[4/3] bg-cream-deep">
+                      <div
+                        key={m.slug}
+                        className="reveal card overflow-hidden sm:flex sm:items-stretch"
+                      >
+                        <div className="relative aspect-[4/3] shrink-0 bg-cream-deep sm:aspect-auto sm:w-56 md:w-64">
                           {m.photo ? (
-                            <Image src={m.photo} alt={m.name} fill sizes="(min-width:640px) 45vw, 90vw" className="object-cover object-top" />
+                            <Image
+                              src={m.photo}
+                              alt={m.name}
+                              fill
+                              sizes="(min-width:768px) 16rem, (min-width:640px) 14rem, 100vw"
+                              className="object-cover object-top"
+                            />
                           ) : (
-                            <div className="flex h-full w-full items-center justify-center bg-teal/10 font-semibold text-4xl text-teal">
+                            <div className="flex h-full w-full items-center justify-center bg-teal/10 text-4xl font-semibold text-teal">
                               {initials(m.name)}
                             </div>
                           )}
                         </div>
-                        <div className="p-7">
+                        <div className="p-7 md:p-8">
                           <h4 className="text-xl text-ink">{m.name}</h4>
                           <p className="text-sm font-semibold text-teal">{m.role}</p>
-                          <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
+                          <div className="mt-3 space-y-3">
+                            {m.bio.map((p, i) => (
+                              <p key={i} className="text-sm leading-relaxed text-ink/70">
+                                {p}
+                              </p>
+                            ))}
+                          </div>
                           {/* V0062 / DOC-09 — the staff pages had no inbound link from
                               anywhere on the site, and /about linked to none of them. */}
                           {hasStaffPage(m.slug) && (
