@@ -130,12 +130,16 @@ export const gallery: GalleryImage[] = [
 
 export type Logo = { src: string; alt: string; w: number; h: number };
 
+// Dimensions are the real trimmed asset sizes. These files previously carried
+// large padded canvases (Aetna's mark filled 22% of its height) and were all
+// declared 200x90, so a fixed CSS height rendered each mark at a different
+// visual size. Assets are now cropped tight to the mark.
 export const insuranceLogos: Logo[] = [
-  { src: "/images/Aetna-bw-1.png", alt: "Aetna", w: 200, h: 90 },
-  { src: "/images/Cigna-bw-1.png", alt: "Cigna", w: 200, h: 90 },
-  { src: "/images/bluecross-bw2-1.png", alt: "Blue Cross Blue Shield", w: 200, h: 90 },
-  { src: "/images/anthem-black.png", alt: "Anthem", w: 200, h: 90 },
-  { src: "/images/First-Health-for-rehab-hillside.webp", alt: "First Health Network", w: 200, h: 90 },
+  { src: "/images/Aetna-bw-1.png", alt: "Aetna", w: 177, h: 54 },
+  { src: "/images/Cigna-bw-1.png", alt: "Cigna", w: 200, h: 84 },
+  { src: "/images/bluecross-bw2-1.png", alt: "Blue Cross Blue Shield", w: 200, h: 186 },
+  { src: "/images/anthem-black.png", alt: "Anthem", w: 183, h: 49 },
+  { src: "/images/First-Health-for-rehab-hillside.webp", alt: "First Health Network", w: 1009, h: 336 },
 ];
 
 export const accreditations: Logo[] = [

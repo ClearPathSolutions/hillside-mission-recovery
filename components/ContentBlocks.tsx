@@ -19,6 +19,9 @@ type ParagraphBlock = Extract<Block, { type: "paragraph" }>;
 const SERVICE_LINKS: Record<string, { href: string; cta: string }> = {
   detoxification: { href: "/treatment/detoxification", cta: "DETOX" },
   "residential inpatient": { href: "/treatment/residential-inpatient", cta: "INPATIENT" },
+  // Was absent, so Dual Diagnosis fell through to a plain heading + paragraph
+  // while the other three rendered as cards with an image and a link.
+  "dual diagnosis": { href: "/treatment/dual-diagnosis", cta: "DUAL DIAGNOSIS" },
   "aftercare & alumni": { href: "/treatment/aftercare-beyond", cta: "AFTERCARE" },
 };
 

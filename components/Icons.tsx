@@ -124,6 +124,19 @@ export const IconLeaf = (p: P) => (
   </svg>
 );
 
+/**
+ * Continuum of care — two arrows cycling around a circle. Replaces the leaf,
+ * which read as generic wellness rather than "one stage leads into the next".
+ */
+export const IconCycle = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M20 12a8 8 0 0 1-8 8 8 8 0 0 1-6.9-4" />
+    <path d="M4 12a8 8 0 0 1 8-8 8 8 0 0 1 6.9 4" />
+    <path d="M18.2 4.2v3.9h-3.9" />
+    <path d="M5.8 19.8v-3.9h3.9" />
+  </svg>
+);
+
 export const IconGroup = (p: P) => (
   <svg {...base(p)}>
     <circle cx="12" cy="8" r="3" />
