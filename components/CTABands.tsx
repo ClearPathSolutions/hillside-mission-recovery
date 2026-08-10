@@ -30,16 +30,22 @@ export function InsuranceBand() {
             <p className="text-xs font-semibold uppercase tracking-widest text-ink/70">
               In-network &amp; accepted plans
             </p>
-            <div className="grid grid-cols-3 items-center gap-x-6 gap-y-5">
+            {/* Logos read small at h-8/60% opacity. The assets have since been
+                cropped tight to the mark (see lib/media.ts), so each one is
+                given a uniform box and scaled to fit inside it — the marks
+                range from 1.08 (stacked BlueCross) to 3.73 (Anthem wordmark),
+                and forcing a single height would size them inconsistently. */}
+            <div className="grid grid-cols-3 items-center gap-x-7 gap-y-8">
               {insuranceLogos.map((l) => (
-                <Image
-                  key={l.src}
-                  src={l.src}
-                  alt={l.alt}
-                  width={l.w}
-                  height={l.h}
-                  className="h-8 w-auto object-contain opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
-                />
+                <div key={l.src} className="flex h-11 items-center justify-center md:h-12">
+                  <Image
+                    src={l.src}
+                    alt={l.alt}
+                    width={l.w}
+                    height={l.h}
+                    className="max-h-full w-auto max-w-full object-contain opacity-75 grayscale transition hover:opacity-100 hover:grayscale-0"
+                  />
+                </div>
               ))}
             </div>
           </div>

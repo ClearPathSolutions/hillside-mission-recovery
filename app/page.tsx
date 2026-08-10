@@ -11,7 +11,7 @@ import {
   IconArrow,
   IconPhone,
   IconCheck,
-  IconLeaf,
+  IconCycle,
   IconCare,
   IconStaff,
   IconLuxury,
@@ -44,7 +44,7 @@ export default function HomePage() {
     { Icon: IconStaff, title: "Dedicated Staff", text: "A team of expert professionals — many with lived recovery experience — guides you from day one." },
     { Icon: IconCare, title: "Personalized Treatment", text: "A full spectrum of care with a treatment plan designed uniquely around you." },
     { Icon: IconLuxury, title: "Luxury Setting", text: "A comfortable, beautiful environment proven to ease the pain of early recovery." },
-    { Icon: IconLeaf, title: "Continuum of Care", text: "From detox to alumni, we build a lasting foundation for life beyond rehab." },
+    { Icon: IconCycle, title: "Continuum of Care", text: "From detox to alumni, we build a lasting foundation for life beyond rehab." },
   ];
 
   return (
@@ -140,7 +140,7 @@ export default function HomePage() {
               We believe that lasting sobriety comes from treating the whole person. Our program integrates
               mind-body wellness so we can help you heal the roots of addiction — not just the symptoms.
             </p>
-            <p className="mt-4 leading-relaxed text-ink/70">
+            <p className="mt-4 text-lg leading-relaxed text-ink/75">
               Every client who comes through our doors is different, which is why we build an individualized
               plan for each person. From medical detox to residential care and aftercare, our caring,
               professional staff walk with you every step of the way.
