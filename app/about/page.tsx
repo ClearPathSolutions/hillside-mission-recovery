@@ -54,13 +54,18 @@ const values = [
   { Icon: IconCycle, title: "Continuum of Care", text: "Aftercare is essential to success. From day one we work with you to identify aftercare options that build on your new foundation." },
 ];
 
-// Bios, titles and grouping follow the QHG staff directory / support portal,
-// which is the authoritative roster. See issues.md DOC-01 (Phillip's real bio),
-// DOC-02/03 (Monica's title, surname and credential) and DOC-08 (surfacing the
-// regional clinical and nursing leadership that covers this facility).
+// The roster is the client's supplied staff list, verbatim: ten people, with
+// their names and titles exactly as given. Bio text comes from the QHG bio
+// directory. Do not append credentials or geography to a name or title here —
+// an earlier pass did, and it did not match what was asked for.
 //
-// Groups mirror the directory's own three tiers so the page doesn't imply that
-// state- and region-level leadership are based on site day to day.
+// Phillip Carter is deliberately absent: he is not on that list, and both the
+// bio directory and the headshot set file him under Wellness Ranch KY. His
+// /staff page is retired and 301s to this one. See issues.md DOC-11.
+//
+// Groups mirror the three tabs the list itself pointed at (CA sites, Cali
+// South, Hillside), so the page doesn't imply that state- and region-level
+// leadership are based on site day to day.
 const GROUPS = [
   {
     key: "facility",
@@ -96,18 +101,6 @@ type Member = {
 // in the third; that is how they were authored, and nobody's professional bio
 // gets rewritten here (issues.md DOC-06).
 const team: Member[] = [
-  {
-    slug: "phillip-carter",
-    name: "Phillip Carter",
-    role: "Director of Operations",
-    group: "facility",
-    photo: staffPhotos["phillip-carter"],
-    bio: [
-      "Phillip Carter serves as the Director of Operations at Hillside Mission Recovery, bringing extensive experience in criminal justice, behavioral health, and recovery support. He began his career with the Indiana Department of Corrections, where he spent eight years working in state parole, case management, crisis intervention, and employment placement. During that time, he developed a strong foundation in meeting individuals where they are, navigating high-pressure situations with steadiness, and helping people recognize their potential—even when they struggle to see it themselves.",
-      "Phillip joined Hillside Mission Recovery as a Behavioral Health Technician and steadily advanced through leadership roles including Lead Tech and Case Manager before stepping into his current position as Director of Operations. He also spent two years managing sober living homes, an experience that strengthened his commitment to supporting individuals as they rebuild their lives with structure, accountability, and hope.",
-      "As Director of Operations, Phillip leads with integrity, grit, and compassion. He is deeply invested in cultivating a strong team culture and empowering staff to grow into their strengths. Seeing both clients and team members develop confidence, resilience, and purpose is what fuels his passion for the work. Phillip remains dedicated to helping create an environment where lasting recovery and meaningful transformation are possible.",
-    ],
-  },
   {
     slug: "justin-white",
     name: "Justin White",
@@ -158,7 +151,7 @@ const team: Member[] = [
   {
     slug: "shawn-young",
     name: "Shawn Young",
-    role: "Executive Director, Southern California",
+    role: "Executive Director",
     group: "california",
     photo: staffPhotos["shawn-young"],
     bio: [
@@ -172,7 +165,7 @@ const team: Member[] = [
   {
     slug: "michael-mcarthur",
     name: "Michael McArthur",
-    role: "Nursing Director, California",
+    role: "Nursing Director",
     group: "california",
     photo: staffPhotos["michael-mcarthur"],
     bio: [
@@ -185,8 +178,8 @@ const team: Member[] = [
   },
   {
     slug: "riky-hanaumi",
-    name: "Erika “Riky” Hanaumi, LCSW",
-    role: "Clinical Director, California",
+    name: "Riky Hanaumi",
+    role: "Clinical Director",
     group: "california",
     photo: staffPhotos["riky-hanaumi"],
     bio: [
@@ -199,8 +192,8 @@ const team: Member[] = [
   },
   {
     slug: "monica-olivares",
-    name: "Monica Olivares, CADC II",
-    role: "Clinical Supervisor, California",
+    name: "Monica Olivares",
+    role: "Clinical Supervisor",
     group: "california",
     photo: staffPhotos["monica-olivares"],
     bio: [
@@ -212,7 +205,7 @@ const team: Member[] = [
   },
   {
     slug: "jacob-cameron",
-    name: "Jacob Cameron, SUDCC I",
+    name: "Jacob Cameron",
     role: "Client Care Director",
     group: "california",
     photo: staffPhotos["jacob-cameron"],

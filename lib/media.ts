@@ -158,6 +158,8 @@ export const accreditations: Logo[] = [
 // down to 0.67MB.
 export const staffPhotos: Record<string, string> = {
   "monica-olivares": "/images/MonicaHMS.jpeg",
+  // Retained, unused: Phillip Carter is off the roster per the client's staff
+  // list. Kept so restoring him is a one-line change if HR confirms otherwise.
   "phillip-carter": "/images/Phillip-Carter.png",
   // California leadership
   "shawn-young": "/images/staff/shawn-young.jpg",

@@ -18041,43 +18041,6 @@
       }
     ]
   },
-  "staff/phillip-carter": {
-    "slug": "staff/phillip-carter",
-    "type": "staff",
-    "title": "Phillip Carter - Director of Operations",
-    "h1": "Phillip Carter",
-    "description": "Meet Phillip Carter, Director of Operations, dedicated to helping individuals rebuild their lives with structure and hope.",
-    "date": null,
-    "modified": "2026-03-20T16:22:14+00:00",
-    "ogImage": "/images/Phillip-Carter.png",
-    "category": null,
-    "excerpt": "Phillip Carter serves as the Director of Operations at Hillside Mission Recovery, bringing extensive experience in criminal justice, behavioral health, and recovery support. He began his career with t",
-    "readMins": 1,
-    "blockCount": 5,
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "About Us"
-      },
-      {
-        "type": "heading",
-        "level": 1,
-        "text": "Phillip Carter"
-      },
-      {
-        "type": "paragraph",
-        "text": "Phillip Carter serves as the Director of Operations at Hillside Mission Recovery, bringing extensive experience in criminal justice, behavioral health, and recovery support. He began his career with the Indiana Department of Corrections, where he spent eight years working in state parole, case management, crisis intervention, and employment placement. During that time, he developed a strong foundation in meeting individuals where they are, navigating high-pressure situations with steadiness, and helping people recognize their potential—even when they struggle to see it themselves."
-      },
-      {
-        "type": "paragraph",
-        "text": "Phillip joined Hillside Mission Recovery as a Behavioral Health Technician and steadily advanced through leadership roles including Lead Tech and Case Manager before stepping into his current position as Director of Operations. He also spent two years managing sober living homes, an experience that strengthened his commitment to supporting individuals as they rebuild their lives with structure, accountability, and hope."
-      },
-      {
-        "type": "paragraph",
-        "text": "As Director of Operations, Phillip leads with integrity, grit, and compassion. He is deeply invested in cultivating a strong team culture and empowering staff to grow into their strengths. Seeing both clients and team members develop confidence, resilience, and purpose is what fuels his passion for the work. Phillip remains dedicated to helping create an environment where lasting recovery and meaningful transformation are possible."
-      }
-    ]
-  },
   "symptoms-of-alcohol-withdrawal": {
     "slug": "symptoms-of-alcohol-withdrawal",
     "type": "post",
