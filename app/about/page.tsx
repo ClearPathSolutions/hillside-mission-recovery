@@ -179,10 +179,18 @@ const team: Member[] = [
 export default async function AboutPage() {
   // Local entries win; the portal only contributes people not listed above.
   // Portal staff are facility-level by definition — the feed is per-facility.
+  //
+  // The portal currently returns photoUrl: null for everyone, so fall back to
+  // the local headshot map before giving up and rendering initials. That lets a
+  // portal-managed person still get an official headshot from this repo.
   const extras = await extraStaff("hillside-mission-recovery", team);
   const roster: Member[] = [
     ...team,
-    ...extras.map((e) => ({ ...e, group: "facility" as const, photo: e.photo ?? undefined })),
+    ...extras.map((e) => ({
+      ...e,
+      group: "facility" as const,
+      photo: e.photo ?? staffPhotos[e.slug] ?? undefined,
+    })),
   ];
   return (
     <>

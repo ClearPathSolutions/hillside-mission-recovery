@@ -147,8 +147,28 @@ export const accreditations: Logo[] = [
   { src: "/images/NAMI_logo.gif", alt: "NAMI — National Alliance on Mental Illness", w: 160, h: 90 },
 ];
 
-// Staff portraits
+// Staff portraits.
+//
+// Keys are the slug used in the /about roster. For portal-fed people that is
+// the slug lib/staff-feed.ts derives from their name, which keeps quoted
+// nicknames — hence "angela-angie-taylor" rather than "angela-taylor".
+//
+// The /staff/* files are the official QHG headshots, resampled to 900px on the
+// long edge (the cards render ~430px wide) which took 13.6MB of source PNGs
+// down to 0.67MB.
 export const staffPhotos: Record<string, string> = {
   "monica-olivares": "/images/MonicaHMS.jpeg",
   "phillip-carter": "/images/Phillip-Carter.png",
+  // California leadership
+  "shawn-young": "/images/staff/shawn-young.jpg",
+  "michael-mcarthur": "/images/staff/michael-mcarthur.jpg",
+  "riky-hanaumi": "/images/staff/riky-hanaumi.jpg",
+  "jacob-cameron": "/images/staff/jacob-cameron.jpg",
+  // Southern California
+  "justin-white": "/images/staff/justin-white.jpg",
+  "elizabeth-wald": "/images/staff/elizabeth-wald.jpg",
+  "jeremiah-ross": "/images/staff/jeremiah-ross.jpg",
+  "alanna-mcmurtrey": "/images/staff/alanna-mcmurtrey.jpg",
+  // Hillside Mission — arrives via the portal feed, which has no photo for her
+  "angela-angie-taylor": "/images/staff/angela-angie-taylor.jpg",
 };
