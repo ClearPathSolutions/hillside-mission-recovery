@@ -18,6 +18,41 @@ const { siteKey, api } = site.widgets.clarion;
 // Revalidate the feed hourly (matches Clarion's own ~1h cache guidance).
 const REVALIDATE_SECONDS = 3600;
 
+/**
+ * Cap how long we wait on Clarion.
+ *
+ * Both /sitemap.xml and /blog await this feed during the build, and Next kills
+ * a static route that takes over 60s. With no cap, one slow Clarion response
+ * fails the entire production deploy — which is exactly what happened to
+ * commit a35a65f. The callers already degrade to an empty list on error; they
+ * just never got the chance.
+ *
+ * Implemented as a race rather than an AbortSignal so the fetch options stay
+ * untouched and Next keeps caching/revalidating the response normally.
+ */
+const FEED_TIMEOUT_MS = 10_000;
+
+const TIMEOUT = Symbol("clarion-timeout");
+
+async function withTimeout<T>(p: Promise<T>, label: string): Promise<T | null> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const guard = new Promise<typeof TIMEOUT>((resolve) => {
+    timer = setTimeout(() => resolve(TIMEOUT), FEED_TIMEOUT_MS);
+  });
+  try {
+    const r = await Promise.race([p, guard]);
+    if (r === TIMEOUT) {
+      // Visible on purpose: a degraded build silently missing every Clarion
+      // post looks identical to Clarion having no posts.
+      console.warn(`[clarion] ${label} exceeded ${FEED_TIMEOUT_MS}ms — continuing without it`);
+      return null;
+    }
+    return r as T;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 export type ClarionFeedPost = {
   slug: string;
   title: string;
@@ -81,10 +116,13 @@ function approveCover<T extends ClarionFeedPost>(p: T): T {
 /** Fetch the Clarion feed and normalize to the site's PostMeta shape. Never throws. */
 export async function getClarionPosts(): Promise<PostMeta[]> {
   try {
-    const res = await fetch(`${api}/blog/public/feed?site_key=${encodeURIComponent(siteKey)}`, {
-      next: { revalidate: REVALIDATE_SECONDS },
-    });
-    if (!res.ok) return [];
+    const res = await withTimeout(
+      fetch(`${api}/blog/public/feed?site_key=${encodeURIComponent(siteKey)}`, {
+        next: { revalidate: REVALIDATE_SECONDS },
+      }),
+      "blog feed",
+    );
+    if (!res || !res.ok) return [];
     const data = (await res.json()) as { posts?: ClarionFeedPost[] };
     return (data.posts ?? []).map((p) => toMeta(approveCover(p)));
   } catch {
@@ -95,11 +133,14 @@ export async function getClarionPosts(): Promise<PostMeta[]> {
 /** Fetch a single Clarion post's full body. Returns null if not found. Never throws. */
 export async function getClarionPost(slug: string): Promise<ClarionFullPost | null> {
   try {
-    const res = await fetch(
-      `${api}/blog/public/post?site_key=${encodeURIComponent(siteKey)}&slug=${encodeURIComponent(slug)}`,
-      { next: { revalidate: REVALIDATE_SECONDS } },
+    const res = await withTimeout(
+      fetch(
+        `${api}/blog/public/post?site_key=${encodeURIComponent(siteKey)}&slug=${encodeURIComponent(slug)}`,
+        { next: { revalidate: REVALIDATE_SECONDS } },
+      ),
+      `post ${slug}`,
     );
-    if (!res.ok) return null;
+    if (!res || !res.ok) return null;
     return approveCover((await res.json()) as ClarionFullPost);
   } catch {
     return null;
