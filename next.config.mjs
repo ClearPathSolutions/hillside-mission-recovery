@@ -66,6 +66,14 @@ const nextConfig = {
         destination: "/staff/monica-olivares",
         statusCode: 301,
       },
+      // Phillip Carter is not on the client's staff list, and both the QHG bio
+      // directory and the headshot set file him under Wellness Ranch KY. His
+      // page is retired; the URL is indexed, so it redirects rather than 404s.
+      {
+        source: "/staff/phillip-carter",
+        destination: "/about",
+        statusCode: 301,
+      },
       // VIS-SLUG — inherited "detoc" typo, live on production and indexed.
       {
         source: "/how-to-detoc-from-xanax",
