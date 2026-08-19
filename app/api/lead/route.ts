@@ -12,10 +12,13 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const MAX_FIELD_LEN = 5000;
-const REQUIRED = ["firstName", "phone", "email"] as const;
+const REQUIRED = ["name", "phone", "email"] as const;
 
 /** Fields we accept from the form. Anything else is ignored. */
 const ALLOWED_FIELDS = [
+  "name",
+  // Accepted only so a page loaded before this change deployed still submits
+  // successfully; both are folded into `name` below and never stored apart.
   "firstName",
   "lastName",
   "phone",
@@ -70,6 +73,15 @@ export async function POST(request: Request) {
     const v = str(body[key]);
     if (v) fields[key] = v;
   }
+
+  // A client cached from before the single-name change posts firstName/lastName.
+  // Fold them into `name` so an open tab mid-deploy still delivers its lead.
+  if (!fields.name) {
+    const legacy = [fields.firstName, fields.lastName].filter(Boolean).join(" ").trim();
+    if (legacy) fields.name = legacy;
+  }
+  delete fields.firstName;
+  delete fields.lastName;
 
   const missing = REQUIRED.filter((k) => !fields[k]);
   if (missing.length) {

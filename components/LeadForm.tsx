@@ -110,10 +110,7 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field id={fieldId("firstName")} label="First name" name="firstName" required autoComplete="given-name" />
-        <Field id={fieldId("lastName")} label="Last name" name="lastName" required autoComplete="family-name" />
-      </div>
+      <Field id={fieldId("name")} label="Name" name="name" required autoComplete="name" />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field id={fieldId("phone")} label="Phone" name="phone" type="tel" required autoComplete="tel" />
         <Field id={fieldId("email")} label="Email" name="email" type="email" required autoComplete="email" />

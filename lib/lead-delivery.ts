@@ -69,7 +69,7 @@ function errText(e: unknown): string {
 /** Human-readable body used for the email channels. */
 function renderEmail(lead: LeadPayload): { subject: string; text: string } {
   const label = lead.variant === "insurance" ? "Insurance verification" : "Contact";
-  const name = [lead.fields.firstName, lead.fields.lastName].filter(Boolean).join(" ");
+  const name = lead.fields.name ?? "";
   const lines = [
     `${label} request — ${site.fullName}`,
     `Reference: ${lead.reference}`,
