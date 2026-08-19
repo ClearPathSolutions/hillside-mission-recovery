@@ -76,7 +76,7 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/admissions" className="btn btn-primary">
+              <Link href="/admissions#verify-insurance" className="btn btn-primary">
                 Verify Your Insurance <IconArrow className="h-4 w-4" />
               </Link>
               <a href={site.phoneHref} className="btn btn-light">

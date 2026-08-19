@@ -18,7 +18,7 @@ export function InsuranceBand() {
               your benefits in minutes — it&apos;s free, confidential, and comes with no obligation.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link href="/admissions" className="btn btn-primary">
+              <Link href="/admissions#verify-insurance" className="btn btn-primary">
                 Verify Insurance <IconArrow className="h-4 w-4" />
               </Link>
               <a href={site.phoneHref} className="btn btn-ghost">

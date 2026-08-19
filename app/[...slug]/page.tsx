@@ -146,7 +146,7 @@ function ArticlePage({ doc }: { doc: Doc }) {
               </p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                 <a href={site.phoneHref} className="btn btn-primary">Call {site.phone}</a>
-                <Link href="/admissions" className="btn btn-ghost">Verify insurance</Link>
+                <Link href="/admissions#verify-insurance" className="btn btn-ghost">Verify insurance</Link>
               </div>
             </div>
           </article>

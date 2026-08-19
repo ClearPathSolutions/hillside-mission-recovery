@@ -48,7 +48,7 @@ export default function TourPage() {
           </div>
 
           <div className="reveal mt-14 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href="/admissions" className="btn btn-primary">
+            <Link href="/admissions#verify-insurance" className="btn btn-primary">
               Verify your insurance <IconArrow className="h-4 w-4" />
             </Link>
             <Link href="/contact" className="btn btn-ghost">

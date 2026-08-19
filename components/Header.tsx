@@ -101,7 +101,7 @@ export default function Header() {
               <PhoneIcon className="h-4 w-4" />
               {site.phone}
             </a>
-            <Link href="/admissions" className="btn btn-primary !py-2.5 !px-5 text-sm">
+            <Link href="/admissions#verify-insurance" className="btn btn-primary !py-2.5 !px-5 text-sm">
               Verify Insurance
             </Link>
           </div>
@@ -202,7 +202,7 @@ export default function Header() {
             <a href={site.phoneHref} className="btn btn-ghost flex-1">
               <PhoneIcon className="h-4 w-4" /> Call Now
             </a>
-            <Link href="/admissions" className="btn btn-primary flex-1" onClick={() => setMobileOpen(false)}>
+            <Link href="/admissions#verify-insurance" className="btn btn-primary flex-1" onClick={() => setMobileOpen(false)}>
               Verify Insurance
             </Link>
           </div>

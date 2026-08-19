@@ -89,7 +89,7 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <Link href="/privacy-policy" className="hover:text-cream">Privacy Policy</Link>
-            <Link href="/admissions" className="hover:text-cream">Verify Insurance</Link>
+            <Link href="/admissions#verify-insurance" className="hover:text-cream">Verify Insurance</Link>
             <Link href="/contact" className="hover:text-cream">Contact</Link>
             <span>Joint Commission Gold Seal Accredited</span>
           </div>

@@ -105,7 +105,10 @@ export default function AdmissionsPage() {
             </div>
           </div>
 
-          <div className="reveal rounded-2xl bg-cream p-7 text-ink md:p-9">
+          <div
+            id="verify-insurance"
+            className="reveal scroll-mt-28 rounded-2xl bg-cream p-7 text-ink md:p-9"
+          >
             <h3 className="text-2xl">Verify my benefits</h3>
             <p className="mt-2 text-ink/70">Takes about 2 minutes. A specialist will follow up personally.</p>
             <div className="mt-6">

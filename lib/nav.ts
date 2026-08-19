@@ -85,7 +85,7 @@ export const nav: NavItem[] = [
         heading: "Get Started",
         links: [
           { label: "Admissions Process", href: "/admissions" },
-          { label: "Verify Your Insurance", href: "/admissions" },
+          { label: "Verify Your Insurance", href: "/admissions#verify-insurance" },
           { label: "Orange County Behavioral Health", href: "/orange-county-behavioral-health" },
         ],
       },

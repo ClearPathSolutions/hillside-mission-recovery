@@ -20,7 +20,7 @@ export function ContentSidebar({ toc }: { toc?: TocItem[] }) {
           <IconPhone className="h-4 w-4" /> {site.phone}
         </a>
         <Link
-          href="/admissions"
+          href="/admissions#verify-insurance"
           className="mt-2.5 flex w-full items-center justify-center gap-1.5 rounded-full border border-white/20 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
         >
           Verify Insurance <IconArrow className="h-4 w-4" />
