@@ -28,6 +28,12 @@ export const site = {
       api: "https://api.clarionlabs.ai",
       blogEmbed: "https://www.clarionlabs.ai/blog-embed.v1.js",
     },
+    // Google Tag Manager container. Tags added inside the GTM UI load their own
+    // third-party origins, which the CSP in next.config.mjs must also allow —
+    // see the GOOGLE constant there.
+    gtmId: "GTM-NLPN34C5",
+    // CallTrackingMetrics — swaps tracked numbers in the DOM.
+    ctmScript: "//264810.tctm.co/t.js",
   },
 } as const;
 

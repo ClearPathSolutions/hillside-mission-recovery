@@ -5,6 +5,25 @@
 const CLARION = "https://*.clarionlabs.ai";
 const CTM = "https://*.tctm.co https://*.calltrackingmetrics.com";
 
+// Google Tag Manager and the Google tags it most commonly loads (GA4, Ads).
+// GTM is a container: anything added in its UI fetches from its own origin, so
+// a new tag type (Meta Pixel, LinkedIn, Hotjar, ...) needs its origin added
+// here as well or the CSP will block it silently.
+const GTM = "https://www.googletagmanager.com";
+// Bare hosts are listed alongside the wildcards on purpose: `*.analytics.google.com`
+// does not match `analytics.google.com`, which is the host GA4 actually posts to.
+const GOOGLE_ANALYTICS =
+  "https://www.google-analytics.com https://analytics.google.com " +
+  "https://*.analytics.google.com https://*.google-analytics.com";
+// `*.doubleclick.net` rather than `*.g.doubleclick.net` — Ads conversion tracking
+// collects on ad.doubleclick.net, which is not under the .g. subdomain.
+const GOOGLE_ADS =
+  "https://www.google.com https://www.googleadservices.com https://*.doubleclick.net";
+// Microsoft Clarity, loaded as a tag inside the GTM container.
+const CLARITY = "https://www.clarity.ms https://*.clarity.ms";
+// Clarity fires an identity-sync pixel at Bing; image-only, no script.
+const BING = "https://c.bing.com";
+
 // A7 — security headers. Only HSTS was set before.
 // The CSP keeps 'unsafe-inline' because Next.js emits inline bootstrap scripts
 // and the Clarion widget injects inline styles; the value here is pinning which
@@ -12,12 +31,12 @@ const CTM = "https://*.tctm.co https://*.calltrackingmetrics.com";
 // app moves to a nonce-aware CSP.
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${CLARION} ${CTM}`,
+  `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
   "style-src 'self' 'unsafe-inline'",
-  `img-src 'self' data: blob: https://images.unsplash.com ${CLARION} ${CTM}`,
+  `img-src 'self' data: blob: https://images.unsplash.com ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY} ${BING}`,
   "font-src 'self' data:",
-  `connect-src 'self' ${CLARION} ${CTM}`,
-  `frame-src 'self' ${CLARION} https://www.google.com`,
+  `connect-src 'self' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
+  `frame-src 'self' ${CLARION} ${GTM} https://www.google.com https://td.doubleclick.net`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
