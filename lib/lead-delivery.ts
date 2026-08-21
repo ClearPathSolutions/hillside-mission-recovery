@@ -29,6 +29,13 @@ export type LeadAttribution = {
   referrer?: string | null;
   utm?: Record<string, string> | null;
   gclid?: string | null;
+  /** fbclid / msclkid / gbraid / wbraid — everything gclid alone doesn't cover. */
+  clickIds?: Record<string, string> | null;
+  /**
+   * CTM's own session id, 24 hex characters. Resolved server-side from the
+   * client value or the `__ctmid` cookie; `null` when CTM never loaded.
+   */
+  ctmVisitorSid?: string | null;
   userAgent?: string | null;
 };
 
@@ -85,6 +92,10 @@ function renderEmail(lead: LeadPayload): { subject: string; text: string } {
     attr.referrer ? `referrer: ${attr.referrer}` : null,
     attr.gclid ? `gclid: ${attr.gclid}` : null,
     ...Object.entries(attr.utm ?? {}).map(([k, v]) => `utm_${k}: ${v}`),
+    ...Object.entries(attr.clickIds ?? {}).map(([k, v]) => `${k}: ${v}`),
+    // Spelled out when absent: a lead with no CTM id is one that will not be
+    // attached to a call-tracking visit, and that is worth noticing.
+    `ctm_visitor_sid: ${attr.ctmVisitorSid ?? "(none — t.js blocked or not loaded)"}`,
   ].filter(Boolean) as string[];
 
   if (attrLines.length) lines.push("", "-- attribution --", ...attrLines);
@@ -108,26 +119,48 @@ async function deliverClarion(lead: LeadPayload): Promise<ChannelResult> {
     return { channel: "clarion", ok: false, detail: "disabled" };
   }
   const { siteKey, api } = site.widgets.clarion;
-  try {
-    const res = await fetchWithTimeout(
-      `${api.replace(/\/$/, "")}/forms/public/submit`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          site_key: siteKey,
-          form_key: lead.variant === "insurance" ? "insurance_verification" : "contact",
-          data: { ...lead.fields, variant: lead.variant, reference: lead.reference },
-          page_url: lead.attribution.pageUrl ?? null,
-          landing_page_url: lead.attribution.landingPageUrl ?? null,
-          referrer: lead.attribution.referrer ?? null,
-          utm: lead.attribution.utm ?? null,
-          gclid: lead.attribution.gclid ?? null,
-          user_agent: lead.attribution.userAgent ?? null,
-        }),
-      },
+  const url = `${api.replace(/\/$/, "")}/forms/public/submit`;
+
+  const body = (includeExtras: boolean) =>
+    JSON.stringify({
+      site_key: siteKey,
+      form_key: lead.variant === "insurance" ? "insurance_verification" : "contact",
+      data: { ...lead.fields, variant: lead.variant, reference: lead.reference },
+      page_url: lead.attribution.pageUrl ?? null,
+      landing_page_url: lead.attribution.landingPageUrl ?? null,
+      referrer: lead.attribution.referrer ?? null,
+      utm: lead.attribution.utm ?? null,
+      gclid: lead.attribution.gclid ?? null,
+      // FLAT and TOP-LEVEL, exactly here. Clarion's parser reads
+      // `ctm_visitor_sid` off the root of the body; nesting it under a
+      // `session` object means their parser never finds it and the lead is
+      // filed against no visit — with a 200 response either way.
+      ctm_visitor_sid: lead.attribution.ctmVisitorSid ?? null,
+      // fbclid / msclkid / gbraid / wbraid. Keys Clarion has never been asked
+      // to accept, hence the retry below.
+      ...(includeExtras ? (lead.attribution.clickIds ?? {}) : {}),
+      user_agent: lead.attribution.userAgent ?? null,
+    });
+
+  const post = (includeExtras: boolean) =>
+    fetchWithTimeout(
+      url,
+      { method: "POST", headers: { "Content-Type": "application/json" }, body: body(includeExtras) },
       CLARION_TIMEOUT_MS,
     );
+
+  try {
+    const hasExtras = Object.keys(lead.attribution.clickIds ?? {}).length > 0;
+    let res = await post(hasExtras);
+
+    // If strict validation rejects an unknown click-id key, resend without them.
+    // Losing an admissions enquiry to gain an attribution field is not a trade
+    // worth making. `ctm_visitor_sid` is never dropped — it is the point.
+    if (hasExtras && res.status >= 400 && res.status < 500) {
+      console.warn(`[lead] Clarion rejected the extra click ids (HTTP ${res.status}); retrying without them`);
+      res = await post(false);
+    }
+
     if (!res.ok) {
       return { channel: "clarion", ok: false, detail: `HTTP ${res.status}` };
     }

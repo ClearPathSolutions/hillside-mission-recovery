@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Clarion from "@/components/Clarion";
+import SessionTracker from "@/components/SessionTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,9 +72,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               `f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${site.widgets.gtmId}');`,
           }}
         />
-        {/* CallTrackingMetrics — number swapping. */}
+        {/* CallTrackingMetrics — number swapping.
+            Loaded eagerly, NOT async: this script rewrites tracked phone numbers
+            in the DOM, so deferring it leaves a window in which a visitor can
+            read and dial the untracked number. It also establishes the CTM
+            session that a submitted lead is filed against, so it has to run on
+            every page including campaign landing pages — which is why it lives
+            in the root layout rather than a per-route include. */}
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script async src={site.widgets.ctmScript}></script>
+        <script src={site.widgets.ctmScript}></script>
       </head>
       <body>
         {/* GTM fallback for no-JS clients. Must be the first thing in <body>. */}
@@ -128,6 +135,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <Reveal />
+        <SessionTracker />
         <Clarion />
       </body>
     </html>

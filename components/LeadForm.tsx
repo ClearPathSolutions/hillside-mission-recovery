@@ -3,59 +3,9 @@
 import { useId, useRef, useState } from "react";
 import { IconArrow, IconCheck, IconShield } from "@/components/Icons";
 import { site } from "@/lib/site";
+import { attributionForSubmit, auxiliaryClickIds } from "@/lib/session";
 
 type Variant = "contact" | "insurance";
-
-// Attribution keys shared with Clarion's forms-capture snippet, so a lead
-// submitted through this form carries the same first-touch data the widget
-// would have recorded.
-const FT_LANDING = "clarion_ft_landing";
-const FT_REFERRER = "clarion_ft_referrer";
-
-function session(key: string, value?: string): string | null {
-  try {
-    if (value !== undefined) {
-      sessionStorage.setItem(key, value);
-      return value;
-    }
-    return sessionStorage.getItem(key);
-  } catch {
-    return null;
-  }
-}
-
-/** Record first-touch landing page + referrer once per session. */
-function rememberFirstTouch() {
-  if (session(FT_LANDING) != null) return;
-  session(FT_LANDING, location.href);
-  const ref = document.referrer || "";
-  session(FT_REFERRER, ref && ref.indexOf(location.origin) !== 0 ? ref : "");
-}
-
-function collectAttribution() {
-  if (typeof window === "undefined") return {};
-  rememberFirstTouch();
-
-  let params: URLSearchParams | null = null;
-  try {
-    params = new URLSearchParams(location.search);
-  } catch {}
-
-  const utm: Record<string, string> = {};
-  for (const k of ["source", "medium", "campaign", "term", "content"]) {
-    const v = params?.get(`utm_${k}`);
-    if (v) utm[k] = v;
-  }
-
-  const referrer = session(FT_REFERRER);
-  return {
-    pageUrl: location.href,
-    landingPageUrl: session(FT_LANDING) || location.href,
-    referrer: referrer || null,
-    utm: Object.keys(utm).length ? utm : null,
-    gclid: params?.get("gclid") || null,
-  };
-}
 
 export default function LeadForm({ variant = "contact" }: { variant?: Variant }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -79,7 +29,15 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, variant, attribution: collectAttribution() }),
+        // Attribution comes from the store (lib/session.ts), not from
+        // location.search: by the time someone reaches this form the campaign
+        // parameters are usually several navigations behind them.
+        body: JSON.stringify({
+          ...data,
+          variant,
+          attribution: attributionForSubmit(),
+          clickIds: auxiliaryClickIds(),
+        }),
       });
       const json = (await res.json().catch(() => null)) as { ok?: boolean } | null;
       // Only claim success when the server confirms a channel accepted the lead.

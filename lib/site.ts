@@ -32,8 +32,11 @@ export const site = {
     // third-party origins, which the CSP in next.config.mjs must also allow —
     // see the GOOGLE constant there.
     gtmId: "GTM-NLPN34C5",
-    // CallTrackingMetrics — swaps tracked numbers in the DOM.
-    ctmScript: "//264810.tctm.co/t.js",
+    // CallTrackingMetrics. Absolute https, not protocol-relative: the swap
+    // script must never be fetched over http from an https page.
+    // Account 264810 serves the whole facility fleet — do not change the id
+    // without confirming which account the site belongs to.
+    ctmScript: "https://264810.tctm.co/t.js",
   },
 } as const;
 

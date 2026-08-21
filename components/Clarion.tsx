@@ -34,13 +34,14 @@ export default function Clarion() {
         data-position={BRAND.position}
         data-font={BRAND.font}
       />
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-      <script
-        src="https://www.clarionlabs.ai/forms-capture.v1.js"
-        async
-        data-site-key={siteKey}
-        data-api={api}
-      />
+      {/* forms-capture.v1.js is deliberately NOT loaded.
+          It binds only to `form[data-clarion-form]`, an attribute no form here
+          sets, so it was inert — but it is an inert *interceptor*: it attaches a
+          submit listener and does not check `defaultPrevented`, so the moment
+          anyone added that attribute to a form every lead would be sent twice,
+          once by the browser and once by the server relay in
+          lib/lead-delivery.ts. Submission is server-side (app/api/lead/route.ts)
+          so an ad blocker cannot swallow a lead; that is the single path. */}
     </>
   );
 }

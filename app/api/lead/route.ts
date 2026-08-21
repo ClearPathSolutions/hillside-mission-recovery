@@ -33,7 +33,53 @@ function str(v: unknown): string {
   return typeof v === "string" ? v.trim().slice(0, MAX_FIELD_LEN) : "";
 }
 
-function pickAttribution(raw: unknown): LeadAttribution {
+/** CTM session ids are 24 hex characters with no dashes. A UUID is not one. */
+const CTM_ID = /^[0-9a-f]{24}$/i;
+
+/**
+ * Resolve the CTM session id the lead should be filed against.
+ *
+ * `__ctmid` is a first-party cookie, so it rides along on this request whether or
+ * not the client managed to read it. That second source is the point: a
+ * client-side regression can no longer silently un-attribute every lead.
+ *
+ * Every failure here is logged, because all of them are invisible otherwise —
+ * Clarion answers 200, the lead arrives, and only the link to the ad click is
+ * missing.
+ */
+function resolveCtmVisitorSid(raw: unknown, request: Request): string | null {
+  const fromClient = typeof raw === "string" && raw ? raw.slice(0, 128) : null;
+  if (fromClient && CTM_ID.test(fromClient)) return fromClient;
+
+  let fromCookie: string | null = null;
+  const match = request.headers.get("cookie")?.match(/(?:^|;\s*)__ctmid=([^;]*)/);
+  if (match) {
+    try {
+      fromCookie = decodeURIComponent(match[1]);
+    } catch {
+      fromCookie = match[1];
+    }
+  }
+
+  if (fromCookie && CTM_ID.test(fromCookie)) {
+    if (fromClient) {
+      console.warn("[lead] browser sent a non-CTM session id; using the __ctmid cookie instead");
+    }
+    return fromCookie;
+  }
+
+  if (fromClient) {
+    // Forwarded anyway so the value is visible in Clarion rather than lost, but
+    // no visit will attach to it.
+    console.warn("[lead] session id is not CTM-shaped and no __ctmid cookie — no visit will attach");
+    return fromClient;
+  }
+
+  console.warn("[lead] no CTM session id — t.js is likely blocked or failed to load");
+  return null;
+}
+
+function pickAttribution(raw: unknown, clickIdsRaw: unknown): LeadAttribution {
   const a = (raw ?? {}) as Record<string, unknown>;
   const utmRaw = (a.utm ?? null) as Record<string, unknown> | null;
   const utm: Record<string, string> = {};
@@ -43,12 +89,26 @@ function pickAttribution(raw: unknown): LeadAttribution {
       if (s) utm[k.slice(0, 40)] = s;
     }
   }
+
+  // Non-Google click ids, bounded the same way the utm map is: the endpoint is
+  // public and unauthenticated, so the shape of anything from the client is
+  // rebuilt here rather than passed through.
+  const clickIdsIn = (clickIdsRaw ?? null) as Record<string, unknown> | null;
+  const clickIds: Record<string, string> = {};
+  if (clickIdsIn && typeof clickIdsIn === "object") {
+    for (const k of ["fbclid", "msclkid", "gbraid", "wbraid"]) {
+      const s = str(clickIdsIn[k]);
+      if (s) clickIds[k] = s;
+    }
+  }
+
   return {
     pageUrl: str(a.pageUrl) || null,
     landingPageUrl: str(a.landingPageUrl) || null,
     referrer: str(a.referrer) || null,
     utm: Object.keys(utm).length ? utm : null,
     gclid: str(a.gclid) || null,
+    clickIds: Object.keys(clickIds).length ? clickIds : null,
   };
 }
 
@@ -99,8 +159,12 @@ export async function POST(request: Request) {
     receivedAt: new Date().toISOString(),
     fields,
     attribution: {
-      ...pickAttribution(body.attribution),
+      ...pickAttribution(body.attribution, body.clickIds),
       userAgent: request.headers.get("user-agent"),
+      ctmVisitorSid: resolveCtmVisitorSid(
+        (body.attribution as Record<string, unknown> | undefined)?.ctmVisitorSid,
+        request,
+      ),
     },
   };
 
