@@ -45,7 +45,103 @@ export type LeadPayload = {
   receivedAt: string;
   fields: Record<string, string>;
   attribution: LeadAttribution;
+  /**
+   * Supplementary visit context, shaped entirely by the client. Arrives raw and
+   * untrusted; `deliverLead` rebuilds it via `sanitizeSession` before any
+   * channel sees it, so nothing downstream handles the original value.
+   */
+  session?: unknown;
 };
+
+/** Anything that survives sanitisation is plain JSON by construction. */
+export type SafeJson = string | number | boolean | null | SafeJson[] | { [key: string]: SafeJson };
+
+// Caps for the client-supplied `session` object. The lead endpoint is public and
+// unauthenticated, so the object is rebuilt from scratch rather than trusted:
+// without these a single request could pin the event loop on a deeply nested
+// structure or push megabytes through to the CRM.
+const SESSION_MAX_DEPTH = 5;
+const SESSION_MAX_KEYS = 40;
+const SESSION_MAX_ARRAY = 20;
+const SESSION_MAX_STRING = 500;
+const SESSION_MAX_BYTES = 4000;
+const SESSION_MAX_KEY_LEN = 64;
+
+/**
+ * Keys that must never be copied onto a plain object. `JSON.parse` happily
+ * produces an own `__proto__` property, and assigning it with bracket notation
+ * would mutate the prototype rather than set a field.
+ */
+const UNSAFE_KEYS = new Set(["__proto__", "constructor", "prototype"]);
+
+/**
+ * Rebuild an untrusted value as plain JSON within a fixed byte budget.
+ * Returns `undefined` for anything not representable (functions, symbols,
+ * NaN/Infinity, or values that no longer fit).
+ */
+function rebuild(value: unknown, depth: number, budget: { left: number }): SafeJson | undefined {
+  if (budget.left <= 0) return undefined;
+  if (value === null) return null;
+
+  switch (typeof value) {
+    case "boolean":
+      budget.left -= 5;
+      return value;
+    case "number":
+      // NaN and Infinity serialise to null, which reads as a real absent value.
+      if (!Number.isFinite(value)) return undefined;
+      budget.left -= 8;
+      return value;
+    case "string": {
+      const text = value.slice(0, SESSION_MAX_STRING);
+      budget.left -= text.length + 2;
+      return text;
+    }
+    case "object":
+      break;
+    default:
+      // function, symbol, bigint, undefined — all dropped.
+      return undefined;
+  }
+
+  if (depth >= SESSION_MAX_DEPTH) return undefined;
+
+  if (Array.isArray(value)) {
+    const out: SafeJson[] = [];
+    for (const item of value.slice(0, SESSION_MAX_ARRAY)) {
+      if (budget.left <= 0) break;
+      const clean = rebuild(item, depth + 1, budget);
+      if (clean !== undefined) out.push(clean);
+    }
+    return out;
+  }
+
+  const out: Record<string, SafeJson> = {};
+  let kept = 0;
+  // Own enumerable string keys only — never inherited properties, never symbols.
+  for (const [rawKey, rawValue] of Object.entries(value as Record<string, unknown>)) {
+    if (kept >= SESSION_MAX_KEYS || budget.left <= 0) break;
+    if (UNSAFE_KEYS.has(rawKey)) continue;
+    const key = rawKey.slice(0, SESSION_MAX_KEY_LEN);
+    const clean = rebuild(rawValue, depth + 1, budget);
+    if (clean === undefined) continue;
+    budget.left -= key.length + 3;
+    out[key] = clean;
+    kept++;
+  }
+  return out;
+}
+
+/** Rebuild the client's `session` object, or `null` if there is nothing usable. */
+export function sanitizeSession(raw: unknown): SafeJson | null {
+  // An array or a scalar is not a session object; treat it as absent rather than
+  // forwarding a meaningless `session: []`.
+  if (raw === null || typeof raw !== "object" || Array.isArray(raw)) return null;
+  const clean = rebuild(raw, 0, { left: SESSION_MAX_BYTES });
+  if (clean === undefined || clean === null || typeof clean !== "object" || Array.isArray(clean)) return null;
+  // An object that sanitised down to nothing carries no information.
+  return Object.keys(clean).length ? clean : null;
+}
 
 export type ChannelResult = {
   channel: string;
@@ -136,9 +232,10 @@ async function deliverClarion(lead: LeadPayload): Promise<ChannelResult> {
       // `session` object means their parser never finds it and the lead is
       // filed against no visit — with a 200 response either way.
       ctm_visitor_sid: lead.attribution.ctmVisitorSid ?? null,
-      // fbclid / msclkid / gbraid / wbraid. Keys Clarion has never been asked
-      // to accept, hence the retry below.
+      // fbclid / msclkid / gbraid / wbraid, and the `session` object. All keys
+      // Clarion has never been asked to accept, hence the retry below.
       ...(includeExtras ? (lead.attribution.clickIds ?? {}) : {}),
+      ...(includeExtras && lead.session ? { session: lead.session } : {}),
       user_agent: lead.attribution.userAgent ?? null,
     });
 
@@ -150,14 +247,17 @@ async function deliverClarion(lead: LeadPayload): Promise<ChannelResult> {
     );
 
   try {
-    const hasExtras = Object.keys(lead.attribution.clickIds ?? {}).length > 0;
+    const hasExtras = Object.keys(lead.attribution.clickIds ?? {}).length > 0 || lead.session != null;
     let res = await post(hasExtras);
 
-    // If strict validation rejects an unknown click-id key, resend without them.
-    // Losing an admissions enquiry to gain an attribution field is not a trade
-    // worth making. `ctm_visitor_sid` is never dropped — it is the point.
+    // If strict validation rejects an unknown key, resend with only the fields
+    // Clarion is known to accept. Losing an admissions enquiry to gain an
+    // attribution field is not a trade worth making. `ctm_visitor_sid` is never
+    // dropped — it is the point of the whole exercise.
     if (hasExtras && res.status >= 400 && res.status < 500) {
-      console.warn(`[lead] Clarion rejected the extra click ids (HTTP ${res.status}); retrying without them`);
+      console.warn(
+        `[lead] Clarion rejected the click ids / session object (HTTP ${res.status}); retrying without them`,
+      );
       res = await post(false);
     }
 
@@ -259,11 +359,16 @@ async function deliverWebhook(lead: LeadPayload): Promise<ChannelResult | null> 
  * Delivered = at least one channel accepted it.
  */
 export async function deliverLead(lead: LeadPayload): Promise<DeliveryOutcome> {
+  // Rebuild the untrusted `session` object exactly once, here, so every channel
+  // below — including the webhook, which forwards the whole lead — is working
+  // from a bounded, plain-JSON value rather than whatever the client posted.
+  const safe: LeadPayload = { ...lead, session: sanitizeSession(lead.session) };
+
   const settled = await Promise.all([
-    deliverClarion(lead),
-    deliverResend(lead),
-    deliverSendgrid(lead),
-    deliverWebhook(lead),
+    deliverClarion(safe),
+    deliverResend(safe),
+    deliverSendgrid(safe),
+    deliverWebhook(safe),
   ]);
 
   const results = settled.filter((r): r is ChannelResult => r !== null);

@@ -60,6 +60,8 @@ type VisitRecord = {
   referrer: string | null;
   startedAt: number;
   lastSeenAt: number;
+  /** Optional: records written before this field existed simply read as 0. */
+  pageviews?: number;
 };
 
 export type Attribution = {
@@ -127,6 +129,44 @@ function liveCampaign(): CampaignRecord | null {
   return stored;
 }
 
+/** Persist a fresh ad click, if the current URL carries one. */
+function captureCampaign(now: number): void {
+  const fresh = campaignFromUrl();
+  if (!Object.keys(fresh).length) return;
+  // A fresh click always wins. That is a new campaign, not a continuation of an
+  // older one, and crediting the earlier ad would misreport both.
+  writeJson(CAMPAIGN_KEY, {
+    params: fresh,
+    landingPageUrl: location.href,
+    referrer: externalReferrer(),
+    at: now,
+  } satisfies CampaignRecord);
+}
+
+/**
+ * Open or extend the current visit.
+ *
+ * `countPageview` is false when this runs at submit time: a submission is not a
+ * pageview, and counting it would inflate every converting visit by one.
+ */
+function touchVisit(now: number, countPageview: boolean): VisitRecord {
+  const visit = readJson<VisitRecord>(VISIT_KEY);
+  const continuing = visit && typeof visit.lastSeenAt === "number" && now - visit.lastSeenAt <= VISIT_IDLE_MS;
+
+  const next: VisitRecord = continuing
+    ? { ...visit, lastSeenAt: now, pageviews: (visit.pageviews ?? 0) + (countPageview ? 1 : 0) }
+    : {
+        landingPageUrl: location.href,
+        referrer: externalReferrer(),
+        startedAt: now,
+        lastSeenAt: now,
+        pageviews: countPageview ? 1 : 0,
+      };
+
+  writeJson(VISIT_KEY, next);
+  return next;
+}
+
 /**
  * Record a pageview. Must run on every route change, not just first paint —
  * otherwise a client-side navigation away from the ad's entry page is invisible
@@ -134,32 +174,20 @@ function liveCampaign(): CampaignRecord | null {
  */
 export function recordPageview(): void {
   if (typeof window === "undefined") return;
-
   const now = Date.now();
-  const href = location.href;
-  const referrer = externalReferrer();
-  const fresh = campaignFromUrl();
+  captureCampaign(now);
+  touchVisit(now, true);
+}
 
-  // A fresh click always wins. That is a new campaign, not a continuation of an
-  // older one, and crediting the earlier ad would misreport both.
-  if (Object.keys(fresh).length) {
-    writeJson(CAMPAIGN_KEY, {
-      params: fresh,
-      landingPageUrl: href,
-      referrer,
-      at: now,
-    } satisfies CampaignRecord);
-  }
-
-  const visit = readJson<VisitRecord>(VISIT_KEY);
-  const continuing = visit && typeof visit.lastSeenAt === "number" && now - visit.lastSeenAt <= VISIT_IDLE_MS;
-
-  writeJson(
-    VISIT_KEY,
-    continuing
-      ? ({ ...visit, lastSeenAt: now } satisfies VisitRecord)
-      : ({ landingPageUrl: href, referrer, startedAt: now, lastSeenAt: now } satisfies VisitRecord),
-  );
+/**
+ * Refresh the store at submit time without counting a pageview. Covers the
+ * visitor who lands directly on a form page and submits before any route change.
+ */
+function ensureVisit(): VisitRecord | null {
+  if (typeof window === "undefined") return null;
+  const now = Date.now();
+  captureCampaign(now);
+  return touchVisit(now, false);
 }
 
 /** CTM's session id: 24 hex characters, no dashes. Anything else is not CTM's. */
@@ -210,12 +238,8 @@ export function attributionForSubmit(): Attribution {
     return { pageUrl: null, landingPageUrl: null, referrer: null, utm: null, gclid: null, ctmVisitorSid: null };
   }
 
-  // Covers the visitor who lands directly on a form page and submits without
-  // ever triggering a route change.
-  recordPageview();
-
+  const visit = ensureVisit();
   const campaign = liveCampaign();
-  const visit = readJson<VisitRecord>(VISIT_KEY);
   const params: Campaign = campaign?.params ?? {};
 
   const utm: Record<string, string> = {};
@@ -247,4 +271,105 @@ export function auxiliaryClickIds(): Record<string, string> | null {
     if (params[key]) aux[key] = params[key];
   }
   return Object.keys(aux).length ? aux : null;
+}
+
+/**
+ * Rich session context for a lead submission.
+ *
+ * This is supplementary. Everything needed to attribute the lead is already in
+ * the flat fields `attributionForSubmit()` returns — `session` adds the shape of
+ * the visit around them: how long the person spent, how many pages they read,
+ * what the campaign looked like in full.
+ *
+ * Deliberately NOT included: the list of pages visited. On a treatment site a
+ * path discloses what someone is seeking help for, and a page-by-page trail
+ * turns an admissions enquiry into a diagnosis history in a third-party CRM.
+ * The current page and the landing page are already sent and are justifiable on
+ * their own; a full trail is not, so it is left out until someone asks for it
+ * with that trade-off in view.
+ *
+ * The server rebuilds this object before forwarding it — see `sanitizeSession`
+ * in lib/lead-delivery.ts. Nothing here is trusted on arrival.
+ */
+export type SessionPayload = {
+  version: 1;
+  visit: {
+    startedAt: string;
+    lastSeenAt: string;
+    durationMs: number;
+    pageviews: number;
+  };
+  landing: {
+    url: string | null;
+    referrer: string | null;
+  };
+  campaign: {
+    /** Every parameter as it arrived, including ones folded into `utm`/`gclid`. */
+    params: Campaign;
+    capturedAt: string;
+    /** True when the campaign predates the current visit — a returning click. */
+    priorVisit: boolean;
+  } | null;
+  ctm: { visitorSid: string | null };
+  client: {
+    timezone: string | null;
+    language: string | null;
+    screen: string | null;
+    viewport: string | null;
+  };
+};
+
+function iso(ms: number): string {
+  return new Date(ms).toISOString();
+}
+
+/** Best-effort environment details. Any of these can be unavailable. */
+function clientInfo(): SessionPayload["client"] {
+  const safe = <T>(fn: () => T): T | null => {
+    try {
+      return fn();
+    } catch {
+      return null;
+    }
+  };
+  return {
+    timezone: safe(() => Intl.DateTimeFormat().resolvedOptions().timeZone) ?? null,
+    language: safe(() => navigator.language) ?? null,
+    screen: safe(() => `${screen.width}x${screen.height}`) ?? null,
+    viewport: safe(() => `${window.innerWidth}x${window.innerHeight}`) ?? null,
+  };
+}
+
+/** Build the session object sent alongside a lead. `null` before hydration. */
+export function sessionPayload(): SessionPayload | null {
+  if (typeof window === "undefined") return null;
+
+  const visit = ensureVisit();
+  if (!visit) return null;
+  const campaign = liveCampaign();
+
+  return {
+    version: 1,
+    visit: {
+      startedAt: iso(visit.startedAt),
+      lastSeenAt: iso(visit.lastSeenAt),
+      durationMs: Math.max(0, visit.lastSeenAt - visit.startedAt),
+      pageviews: visit.pageviews ?? 0,
+    },
+    landing: {
+      // Mirrors attributionForSubmit: the campaign's entry page outranks the
+      // current visit's, so the two never disagree.
+      url: campaign?.landingPageUrl ?? visit.landingPageUrl ?? null,
+      referrer: campaign?.referrer ?? visit.referrer ?? null,
+    },
+    campaign: campaign
+      ? {
+          params: campaign.params,
+          capturedAt: iso(campaign.at),
+          priorVisit: campaign.at < visit.startedAt,
+        }
+      : null,
+    ctm: { visitorSid: ctmVisitorSid() },
+    client: clientInfo(),
+  };
 }

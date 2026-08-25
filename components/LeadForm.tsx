@@ -3,7 +3,7 @@
 import { useId, useRef, useState } from "react";
 import { IconArrow, IconCheck, IconShield } from "@/components/Icons";
 import { site } from "@/lib/site";
-import { attributionForSubmit, auxiliaryClickIds } from "@/lib/session";
+import { attributionForSubmit, auxiliaryClickIds, sessionPayload } from "@/lib/session";
 
 type Variant = "contact" | "insurance";
 
@@ -37,6 +37,7 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
           variant,
           attribution: attributionForSubmit(),
           clickIds: auxiliaryClickIds(),
+          session: sessionPayload(),
         }),
       });
       const json = (await res.json().catch(() => null)) as { ok?: boolean } | null;

@@ -166,6 +166,9 @@ export async function POST(request: Request) {
         request,
       ),
     },
+    // Forwarded raw on purpose: deliverLead rebuilds it (sanitizeSession) as the
+    // single choke point, so there is no second, drifting copy of those caps here.
+    session: body.session,
   };
 
   const { delivered, results } = await deliverLead(lead);
