@@ -73,14 +73,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         {/* CallTrackingMetrics — number swapping.
-            Loaded eagerly, NOT async: this script rewrites tracked phone numbers
-            in the DOM, so deferring it leaves a window in which a visitor can
-            read and dial the untracked number. It also establishes the CTM
-            session that a submitted lead is filed against, so it has to run on
-            every page including campaign landing pages — which is why it lives
-            in the root layout rather than a per-route include. */}
+
+            `async` is REQUIRED here. Do not make this a synchronous tag, and
+            note that the CTM rollout spec's section 2 says to load it eagerly —
+            that guidance is wrong and this deliberately overrides it.
+
+            A sync tag in <head> executes before <body> exists. CTM's number
+            scan defaults its root to document.body and silently no-ops when
+            that is null, so it can miss every phone number on the page: no
+            swap happens, all visitors see the same hardcoded number, and CTM
+            is left guessing which web session an inbound call belongs to.
+            On React there is a second failure — a sync tag rewrites the number
+            before hydration, then React reverts the swap and replaces the
+            server HTML wholesale.
+
+            Both fail silently, and a present __ctm.config.sid does NOT rule
+            them out: it only proves t.js ran, not that the scan found anything.
+            The check that matters is
+              Object.keys(window.__ctm_tracked_numbers).length > 0
+
+            Must stay in the root layout so it loads on every page including
+            campaign landing pages, absolute https (never protocol-relative),
+            and exactly one copy — count with
+              document.querySelectorAll('script[src*="tctm.co/t.js"]').length
+            never `[src*="tctm.co"]`, which also matches the p.js that t.js
+            injects itself and so reads 2 on a correct install. */}
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src={site.widgets.ctmScript}></script>
+        <script async src={site.widgets.ctmScript}></script>
       </head>
       <body>
         {/* GTM fallback for no-JS clients. Must be the first thing in <body>. */}
