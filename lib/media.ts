@@ -168,7 +168,6 @@ export const staffPhotos: Record<string, string> = {
   "jacob-cameron": "/images/staff/jacob-cameron.jpg",
   // Southern California
   "justin-white": "/images/staff/justin-white.jpg",
-  "elizabeth-wald": "/images/staff/elizabeth-wald.jpg",
   "jeremiah-ross": "/images/staff/jeremiah-ross.jpg",
   "alanna-mcmurtrey": "/images/staff/alanna-mcmurtrey.jpg",
   // Hillside Mission — arrives via the portal feed, which has no photo for her

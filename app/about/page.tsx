@@ -114,18 +114,6 @@ const team: Member[] = [
     ],
   },
   {
-    slug: "elizabeth-wald",
-    name: "Elizabeth Wald",
-    role: "Program Director",
-    group: "socal",
-    photo: staffPhotos["elizabeth-wald"],
-    bio: [
-      "Elizabeth Wald serves as Program Director for Quadrant Health Group's Southern California facilities, where she oversees program operations, clinical coordination, and day-to-day management across the organization's behavioral health treatment centers. She works closely with multidisciplinary teams to ensure each program delivers exceptional, individualized care while maintaining the highest standards of quality, compliance, and operational excellence.",
-      "Since entering the behavioral health field in 2021, Elizabeth has been an integral part of Quadrant Health Group's growth, beginning with the opening of one of its Northern California facilities. Her leadership has been instrumental in fostering compassionate, client-centered treatment environments where individuals receive personalized support throughout every stage of their recovery journey.",
-      "Elizabeth's passion for behavioral healthcare is deeply rooted in her own lived experience in recovery. She believes that meaningful healing begins by meeting individuals where they are, building genuine connections, and empowering them with the tools, education, and support needed to achieve lasting recovery. Her leadership is driven by empathy, authenticity, and an unwavering commitment to helping others reclaim their lives while supporting her teams in delivering the highest level of care.",
-    ],
-  },
-  {
     slug: "jeremiah-ross",
     name: "Jeremiah Ross",
     role: "Nursing Supervisor",
