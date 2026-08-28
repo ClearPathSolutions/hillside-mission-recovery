@@ -63,9 +63,15 @@ const values = [
 // bio directory and the headshot set file him under Wellness Ranch KY. His
 // /staff page is retired and 301s to this one. See issues.md DOC-11.
 //
+// Dr. Pamela Tambini is not on that list either, and is here on purpose: her
+// medical oversight is network-wide rather than Hillside's, so she sits in the
+// Quadrant Health Group group and her profile canonicalises to the QHG original
+// (lib/content.ts, CANONICAL_AT_PARENT).
+//
 // Groups mirror the three tabs the list itself pointed at (CA sites, Cali
-// South, Hillside), so the page doesn't imply that state- and region-level
-// leadership are based on site day to day.
+// South, Hillside), plus a fourth for network-wide oversight, so the page
+// doesn't imply that state-, region- and group-level leadership are based on
+// site day to day.
 const GROUPS = [
   {
     key: "facility",
@@ -81,6 +87,11 @@ const GROUPS = [
     key: "california",
     label: "California leadership",
     blurb: "Executive, medical and clinical oversight for every Quadrant Health Group facility in California.",
+  },
+  {
+    key: "network",
+    label: "Quadrant Health Group",
+    blurb: "Medical oversight shared across every Quadrant Health Group facility, nationwide.",
   },
 ] as const;
 
@@ -200,6 +211,21 @@ const team: Member[] = [
     bio: [
       "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about helping individuals navigate the recovery process, Jacob is dedicated to creating a treatment experience that is both meaningful and engaging. He believes that lasting recovery is built through genuine connection, compassionate support, and an environment where clients feel valued every step of the way.",
       "In his role, Jacob works to ensure that each client receives personalized care and experiences a sense of belonging throughout their treatment journey. His goal is to help individuals not only achieve recovery but also discover that life in recovery can be fulfilling, rewarding, and enjoyable. Through his commitment to client-centered care, Jacob strives to make a lasting positive impact on the lives of those he serves.",
+    ],
+  },
+  {
+    slug: "pamela-tambini",
+    name: "Dr. Pamela Tambini",
+    role: "Medical Oversight",
+    group: "network",
+    photo: staffPhotos["pamela-tambini"],
+    bio: [
+      "Dr. Pamela Tambini is a board-certified physician in Internal Medicine and Addiction Medicine, entrepreneur, and healthcare executive dedicated to advancing evidence-based treatment for individuals with substance use and co-occurring mental health disorders. She is the Founder and Chief Executive Officer of The Sober Connection, a physician-led medical services organization that partners with behavioral healthcare facilities nationwide to provide comprehensive medical leadership, provider staffing, quality assurance, and regulatory compliance solutions.",
+      "With extensive experience across the continuum of addiction treatment—including medical detoxification, residential treatment, partial hospitalization, intensive outpatient, and outpatient care—Dr. Tambini has developed scalable clinical programs that improve patient outcomes while helping organizations maintain regulatory excellence and operational efficiency. Her expertise includes addiction medicine, psychopharmacology, withdrawal management, medical stabilization, utilization review, physician leadership, and multi-state healthcare operations.",
+      "Prior to founding The Sober Connection, Dr. Tambini served as a hospitalist within the Veterans Health Administration, where she managed medically complex patients and collaborated with multidisciplinary teams to deliver high-quality inpatient care. Her clinical expertise, combined with her operational leadership, provides a unique perspective on integrating medical excellence with sustainable healthcare systems.",
+      "Under Dr. Tambini's leadership, The Sober Connection has grown into a multi-state organization supporting behavioral healthcare facilities through physician staffing, medical directorships, quality improvement initiatives, provider education, credentialing, policy development, and clinical oversight. She is recognized for building high-performing medical teams, implementing standardized clinical processes, and helping treatment centers navigate accreditation, licensing, and payer requirements.",
+      "Dr. Tambini is passionate about raising the standard of addiction medicine by combining compassionate patient care with innovative operational strategies. Her leadership philosophy emphasizes clinical integrity, accountability, and collaboration, with a focus on creating systems that support both providers and the patients they serve.",
+      "She remains actively involved in medical education, physician mentorship, and the ongoing advancement of best practices in behavioral healthcare while continuing to care for patients and advise organizations on clinical program development, healthcare operations, and quality improvement initiatives.",
     ],
   },
 ];

@@ -39,6 +39,15 @@ export const HANDBUILT = new Set([
 // Kept here so app/sitemap.ts and the catch-all metadata agree on one list.
 export const NOINDEX_SLUGS = new Set(["thank-you"]);
 
+// Pages whose text is published first by Quadrant Health Group and syndicated
+// verbatim to every facility site. Thirteen near-identical copies otherwise
+// compete with each other, so these point their canonical at the QHG original
+// instead of at themselves. Keyed by full doc slug — a slug that is absent
+// (every other staff profile included) keeps its own self-canonical.
+export const CANONICAL_AT_PARENT: Record<string, string> = {
+  "staff/pamela-tambini": "https://www.quadranthealthgroup.com/team/pamela-tambini/",
+};
+
 export function keyToSlug(key: string): string {
   return key === "home" ? "" : key;
 }

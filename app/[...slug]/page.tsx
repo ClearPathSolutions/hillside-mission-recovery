@@ -8,6 +8,7 @@ import {
   getRelatedPosts,
   deriveCategory,
   NOINDEX_SLUGS,
+  CANONICAL_AT_PARENT,
   type Doc,
 } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -43,7 +44,7 @@ export async function generateMetadata({
       images: [doc.ogImage || defaultOgImage],
       type: doc.type === "post" ? "article" : "website",
     },
-    alternates: { canonical: `/${doc.slug}` },
+    alternates: { canonical: CANONICAL_AT_PARENT[doc.slug] ?? `/${doc.slug}` },
     // A6 — /thank-you is a conversion page; keep it out of the index.
     ...(NOINDEX_SLUGS.has(doc.slug) ? { robots: { index: false, follow: true } } : {}),
   };
@@ -181,11 +182,17 @@ function ArticlePage({ doc }: { doc: Doc }) {
 }
 
 /* ---------- Staff profile ---------- */
+const STAFF_ROLES: Record<string, string> = {
+  "monica-olivares": "Clinical Supervisor",
+  "pamela-tambini": "Medical Oversight",
+};
+
 function StaffPage({ doc }: { doc: Doc }) {
   const key = doc.slug.split("/").pop() || "";
   const photo = staffPhotos[key];
-  // Titles follow the QHG directory / staff portal (issues.md DOC-02).
-  const role = /monica/i.test(doc.slug) ? "Clinical Supervisor" : "Director of Operations";
+  // Titles follow the QHG directory / staff portal (issues.md DOC-02). Keyed by
+  // slug so a second profile can't inherit the first one's title.
+  const role = STAFF_ROLES[key] ?? "Director of Operations";
   const name = doc.h1 || doc.title;
 
   return (
