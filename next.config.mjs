@@ -3,6 +3,11 @@
 // Third-party origins the site actually loads. Keep in sync with
 // lib/image-hosts.ts (used to guard next/image against unknown hosts).
 const CLARION = "https://*.clarionlabs.ai";
+// Listed explicitly in img-src as well as being covered by the wildcard above.
+// Redundant today on purpose: post covers are served from this host, so if
+// anyone ever narrows CLARION to `www.clarionlabs.ai`, an explicit entry keeps
+// images loading instead of failing silently. Do not "simplify" it away.
+const CLARION_API = "https://api.clarionlabs.ai";
 const CTM = "https://*.tctm.co https://*.calltrackingmetrics.com";
 
 // Google Tag Manager and the Google tags it most commonly loads (GA4, Ads).
@@ -33,7 +38,7 @@ const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
   "style-src 'self' 'unsafe-inline'",
-  `img-src 'self' data: blob: https://images.unsplash.com ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY} ${BING}`,
+  `img-src 'self' data: blob: ${CLARION_API} https://images.unsplash.com ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY} ${BING}`,
   "font-src 'self' data:",
   `connect-src 'self' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
   `frame-src 'self' ${CLARION} ${GTM} https://www.google.com https://td.doubleclick.net`,
