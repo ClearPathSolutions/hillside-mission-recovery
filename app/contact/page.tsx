@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const details = [
     { Icon: IconPhone, label: "Call us", value: site.phone, href: site.phoneHref, note: "Confidential, 24/7" },
-    { Icon: IconMail, label: "Email", value: site.contactEmail, href: `mailto:${site.contactEmail}`, note: "We reply quickly" },
+    { Icon: IconMail, label: "Email", value: site.email, href: `mailto:${site.email}`, note: "We reply quickly" },
     { Icon: IconPin, label: "Visit", value: site.address.full, note: "Orange County, California" },
     { Icon: IconClock, label: "Availability", value: "Open 24 hours", note: "Every day of the week" },
   ];

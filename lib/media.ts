@@ -160,7 +160,6 @@ export const staffPhotos: Record<string, string> = {
   "monica-olivares": "/images/MonicaHMS.jpeg",
   // Retained, unused: Phillip Carter is off the roster per the client's staff
   // list. Kept so restoring him is a one-line change if HR confirms otherwise.
-  "phillip-carter": "/images/Phillip-Carter.png",
   // California leadership
   "shawn-young": "/images/staff/shawn-young.jpg",
   "michael-mcarthur": "/images/staff/michael-mcarthur.jpg",
@@ -174,4 +173,5 @@ export const staffPhotos: Record<string, string> = {
   "angela-angie-taylor": "/images/staff/angela-angie-taylor.jpg",
   // Quadrant Health Group — network-wide, not tied to a single facility
   "pamela-tambini": "/images/staff/pamela-tambini.jpg",
+  "bj-thome": "/images/staff/bj-thome.jpg",
 };

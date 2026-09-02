@@ -54,7 +54,7 @@ const values = [
   { Icon: IconCycle, title: "Continuum of Care", text: "Aftercare is essential to success. From day one we work with you to identify aftercare options that build on your new foundation." },
 ];
 
-// The roster is the client's supplied staff list, verbatim: ten people, with
+// The roster is the client's supplied staff list, verbatim: eleven people, with
 // their names and titles exactly as given. Bio text comes from the QHG bio
 // directory. Do not append credentials or geography to a name or title here —
 // an earlier pass did, and it did not match what was asked for.
@@ -63,10 +63,15 @@ const values = [
 // bio directory and the headshot set file him under Wellness Ranch KY. His
 // /staff page is retired and 301s to this one. See issues.md DOC-11.
 //
-// Dr. Pamela Tambini is not on that list either, and is here on purpose: her
-// medical oversight is network-wide rather than Hillside's, so she sits in the
-// Quadrant Health Group group and her profile canonicalises to the QHG original
-// (lib/content.ts, CANONICAL_AT_PARENT).
+// Dr. Pamela Tambini is on the list and sits apart from the rest: her medical
+// oversight is network-wide rather than Hillside's or California's, so she is in
+// the Quadrant Health Group group and her profile canonicalises to the QHG
+// original (lib/content.ts, CANONICAL_AT_PARENT).
+//
+// BJ Thome's directory heading reads "Alumni Coordinator | California". The
+// "| California" is scope, which the California leadership group already states,
+// so the role renders as "Alumni Coordinator" to match how the other
+// California-wide titles are written here.
 //
 // Groups mirror the three tabs the list itself pointed at (CA sites, Cali
 // South, Hillside), plus a fourth for network-wide oversight, so the page
@@ -211,6 +216,19 @@ const team: Member[] = [
     bio: [
       "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about helping individuals navigate the recovery process, Jacob is dedicated to creating a treatment experience that is both meaningful and engaging. He believes that lasting recovery is built through genuine connection, compassionate support, and an environment where clients feel valued every step of the way.",
       "In his role, Jacob works to ensure that each client receives personalized care and experiences a sense of belonging throughout their treatment journey. His goal is to help individuals not only achieve recovery but also discover that life in recovery can be fulfilling, rewarding, and enjoyable. Through his commitment to client-centered care, Jacob strives to make a lasting positive impact on the lives of those he serves.",
+    ],
+  },
+  {
+    slug: "bj-thome",
+    name: "BJ Thome",
+    role: "Alumni Coordinator",
+    group: "california",
+    photo: staffPhotos["bj-thome"],
+    bio: [
+      "BJ Thome serves as the Alumni Coordinator for Quadrant Health Group’s California facilities, where his purpose is to ensure that no one feels they have to walk the road of recovery alone. His passion for this work is deeply personal. Having experienced the struggles of addiction firsthand, BJ understands both the courage it takes to begin recovery and the importance of continued support long after treatment ends.",
+      "BJ focuses on building genuine, trusting relationships with clients while they are still in treatment, helping establish a sense of connection and community before they transition back into everyday life. He believes recovery does not end at discharge—and neither should the support. His goal is for every client to know they have somewhere to turn, people who understand, and a community that continues to stand behind them.",
+      "Drawing from his own lived experience, BJ is passionate about meeting people where they are without judgment and reminding them that their story does not have to end where addiction once took them. He strives to make every person he encounters feel seen, heard, valued, and welcomed.",
+      "For BJ, alumni coordination is about more than building a program. It is about creating lasting connection, belonging, and purpose while helping individuals stay engaged in a recovery community that genuinely wants to see them succeed.",
     ],
   },
   {

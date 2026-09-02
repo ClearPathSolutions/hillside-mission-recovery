@@ -7,8 +7,7 @@ export const site = {
   url: "https://hillsidemission.com",
   phone: "(866) 393-5174",
   phoneHref: "tel:+18663935174",
-  email: "admissions@hillsidemission.com",
-  contactEmail: "info@hillsidemission.com",
+  email: "info@hillsidemission.com",
   address: {
     street: "23371 Rockrose",
     city: "Mission Viejo",
