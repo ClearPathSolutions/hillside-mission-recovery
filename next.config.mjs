@@ -8,6 +8,12 @@ const CLARION = "https://*.clarionlabs.ai";
 // anyone ever narrows CLARION to `www.clarionlabs.ai`, an explicit entry keeps
 // images loading instead of failing silently. Do not "simplify" it away.
 const CLARION_API = "https://api.clarionlabs.ai";
+// Inline body images in Clarion posts point at CLARION_API, which answers with a
+// 302 to a presigned S3 URL on this bucket. CSP is enforced against the final
+// URL of a redirect chain, not just the one in the markup, so without this host
+// every in-article image is blocked and renders as a broken icon. Cover images
+// were unaffected because approveCover() swaps them for local facility photos.
+const CLARION_MEDIA = "https://clarion-meta-ads-media.s3.amazonaws.com";
 const CTM = "https://*.tctm.co https://*.calltrackingmetrics.com";
 
 // Google Tag Manager and the Google tags it most commonly loads (GA4, Ads).
@@ -38,7 +44,7 @@ const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
   "style-src 'self' 'unsafe-inline'",
-  `img-src 'self' data: blob: ${CLARION_API} https://images.unsplash.com ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY} ${BING}`,
+  `img-src 'self' data: blob: ${CLARION_API} ${CLARION_MEDIA} https://images.unsplash.com ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY} ${BING}`,
   "font-src 'self' data:",
   `connect-src 'self' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
   `frame-src 'self' ${CLARION} ${GTM} https://www.google.com https://td.doubleclick.net`,

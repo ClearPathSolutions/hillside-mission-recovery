@@ -207,7 +207,23 @@ export function processBodyHtml(html: string): { html: string; toc: TocItem[] } 
     },
   );
 
-  return { html: withIds, toc };
+  // Clarion emits inline body images as bare `<img src="...">` — no alt, and no
+  // loading hint. The tag is injected via dangerouslySetInnerHTML, so next/image
+  // never sees it and cannot supply either. Screen readers would otherwise
+  // announce the raw URL, so an empty alt marks them as decorative (the posts
+  // carry no caption text to promote), and lazy-loading keeps below-the-fold
+  // article images off the critical path.
+  const withImgAttrs = withIds.replace(/<img\s([^>]*?)\/?>/gi, (_m, attrs: string) => {
+    let out = attrs.trim();
+    // Anchored to an attribute boundary so `data-alt=` or `srcset=` are not
+    // mistaken for the attribute being tested.
+    if (!/(^|\s)alt\s*=/i.test(out)) out += ' alt=""';
+    if (!/(^|\s)loading\s*=/i.test(out)) out += ' loading="lazy"';
+    if (!/(^|\s)decoding\s*=/i.test(out)) out += ' decoding="async"';
+    return `<img ${out}>`;
+  });
+
+  return { html: withImgAttrs, toc };
 }
 
 // Referenced so a future taxonomy change to CATEGORIES stays in sync here.
