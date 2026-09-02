@@ -72,41 +72,11 @@ const values = [
 // "| California" is scope, which the California leadership group already states,
 // so the role renders as "Alumni Coordinator" to match how the other
 // California-wide titles are written here.
-//
-// Groups mirror the three tabs the list itself pointed at (CA sites, Cali
-// South, Hillside), plus a fourth for network-wide oversight, so the page
-// doesn't imply that state-, region- and group-level leadership are based on
-// site day to day.
-const GROUPS = [
-  {
-    key: "facility",
-    label: "At Hillside Mission",
-    blurb: "The team you meet at our Mission Viejo residence.",
-  },
-  {
-    key: "socal",
-    label: "Southern California",
-    blurb: "Program and clinical leadership across our Southern California facilities.",
-  },
-  {
-    key: "california",
-    label: "California leadership",
-    blurb: "Executive, medical and clinical oversight for every Quadrant Health Group facility in California.",
-  },
-  {
-    key: "network",
-    label: "Quadrant Health Group",
-    blurb: "Medical oversight shared across every Quadrant Health Group facility, nationwide.",
-  },
-] as const;
-
-type GroupKey = (typeof GROUPS)[number]["key"];
 
 type Member = {
   slug: string;
   name: string;
   role: string;
-  group: GroupKey;
   photo?: string;
   /** Paragraphs, verbatim from the QHG bio directory. */
   bio: string[];
@@ -118,45 +88,23 @@ type Member = {
 // gets rewritten here (issues.md DOC-06).
 const team: Member[] = [
   {
-    slug: "justin-white",
-    name: "Justin White",
-    role: "Program Director",
-    group: "socal",
-    photo: staffPhotos["justin-white"],
+    slug: "pamela-tambini",
+    name: "Dr. Pamela Tambini",
+    role: "Medical Oversight",
+    photo: staffPhotos["pamela-tambini"],
     bio: [
-      "Justin White serves as Program Director for Quadrant Health Group's Southern California facilities, providing operational leadership and program oversight across the organization's behavioral health treatment centers. In this role, he works closely with multidisciplinary teams to ensure each facility delivers high-quality, individualized care while maintaining excellence in clinical programming, regulatory compliance, and day-to-day operations.",
-      "A Registered Addiction Counselor, Justin brings extensive experience in both detoxification and residential treatment settings. His leadership is rooted in the belief that recovery is never one-size-fits-all, and he is committed to fostering treatment environments where every client feels respected, supported, and empowered throughout their healing journey.",
-      "Known for his compassionate and collaborative leadership style, Justin is passionate about developing strong teams and creating programs that promote lasting recovery. He believes meaningful change begins with genuine human connection and is dedicated to helping both clients and staff reach their fullest potential. Through his leadership, he continues to advance Quadrant Health Group's mission of providing exceptional, evidence-based behavioral healthcare across Southern California.",
-    ],
-  },
-  {
-    slug: "jeremiah-ross",
-    name: "Jeremiah Ross",
-    role: "Nursing Supervisor",
-    group: "socal",
-    photo: staffPhotos["jeremiah-ross"],
-    bio: [
-      "Jeremiah Ross, is a dedicated healthcare professional with more than 10 years of patient care experience and a strong background in substance use disorder treatment, client care coordination, and clinical team leadership. As the Nursing Supervisor, Jeremiah plays an integral role in supporting both clients and staff, helping oversee day-to-day clinical operations, medication-assisted treatment (MAT) protocols, documentation compliance, staff development, and multidisciplinary collaboration to ensure the highest standards of care.",
-      "Passionate about helping individuals navigate the recovery process, Jeremiah is committed to creating a safe, supportive, and structured treatment environment where clients can build stability, develop healthy coping skills, and work toward lasting recovery. His leadership style emphasizes compassion, accountability, and teamwork, helping foster positive outcomes for both clients and clinical staff.",
-    ],
-  },
-  {
-    slug: "alanna-mcmurtrey",
-    name: "Alanna McMurtrey",
-    role: "Lead Case Manager",
-    group: "socal",
-    photo: staffPhotos["alanna-mcmurtrey"],
-    bio: [
-      "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management services and supports clients through detox and residential levels of care. In her role, she coordinates client care, provides leadership and clinical support to case management staff, and helps ensure that each individual receives consistent, structured, and personalized support throughout their treatment journey.",
-      "With several years of experience in behavioral health and addiction treatment, Alanna has developed a strong passion for helping individuals overcome substance use disorders and co-occurring mental health challenges. She is dedicated to fostering engagement in treatment, promoting personal growth, and supporting clients as they work toward sustainable, long-term recovery.",
-      "Alanna takes a client-centered, strengths-based approach to care, meeting individuals where they are and helping them build upon their unique strengths. She is committed to creating a safe, respectful, and supportive environment where clients feel heard, valued, and empowered to make meaningful changes in their lives. Through collaboration, compassion, and clinical consistency, she strives to help clients develop the skills, confidence, and stability needed to achieve lasting recovery and improved well-being.",
+      "Dr. Pamela Tambini is a board-certified physician in Internal Medicine and Addiction Medicine, entrepreneur, and healthcare executive dedicated to advancing evidence-based treatment for individuals with substance use and co-occurring mental health disorders. She is the Founder and Chief Executive Officer of The Sober Connection, a physician-led medical services organization that partners with behavioral healthcare facilities nationwide to provide comprehensive medical leadership, provider staffing, quality assurance, and regulatory compliance solutions.",
+      "With extensive experience across the continuum of addiction treatment—including medical detoxification, residential treatment, partial hospitalization, intensive outpatient, and outpatient care—Dr. Tambini has developed scalable clinical programs that improve patient outcomes while helping organizations maintain regulatory excellence and operational efficiency. Her expertise includes addiction medicine, psychopharmacology, withdrawal management, medical stabilization, utilization review, physician leadership, and multi-state healthcare operations.",
+      "Prior to founding The Sober Connection, Dr. Tambini served as a hospitalist within the Veterans Health Administration, where she managed medically complex patients and collaborated with multidisciplinary teams to deliver high-quality inpatient care. Her clinical expertise, combined with her operational leadership, provides a unique perspective on integrating medical excellence with sustainable healthcare systems.",
+      "Under Dr. Tambini's leadership, The Sober Connection has grown into a multi-state organization supporting behavioral healthcare facilities through physician staffing, medical directorships, quality improvement initiatives, provider education, credentialing, policy development, and clinical oversight. She is recognized for building high-performing medical teams, implementing standardized clinical processes, and helping treatment centers navigate accreditation, licensing, and payer requirements.",
+      "Dr. Tambini is passionate about raising the standard of addiction medicine by combining compassionate patient care with innovative operational strategies. Her leadership philosophy emphasizes clinical integrity, accountability, and collaboration, with a focus on creating systems that support both providers and the patients they serve.",
+      "She remains actively involved in medical education, physician mentorship, and the ongoing advancement of best practices in behavioral healthcare while continuing to care for patients and advise organizations on clinical program development, healthcare operations, and quality improvement initiatives.",
     ],
   },
   {
     slug: "shawn-young",
     name: "Shawn Young",
     role: "Executive Director",
-    group: "california",
     photo: staffPhotos["shawn-young"],
     bio: [
       "As the Executive Director of Southern California, I have the privilege of leading a team of dedicated professionals across several substance abuse treatment facilities — but at the heart of what I do is people. Whether it’s helping a client take their first step toward recovery or supporting a staff member as they grow into leadership, my passion lies in developing others and building environments where people can thrive.",
@@ -170,7 +118,6 @@ const team: Member[] = [
     slug: "michael-mcarthur",
     name: "Michael McArthur",
     role: "Nursing Director",
-    group: "california",
     photo: staffPhotos["michael-mcarthur"],
     bio: [
       "I am the Director of Nursing for California facilities, overseeing all medical staff and client care operations. My journey into nursing was inspired by a personal desire to provide hope and compassion during life’s most challenging moments. Watching nurses care for my family during a difficult time, I realized how powerful a little hope and dedicated care can be. This inspired me to pursue a career in nursing, knowing I could make a difference when people need it most.",
@@ -184,7 +131,6 @@ const team: Member[] = [
     slug: "riky-hanaumi",
     name: "Riky Hanaumi",
     role: "Clinical Director",
-    group: "california",
     photo: staffPhotos["riky-hanaumi"],
     bio: [
       "Erika “Riky” Hanaumi is a Licensed Clinical Social Worker with more than 20 years of experience in behavioral health and addiction treatment. She currently serves as Clinical Director for Quadrant Health Group’s California facilities, where she oversees clinical programming, mentors and supports therapists in developing effective treatment strategies, and ensures the delivery of compassionate, individualized, and clinically sound care. Her leadership focuses on promoting evidence-based practices, clinical excellence, and positive treatment outcomes for individuals with co-occurring mental health and substance use disorders.",
@@ -195,10 +141,20 @@ const team: Member[] = [
     ],
   },
   {
+    slug: "justin-white",
+    name: "Justin White",
+    role: "Program Director",
+    photo: staffPhotos["justin-white"],
+    bio: [
+      "Justin White serves as Program Director for Quadrant Health Group's Southern California facilities, providing operational leadership and program oversight across the organization's behavioral health treatment centers. In this role, he works closely with multidisciplinary teams to ensure each facility delivers high-quality, individualized care while maintaining excellence in clinical programming, regulatory compliance, and day-to-day operations.",
+      "A Registered Addiction Counselor, Justin brings extensive experience in both detoxification and residential treatment settings. His leadership is rooted in the belief that recovery is never one-size-fits-all, and he is committed to fostering treatment environments where every client feels respected, supported, and empowered throughout their healing journey.",
+      "Known for his compassionate and collaborative leadership style, Justin is passionate about developing strong teams and creating programs that promote lasting recovery. He believes meaningful change begins with genuine human connection and is dedicated to helping both clients and staff reach their fullest potential. Through his leadership, he continues to advance Quadrant Health Group's mission of providing exceptional, evidence-based behavioral healthcare across Southern California.",
+    ],
+  },
+  {
     slug: "jacob-cameron",
     name: "Jacob Cameron",
     role: "Client Care Director",
-    group: "california",
     photo: staffPhotos["jacob-cameron"],
     bio: [
       "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about helping individuals navigate the recovery process, Jacob is dedicated to creating a treatment experience that is both meaningful and engaging. He believes that lasting recovery is built through genuine connection, compassionate support, and an environment where clients feel valued every step of the way.",
@@ -206,10 +162,19 @@ const team: Member[] = [
     ],
   },
   {
+    slug: "jeremiah-ross",
+    name: "Jeremiah Ross",
+    role: "Nursing Supervisor",
+    photo: staffPhotos["jeremiah-ross"],
+    bio: [
+      "Jeremiah Ross, is a dedicated healthcare professional with more than 10 years of patient care experience and a strong background in substance use disorder treatment, client care coordination, and clinical team leadership. As the Nursing Supervisor, Jeremiah plays an integral role in supporting both clients and staff, helping oversee day-to-day clinical operations, medication-assisted treatment (MAT) protocols, documentation compliance, staff development, and multidisciplinary collaboration to ensure the highest standards of care.",
+      "Passionate about helping individuals navigate the recovery process, Jeremiah is committed to creating a safe, supportive, and structured treatment environment where clients can build stability, develop healthy coping skills, and work toward lasting recovery. His leadership style emphasizes compassion, accountability, and teamwork, helping foster positive outcomes for both clients and clinical staff.",
+    ],
+  },
+  {
     slug: "monica-olivares",
     name: "Monica Olivares",
     role: "Clinical Supervisor",
-    group: "california",
     photo: staffPhotos["monica-olivares"],
     bio: [
       "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral health field and a deeply personal passion for recovery and healing. Throughout her career, Monica has worked across nearly every level of care — including Detox, Residential, IOP, PHP, and Outpatient programs — while holding a wide range of roles from Behavioral Health Technician and Case Manager to Program Manager and Program Director.",
@@ -219,31 +184,26 @@ const team: Member[] = [
     ],
   },
   {
+    slug: "alanna-mcmurtrey",
+    name: "Alanna McMurtrey",
+    role: "Lead Case Manager",
+    photo: staffPhotos["alanna-mcmurtrey"],
+    bio: [
+      "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management services and supports clients through detox and residential levels of care. In her role, she coordinates client care, provides leadership and clinical support to case management staff, and helps ensure that each individual receives consistent, structured, and personalized support throughout their treatment journey.",
+      "With several years of experience in behavioral health and addiction treatment, Alanna has developed a strong passion for helping individuals overcome substance use disorders and co-occurring mental health challenges. She is dedicated to fostering engagement in treatment, promoting personal growth, and supporting clients as they work toward sustainable, long-term recovery.",
+      "Alanna takes a client-centered, strengths-based approach to care, meeting individuals where they are and helping them build upon their unique strengths. She is committed to creating a safe, respectful, and supportive environment where clients feel heard, valued, and empowered to make meaningful changes in their lives. Through collaboration, compassion, and clinical consistency, she strives to help clients develop the skills, confidence, and stability needed to achieve lasting recovery and improved well-being.",
+    ],
+  },
+  {
     slug: "bj-thome",
     name: "BJ Thome",
     role: "Alumni Coordinator",
-    group: "california",
     photo: staffPhotos["bj-thome"],
     bio: [
       "BJ Thome serves as the Alumni Coordinator for Quadrant Health Group’s California facilities, where his purpose is to ensure that no one feels they have to walk the road of recovery alone. His passion for this work is deeply personal. Having experienced the struggles of addiction firsthand, BJ understands both the courage it takes to begin recovery and the importance of continued support long after treatment ends.",
       "BJ focuses on building genuine, trusting relationships with clients while they are still in treatment, helping establish a sense of connection and community before they transition back into everyday life. He believes recovery does not end at discharge—and neither should the support. His goal is for every client to know they have somewhere to turn, people who understand, and a community that continues to stand behind them.",
       "Drawing from his own lived experience, BJ is passionate about meeting people where they are without judgment and reminding them that their story does not have to end where addiction once took them. He strives to make every person he encounters feel seen, heard, valued, and welcomed.",
       "For BJ, alumni coordination is about more than building a program. It is about creating lasting connection, belonging, and purpose while helping individuals stay engaged in a recovery community that genuinely wants to see them succeed.",
-    ],
-  },
-  {
-    slug: "pamela-tambini",
-    name: "Dr. Pamela Tambini",
-    role: "Medical Oversight",
-    group: "network",
-    photo: staffPhotos["pamela-tambini"],
-    bio: [
-      "Dr. Pamela Tambini is a board-certified physician in Internal Medicine and Addiction Medicine, entrepreneur, and healthcare executive dedicated to advancing evidence-based treatment for individuals with substance use and co-occurring mental health disorders. She is the Founder and Chief Executive Officer of The Sober Connection, a physician-led medical services organization that partners with behavioral healthcare facilities nationwide to provide comprehensive medical leadership, provider staffing, quality assurance, and regulatory compliance solutions.",
-      "With extensive experience across the continuum of addiction treatment—including medical detoxification, residential treatment, partial hospitalization, intensive outpatient, and outpatient care—Dr. Tambini has developed scalable clinical programs that improve patient outcomes while helping organizations maintain regulatory excellence and operational efficiency. Her expertise includes addiction medicine, psychopharmacology, withdrawal management, medical stabilization, utilization review, physician leadership, and multi-state healthcare operations.",
-      "Prior to founding The Sober Connection, Dr. Tambini served as a hospitalist within the Veterans Health Administration, where she managed medically complex patients and collaborated with multidisciplinary teams to deliver high-quality inpatient care. Her clinical expertise, combined with her operational leadership, provides a unique perspective on integrating medical excellence with sustainable healthcare systems.",
-      "Under Dr. Tambini's leadership, The Sober Connection has grown into a multi-state organization supporting behavioral healthcare facilities through physician staffing, medical directorships, quality improvement initiatives, provider education, credentialing, policy development, and clinical oversight. She is recognized for building high-performing medical teams, implementing standardized clinical processes, and helping treatment centers navigate accreditation, licensing, and payer requirements.",
-      "Dr. Tambini is passionate about raising the standard of addiction medicine by combining compassionate patient care with innovative operational strategies. Her leadership philosophy emphasizes clinical integrity, accountability, and collaboration, with a focus on creating systems that support both providers and the patients they serve.",
-      "She remains actively involved in medical education, physician mentorship, and the ongoing advancement of best practices in behavioral healthcare while continuing to care for patients and advise organizations on clinical program development, healthcare operations, and quality improvement initiatives.",
     ],
   },
 ];
@@ -260,7 +220,6 @@ export default async function AboutPage() {
     ...team,
     ...extras.map((e) => ({
       ...e,
-      group: "facility" as const,
       photo: e.photo ?? staffPhotos[e.slug] ?? undefined,
       bio: [e.bio],
     })),
@@ -342,24 +301,19 @@ export default async function AboutPage() {
             <h2 className="mt-4 text-3xl md:text-4xl">Meet our team</h2>
             <p className="mt-4 text-ink/70">The people who make recovery at Hillside Mission personal.</p>
           </div>
-          {/* Grouped by the directory's three tiers rather than one flat grid —
-              eleven cards in a single run gave no sense of who is on site. */}
-          <div className="mx-auto mt-14 max-w-4xl space-y-16">
-            {GROUPS.map((g) => {
-              const members = roster.filter((m) => m.group === g.key);
-              if (!members.length) return null;
-              return (
-                <div key={g.key}>
-                  <div className="reveal border-b border-line pb-4">
-                    <h3 className="font-display text-2xl text-ink">{g.label}</h3>
-                    <p className="mt-1 text-sm text-ink/70">{g.blurb}</p>
-                  </div>
-                  {/* Full-width rows rather than a two-column card grid: these
-                      are the directory's complete bios, up to five paragraphs,
-                      which a narrow card can't hold without going very tall and
-                      leaving the shorter entries ragged beside it. */}
-                  <div className="mt-8 space-y-8">
-                    {members.map((m) => (
+          {/* One flat list in roster order. This was previously split into
+              facility / Southern California / California leadership / network
+              tiers, on the reasoning that grouping stopped the page implying
+              regional leaders were on site day to day. That reasoning does not
+              hold — these people do work across several facilities — so the
+              tiers were removed and the roster reads in the requested order. */}
+          {/* Full-width rows rather than a two-column card grid: these are the
+              directory's complete bios, up to five paragraphs, which a narrow
+              card can't hold without going very tall and leaving the shorter
+              entries ragged beside it. */}
+          <div className="mx-auto mt-14 max-w-4xl">
+            <div className="space-y-8">
+              {roster.map((m) => (
                       <div
                         key={m.slug}
                         className="reveal card overflow-hidden sm:flex sm:items-stretch"
@@ -401,11 +355,8 @@ export default async function AboutPage() {
                           )}
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
         </div>
       </section>
