@@ -59,7 +59,10 @@ export default async function BlogPage() {
                     fill
                     priority
                     sizes="(min-width:1024px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    // object-contain, not cover: Clarion covers are branded artwork with the
+                    // post title set into the image, and cropping to fill cut the wording off.
+                    // The hover zoom is gone for the same reason — it cropped what it magnified.
+                    className="object-contain"
                   />
                 )}
               </div>

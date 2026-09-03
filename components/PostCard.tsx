@@ -7,6 +7,9 @@ import { IconClock, IconArrow } from "@/components/Icons";
 export default function PostCard({ post, priority = false }: { post: PostMeta; priority?: boolean }) {
   return (
     <article className="reveal card card-hover group flex flex-col overflow-hidden">
+      {/* object-contain on the cover: Clarion covers are branded artwork with the post
+          title set into the image, so cropping to fill cut the wording off. Facility
+          photos are ~1.58:1 against this 1.6:1 frame, so they letterbox imperceptibly. */}
       <Link href={`/${post.slug}`} className="relative block aspect-[16/10] overflow-hidden bg-cream-deep">
         {post.ogImage && isOptimizableImage(post.ogImage) ? (
           <Image
@@ -15,7 +18,7 @@ export default function PostCard({ post, priority = false }: { post: PostMeta; p
             fill
             sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
             priority={priority}
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-contain"
           />
         ) : post.ogImage ? (
           // Host isn't in the optimizer allowlist — render unoptimized rather than throw.
@@ -23,7 +26,7 @@ export default function PostCard({ post, priority = false }: { post: PostMeta; p
           <img
             src={post.ogImage}
             alt={post.title}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="absolute inset-0 h-full w-full object-contain"
           />
         ) : (
           <div className="absolute inset-0 grid place-items-center bg-ink/5 text-ink/70">Hillside Mission</div>
