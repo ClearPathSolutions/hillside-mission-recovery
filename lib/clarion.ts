@@ -105,12 +105,26 @@ function toMeta(p: ClarionFeedPost, bodyForEstimate = ""): PostMeta {
 }
 
 /**
- * Clarion authors pick their own cover art (currently Unsplash), but every
- * photograph on this site has to come from the approved facility set, so the
- * cover is swapped for a deterministic approved photo keyed on the post slug.
+ * Use the cover image the Clarion author chose.
+ *
+ * This function used to overwrite every cover with a photo from the approved
+ * facility set, on the reasoning that Clarion covers were generic Unsplash
+ * stock and a treatment site should only show its own building. Covers are now
+ * first-party branded artwork produced for the post, and a blanket swap cannot
+ * tell the two apart — it was discarding purpose-made art and substituting an
+ * unrelated photo of the house. The author's choice is authoritative.
+ *
+ * A facility photo is still used when Clarion sends no cover at all. That fills
+ * a gap rather than overriding a decision, and it keeps the card from falling
+ * back to the plain text placeholder in PostCard.
+ *
+ * Note the cover host must be permitted by the CSP in next.config.mjs to render
+ * at all: api.clarionlabs.ai (Clarion uploads) and images.unsplash.com are
+ * allowed today. A cover pointed at some other host will be blocked, so add the
+ * host there if Clarion ever starts serving from a new CDN.
  */
-function approveCover<T extends ClarionFeedPost>(p: T): T {
-  return { ...p, cover_image_url: facilityPhotoFor(p.slug) };
+function withAuthorCover<T extends ClarionFeedPost>(p: T): T {
+  return p.cover_image_url ? p : { ...p, cover_image_url: facilityPhotoFor(p.slug) };
 }
 
 /** Fetch the Clarion feed and normalize to the site's PostMeta shape. Never throws. */
@@ -124,7 +138,7 @@ export async function getClarionPosts(): Promise<PostMeta[]> {
     );
     if (!res || !res.ok) return [];
     const data = (await res.json()) as { posts?: ClarionFeedPost[] };
-    return (data.posts ?? []).map((p) => toMeta(approveCover(p)));
+    return (data.posts ?? []).map((p) => toMeta(withAuthorCover(p)));
   } catch {
     return [];
   }
@@ -141,7 +155,7 @@ export async function getClarionPost(slug: string): Promise<ClarionFullPost | nu
       `post ${slug}`,
     );
     if (!res || !res.ok) return null;
-    return approveCover((await res.json()) as ClarionFullPost);
+    return withAuthorCover((await res.json()) as ClarionFullPost);
   } catch {
     return null;
   }
