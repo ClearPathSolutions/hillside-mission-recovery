@@ -21,11 +21,17 @@ const inter = Inter({
   display: "swap",
 });
 
+// Inter stays preloaded — it is the body face and first paint waits on it.
+// Fraunces does not: at 47.3KB it is now the largest single item competing with
+// the hero image, it is only used for h1-h4, and `display: "swap"` paints those
+// in the size-adjusted fallback immediately. Dropping *both* preloads was tried
+// and regressed FCP badly; dropping only the display face is the targeted form.
 const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["500"],
   variable: "--font-fraunces",
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
