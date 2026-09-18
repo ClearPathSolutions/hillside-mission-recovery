@@ -16,15 +16,16 @@ import SessionTracker from "@/components/SessionTracker";
 // then waits on the stylesheet-discovered font request. Net score went down.
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   variable: "--font-inter",
   display: "swap",
 });
 
 const fraunces = Fraunces({
   subsets: ["latin"],
+  weight: ["500"],
   variable: "--font-fraunces",
   display: "swap",
-  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
