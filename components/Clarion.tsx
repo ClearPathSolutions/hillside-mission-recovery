@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import { site } from "@/lib/site";
 
 const BRAND = {
@@ -8,8 +11,44 @@ const BRAND = {
   font: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
 };
 
+const TRIGGERS = ["pointerdown", "keydown", "scroll", "touchstart", "mousemove"] as const;
+const FALLBACK_MS = 4000;
+
 export default function Clarion() {
   const { siteKey, api } = site.widgets.clarion;
+
+  // The chat bubble is not needed at first paint, and as a <script> in <head>
+  // it competed with the hero image for bandwidth on a throttled connection.
+  // Loaded on the first real input instead, with a fallback timer, mirroring
+  // components/GtmLoader.tsx.
+  useEffect(() => {
+    let loaded = false;
+    let timer: ReturnType<typeof setTimeout>;
+    const load = () => {
+      if (loaded) return;
+      loaded = true;
+      teardown();
+      const s = document.createElement("script");
+      s.src = "https://www.clarionlabs.ai/widget.v1.js";
+      s.async = true;
+      s.dataset.siteKey = siteKey;
+      s.dataset.api = api;
+      s.dataset.color = BRAND.color;
+      s.dataset.headerText = BRAND.headerText;
+      s.dataset.title = BRAND.title;
+      s.dataset.position = BRAND.position;
+      s.dataset.font = BRAND.font;
+      document.body.appendChild(s);
+    };
+    const teardown = () => {
+      clearTimeout(timer);
+      for (const e of TRIGGERS) window.removeEventListener(e, load);
+    };
+    timer = setTimeout(load, FALLBACK_MS);
+    for (const e of TRIGGERS) window.addEventListener(e, load, { once: true, passive: true });
+    return teardown;
+  }, [siteKey, api]);
+
   return (
     <>
       <style
@@ -21,18 +60,6 @@ export default function Clarion() {
   --clarion-chat-position: ${BRAND.position};
 }`,
         }}
-      />
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-      <script
-        src="https://www.clarionlabs.ai/widget.v1.js"
-        async
-        data-site-key={siteKey}
-        data-api={api}
-        data-color={BRAND.color}
-        data-header-text={BRAND.headerText}
-        data-title={BRAND.title}
-        data-position={BRAND.position}
-        data-font={BRAND.font}
       />
       {/* forms-capture.v1.js is deliberately NOT loaded.
           It binds only to `form[data-clarion-form]`, an attribute no form here
