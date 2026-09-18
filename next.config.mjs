@@ -55,6 +55,21 @@ const csp = [
   "upgrade-insecure-requests",
 ].join("; ");
 
+// Preconnect as an HTTP header, not a <link> in the layout.
+//
+// Next hoists its own preloads and the framework script tags to the top of
+// <head>, so a <link rel="preconnect"> written in the layout lands *after* the
+// third-party <script> tags it is supposed to warm up — measured at byte 2399
+// against the CTM tag at 1890, i.e. useless. A Link header is processed before
+// the HTML is parsed at all, so the connection is opening while the document
+// is still downloading. Kept to three origins, per Lighthouse's advice not to
+// exceed about four.
+const preconnectLink = [
+  "<https://264810.tctm.co>; rel=preconnect",
+  "<https://www.clarionlabs.ai>; rel=preconnect",
+  "<https://api.clarionlabs.ai>; rel=preconnect",
+].join(", ");
+
 const securityHeaders = [
   { key: "Content-Security-Policy", value: csp },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
@@ -64,6 +79,7 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()",
   },
+  { key: "Link", value: preconnectLink },
   {
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
