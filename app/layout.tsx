@@ -10,17 +10,14 @@ import Reveal from "@/components/Reveal";
 import Clarion from "@/components/Clarion";
 import SessionTracker from "@/components/SessionTracker";
 
-// preload:false on both faces is deliberate. next/font preloads by default,
-// which put 66KB + 49KB of woff2 on the wire alongside the 25KB hero image —
-// the LCP element — and on simulated Slow 4G that contention was most of the
-// gap between a 1.6s observed LCP and a 3.9s scored one. `display: "swap"`
-// plus next/font's size-adjusted fallback means text still paints immediately
-// and CLS stays at 0; the faces just swap in a beat later.
+// Both faces stay preloaded. Dropping the preload to free bandwidth for the
+// hero image was measured and made things worse: LCP barely moved (3.9s -> 4.0s
+// average) while FCP regressed from ~1.1s to ~2.2s, because the first paint
+// then waits on the stylesheet-discovered font request. Net score went down.
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  preload: false,
 });
 
 const fraunces = Fraunces({
@@ -28,7 +25,6 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   display: "swap",
   axes: ["opsz"],
-  preload: false,
 });
 
 export const metadata: Metadata = {
