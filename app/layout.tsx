@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import { site } from "@/lib/site";
 import { defaultOgImage } from "@/lib/media";
 import Header from "@/components/Header";
@@ -59,19 +60,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <head>
-        {/* Google Tag Manager — kept first in <head> so tags fire as early as
-            possible. The inline bootstrap relies on the CSP's 'unsafe-inline'
-            for script-src; googletagmanager.com is allow-listed there too. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':` +
-              `new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],` +
-              `j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;` +
-              `j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;` +
-              `f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${site.widgets.gtmId}');`,
-          }}
-        />
+        {/* Preconnect the origins the critical path actually waits on.
+            api.clarionlabs.ai is the blog feed; Lighthouse measured ~300ms of
+            LCP saving from connecting to it early. */}
+        <link rel="preconnect" href="https://api.clarionlabs.ai" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
         {/* CallTrackingMetrics — number swapping.
 
             `async` is REQUIRED here. Do not make this a synchronous tag, and
@@ -102,6 +96,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script async src={site.widgets.ctmScript}></script>
       </head>
       <body>
+        {/* Google Tag Manager.
+
+            This was an inline bootstrap at the top of <head>. That put gtm.js
+            plus the two gtag bundles — ~465KB and ~430ms of main-thread work —
+            ahead of the hero paint, and Lighthouse's simulated Slow 4G model
+            charged all of it to LCP.
+
+            `afterInteractive` keeps GTM in the document and firing on every
+            page, but defers it until after hydration so it no longer competes
+            with the LCP image. This is Next's documented placement for GTM and
+            what @next/third-parties does. The <noscript> fallback below still
+            has to be the first thing in <body>. */}
+        <Script id="gtm-bootstrap" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':` +
+            `new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],` +
+            `j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;` +
+            `j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;` +
+            `f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${site.widgets.gtmId}');`}
+        </Script>
         {/* GTM fallback for no-JS clients. Must be the first thing in <body>. */}
         <noscript>
           <iframe

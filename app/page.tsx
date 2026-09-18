@@ -56,6 +56,10 @@ export default function HomePage() {
           alt="Hillside Mission Recovery residence in Mission Viejo"
           fill
           priority
+          // Next emits the preload link from `priority` but not the attribute
+          // on the <img>; Lighthouse flags the missing fetchpriority on the LCP
+          // image, so it is set explicitly.
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-center"
         />
