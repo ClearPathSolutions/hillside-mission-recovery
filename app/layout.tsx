@@ -65,6 +65,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             LCP saving from connecting to it early. */}
         <link rel="preconnect" href="https://api.clarionlabs.ai" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {/* CTM is in <head> and on the critical path; Lighthouse measured
+            ~160ms of LCP saving from preconnecting to it. */}
+        <link rel="preconnect" href="https://264810.tctm.co" />
         <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
         {/* CallTrackingMetrics — number swapping.
 
@@ -103,12 +106,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ahead of the hero paint, and Lighthouse's simulated Slow 4G model
             charged all of it to LCP.
 
-            `afterInteractive` keeps GTM in the document and firing on every
-            page, but defers it until after hydration so it no longer competes
-            with the LCP image. This is Next's documented placement for GTM and
-            what @next/third-parties does. The <noscript> fallback below still
-            has to be the first thing in <body>. */}
-        <Script id="gtm-bootstrap" strategy="afterInteractive">
+            `afterInteractive` was not enough. It fires once hydration lands,
+            which on a throttled phone is still inside the LCP window — across
+            repeated Lighthouse runs GTM arrived anywhere from 455ms to 801ms
+            and the simulated LCP swung between 2.6s and 11.3s with it, even
+            though every network request finished by 2.2s.
+
+            `lazyOnload` defers to browser idle after load, so the container's
+            three bundles stop competing with the hero paint. The cost is that
+            tags fire a beat later; that is acceptable here because the
+            conversions are phone calls and form submissions, both well after
+            load. The <noscript> fallback below still has to be first in
+            <body>. */}
+        <Script id="gtm-bootstrap" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':` +
             `new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],` +
             `j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;` +
