@@ -71,6 +71,9 @@ export default function Header() {
               width={600}
               height={294}
               priority
+              // Renders at 44-48px tall; without this Next preloads the 1200w
+              // variant (12.4KB) against the hero image.
+              sizes="240px"
               className={`w-auto transition-all duration-300 ${solid ? "h-9 md:h-10" : "h-11 md:h-12"}`}
             />
           </Link>
