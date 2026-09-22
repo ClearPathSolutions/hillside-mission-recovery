@@ -183,8 +183,17 @@ function ArticlePage({ doc }: { doc: Doc }) {
 
 /* ---------- Staff profile ---------- */
 const STAFF_ROLES: Record<string, string> = {
-  "monica-olivares": "Clinical Supervisor",
   "pamela-tambini": "Medical Oversight",
+  "shawn-young": "Executive Director",
+  "michael-mcarthur": "Nursing Director",
+  "riky-hanaumi": "Clinical Director",
+  "justin-white": "Program Director",
+  "jacob-cameron": "Client Care Director",
+  "jeremiah-ross": "Nursing Supervisor",
+  "monica-olivares": "Clinical Supervisor",
+  "alanna-mcmurtrey": "Lead Case Manager",
+  "bj-thome": "Alumni Coordinator",
+  "angela-angie-taylor": "Case Manager",
 };
 
 function StaffPage({ doc }: { doc: Doc }) {

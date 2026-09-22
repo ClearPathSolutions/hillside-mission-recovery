@@ -18003,26 +18003,17 @@
   "staff/monica-olivares": {
     "slug": "staff/monica-olivares",
     "type": "staff",
-    "title": "Monica Olivares, CADC II - Clinical Supervisor",
-    "h1": "Monica Olivares, CADC II",
-    "description": "Clinical Supervisor Monica Olivares, CADC II, brings 11+ years in behavioral health and lived recovery experience across Quadrant Health Group’s California facilities.",
+    "title": "Monica Olivares - Clinical Supervisor",
+    "h1": "Monica Olivares",
+    "description": "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral…",
     "date": null,
-    "modified": "2026-03-20T16:18:26+00:00",
-    "ogImage": "/images/MonicaHMS-scaled.jpeg",
+    "modified": "2026-09-21",
+    "ogImage": "/images/MonicaHMS.jpeg",
     "category": null,
-    "excerpt": "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral health field and a deeply personal passion f",
+    "excerpt": "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral…",
     "readMins": 1,
-    "blockCount": 6,
+    "blockCount": 4,
     "blocks": [
-      {
-        "type": "paragraph",
-        "text": "About Us"
-      },
-      {
-        "type": "heading",
-        "level": 1,
-        "text": "Monica Olivares, CADC II"
-      },
       {
         "type": "paragraph",
         "text": "Monica Olivares serves as the Clinical Supervisor for Quadrant Health Group’s California facilities, bringing over 11 years of experience in the behavioral health field and a deeply personal passion for recovery and healing. Throughout her career, Monica has worked across nearly every level of care — including Detox, Residential, IOP, PHP, and Outpatient programs — while holding a wide range of roles from Behavioral Health Technician and Case Manager to Program Manager and Program Director."
@@ -18046,14 +18037,14 @@
     "type": "staff",
     "title": "Dr. Pamela Tambini - Medical Oversight",
     "h1": "Dr. Pamela Tambini",
-    "description": "Dr. Pamela Tambini is a board-certified physician in Internal Medicine and Addiction Medicine providing medical oversight for Quadrant Health Group facilities.",
+    "description": "Dr. Pamela Tambini is a board-certified physician in Internal Medicine and Addiction Medicine, healthcare executive, and Founder and Chief Executive Officer…",
     "date": null,
-    "modified": "2026-08-28T00:00:00+00:00",
+    "modified": "2026-09-21",
     "ogImage": "/images/staff/pamela-tambini.jpg",
     "category": null,
-    "excerpt": "Dr. Pamela Tambini is a board-certified physician in Internal Medicine and Addiction Medicine, healthcare executive, and Founder and Chief Executive Officer of The Sober Connection, a physician-led…",
-    "readMins": 2,
-    "blockCount": 6,
+    "excerpt": "Dr. Pamela Tambini is a board-certified physician in Internal Medicine and Addiction Medicine, healthcare executive, and Founder and Chief Executive Officer…",
+    "readMins": 1,
+    "blockCount": 7,
     "blocks": [
       {
         "type": "paragraph",
@@ -24746,6 +24737,270 @@
           "Jordan, M. R., et al. (2023). Naloxone. StatPearls. ncbi.nlm.nih.gov",
           "Substance Abuse and Mental Health Services Administration. National Helpline. samhsa.gov"
         ]
+      }
+    ]
+  },
+  "staff/shawn-young": {
+    "slug": "staff/shawn-young",
+    "type": "staff",
+    "title": "Shawn Young - Executive Director",
+    "h1": "Shawn Young",
+    "description": "As the Executive Director of Southern California, I have the privilege of leading a team of dedicated professionals across several substance abuse treatment…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/shawn-young.jpg",
+    "category": null,
+    "excerpt": "As the Executive Director of Southern California, I have the privilege of leading a team of dedicated professionals across several substance abuse treatment…",
+    "readMins": 1,
+    "blockCount": 5,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "As the Executive Director of Southern California, I have the privilege of leading a team of dedicated professionals across several substance abuse treatment facilities — but at the heart of what I do is people. Whether it’s helping a client take their first step toward recovery or supporting a staff member as they grow into leadership, my passion lies in developing others and building environments where people can thrive."
+      },
+      {
+        "type": "paragraph",
+        "text": "I didn’t get here by accident. I worked my way up through this field — from cooking in the kitchen and working as a tech, to becoming a clinician, and now serving in executive leadership. That journey gave me a deep understanding of what this work really takes — grit, heart, and an unwavering commitment to showing up for people when they need it most."
+      },
+      {
+        "type": "paragraph",
+        "text": "I believe recovery is more than just treatment — it’s a life long journey that we have the privilege of helping people build that foundation."
+      },
+      {
+        "type": "paragraph",
+        "text": "At the end of the day, I’m a husband and a father. My family is my foundation and the reason I lead with heart. The way I show up at home is how I try to show up in this work — grounded, honest, and fully present."
+      },
+      {
+        "type": "paragraph",
+        "text": "This isn’t just a job to me — it’s a calling, and I’m all in."
+      }
+    ]
+  },
+  "staff/michael-mcarthur": {
+    "slug": "staff/michael-mcarthur",
+    "type": "staff",
+    "title": "Michael McArthur - Nursing Director",
+    "h1": "Michael McArthur",
+    "description": "I am the Director of Nursing for California facilities, overseeing all medical staff and client care operations. My journey into nursing was inspired by a…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/michael-mcarthur.jpg",
+    "category": null,
+    "excerpt": "I am the Director of Nursing for California facilities, overseeing all medical staff and client care operations. My journey into nursing was inspired by a…",
+    "readMins": 1,
+    "blockCount": 5,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "I am the Director of Nursing for California facilities, overseeing all medical staff and client care operations. My journey into nursing was inspired by a personal desire to provide hope and compassion during life’s most challenging moments. Watching nurses care for my family during a difficult time, I realized how powerful a little hope and dedicated care can be. This inspired me to pursue a career in nursing, knowing I could make a difference when people need it most."
+      },
+      {
+        "type": "paragraph",
+        "text": "I love working in addiction recovery because it allows me to witness clients grow and thrive within our walls. Our staff’s client-focused approach creates a positive, motivating environment that makes coming to work truly rewarding."
+      },
+      {
+        "type": "paragraph",
+        "text": "Outside of my professional life, I am a proud father of four wonderful kids. They are my greatest inspiration—teaching me patience, resilience, and the importance of hope every day. My personal recovery journey has also strengthened my understanding of overcoming adversity, and it fuels my dedication to helping others find their path to healing."
+      },
+      {
+        "type": "paragraph",
+        "text": "I work in this industry because I believe that substance use disorder and behavioral health are underserved populations that deserve attention, compassion, and support. I am excited to be on the front lines helping to reduce stigma and provide clients with genuine opportunities for recovery."
+      },
+      {
+        "type": "paragraph",
+        "text": "Personally, I am passionate about my family, continuous improvement in patient care through scientific and technological advances, and my love for the Los Angeles Lakers. My goal is to make a meaningful difference, one life at a time, with hope, compassion, and unwavering dedication."
+      }
+    ]
+  },
+  "staff/riky-hanaumi": {
+    "slug": "staff/riky-hanaumi",
+    "type": "staff",
+    "title": "Riky Hanaumi - Clinical Director",
+    "h1": "Riky Hanaumi",
+    "description": "Erika “Riky” Hanaumi is a Licensed Clinical Social Worker with more than 20 years of experience in behavioral health and addiction treatment. She currently…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/riky-hanaumi.jpg",
+    "category": null,
+    "excerpt": "Erika “Riky” Hanaumi is a Licensed Clinical Social Worker with more than 20 years of experience in behavioral health and addiction treatment. She currently…",
+    "readMins": 1,
+    "blockCount": 5,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Erika “Riky” Hanaumi is a Licensed Clinical Social Worker with more than 20 years of experience in behavioral health and addiction treatment. She currently serves as Clinical Director for Quadrant Health Group’s California facilities, where she oversees clinical programming, mentors and supports therapists in developing effective treatment strategies, and ensures the delivery of compassionate, individualized, and clinically sound care. Her leadership focuses on promoting evidence-based practices, clinical excellence, and positive treatment outcomes for individuals with co-occurring mental health and substance use disorders."
+      },
+      {
+        "type": "paragraph",
+        "text": "Riky began her career working with individuals experiencing homelessness, providing intensive support, advocacy, and resource coordination to help clients overcome barriers and access essential services. This experience fueled her passion for serving vulnerable populations and inspired her to pursue a Master of Social Work degree from California State University, Fullerton, which she earned in 2013\\\\."
+      },
+      {
+        "type": "paragraph",
+        "text": "Throughout her career, Riky has worked in both inpatient and outpatient settings, providing therapy, crisis intervention, case management, and recovery-oriented services. She has extensive experience supporting adults with complex behavioral health needs, including co-occurring mental health and substance use disorders, while helping individuals navigate the challenges of recovery and major life transitions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Riky is trained in evidence-based treatment modalities, including Cognitive Behavioral Therapy (CBT) and Dialectical Behavior Therapy (DBT). She is passionate about helping clients build resilience, strengthen coping skills, improve interpersonal relationships, and achieve lasting recovery."
+      },
+      {
+        "type": "paragraph",
+        "text": "At the heart of Riky’s work is a belief in the power of human connection and personal transformation. She is committed to empowering individuals to recognize their strengths, cultivate self-worth, and build fulfilling lives grounded in purpose, integrity, and hope."
+      }
+    ]
+  },
+  "staff/justin-white": {
+    "slug": "staff/justin-white",
+    "type": "staff",
+    "title": "Justin White - Program Director",
+    "h1": "Justin White",
+    "description": "Justin White serves as Program Director for Quadrant Health Group's Southern California facilities, providing operational leadership and program oversight…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/justin-white.jpg",
+    "category": null,
+    "excerpt": "Justin White serves as Program Director for Quadrant Health Group's Southern California facilities, providing operational leadership and program oversight…",
+    "readMins": 1,
+    "blockCount": 3,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Justin White serves as Program Director for Quadrant Health Group's Southern California facilities, providing operational leadership and program oversight across the organization's behavioral health treatment centers. In this role, he works closely with multidisciplinary teams to ensure each facility delivers high-quality, individualized care while maintaining excellence in clinical programming, regulatory compliance, and day-to-day operations."
+      },
+      {
+        "type": "paragraph",
+        "text": "A Registered Addiction Counselor, Justin brings extensive experience in both detoxification and residential treatment settings. His leadership is rooted in the belief that recovery is never one-size-fits-all, and he is committed to fostering treatment environments where every client feels respected, supported, and empowered throughout their healing journey."
+      },
+      {
+        "type": "paragraph",
+        "text": "Known for his compassionate and collaborative leadership style, Justin is passionate about developing strong teams and creating programs that promote lasting recovery. He believes meaningful change begins with genuine human connection and is dedicated to helping both clients and staff reach their fullest potential. Through his leadership, he continues to advance Quadrant Health Group's mission of providing exceptional, evidence-based behavioral healthcare across Southern California."
+      }
+    ]
+  },
+  "staff/jacob-cameron": {
+    "slug": "staff/jacob-cameron",
+    "type": "staff",
+    "title": "Jacob Cameron - Client Care Director",
+    "h1": "Jacob Cameron",
+    "description": "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/jacob-cameron.jpg",
+    "category": null,
+    "excerpt": "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about…",
+    "readMins": 1,
+    "blockCount": 2,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Jacob Cameron serves as the Client Care Director at Quadrant Health Group and is a Registered Substance Use Disorder Counselor (SUDCC I). Passionate about helping individuals navigate the recovery process, Jacob is dedicated to creating a treatment experience that is both meaningful and engaging. He believes that lasting recovery is built through genuine connection, compassionate support, and an environment where clients feel valued every step of the way."
+      },
+      {
+        "type": "paragraph",
+        "text": "In his role, Jacob works to ensure that each client receives personalized care and experiences a sense of belonging throughout their treatment journey. His goal is to help individuals not only achieve recovery but also discover that life in recovery can be fulfilling, rewarding, and enjoyable. Through his commitment to client-centered care, Jacob strives to make a lasting positive impact on the lives of those he serves."
+      }
+    ]
+  },
+  "staff/jeremiah-ross": {
+    "slug": "staff/jeremiah-ross",
+    "type": "staff",
+    "title": "Jeremiah Ross - Nursing Supervisor",
+    "h1": "Jeremiah Ross",
+    "description": "Jeremiah Ross, is a dedicated healthcare professional with more than 10 years of patient care experience and a strong background in substance use disorder…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/jeremiah-ross.jpg",
+    "category": null,
+    "excerpt": "Jeremiah Ross, is a dedicated healthcare professional with more than 10 years of patient care experience and a strong background in substance use disorder…",
+    "readMins": 1,
+    "blockCount": 2,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Jeremiah Ross, is a dedicated healthcare professional with more than 10 years of patient care experience and a strong background in substance use disorder treatment, client care coordination, and clinical team leadership. As the Nursing Supervisor, Jeremiah plays an integral role in supporting both clients and staff, helping oversee day-to-day clinical operations, medication-assisted treatment (MAT) protocols, documentation compliance, staff development, and multidisciplinary collaboration to ensure the highest standards of care."
+      },
+      {
+        "type": "paragraph",
+        "text": "Passionate about helping individuals navigate the recovery process, Jeremiah is committed to creating a safe, supportive, and structured treatment environment where clients can build stability, develop healthy coping skills, and work toward lasting recovery. His leadership style emphasizes compassion, accountability, and teamwork, helping foster positive outcomes for both clients and clinical staff."
+      }
+    ]
+  },
+  "staff/alanna-mcmurtrey": {
+    "slug": "staff/alanna-mcmurtrey",
+    "type": "staff",
+    "title": "Alanna McMurtrey - Lead Case Manager",
+    "h1": "Alanna McMurtrey",
+    "description": "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/alanna-mcmurtrey.jpg",
+    "category": null,
+    "excerpt": "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management…",
+    "readMins": 1,
+    "blockCount": 3,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management services and supports clients through detox and residential levels of care. In her role, she coordinates client care, provides leadership and clinical support to case management staff, and helps ensure that each individual receives consistent, structured, and personalized support throughout their treatment journey."
+      },
+      {
+        "type": "paragraph",
+        "text": "With several years of experience in behavioral health and addiction treatment, Alanna has developed a strong passion for helping individuals overcome substance use disorders and co-occurring mental health challenges. She is dedicated to fostering engagement in treatment, promoting personal growth, and supporting clients as they work toward sustainable, long-term recovery."
+      },
+      {
+        "type": "paragraph",
+        "text": "Alanna takes a client-centered, strengths-based approach to care, meeting individuals where they are and helping them build upon their unique strengths. She is committed to creating a safe, respectful, and supportive environment where clients feel heard, valued, and empowered to make meaningful changes in their lives. Through collaboration, compassion, and clinical consistency, she strives to help clients develop the skills, confidence, and stability needed to achieve lasting recovery and improved well-being."
+      }
+    ]
+  },
+  "staff/bj-thome": {
+    "slug": "staff/bj-thome",
+    "type": "staff",
+    "title": "BJ Thome - Alumni Coordinator",
+    "h1": "BJ Thome",
+    "description": "BJ Thome serves as the Alumni Coordinator for Quadrant Health Group’s California facilities, where his purpose is to ensure that no one feels they have to…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/bj-thome.jpg",
+    "category": null,
+    "excerpt": "BJ Thome serves as the Alumni Coordinator for Quadrant Health Group’s California facilities, where his purpose is to ensure that no one feels they have to…",
+    "readMins": 1,
+    "blockCount": 4,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "BJ Thome serves as the Alumni Coordinator for Quadrant Health Group’s California facilities, where his purpose is to ensure that no one feels they have to walk the road of recovery alone. His passion for this work is deeply personal. Having experienced the struggles of addiction firsthand, BJ understands both the courage it takes to begin recovery and the importance of continued support long after treatment ends."
+      },
+      {
+        "type": "paragraph",
+        "text": "BJ focuses on building genuine, trusting relationships with clients while they are still in treatment, helping establish a sense of connection and community before they transition back into everyday life. He believes recovery does not end at discharge—and neither should the support. His goal is for every client to know they have somewhere to turn, people who understand, and a community that continues to stand behind them."
+      },
+      {
+        "type": "paragraph",
+        "text": "Drawing from his own lived experience, BJ is passionate about meeting people where they are without judgment and reminding them that their story does not have to end where addiction once took them. He strives to make every person he encounters feel seen, heard, valued, and welcomed."
+      },
+      {
+        "type": "paragraph",
+        "text": "For BJ, alumni coordination is about more than building a program. It is about creating lasting connection, belonging, and purpose while helping individuals stay engaged in a recovery community that genuinely wants to see them succeed."
+      }
+    ]
+  },
+  "staff/angela-angie-taylor": {
+    "slug": "staff/angela-angie-taylor",
+    "type": "staff",
+    "title": "Angela “Angie” Taylor, RADT - Case Manager",
+    "h1": "Angela “Angie” Taylor, RADT",
+    "description": "Angela Taylor, serves as a Case Manager dedicated to supporting individuals throughout their recovery journey. With experience in the substance use…",
+    "date": null,
+    "modified": "2026-09-21",
+    "ogImage": "/images/staff/angela-angie-taylor.jpg",
+    "category": null,
+    "excerpt": "Angela Taylor, serves as a Case Manager dedicated to supporting individuals throughout their recovery journey. With experience in the substance use…",
+    "readMins": 1,
+    "blockCount": 1,
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Angela Taylor, serves as a Case Manager dedicated to supporting individuals throughout their recovery journey. With experience in the substance use treatment field, Angela is passionate about helping clients navigate the treatment process with greater confidence, comfort, and purpose while fostering personal growth and long-term success. Known for her compassionate and supportive approach, Angela strives to make the recovery experience as meaningful and stress-free as possible. She is committed to helping clients access the resources, guidance, and encouragement they need to build a strong foundation for lasting change. Angela is currently pursuing a degree in Human Services and plans to continue advancing her education to further enhance her ability to serve individuals, families, and communities impacted by substance use and behavioral health challenges."
       }
     ]
   }

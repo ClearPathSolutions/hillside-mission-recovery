@@ -319,7 +319,7 @@ export default async function AboutPage() {
                         key={m.slug}
                         className="reveal card overflow-hidden sm:flex sm:items-stretch"
                       >
-                        <div className="relative aspect-[4/3] shrink-0 bg-cream-deep sm:aspect-auto sm:w-56 md:w-64">
+                        <div className="relative aspect-[4/3] shrink-0 self-start overflow-hidden bg-cream-deep sm:aspect-[3/4] sm:w-48 md:w-56">
                           {m.photo ? (
                             <Image
                               src={m.photo}
@@ -334,16 +334,20 @@ export default async function AboutPage() {
                             </div>
                           )}
                         </div>
-                        <div className="p-7 md:p-8">
+                        {/* Centred, because the 3:4 portrait sets the card
+                            height and the excerpt is shorter than it. */}
+                        <div className="flex flex-col justify-center p-7 md:p-8">
                           <h4 className="text-xl text-ink">{m.name}</h4>
                           <p className="text-sm font-semibold text-teal">{m.role}</p>
-                          <div className="mt-3 space-y-3">
-                            {m.bio.map((p, i) => (
-                              <p key={i} className="text-sm leading-relaxed text-ink/70">
-                                {p}
-                              </p>
-                            ))}
-                          </div>
+                          {/* One clamped excerpt, not the whole bio. Rendering
+                              every paragraph here made each card as tall as its
+                              longest bio — Dr. Tambini's ran seven paragraphs —
+                              which stretched the photo beside it and left the
+                              cards wildly uneven. The full text lives on the
+                              profile page behind "Read full bio". */}
+                          <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-ink/70">
+                            {m.bio[0]}
+                          </p>
                           {/* V0062 / DOC-09 — the staff pages had no inbound link from
                               anywhere on the site, and /about linked to none of them. */}
                           {hasStaffPage(m.slug) && (
