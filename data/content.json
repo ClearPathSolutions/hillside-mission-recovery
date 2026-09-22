@@ -25002,7 +25002,7 @@
       }
     ],
     "role": "Alumni Coordinator",
-    "order": 9
+    "order": 10
   },
   "staff/angela-angie-taylor": {
     "slug": "staff/angela-angie-taylor",
@@ -25024,6 +25024,6 @@
       }
     ],
     "role": "Case Manager",
-    "order": 10
+    "order": 9
   }
 }
