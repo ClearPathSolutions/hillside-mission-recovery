@@ -18,6 +18,13 @@ export const site = {
   // Google Maps embed for the facility area
   mapQuery: "23371+Rockrose,+Mission+Viejo,+CA+92692",
   reviewUrl: "https://g.page/r/CcJyF5dadvR0EAI/review",
+  // Also emitted as schema.org sameAs in app/layout.tsx, which is how search
+  // engines tie these profiles to the business entity.
+  social: {
+    linkedin: "https://www.linkedin.com/company/hillside-mission-recovery/",
+    instagram: "https://www.instagram.com/hillsidemissionrecovery/",
+    facebook: "https://www.facebook.com/hillsidemissionrecovery",
+  },
   establishedYear: 2020,
   peopleHelped: "1,000+",
   beds: 6,

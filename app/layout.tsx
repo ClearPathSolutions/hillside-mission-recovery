@@ -142,6 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "Aftercare & Alumni Program",
               ],
               areaServed: "Orange County, California",
+              sameAs: Object.values(site.social),
               foundingDate: String(site.establishedYear),
             }),
           }}

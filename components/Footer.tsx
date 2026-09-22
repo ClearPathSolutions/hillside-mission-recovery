@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { jointCommissionSeal } from "@/lib/media";
+import { IconLinkedIn, IconInstagram, IconFacebook } from "@/components/Icons";
 import { footerNav } from "@/lib/nav";
 
 export default function Footer() {
@@ -85,6 +86,26 @@ export default function Footer() {
               Accredited by The Joint Commission — verify our record
             </span>
           </a>
+
+          <ul className="mt-7 flex items-center gap-3">
+            {[
+              { href: site.social.linkedin, label: "LinkedIn", Icon: IconLinkedIn },
+              { href: site.social.instagram, label: "Instagram", Icon: IconInstagram },
+              { href: site.social.facebook, label: "Facebook", Icon: IconFacebook },
+            ].map(({ href, label, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${site.name} on ${label}`}
+                  className="grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-cream/70 transition-colors hover:border-teal-bright hover:text-white"
+                >
+                  <Icon className="h-[18px] w-[18px]" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Nav columns */}
