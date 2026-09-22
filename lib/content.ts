@@ -26,6 +26,9 @@ export type Doc = {
   readMins: number;
   blockCount: number;
   blocks: Block[];
+  /** Staff only: job title, and position in the client's requested order. */
+  role?: string;
+  order?: number;
 };
 
 const docs = raw as unknown as Record<string, Doc>;
@@ -191,4 +194,36 @@ export function getDocMeta(slug: string) {
     description: doc.description || doc.excerpt,
     ogImage: doc.ogImage,
   };
+}
+
+/**
+ * The team, in the order the client supplied.
+ *
+ * Staff documents in data/content.json are the single source: they back both
+ * the /about cards and the /staff/<slug> profile pages. Name, role and bio were
+ * previously duplicated between a roster array in app/about/page.tsx and these
+ * documents, which could silently drift apart.
+ */
+export type StaffMember = {
+  slug: string;
+  name: string;
+  role: string;
+  photo: string | null;
+  /** Full bio, one entry per paragraph. The cards show the first. */
+  bio: string[];
+};
+
+export function getStaffRoster(): StaffMember[] {
+  return Object.values(docs)
+    .filter((d) => d.type === "staff")
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
+    .map((d) => ({
+      slug: d.slug.split("/").pop() as string,
+      name: d.h1 || d.title,
+      role: d.role ?? "",
+      photo: d.ogImage,
+      bio: d.blocks
+        .filter((b): b is Extract<Block, { type: "paragraph" }> => b.type === "paragraph")
+        .map((b) => b.text),
+    }));
 }

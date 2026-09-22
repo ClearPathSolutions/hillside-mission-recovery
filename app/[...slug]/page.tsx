@@ -182,26 +182,13 @@ function ArticlePage({ doc }: { doc: Doc }) {
 }
 
 /* ---------- Staff profile ---------- */
-const STAFF_ROLES: Record<string, string> = {
-  "pamela-tambini": "Medical Oversight",
-  "shawn-young": "Executive Director",
-  "michael-mcarthur": "Nursing Director",
-  "riky-hanaumi": "Clinical Director",
-  "justin-white": "Program Director",
-  "jacob-cameron": "Client Care Director",
-  "jeremiah-ross": "Nursing Supervisor",
-  "monica-olivares": "Clinical Supervisor",
-  "alanna-mcmurtrey": "Lead Case Manager",
-  "bj-thome": "Alumni Coordinator",
-  "angela-angie-taylor": "Case Manager",
-};
 
 function StaffPage({ doc }: { doc: Doc }) {
   const key = doc.slug.split("/").pop() || "";
   const photo = staffPhotos[key];
-  // Titles follow the QHG directory / staff portal (issues.md DOC-02). Keyed by
-  // slug so a second profile can't inherit the first one's title.
-  const role = STAFF_ROLES[key] ?? "Director of Operations";
+  // Title comes from the document itself, so it cannot disagree with the one
+  // rendered on the /about card (issues.md DOC-02).
+  const role = doc.role ?? "";
   const name = doc.h1 || doc.title;
 
   return (

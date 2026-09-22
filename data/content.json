@@ -18030,7 +18030,9 @@
         "type": "paragraph",
         "text": "Known for her energy, heart, and dedication, Monica is passionate about helping both clients and staff grow while cultivating strong, supportive treatment teams across the California programs. Outside of work, she enjoys spending time with her family, being outdoors, attending music festivals, exploring escape rooms, traveling, and creating memorable life experiences."
       }
-    ]
+    ],
+    "role": "Clinical Supervisor",
+    "order": 7
   },
   "staff/pamela-tambini": {
     "slug": "staff/pamela-tambini",
@@ -18074,7 +18076,9 @@
         "type": "paragraph",
         "text": "Dr. Tambini remains focused on advancing standards in addiction medicine and behavioral healthcare through physician leadership, provider education, clinical governance, and the development of systems that promote quality, accountability, continuity of care, and regulatory excellence."
       }
-    ]
+    ],
+    "role": "Medical Oversight",
+    "order": 0
   },
   "symptoms-of-alcohol-withdrawal": {
     "slug": "symptoms-of-alcohol-withdrawal",
@@ -24774,7 +24778,9 @@
         "type": "paragraph",
         "text": "This isn’t just a job to me — it’s a calling, and I’m all in."
       }
-    ]
+    ],
+    "role": "Executive Director",
+    "order": 1
   },
   "staff/michael-mcarthur": {
     "slug": "staff/michael-mcarthur",
@@ -24810,7 +24816,9 @@
         "type": "paragraph",
         "text": "Personally, I am passionate about my family, continuous improvement in patient care through scientific and technological advances, and my love for the Los Angeles Lakers. My goal is to make a meaningful difference, one life at a time, with hope, compassion, and unwavering dedication."
       }
-    ]
+    ],
+    "role": "Nursing Director",
+    "order": 2
   },
   "staff/riky-hanaumi": {
     "slug": "staff/riky-hanaumi",
@@ -24846,7 +24854,9 @@
         "type": "paragraph",
         "text": "At the heart of Riky’s work is a belief in the power of human connection and personal transformation. She is committed to empowering individuals to recognize their strengths, cultivate self-worth, and build fulfilling lives grounded in purpose, integrity, and hope."
       }
-    ]
+    ],
+    "role": "Clinical Director",
+    "order": 3
   },
   "staff/justin-white": {
     "slug": "staff/justin-white",
@@ -24874,7 +24884,9 @@
         "type": "paragraph",
         "text": "Known for his compassionate and collaborative leadership style, Justin is passionate about developing strong teams and creating programs that promote lasting recovery. He believes meaningful change begins with genuine human connection and is dedicated to helping both clients and staff reach their fullest potential. Through his leadership, he continues to advance Quadrant Health Group's mission of providing exceptional, evidence-based behavioral healthcare across Southern California."
       }
-    ]
+    ],
+    "role": "Program Director",
+    "order": 4
   },
   "staff/jacob-cameron": {
     "slug": "staff/jacob-cameron",
@@ -24898,7 +24910,9 @@
         "type": "paragraph",
         "text": "In his role, Jacob works to ensure that each client receives personalized care and experiences a sense of belonging throughout their treatment journey. His goal is to help individuals not only achieve recovery but also discover that life in recovery can be fulfilling, rewarding, and enjoyable. Through his commitment to client-centered care, Jacob strives to make a lasting positive impact on the lives of those he serves."
       }
-    ]
+    ],
+    "role": "Client Care Director",
+    "order": 5
   },
   "staff/jeremiah-ross": {
     "slug": "staff/jeremiah-ross",
@@ -24922,7 +24936,9 @@
         "type": "paragraph",
         "text": "Passionate about helping individuals navigate the recovery process, Jeremiah is committed to creating a safe, supportive, and structured treatment environment where clients can build stability, develop healthy coping skills, and work toward lasting recovery. His leadership style emphasizes compassion, accountability, and teamwork, helping foster positive outcomes for both clients and clinical staff."
       }
-    ]
+    ],
+    "role": "Nursing Supervisor",
+    "order": 6
   },
   "staff/alanna-mcmurtrey": {
     "slug": "staff/alanna-mcmurtrey",
@@ -24950,7 +24966,9 @@
         "type": "paragraph",
         "text": "Alanna takes a client-centered, strengths-based approach to care, meeting individuals where they are and helping them build upon their unique strengths. She is committed to creating a safe, respectful, and supportive environment where clients feel heard, valued, and empowered to make meaningful changes in their lives. Through collaboration, compassion, and clinical consistency, she strives to help clients develop the skills, confidence, and stability needed to achieve lasting recovery and improved well-being."
       }
-    ]
+    ],
+    "role": "Lead Case Manager",
+    "order": 8
   },
   "staff/bj-thome": {
     "slug": "staff/bj-thome",
@@ -24982,7 +25000,9 @@
         "type": "paragraph",
         "text": "For BJ, alumni coordination is about more than building a program. It is about creating lasting connection, belonging, and purpose while helping individuals stay engaged in a recovery community that genuinely wants to see them succeed."
       }
-    ]
+    ],
+    "role": "Alumni Coordinator",
+    "order": 9
   },
   "staff/angela-angie-taylor": {
     "slug": "staff/angela-angie-taylor",
@@ -25002,6 +25022,8 @@
         "type": "paragraph",
         "text": "Angela Taylor, serves as a Case Manager dedicated to supporting individuals throughout their recovery journey. With experience in the substance use treatment field, Angela is passionate about helping clients navigate the treatment process with greater confidence, comfort, and purpose while fostering personal growth and long-term success. Known for her compassionate and supportive approach, Angela strives to make the recovery experience as meaningful and stress-free as possible. She is committed to helping clients access the resources, guidance, and encouragement they need to build a strong foundation for lasting change. Angela is currently pursuing a degree in Human Services and plans to continue advancing her education to further enhance her ability to serve individuals, families, and communities impacted by substance use and behavioral health challenges."
       }
-    ]
+    ],
+    "role": "Case Manager",
+    "order": 10
   }
 }
