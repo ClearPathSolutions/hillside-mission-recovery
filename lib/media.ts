@@ -142,8 +142,17 @@ export const insuranceLogos: Logo[] = [
   { src: "/images/First-Health-for-rehab-hillside.webp", alt: "First Health Network", w: 1009, h: 336 },
 ];
 
+// The Joint Commission mark, named because the footer shows it on its own.
+// Transparent PNG, so it sits correctly on the dark footer.
+export const jointCommissionSeal: Logo = {
+  src: "/images/goldseal_national-1.png",
+  alt: "The Joint Commission — National Quality Approval Gold Seal",
+  w: 320,
+  h: 320,
+};
+
 export const accreditations: Logo[] = [
-  { src: "/images/goldseal_national-1.png", alt: "The Joint Commission — National Quality Approval Gold Seal", w: 160, h: 160 },
+  jointCommissionSeal,
   { src: "/images/NAMI_logo.gif", alt: "NAMI — National Alliance on Mental Illness", w: 160, h: 90 },
 ];
 

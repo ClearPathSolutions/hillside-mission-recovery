@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { jointCommissionSeal } from "@/lib/media";
 import { footerNav } from "@/lib/nav";
 
 export default function Footer() {
@@ -62,6 +63,28 @@ export default function Footer() {
             <span className="text-gold" aria-hidden="true">★★★★★</span>
             Review us on Google
           </a>
+
+          {/* Accreditation. The footer previously only asserted this in text in
+              the bottom bar; an unlinked, unillustrated certification claim is
+              exactly what the audit flagged elsewhere in the portfolio (V0070),
+              so the mark is shown and linked to the public Quality Check record. */}
+          <a
+            href="https://www.qualitycheck.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 inline-flex items-center gap-3 transition-opacity hover:opacity-100 focus-visible:opacity-100 opacity-90"
+          >
+            <Image
+              src={jointCommissionSeal.src}
+              alt={jointCommissionSeal.alt}
+              width={jointCommissionSeal.w}
+              height={jointCommissionSeal.h}
+              className="h-16 w-16 shrink-0 object-contain"
+            />
+            <span className="max-w-[10rem] text-xs leading-snug text-cream/60">
+              Accredited by The Joint Commission — verify our record
+            </span>
+          </a>
         </div>
 
         {/* Nav columns */}
@@ -91,7 +114,6 @@ export default function Footer() {
             <Link href="/privacy-policy" className="hover:text-cream">Privacy Policy</Link>
             <Link href="/admissions#verify-insurance" className="hover:text-cream">Verify Insurance</Link>
             <Link href="/contact" className="hover:text-cream">Contact</Link>
-            <span>Joint Commission Gold Seal Accredited</span>
           </div>
         </div>
       </div>
