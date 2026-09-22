@@ -16,7 +16,7 @@ export function ContentSidebar({ toc }: { toc?: TocItem[] }) {
         <p className="mt-2 text-sm text-cream/70">
           Confidential help is available 24/7. Speak with a caring admissions specialist now.
         </p>
-        <a href={site.phoneHref} className="btn btn-primary mt-5 w-full">
+        <a href={site.phoneHref} className="btn btn-primary mt-5 w-full" suppressHydrationWarning>
           <IconPhone className="h-4 w-4" /> {site.phone}
         </a>
         <Link

@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a href={site.phoneHref} className="btn btn-primary">
+            <a href={site.phoneHref} className="btn btn-primary" suppressHydrationWarning>
               Call {site.phone}
             </a>
             <Link href="/contact" className="btn btn-light">
@@ -45,7 +45,7 @@ export default function Footer() {
             accredited medical detox and residential treatment with care that truly cares.
           </p>
           <div className="mt-6 space-y-2 text-sm">
-            <a href={site.phoneHref} className="flex items-center gap-2.5 text-cream hover:text-teal-bright transition-colors">
+            <a href={site.phoneHref} className="flex items-center gap-2.5 text-cream hover:text-teal-bright transition-colors" suppressHydrationWarning>
               <span className="text-teal-bright">◆</span> {site.phone}
             </a>
             <a href={`mailto:${site.email}`} className="flex items-center gap-2.5 hover:text-teal-bright transition-colors">

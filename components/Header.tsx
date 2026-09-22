@@ -99,7 +99,7 @@ export default function Header() {
               href={site.phoneHref}
               className={`flex items-center gap-2 text-sm font-semibold transition-colors ${
                 solid ? "text-ink hover:text-teal" : "text-white/90 hover:text-white"
-              }`}
+              }`} suppressHydrationWarning
             >
               <PhoneIcon className="h-4 w-4" />
               {site.phone}
@@ -116,7 +116,7 @@ export default function Header() {
               aria-label={`Call ${site.phone}`}
               className={`grid h-10 w-10 place-items-center rounded-full transition-colors ${
                 solid ? "text-ink hover:bg-sand" : "text-white hover:bg-white/15"
-              }`}
+              }`} suppressHydrationWarning
             >
               <PhoneIcon className="h-5 w-5" />
             </a>
@@ -202,7 +202,7 @@ export default function Header() {
         {/* Sticky mobile CTA footer */}
         <div className="fixed inset-x-0 bottom-0 border-t border-line bg-cream/95 backdrop-blur-md px-5 py-4">
           <div className="flex gap-3">
-            <a href={site.phoneHref} className="btn btn-ghost flex-1">
+            <a href={site.phoneHref} className="btn btn-ghost flex-1" suppressHydrationWarning>
               <PhoneIcon className="h-4 w-4" /> Call Now
             </a>
             <Link href="/admissions#verify-insurance" className="btn btn-primary flex-1" onClick={() => setMobileOpen(false)}>

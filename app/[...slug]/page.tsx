@@ -146,7 +146,7 @@ function ArticlePage({ doc }: { doc: Doc }) {
                 24/7.
               </p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                <a href={site.phoneHref} className="btn btn-primary">Call {site.phone}</a>
+                <a href={site.phoneHref} className="btn btn-primary" suppressHydrationWarning>Call {site.phone}</a>
                 <Link href="/admissions#verify-insurance" className="btn btn-ghost">Verify insurance</Link>
               </div>
             </div>
@@ -209,7 +209,7 @@ function StaffPage({ doc }: { doc: Doc }) {
             )}
             <div className="mt-5 rounded-2xl bg-ink p-6 text-white">
               <p className="text-sm text-cream/70">Speak with our team</p>
-              <a href={site.phoneHref} className="btn btn-primary mt-3 w-full">{site.phone}</a>
+              <a href={site.phoneHref} className="btn btn-primary mt-3 w-full" suppressHydrationWarning>{site.phone}</a>
             </div>
           </div>
           <article className="reveal min-w-0 max-w-2xl">

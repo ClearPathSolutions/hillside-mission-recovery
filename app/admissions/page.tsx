@@ -99,7 +99,7 @@ export default function AdmissionsPage() {
             </div>
 
             <div className="mt-8">
-              <a href={site.phoneHref} className="btn btn-primary">
+              <a href={site.phoneHref} className="btn btn-primary" suppressHydrationWarning>
                 <IconPhone className="h-4 w-4" /> Prefer to call? {site.phone}
               </a>
             </div>

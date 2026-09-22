@@ -68,7 +68,7 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4" suppressHydrationWarning>
       <Field id={fieldId("name")} label="Name" name="name" required autoComplete="name" />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field id={fieldId("phone")} label="Phone" name="phone" type="tel" required autoComplete="tel" />
@@ -127,7 +127,7 @@ export default function LeadForm({ variant = "contact" }: { variant?: Variant })
       {status === "error" && (
         <p role="alert" className="text-sm text-red-700">
           We couldn&apos;t send your message. Please call us directly at{" "}
-          <a href={site.phoneHref} className="font-semibold underline">
+          <a href={site.phoneHref} className="font-semibold underline" suppressHydrationWarning>
             {site.phone}
           </a>{" "}
           and we&apos;ll help right away.

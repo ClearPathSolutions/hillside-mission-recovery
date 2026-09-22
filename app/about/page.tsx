@@ -251,7 +251,7 @@ export default async function AboutPage() {
             We&apos;ve helped over a thousand people find their path to lasting recovery from drugs and
             alcohol. Find out how to begin yours today.
           </p>
-          <a href={site.phoneHref} className="reveal btn btn-primary shrink-0">
+          <a href={site.phoneHref} className="reveal btn btn-primary shrink-0" suppressHydrationWarning>
             Call {site.phone}
           </a>
         </div>

@@ -17,7 +17,7 @@ export default function NotFound() {
           <Link href="/" className="btn btn-primary">
             Back to home <IconArrow className="h-4 w-4" />
           </Link>
-          <a href={site.phoneHref} className="btn btn-light">
+          <a href={site.phoneHref} className="btn btn-light" suppressHydrationWarning>
             <IconPhone className="h-4 w-4" /> {site.phone}
           </a>
         </div>

@@ -124,7 +124,7 @@ export default async function ClarionArticlePage({
                 confidentially, 24/7.
               </p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                <a href={site.phoneHref} className="btn btn-primary">Call {site.phone}</a>
+                <a href={site.phoneHref} className="btn btn-primary" suppressHydrationWarning>Call {site.phone}</a>
                 <Link href="/admissions#verify-insurance" className="btn btn-ghost">Verify insurance</Link>
               </div>
             </div>

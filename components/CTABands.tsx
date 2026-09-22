@@ -21,7 +21,7 @@ export function InsuranceBand() {
               <Link href="/admissions#verify-insurance" className="btn btn-primary">
                 Verify Insurance <IconArrow className="h-4 w-4" />
               </Link>
-              <a href={site.phoneHref} className="btn btn-ghost">
+              <a href={site.phoneHref} className="btn btn-ghost" suppressHydrationWarning>
                 <IconPhone className="h-4 w-4" /> {site.phone}
               </a>
             </div>
