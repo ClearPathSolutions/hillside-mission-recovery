@@ -55,9 +55,14 @@ export const metadata: Metadata = {
     description: site.description,
     images: [defaultOgImage],
   },
+  // The client's badge mark, the same files go.hillsidemission.com serves.
+  // The old /icon.svg was a placeholder "H", not their logo.
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/apple-icon.png",
   },
 };
 
