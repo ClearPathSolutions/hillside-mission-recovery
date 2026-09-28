@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="437d65c9-2cec-4df6-b14a-01f1afb55ef0" name="Changes" comment="Initialize project structure with IDE configuration files" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="141" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "eden-clearpathtx"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ClearPathSolutions/hillside-mission-recovery.git",
+    "accountId": "6708782f-b468-450f-98e4-383a49688421"
+  }
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="2.3145404760408903" />
+      <entry key="MS500" value="4.647557064829069" />
+      <entry key="S2" value="6.238260110707484" />
+      <entry key="S5" value="7.448619682677386" />
+      <entry key="S10" value="11.273549395978877" />
+      <entry key="S30" value="23.79869733447328" />
+      <entry key="S60" value="34.39514429659244" />
+      <entry key="M2" value="50.46659070144074" />
+      <entry key="M5" value="75.54447219859458" />
+      <entry key="M10" value="90.09677958998876" />
+      <entry key="M15" value="96.03958456157793" />
+      <entry key="M30" value="102.64554525493446" />
+      <entry key="H1" value="106.2234181943675" />
+      <entry key="H2" value="108.0861028136012" />
+      <entry key="H4" value="109.03655099375355" />
+      <entry key="D1" value="109.83851380304382" />
+      <entry key="W1" value="109.97690811206819" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.947852309911936E-159" />
+      <entry key="S2" value="2.8871054365614614E-40" />
+      <entry key="S5" value="1.5282171101812555E-16" />
+      <entry key="S10" value="1.2362107871217805E-8" />
+      <entry key="S30" value="0.0023126219139894036" />
+      <entry key="S60" value="0.04871247439433717" />
+      <entry key="M2" value="0.2443210018658203" />
+      <entry key="M5" value="0.7737946810298425" />
+      <entry key="M10" value="1.2165629827876978" />
+      <entry key="M15" value="1.4284481004284915" />
+      <entry key="M30" value="1.6858462091000403" />
+      <entry key="H1" value="1.8350181533722532" />
+      <entry key="H2" value="1.9154207892422515" />
+      <entry key="H4" value="1.9571735831330812" />
+      <entry key="D1" value="1.9927864199304146" />
+      <entry key="W1" value="1.9989676141337094" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.201088199450545" />
+      <entry key="MS500" value="4.586641641993047" />
+      <entry key="S2" value="6.217516079496567" />
+      <entry key="S5" value="7.438931239413215" />
+      <entry key="S10" value="11.266717195319954" />
+      <entry key="S30" value="23.79647152467689" />
+      <entry key="S60" value="34.439846167901855" />
+      <entry key="M2" value="50.706520936377075" />
+      <entry key="M5" value="76.31427973649757" />
+      <entry key="M10" value="91.31047952923667" />
+      <entry key="M15" value="97.46585331092838" />
+      <entry key="M30" value="104.33013941119238" />
+      <entry key="H1" value="108.05776368113715" />
+      <entry key="H2" value="110.00117475414805" />
+      <entry key="H4" value="110.99354690984424" />
+      <entry key="D1" value="111.8312701514227" />
+      <entry key="W1" value="111.9758714188586" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3JySGEGc4Bv1MN6NUPa01hXYqS7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "feat/editorial-policy",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/edenhebron/Desktop/hillside-mission-recovery",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="437d65c9-2cec-4df6-b14a-01f1afb55ef0" name="Changes" comment="" />
+      <created>1790631716941</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790631716941</updated>
+      <workItem from="1790631718053" duration="1002000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initialize project structure with IDE configuration files">
+      <option name="closed" value="true" />
+      <created>1790632538420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1790632538420</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialize project structure with IDE configuration files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialize project structure with IDE configuration files" />
+  </component>
+</project>
