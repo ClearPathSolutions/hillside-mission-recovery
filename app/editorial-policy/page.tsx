@@ -4,7 +4,6 @@ import { site } from "@/lib/site";
 import {
   editorial,
   editorialMissing,
-  editorialLastReviewedDisplay,
   editorialPolicyBody,
   editorialPolicyReady,
   editorialPolicyServed,
@@ -39,7 +38,6 @@ export default function EditorialPolicyPage() {
       <PageHero
         eyebrow={site.name}
         title="Editorial Policy"
-        subtitle={editorialLastReviewedDisplay}
         crumbs={[{ label: "Home", href: "/" }, { label: "Editorial Policy" }]}
       />
       <script
