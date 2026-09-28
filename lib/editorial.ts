@@ -62,6 +62,19 @@ function monthYear(iso: string): string {
   });
 }
 
+/**
+ * The review date as shown under the page's H1, e.g. "September 2026". Left as
+ * the raw token while unset, like the body's placeholders.
+ */
+export const editorialLastReviewedDisplay = editorial.lastReviewed
+  ? monthYear(editorial.lastReviewed)
+  : "{{LAST_REVIEWED}}";
+
+// The template closes with "This policy was last reviewed {{LAST_REVIEWED}}."
+// On this site the date sits under the H1 instead (a copy change to report to
+// the package owner, per its README).
+const LAST_REVIEWED_LINE = /\s*<p><em>This policy was last reviewed \{\{LAST_REVIEWED\}\}\.<\/em><\/p>/;
+
 const escapeHtml = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -82,10 +95,16 @@ export function editorialPolicyBody(): { html: string; toc: TocItem[] } {
     EDITORIAL_EMAIL: editorial.editorialEmail,
     PHONE: editorial.phone,
     PHONE_TEL: editorial.phoneTel,
-    LAST_REVIEWED: editorial.lastReviewed && monthYear(editorial.lastReviewed),
   };
 
-  const html = readFileSync(file, "utf8")
+  const template = readFileSync(file, "utf8");
+  if (!LAST_REVIEWED_LINE.test(template)) {
+    // The template's closing line changed; re-check where the date belongs.
+    throw new Error("Editorial policy template no longer has the 'last reviewed' closing line");
+  }
+
+  const html = template
+    .replace(LAST_REVIEWED_LINE, "")
     // Header comment is dev notes, not page content.
     .replace(/<!--[\s\S]*?-->/g, "")
     // PageHero renders the page's single H1.
