@@ -29,6 +29,24 @@ export type Doc = {
   /** Staff only: job title, and position in the client's requested order. */
   role?: string;
   order?: number;
+  /**
+   * Staff only, for the bio page's Person schema. Real, verifiable values only
+   * (editorial-policy-dev-package/schema/reviewer-person.jsonld); leave unset
+   * rather than guess. `credentials` is also appended to the name in bylines,
+   * so omit it when the name already carries them (e.g. "…, RADT").
+   */
+  credentials?: string;
+  license?: string;
+  sameAs?: string[];
+  /**
+   * Posts only — the editorial policy's per-post fields. Both people are staff
+   * slugs (the part after staff/), so every name links to a bio page. A missing
+   * value means no line: there is never a site-wide default reviewer.
+   */
+  writtenBy?: string;
+  reviewedBy?: string;
+  /** YYYY-MM-DD. */
+  lastReviewed?: string;
 };
 
 const docs = raw as unknown as Record<string, Doc>;
@@ -226,4 +244,50 @@ export function getStaffRoster(): StaffMember[] {
         .filter((b): b is Extract<Block, { type: "paragraph" }> => b.type === "paragraph")
         .map((b) => b.text),
     }));
+}
+
+/** Someone a post can credit: always a staff document, so always a bio page. */
+export type Person = {
+  slug: string;
+  name: string;
+  credentials: string | null;
+  role: string;
+  bioPath: string;
+};
+
+export function getPerson(slug: string): Person {
+  const doc = docs[`staff/${slug}`];
+  // Fail the build: a byline naming someone without a bio page is exactly
+  // what the policy promises never to publish.
+  if (!doc || doc.type !== "staff") throw new Error(`Byline references unknown staff slug "${slug}"`);
+  return {
+    slug,
+    name: doc.h1 || doc.title,
+    credentials: doc.credentials ?? null,
+    role: doc.role ?? "",
+    bioPath: `/staff/${slug}`,
+  };
+}
+
+export type Byline = {
+  author: Person | null;
+  /** Set only when the post has both a reviewer and a review date. */
+  reviewer: Person | null;
+  lastReviewed: string | null;
+  modified: string | null;
+};
+
+export function getByline(doc: Doc): Byline {
+  if (doc.lastReviewed && !/^\d{4}-\d{2}-\d{2}$/.test(doc.lastReviewed)) {
+    throw new Error(`${doc.slug}: lastReviewed must be YYYY-MM-DD, got "${doc.lastReviewed}"`);
+  }
+  const lastReviewed = doc.lastReviewed || null;
+  // Resolved even when undated, so a typo'd slug still fails the build.
+  const reviewer = doc.reviewedBy ? getPerson(doc.reviewedBy) : null;
+  return {
+    author: doc.writtenBy ? getPerson(doc.writtenBy) : null,
+    reviewer: lastReviewed ? reviewer : null,
+    lastReviewed,
+    modified: doc.modified,
+  };
 }
