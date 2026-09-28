@@ -27,8 +27,8 @@ export const editorial = {
   /** Rendered as shown on the site; the tel: form comes from site.phoneHref. */
   phone: site.phone,
   phoneTel: site.phoneHref.replace(/^tel:/, ""),
-  /** YYYY-MM-DD. Blank in facilities.csv as of 2026-09-28. */
-  lastReviewed: "",
+  /** YYYY-MM-DD. */
+  lastReviewed: "2026-09-28",
   /** Copy of the CSV's CONTENT_SIGNOFF cell. Blank as of 2026-09-28. */
   contentSignoff: "",
 } as const;
