@@ -6,3 +6,4 @@ out
 _scrape
 *.tsbuildinfo
 editorial-policy-dev-package/Editorial_Policy_Source_of_Truth - Source of Truth.csv
+.vercel
