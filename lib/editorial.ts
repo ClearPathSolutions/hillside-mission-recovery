@@ -12,8 +12,8 @@ import { site } from "@/lib/site";
  * Until every field is filled and the CSV's CONTENT_SIGNOFF is recorded, the
  * policy is withheld from production: the route 404s there and nothing links
  * to it, it is left out of the sitemap, and the Organization schema does not
- * point at it. Local and Vercel preview builds still render it (noindex, with
- * a banner) so it can be reviewed.
+ * point at it. Local and Vercel preview builds still render it (noindex) so it
+ * can be reviewed.
  */
 export const editorial = {
   facilityName: site.fullName,

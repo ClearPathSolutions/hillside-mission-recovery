@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { site } from "@/lib/site";
 import {
   editorial,
-  editorialMissing,
   editorialPolicyBody,
   editorialPolicyReady,
   editorialPolicyServed,
@@ -59,12 +58,6 @@ export default function EditorialPolicyPage() {
       <section className="bg-cream">
         <div className="container-x grid gap-12 py-16 md:py-20 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14">
           <div className="min-w-0 max-w-2xl">
-            {!editorialPolicyReady && (
-              <p className="mb-10 rounded-2xl border border-gold/60 bg-gold/10 p-5 text-sm text-ink">
-                <strong>Preview only.</strong> This page is withheld from production until these are
-                supplied: {editorialMissing.join(", ")}.
-              </p>
-            )}
             {/* suppressHydrationWarning: CTM rewrites the phone link inside. */}
             <div
               className="clarion-prose"
