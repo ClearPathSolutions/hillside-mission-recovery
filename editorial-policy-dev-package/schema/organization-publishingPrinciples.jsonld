@@ -1,0 +1,15 @@
+<!--
+  MERGE into the site's existing Organization / MedicalOrganization node (e.g. Yoast/Rank Math graph or theme schema).
+  Do not add a second Organization node. The only new properties are publishingPrinciples and correctionsPolicy.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "@id": "https://{{DOMAIN}}/#organization",
+  "name": "{{FACILITY_NAME}}",
+  "url": "https://{{DOMAIN}}/",
+  "publishingPrinciples": "https://{{DOMAIN}}/editorial-policy/",
+  "correctionsPolicy": "https://{{DOMAIN}}/editorial-policy/#content-updates-and-corrections"
+}
+</script>

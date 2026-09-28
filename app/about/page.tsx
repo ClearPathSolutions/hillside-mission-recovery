@@ -8,6 +8,7 @@ import { InsuranceBand } from "@/components/CTABands";
 import { IconStaff, IconCare, IconLuxury, IconCycle, IconArrow } from "@/components/Icons";
 import { extraStaff } from "@/lib/staff-feed";
 import { getDoc, getStaffRoster } from "@/lib/content";
+import { editorialPolicyServed, EDITORIAL_POLICY_PATH } from "@/lib/editorial";
 
 /** True when a /staff/<slug> document exists to link the card to (V0062). */
 function hasStaffPage(slug: string): boolean {
@@ -236,6 +237,15 @@ export default async function AboutPage() {
                       </div>
               ))}
             </div>
+            {editorialPolicyServed && (
+              <p className="reveal mt-12 text-center text-sm text-ink/70">
+                Learn how we research, write and review the health information on this site in our{" "}
+                <Link href={EDITORIAL_POLICY_PATH} className="font-semibold text-teal underline underline-offset-2">
+                  Editorial Policy
+                </Link>
+                .
+              </p>
+            )}
           </div>
         </div>
       </section>

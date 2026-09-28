@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { jointCommissionSeal } from "@/lib/media";
 import { IconLinkedIn, IconInstagram, IconFacebook } from "@/components/Icons";
 import { footerNav } from "@/lib/nav";
+import { editorialPolicyServed, EDITORIAL_POLICY_PATH } from "@/lib/editorial";
 
 export default function Footer() {
   const year = 2026;
@@ -133,6 +134,9 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <Link href="/privacy-policy" className="hover:text-cream">Privacy Policy</Link>
+            {editorialPolicyServed && (
+              <Link href={EDITORIAL_POLICY_PATH} className="hover:text-cream">Editorial Policy</Link>
+            )}
             <Link href="/admissions#verify-insurance" className="hover:text-cream">Verify Insurance</Link>
             <Link href="/contact" className="hover:text-cream">Contact</Link>
           </div>

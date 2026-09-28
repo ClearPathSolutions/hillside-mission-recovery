@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://{{DOMAIN}}/editorial-policy/#webpage",
+  "url": "https://{{DOMAIN}}/editorial-policy/",
+  "name": "Editorial Policy",
+  "description": "How {{FACILITY_NAME}} researches, writes, clinically reviews and updates the health information on {{DOMAIN}}.",
+  "isPartOf": { "@id": "https://{{DOMAIN}}/#website" },
+  "about": { "@id": "https://{{DOMAIN}}/#organization" },
+  "lastReviewed": "{{LAST_REVIEWED}}",
+  "inLanguage": "en-US"
+}
+</script>
