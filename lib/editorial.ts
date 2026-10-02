@@ -19,9 +19,9 @@ export const editorial = {
   facilityName: site.fullName,
   domain: new URL(site.url).hostname,
   /**
-   * Corrections inbox. EDITORIAL_EMAIL is blank in the source-of-truth CSV, so
-   * this uses that row's PUBLIC_EMAIL instead, as instructed. The NAP audit
-   * flags it (admissions@ rather than info@, which site.email uses).
+   * Corrections inbox, confirmed as admissions@ on 2026-10-02 (facilities.csv
+   * agrees). The NAP audit flags admissions@ rather than info@, which
+   * site.email uses; that is intentional here.
    */
   editorialEmail: "admissions@hillsidemission.com",
   /** Rendered as shown on the site; the tel: form comes from site.phoneHref. */
@@ -29,8 +29,8 @@ export const editorial = {
   phoneTel: site.phoneHref.replace(/^tel:/, ""),
   /** YYYY-MM-DD. */
   lastReviewed: "2026-09-28",
-  /** Copy of the CSV's CONTENT_SIGNOFF cell. Blank as of 2026-09-28. */
-  contentSignoff: "",
+  /** Copy of the CSV's CONTENT_SIGNOFF cell. */
+  contentSignoff: "2026-10-02",
 } as const;
 
 // No trailing slash: the site's routes have none, and Next redirects the
