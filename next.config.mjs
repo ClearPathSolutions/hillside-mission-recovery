@@ -120,6 +120,13 @@ const nextConfig = {
         destination: "/about",
         statusCode: 301,
       },
+      // Alanna McMurtrey is off the roster; her profile page is retired, so the
+      // URL redirects rather than 404s.
+      {
+        source: "/staff/alanna-mcmurtrey",
+        destination: "/about",
+        statusCode: 301,
+      },
       // VIS-SLUG — inherited "detoc" typo, live on production and indexed.
       {
         source: "/how-to-detoc-from-xanax",
