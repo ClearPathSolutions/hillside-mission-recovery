@@ -4,133 +4,128 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="437d65c9-2cec-4df6-b14a-01f1afb55ef0" name="Changes" comment="Initialize project structure with VCS and IDE configuration files">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="437d65c9-2cec-4df6-b14a-01f1afb55ef0" name="Changes" comment="Update project configuration files to include Vercel and adjust task summaries" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="141" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$/hillside-mission-recovery" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/hillside-mission-recovery" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "eden-clearpathtx"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;eden-clearpathtx&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ClearPathSolutions/hillside-mission-recovery.git",
-    "accountId": "6708782f-b468-450f-98e4-383a49688421"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ClearPathSolutions/hillside-mission-recovery.git&quot;,
+    &quot;accountId&quot;: &quot;6708782f-b468-450f-98e4-383a49688421&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.9544881303049648" />
-      <entry key="MS500" value="3.88221863008894" />
-      <entry key="S2" value="5.292215252687265" />
-      <entry key="S5" value="5.6980899207429685" />
-      <entry key="S10" value="5.84845565150384" />
-      <entry key="S30" value="6.617566828253767" />
-      <entry key="S60" value="8.952613403869718" />
-      <entry key="M2" value="13.803644834476524" />
-      <entry key="M5" value="38.365927121935485" />
-      <entry key="M10" value="77.21564597122159" />
-      <entry key="M15" value="101.59076020899055" />
-      <entry key="M30" value="136.03156386183136" />
-      <entry key="H1" value="158.3496672098527" />
-      <entry key="H2" value="171.08185792620733" />
-      <entry key="H4" value="177.88570050377655" />
-      <entry key="D1" value="183.7921033103504" />
-      <entry key="W1" value="184.82689185697743" />
+      <entry key="MS100" value="2.241263156314317" />
+      <entry key="MS500" value="4.664624905454067" />
+      <entry key="S2" value="6.2474871238267475" />
+      <entry key="S5" value="6.783974803231679" />
+      <entry key="S10" value="8.721566557977091" />
+      <entry key="S30" value="20.463546129793546" />
+      <entry key="S60" value="29.815241292532235" />
+      <entry key="M2" value="38.15530269181647" />
+      <entry key="M5" value="55.12015161161147" />
+      <entry key="M10" value="88.11410656509563" />
+      <entry key="M15" value="114.72443854433963" />
+      <entry key="M30" value="159.24970875861374" />
+      <entry key="H1" value="192.05981206167652" />
+      <entry key="H2" value="212.0793261481108" />
+      <entry key="H4" value="223.15096712884298" />
+      <entry key="D1" value="232.9688079197157" />
+      <entry key="W1" value="234.7084176322928" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.3135277024392397E-112" />
-      <entry key="S5" value="1.7675662259292618E-45" />
-      <entry key="S10" value="4.204243363872325E-23" />
-      <entry key="S30" value="3.478785891215255E-8" />
-      <entry key="S60" value="1.905102837311387E-4" />
-      <entry key="M2" value="0.015879905651610245" />
-      <entry key="M5" value="0.2976453343159465" />
-      <entry key="M10" value="0.8990223778036438" />
-      <entry key="M15" value="1.3275464509777988" />
-      <entry key="M30" value="1.9835287441829559" />
-      <entry key="H1" value="2.435622888765334" />
-      <entry key="H2" value="2.7020756731325286" />
-      <entry key="H4" value="2.8468676710820473" />
-      <entry key="D1" value="2.9738774919021993" />
-      <entry key="W1" value="2.996253222290241" />
+      <entry key="S2" value="1.582878377222829E-194" />
+      <entry key="S5" value="3.0184154738201677E-78" />
+      <entry key="S10" value="1.7373587638700217E-39" />
+      <entry key="S30" value="1.202711842813765E-13" />
+      <entry key="S60" value="3.5423002313348603E-7" />
+      <entry key="M2" value="6.847489731012573E-4" />
+      <entry key="M5" value="0.08463937894000176" />
+      <entry key="M10" value="0.47941011882662266" />
+      <entry key="M15" value="0.8729864889639063" />
+      <entry key="M30" value="1.608486412231278" />
+      <entry key="H1" value="2.193307358851865" />
+      <entry key="H2" value="2.5641429427413436" />
+      <entry key="H4" value="2.7732539668924487" />
+      <entry key="D1" value="2.960920868897551" />
+      <entry key="W1" value="2.9943848579356938" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.8818195843433696" />
-      <entry key="MS500" value="3.852165045274161" />
-      <entry key="S2" value="5.281862788327187" />
-      <entry key="S5" value="5.693620860812994" />
-      <entry key="S10" value="5.846159860698466" />
-      <entry key="S30" value="6.616654852363229" />
-      <entry key="S60" value="8.952093950686924" />
-      <entry key="M2" value="13.818690006784923" />
-      <entry key="M5" value="38.66156731951597" />
-      <entry key="M10" value="78.11214965551456" />
-      <entry key="M15" value="102.91594766364598" />
-      <entry key="M30" value="138.01340892047924" />
-      <entry key="H1" value="160.78427834271469" />
-      <entry key="H2" value="173.78337820257525" />
-      <entry key="H4" value="180.7322770962878" />
-      <entry key="D1" value="186.76593033960634" />
-      <entry key="W1" value="187.82313782134042" />
+      <entry key="MS100" value="2.1408490145960446" />
+      <entry key="MS500" value="4.6162516853214" />
+      <entry key="S2" value="6.2313156515737695" />
+      <entry key="S5" value="6.776988238115489" />
+      <entry key="S10" value="8.717201695975827" />
+      <entry key="S30" value="20.46024085979358" />
+      <entry key="S60" value="29.812623880171888" />
+      <entry key="M2" value="38.15408214597486" />
+      <entry key="M5" value="55.20322921003941" />
+      <entry key="M10" value="88.59162145893067" />
+      <entry key="M15" value="115.5954916556773" />
+      <entry key="M30" value="160.85663133025994" />
+      <entry key="H1" value="194.25210712485352" />
+      <entry key="H2" value="214.6428909492909" />
+      <entry key="H4" value="225.92391187001695" />
+      <entry key="D1" value="235.92967424927323" />
+      <entry key="W1" value="237.70279462260206" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3JySGEGc4Bv1MN6NUPa01hXYqS7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "feat/editorial-policy",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/edenhebron/Desktop/hillside-mission-recovery",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/edenhebron/Desktop/hillside-mission-recovery&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -166,7 +161,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1790631716941</updated>
-      <workItem from="1790631718053" duration="2117000" />
+      <workItem from="1790631718053" duration="2710000" />
+      <workItem from="1790952123761" duration="589000" />
+      <workItem from="1790960215860" duration="162000" />
+      <workItem from="1790962516020" duration="95000" />
+      <workItem from="1790962933117" duration="211000" />
+      <workItem from="1790968929762" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with IDE configuration files">
       <option name="closed" value="true" />
@@ -184,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790632873483</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update project configuration files to include Vercel and adjust task summaries">
+      <option name="closed" value="true" />
+      <created>1790633963252</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1790633963252</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +201,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize project structure with IDE configuration files" />
     <MESSAGE value="Initialize project structure with VCS and IDE configuration files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize project structure with VCS and IDE configuration files" />
+    <MESSAGE value="Update project configuration files to include Vercel and adjust task summaries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update project configuration files to include Vercel and adjust task summaries" />
   </component>
 </project>

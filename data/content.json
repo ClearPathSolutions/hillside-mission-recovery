@@ -24940,36 +24940,6 @@
     "role": "Nursing Supervisor",
     "order": 6
   },
-  "staff/alanna-mcmurtrey": {
-    "slug": "staff/alanna-mcmurtrey",
-    "type": "staff",
-    "title": "Alanna McMurtrey - Lead Case Manager",
-    "h1": "Alanna McMurtrey",
-    "description": "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management…",
-    "date": null,
-    "modified": "2026-09-21",
-    "ogImage": "/images/staff/alanna-mcmurtrey.jpg",
-    "category": null,
-    "excerpt": "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management…",
-    "readMins": 1,
-    "blockCount": 3,
-    "blocks": [
-      {
-        "type": "paragraph",
-        "text": "Alanna McMurtrey serves as the Lead Case Manager for the Southern California facilities of Quadrant Health Group, where she oversees case management services and supports clients through detox and residential levels of care. In her role, she coordinates client care, provides leadership and clinical support to case management staff, and helps ensure that each individual receives consistent, structured, and personalized support throughout their treatment journey."
-      },
-      {
-        "type": "paragraph",
-        "text": "With several years of experience in behavioral health and addiction treatment, Alanna has developed a strong passion for helping individuals overcome substance use disorders and co-occurring mental health challenges. She is dedicated to fostering engagement in treatment, promoting personal growth, and supporting clients as they work toward sustainable, long-term recovery."
-      },
-      {
-        "type": "paragraph",
-        "text": "Alanna takes a client-centered, strengths-based approach to care, meeting individuals where they are and helping them build upon their unique strengths. She is committed to creating a safe, respectful, and supportive environment where clients feel heard, valued, and empowered to make meaningful changes in their lives. Through collaboration, compassion, and clinical consistency, she strives to help clients develop the skills, confidence, and stability needed to achieve lasting recovery and improved well-being."
-      }
-    ],
-    "role": "Lead Case Manager",
-    "order": 8
-  },
   "staff/bj-thome": {
     "slug": "staff/bj-thome",
     "type": "staff",
