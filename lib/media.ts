@@ -177,7 +177,6 @@ export const staffPhotos: Record<string, string> = {
   // Southern California
   "justin-white": "/images/staff/justin-white.jpg",
   "jeremiah-ross": "/images/staff/jeremiah-ross.jpg",
-  "alanna-mcmurtrey": "/images/staff/alanna-mcmurtrey.jpg",
   // Hillside Mission — arrives via the portal feed, which has no photo for her
   "angela-angie-taylor": "/images/staff/angela-angie-taylor.jpg",
   // Quadrant Health Group — network-wide, not tied to a single facility
