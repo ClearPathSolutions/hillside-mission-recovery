@@ -1551,7 +1551,7 @@ The directory carries leadership that covers this facility but appears nowhere o
 | Section | People |
 |---|---|
 | CA Sites / Cali Leadership | Shawn Young (Executive Director), Michael McArthur (Nursing Director), Riky Hanaumi, LCSW (Clinical Director), Monica Olivares (Clinical Supervisor), Jacob Cameron (Client Care Director) |
-| Cali SOUTH | Justin White (Program Director), Elizabeth Wald (Program Director), Jeremiah Ross (Nursing Supervisor), Alanna McMurtrey (Lead Case Manager) |
+| Cali SOUTH | Justin White (Program Director), Elizabeth Wald (Program Director), Jeremiah Ross (Nursing Supervisor) |
 
 The portal returns only 2 people for Hillside, so the portal's position is that regional leadership are not facility staff. That is a defensible model — but the result is a YMYL medical-detox site whose team page names **no physician, no nursing lead and no clinical director**. Competing facility sites in the portfolio surface this leadership tier.
 
