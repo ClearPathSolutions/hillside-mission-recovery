@@ -1,0 +1,26 @@
+<!--
+  Article byline — place directly under the H1 on every blog post / clinical article.
+  Data comes from per-post fields (see README "Post fields"):
+    written_by (author), reviewed_by (clinical reviewer, optional), last_reviewed (date), published / modified dates.
+  Render rules:
+    - Always show "Written by".
+    - Show the "Clinically reviewed by" line ONLY when reviewed_by AND last_reviewed are both set.
+      Never show a default or fallback reviewer.
+    - Link both names to their bio pages.
+    - The "Editorial policy" link goes to /editorial-policy/.
+-->
+<div class="article-byline">
+  <p class="byline-line">
+    Written by <a href="{{AUTHOR_BIO_URL}}" rel="author">{{AUTHOR_NAME}}</a>
+  </p>
+  <!-- if reviewed_by && last_reviewed -->
+  <p class="byline-line">
+    Clinically reviewed by <a href="{{REVIEWER_BIO_URL}}">{{REVIEWER_NAME}}, {{REVIEWER_CREDENTIALS}}</a>
+  </p>
+  <!-- endif -->
+  <p class="byline-meta">
+    <!-- if last_reviewed --><span>Last reviewed <time datetime="{{LAST_REVIEWED_ISO}}">{{LAST_REVIEWED_DISPLAY}}</time></span> · <!-- endif -->
+    <span>Updated <time datetime="{{MODIFIED_ISO}}">{{MODIFIED_DISPLAY}}</time></span> ·
+    <a href="/editorial-policy/">Editorial policy</a>
+  </p>
+</div>

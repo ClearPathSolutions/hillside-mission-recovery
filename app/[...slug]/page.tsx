@@ -9,6 +9,8 @@ import {
   deriveCategory,
   NOINDEX_SLUGS,
   CANONICAL_AT_PARENT,
+  getByline,
+  type Byline,
   type Doc,
 } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -19,6 +21,7 @@ import { ContentSidebar } from "@/components/Sidebar";
 import PostCard from "@/components/PostCard";
 import { InsuranceBand, HelpBand } from "@/components/CTABands";
 import { IconClock, IconArrow } from "@/components/Icons";
+import ArticleByline from "@/components/ArticleByline";
 
 export const dynamicParams = false;
 
@@ -98,9 +101,11 @@ function ArticlePage({ doc }: { doc: Doc }) {
     ? new Date(doc.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
     : "";
   const related = getRelatedPosts(doc.slug, category, 3);
+  const byline = getByline(doc);
 
   return (
     <>
+      <ArticleSchema doc={doc} byline={byline} />
       {/* Article header */}
       <section className="relative isolate overflow-hidden bg-ink text-white">
         {doc.ogImage && (
@@ -125,6 +130,9 @@ function ArticlePage({ doc }: { doc: Doc }) {
             {category}
           </span>
           <h1 className="mt-4 max-w-4xl text-3xl leading-[1.08] md:text-5xl">{doc.title}</h1>
+          <div className="max-w-4xl text-cream/85">
+            <ArticleByline byline={byline} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-cream/70">
             {dateLabel && <span>{dateLabel}</span>}
             <span className="flex items-center gap-1.5">
@@ -193,6 +201,7 @@ function StaffPage({ doc }: { doc: Doc }) {
 
   return (
     <>
+      <PersonSchema doc={doc} />
       <PageHero
         eyebrow="Our Team"
         title={name}
@@ -223,6 +232,79 @@ function StaffPage({ doc }: { doc: Doc }) {
       </section>
       <InsuranceBand />
     </>
+  );
+}
+
+/* ---------- schema ---------- */
+
+const orgRef = { "@id": `${site.url}/#organization` };
+const personId = (bioPath: string) => `${site.url}${bioPath}#person`;
+
+function JsonLd({ data }: { data: object }) {
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+
+/** editorial-policy-dev-package/schema/clinical-article.jsonld */
+function ArticleSchema({ doc, byline }: { doc: Doc; byline: Byline }) {
+  const url = `${site.url}/${doc.slug}`;
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "MedicalWebPage",
+            "@id": `${url}#webpage`,
+            url,
+            name: doc.title,
+            // Only with a reviewer: never a default one (README "No default reviewer").
+            ...(byline.reviewer
+              ? { lastReviewed: byline.lastReviewed, reviewedBy: { "@id": personId(byline.reviewer.bioPath) } }
+              : {}),
+            publisher: orgRef,
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": `${url}#article`,
+            headline: doc.title,
+            mainEntityOfPage: { "@id": `${url}#webpage` },
+            ...(doc.date ? { datePublished: doc.date } : {}),
+            ...(doc.modified ? { dateModified: doc.modified } : {}),
+            ...(byline.author ? { author: { "@id": personId(byline.author.bioPath) } } : {}),
+            publisher: orgRef,
+          },
+        ],
+      }}
+    />
+  );
+}
+
+/** editorial-policy-dev-package/schema/reviewer-person.jsonld — unset fields are omitted. */
+function PersonSchema({ doc }: { doc: Doc }) {
+  const bioUrl = `${site.url}/${doc.slug}`;
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": `${bioUrl}#person`,
+        name: doc.h1 || doc.title,
+        url: bioUrl,
+        ...(doc.role ? { jobTitle: doc.role } : {}),
+        ...(doc.credentials ? { honorificSuffix: doc.credentials } : {}),
+        worksFor: orgRef,
+        ...(doc.license
+          ? {
+              hasCredential: {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "license",
+                name: doc.license,
+              },
+            }
+          : {}),
+        ...(doc.sameAs?.length ? { sameAs: doc.sameAs } : {}),
+      }}
+    />
   );
 }
 

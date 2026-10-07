@@ -1,0 +1,30 @@
+<!--
+  Per-article schema. Output reviewedBy + lastReviewed ONLY when the post has a clinical reviewer and review date set.
+  Use MedicalWebPage for clinical/health articles; plain BlogPosting fields still apply.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "{{POST_URL}}#webpage",
+      "url": "{{POST_URL}}",
+      "name": "{{POST_TITLE}}",
+      "lastReviewed": "{{LAST_REVIEWED_ISO}}",
+      "reviewedBy": { "@id": "{{REVIEWER_BIO_URL}}#person" },
+      "publisher": { "@id": "https://{{DOMAIN}}/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{POST_URL}}#article",
+      "headline": "{{POST_TITLE}}",
+      "mainEntityOfPage": { "@id": "{{POST_URL}}#webpage" },
+      "datePublished": "{{PUBLISHED_ISO}}",
+      "dateModified": "{{MODIFIED_ISO}}",
+      "author": { "@id": "{{AUTHOR_BIO_URL}}#person" },
+      "publisher": { "@id": "https://{{DOMAIN}}/#organization" }
+    }
+  ]
+}
+</script>

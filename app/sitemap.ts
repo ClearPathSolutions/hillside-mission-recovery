@@ -3,6 +3,7 @@ import raw from "@/data/content.json";
 import { NOINDEX_SLUGS, archiveTotalPages, getAllPosts } from "@/lib/content";
 import { getClarionPosts } from "@/lib/clarion";
 import { site } from "@/lib/site";
+import { editorialPolicyReady, EDITORIAL_POLICY_PATH } from "@/lib/editorial";
 
 type DocLite = { slug: string; type: string; date: string | null; modified: string | null };
 
@@ -40,5 +41,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.3,
   }));
 
-  return [...pages, ...clarionEntries, ...archive];
+  // Bespoke route with no content.json doc; listed only once it may be indexed.
+  const editorialEntries: MetadataRoute.Sitemap = editorialPolicyReady
+    ? [{ url: abs(EDITORIAL_POLICY_PATH.slice(1)), changeFrequency: "yearly", priority: 0.3 }]
+    : [];
+
+  return [...pages, ...clarionEntries, ...archive, ...editorialEntries];
 }

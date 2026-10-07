@@ -5,3 +5,8 @@ out
 .DS_Store
 _scrape
 *.tsbuildinfo
+editorial-policy-dev-package/Editorial_Policy_Source_of_Truth - Source of Truth.csv
+.vercel
+
+# Stray nested clone of this repo; never commit it.
+/hillside-mission-recovery/

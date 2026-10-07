@@ -137,6 +137,14 @@ const nextConfig = {
       // no route in the rebuild. Wildcarded so future archive URLs land too.
       { source: "/category/:slug*", destination: "/blog", statusCode: 301 },
       { source: "/tag/:slug*", destination: "/blog", statusCode: 301 },
+      // Careers are hosted on ADP Workforce Now. Temporary (302) rather than
+      // 301 so browsers don't cache it if the ADP posting URL ever changes.
+      {
+        source: "/careers",
+        destination:
+          "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=e1094ba9-8b93-4f55-9dab-3102a4eaaa49&ccId=9200865817070_2&lang=en_US",
+        statusCode: 302,
+      },
     ];
   },
 };

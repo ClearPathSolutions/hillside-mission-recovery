@@ -3,6 +3,7 @@ import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { defaultOgImage } from "@/lib/media";
+import { editorialPolicyReady, EDITORIAL_POLICY_URL, CORRECTIONS_ANCHOR } from "@/lib/editorial";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GtmLoader from "@/components/GtmLoader";
@@ -125,6 +126,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": ["MedicalBusiness", "MedicalClinic"],
+              // Referenced by the editorial policy's WebPage node.
+              "@id": `${site.url}/#organization`,
               name: site.fullName,
               description: site.description,
               url: site.url,
@@ -149,6 +152,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               areaServed: "Orange County, California",
               sameAs: Object.values(site.social),
               foundingDate: String(site.establishedYear),
+              // Editorial policy package: merged into this node, never a second one.
+              ...(editorialPolicyReady
+                ? {
+                    publishingPrinciples: EDITORIAL_POLICY_URL,
+                    correctionsPolicy: `${EDITORIAL_POLICY_URL}#${CORRECTIONS_ANCHOR}`,
+                  }
+                : {}),
             }),
           }}
         />

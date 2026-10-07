@@ -1,0 +1,19 @@
+<!-- On each reviewer / author bio page. Fill only real, verifiable credentials. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{BIO_URL}}#person",
+  "name": "{{PERSON_NAME}}",
+  "url": "{{BIO_URL}}",
+  "jobTitle": "{{JOB_TITLE}}",
+  "honorificSuffix": "{{CREDENTIALS}}",
+  "worksFor": { "@id": "https://{{DOMAIN}}/#organization" },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "license",
+    "name": "{{LICENSE_NAME}}"
+  },
+  "sameAs": ["{{LINKEDIN_OR_NPI_REGISTRY_URL}}"]
+}
+</script>

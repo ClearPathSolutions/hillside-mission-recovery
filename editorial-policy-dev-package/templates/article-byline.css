@@ -1,0 +1,21 @@
+/* Minimal byline styles — inherit the theme's fonts and colors; adjust tokens per site. */
+.article-byline {
+  --byline-text: inherit;
+  --byline-muted: color-mix(in srgb, currentColor 65%, transparent);
+  --byline-rule: color-mix(in srgb, currentColor 15%, transparent);
+  margin: 0.75rem 0 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--byline-rule);
+  border-bottom: 1px solid var(--byline-rule);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--byline-text);
+}
+.article-byline p { margin: 0.15rem 0; }
+.article-byline .byline-meta { color: var(--byline-muted); font-size: 0.875rem; }
+.article-byline a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Policy page: keep the terminology table from overflowing on phones */
+.editorial-policy .table-scroll { overflow-x: auto; max-width: 100%; }
+.editorial-policy table { border-collapse: collapse; width: 100%; min-width: 28rem; }
+.editorial-policy th, .editorial-policy td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
