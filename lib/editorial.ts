@@ -28,7 +28,7 @@ export const editorial = {
   phone: site.phone,
   phoneTel: site.phoneHref.replace(/^tel:/, ""),
   /** YYYY-MM-DD. */
-  lastReviewed: "2026-09-28",
+  lastReviewed: "2026-10-07",
   /** Copy of the CSV's CONTENT_SIGNOFF cell. */
   contentSignoff: "2026-10-02",
 } as const;
