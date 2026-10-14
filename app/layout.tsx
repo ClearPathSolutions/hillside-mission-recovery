@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+  verification: {
+    google: "ZE3AJxMh7oEeQjy0ZMMli4LNgH5r0axr7tHsadQQVkU",
+  },
 };
 
 export const viewport: Viewport = {
