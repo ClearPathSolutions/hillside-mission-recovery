@@ -318,8 +318,10 @@ const TITLE_SUFFIX = " | Hillside Mission";
  */
 export function metaTitle(title: string): string | { absolute: string } {
   const t = title.trim();
-  if (/\|\s*Hillside Mission( Recovery)?$/i.test(t) || (t + TITLE_SUFFIX).length > 70) {
-    return { absolute: t };
+  if (/\|\s*Hillside Mission( Recovery)?$/i.test(t)) return { absolute: t };
+  if ((t + TITLE_SUFFIX).length > 70) {
+    // A shorter brand keeps the <title> distinct from the <h1> when it fits.
+    return { absolute: (t + " | Hillside").length <= 70 ? `${t} | Hillside` : t };
   }
   return t;
 }
