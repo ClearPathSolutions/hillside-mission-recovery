@@ -9,6 +9,8 @@ import {
   deriveCategory,
   NOINDEX_SLUGS,
   CANONICAL_AT_PARENT,
+  metaTitle,
+  getStaffDocs,
   getByline,
   type Byline,
   type Doc,
@@ -37,11 +39,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const doc = getDoc(slug.join("/"));
   if (!doc) return {};
+  const title = doc.seoTitle ?? doc.title;
   return {
-    title: doc.title,
+    title: metaTitle(title),
     description: doc.description || doc.excerpt,
     openGraph: {
-      title: doc.title,
+      title,
       description: doc.description || doc.excerpt,
       // A5 — fall back to the facility image so no page ships a blank preview.
       images: [doc.ogImage || defaultOgImage],
@@ -198,6 +201,9 @@ function StaffPage({ doc }: { doc: Doc }) {
   // rendered on the /about card (issues.md DOC-02).
   const role = doc.role ?? "";
   const name = doc.h1 || doc.title;
+  const colleagues = getStaffDocs()
+    .filter((d) => d.slug !== doc.slug)
+    .sort((a, b) => (a.h1 || a.title).localeCompare(b.h1 || b.title));
 
   return (
     <>
@@ -227,6 +233,24 @@ function StaffPage({ doc }: { doc: Doc }) {
             <div className="mt-6">
               <ContentBlocks blocks={doc.blocks} currentPath={`/${doc.slug}`} />
             </div>
+            {/* Bios were linked only from /about (one internal link each, per the
+                site audit). Linking colleagues to each other fixes that and gives
+                a reader somewhere to go next. */}
+            {colleagues.length > 0 && (
+              <nav aria-label="Our team" className="mt-12 border-t border-line pt-8">
+                <h2 className="text-xl text-ink">Meet the rest of our team</h2>
+                <ul className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+                  {colleagues.map((c) => (
+                    <li key={c.slug}>
+                      <Link href={`/${c.slug}`} className="font-semibold text-teal hover:text-ink">
+                        {c.h1 || c.title}
+                      </Link>
+                      {c.role ? <span className="text-sm text-ink/60">, {c.role}</span> : null}
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
           </article>
         </div>
       </section>

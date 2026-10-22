@@ -4,7 +4,9 @@ export const site = {
   tagline: "Luxury Drug & Alcohol Rehab in Mission Viejo, CA",
   description:
     "Hillside Mission Recovery provides accredited medical detox and residential addiction treatment in Mission Viejo. Professional, private care in Orange County.",
-  url: "https://hillsidemission.com",
+  // www is the host Vercel serves (the apex 308s to it). Canonicals, sitemap,
+  // robots and JSON-LD derive from this, so it must be the served host.
+  url: "https://www.hillsidemission.com",
   phone: "(866) 393-5174",
   phoneHref: "tel:+18663935174",
   email: "info@hillsidemission.com",

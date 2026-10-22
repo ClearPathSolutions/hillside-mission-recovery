@@ -118,7 +118,8 @@ export default function Header() {
                 solid ? "text-ink hover:bg-sand" : "text-white hover:bg-white/15"
               }`} suppressHydrationWarning
             >
-              <PhoneIcon className="h-5 w-5" />
+              <PhoneIcon className="h-5 w-5" aria-hidden="true" />
+              <span className="sr-only">Call {site.phone}</span>
             </a>
             <button
               type="button"

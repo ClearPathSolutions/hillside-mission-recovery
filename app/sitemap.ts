@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import raw from "@/data/content.json";
-import { NOINDEX_SLUGS, archiveTotalPages, getAllPosts } from "@/lib/content";
+import { CANONICAL_AT_PARENT, NOINDEX_SLUGS, archiveTotalPages, getAllPosts } from "@/lib/content";
 import { getClarionPosts } from "@/lib/clarion";
 import { site } from "@/lib/site";
 import { editorialPolicyReady, EDITORIAL_POLICY_PATH } from "@/lib/editorial";
@@ -16,6 +16,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((d) => d.slug !== "404-2")
     // A6 — noindex pages don't belong in the sitemap.
     .filter((d) => !NOINDEX_SLUGS.has(d.slug))
+    // Pages canonicalised to quadranthealthgroup.com are not this site's URLs to
+    // list; a sitemap entry whose canonical points elsewhere is an audit error.
+    .filter((d) => !(d.slug in CANONICAL_AT_PARENT))
     .map((d) => ({
       url: abs(d.slug),
       lastModified: d.modified || d.date || undefined,

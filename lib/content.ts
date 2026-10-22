@@ -16,6 +16,10 @@ export type Doc = {
   slug: string;
   type: "page" | "post" | "staff";
   title: string;
+  /** Shorter <title> text where `title` + " | Hillside Mission" would pass 70
+   *  characters. Posts render `title` as their H1, so this also keeps the
+   *  title tag from duplicating the H1. */
+  seoTitle?: string;
   h1: string;
   description: string;
   date: string | null;
@@ -190,9 +194,21 @@ export function getRecentPosts(n = 3): PostMeta[] {
 }
 
 export function getRelatedPosts(slug: string, category: string, n = 3): PostMeta[] {
-  const all = getAllPosts().filter((p) => p.slug !== slug);
-  const sameCat = all.filter((p) => p.category === category);
-  return [...sameCat, ...all.filter((p) => p.category !== category)].slice(0, n);
+  // Neighbours rather than the first `n` of the category: taking the same top
+  // posts every time left most posts linked only from the paginated archive
+  // (one internal link each, per the site audit). Each list is rotated to start
+  // just after the current post, so links spread across the whole library.
+  const all = getAllPosts();
+  const rotateAfter = (list: PostMeta[]) => {
+    const at = list.findIndex((p) => p.slug === slug);
+    const rest = list.filter((p) => p.slug !== slug);
+    if (at < 0 || !rest.length) return rest;
+    const start = at % rest.length;
+    return [...rest.slice(start), ...rest.slice(0, start)];
+  };
+  const sameCat = rotateAfter(all.filter((p) => p.category === category));
+  const others = rotateAfter(all.filter((p) => p.category !== category || p.slug === slug));
+  return [...sameCat, ...others].slice(0, n);
 }
 
 // All slugs handled by the catch-all route (everything except bespoke pages).
@@ -290,4 +306,25 @@ export function getByline(doc: Doc): Byline {
     lastReviewed,
     modified: doc.modified,
   };
+}
+
+const TITLE_SUFFIX = " | Hillside Mission";
+
+/**
+ * Metadata `title` for a page. The layout template appends the brand; where
+ * that would push the tag past 70 characters, or the title already carries the
+ * brand (some Clarion SEO titles do, which rendered "| Hillside Mission |
+ * Hillside Mission"), the title is used as-is instead.
+ */
+export function metaTitle(title: string): string | { absolute: string } {
+  const t = title.trim();
+  if (/\|\s*Hillside Mission( Recovery)?$/i.test(t) || (t + TITLE_SUFFIX).length > 70) {
+    return { absolute: t };
+  }
+  return t;
+}
+
+/** Every staff profile document, for cross-links between bios. */
+export function getStaffDocs(): Doc[] {
+  return Object.values(docs).filter((d) => d.type === "staff");
 }

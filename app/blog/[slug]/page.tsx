@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getClarionPost, clarionCategory, processBodyHtml } from "@/lib/clarion";
-import { getAllPosts } from "@/lib/content";
+import { getClarionPost, getClarionPosts, clarionCategory, processBodyHtml } from "@/lib/clarion";
+import { getAllPosts, getDoc, metaTitle } from "@/lib/content";
+import { cleanCmsHtml } from "@/lib/cmsHtml";
 import { isOptimizableImage } from "@/lib/image-hosts";
 import { site } from "@/lib/site";
 import PostCard from "@/components/PostCard";
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const title = post.seo_meta?.title || post.title;
   const description = post.seo_meta?.description || post.excerpt;
   return {
-    title,
+    title: metaTitle(title),
     description,
     openGraph: {
       title,
@@ -56,9 +57,39 @@ export default async function ClarionArticlePage({
     : "";
   const words = post.body_html.replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length;
   const readMins = Math.max(1, Math.round(words / 200));
-  const related = getAllPosts().slice(0, 3);
+  // Related: the next two Clarion posts after this one (wrapping round), then a
+  // curated article. It used to be the same three newest curated posts on every
+  // Clarion post, which left the Clarion posts themselves linked only from the
+  // blog index.
+  const clarionPosts = await getClarionPosts();
+  const ownSlug = `blog/${slug}`;
+  const at = clarionPosts.findIndex((p) => p.slug === ownSlug);
+  const otherClarion = clarionPosts.filter((p) => p.slug !== ownSlug);
+  const nextClarion =
+    otherClarion.length <= 2
+      ? otherClarion
+      : [0, 1].map((i) => otherClarion[(Math.max(at, 0) + i) % otherClarion.length]);
+  const curated = getAllPosts();
+  const related = [...nextClarion, ...curated].slice(0, 3);
+
+  // Clarion writes internal links on whichever host the author pasted, marks
+  // every link nofollow and leaves inline images without alt text; normalise
+  // that first. Links to posts that exist on sister sites but not here (e.g.
+  // /blog/what-to-expect-first-30-days-of-treatment, a 404) go to the blog.
+  const clarionSlugs = new Set(clarionPosts.map((p) => `/${p.slug}`));
+  const cleaned = cleanCmsHtml(post.body_html, {
+    siteUrl: site.url,
+    trailingSlash: false,
+    fallbackAlt: post.title,
+    fallbackPath: "/blog",
+    isMissing: (path) =>
+      path.startsWith("/blog/") &&
+      !path.startsWith("/blog/page/") &&
+      !clarionSlugs.has(path) &&
+      !getDoc(path.slice(1)),
+  });
   // Inject heading ids + build the "On this page" TOC from the raw body_html.
-  const { html: bodyHtml, toc } = processBodyHtml(post.body_html);
+  const { html: bodyHtml, toc } = processBodyHtml(cleaned);
 
   return (
     <>

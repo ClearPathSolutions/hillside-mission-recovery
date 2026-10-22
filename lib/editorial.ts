@@ -17,7 +17,7 @@ import { site } from "@/lib/site";
  */
 export const editorial = {
   facilityName: site.fullName,
-  domain: new URL(site.url).hostname,
+  domain: new URL(site.url).hostname.replace(/^www\./, ""),
   /**
    * Corrections inbox, confirmed as admissions@ on 2026-10-02 (facilities.csv
    * agrees). The NAP audit flags admissions@ rather than info@, which

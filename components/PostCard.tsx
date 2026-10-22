@@ -52,7 +52,7 @@ export default function PostCard({ post, priority = false }: { post: PostMeta; p
           href={`/${post.slug}`}
           className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal transition-colors group-hover:gap-2.5"
         >
-          Read article <IconArrow className="h-4 w-4" />
+          Read article<span className="sr-only">: {post.title}</span> <IconArrow className="h-4 w-4" />
         </Link>
       </div>
     </article>

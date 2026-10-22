@@ -102,7 +102,9 @@ export default function Footer() {
                   aria-label={`${site.name} on ${label}`}
                   className="grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-cream/70 transition-colors hover:border-teal-bright hover:text-white"
                 >
-                  <Icon className="h-[18px] w-[18px]" />
+                  <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
+                  {/* Crawlers read anchor text, not aria-label (audit: links with no anchor text). */}
+                  <span className="sr-only">{`${site.name} on ${label}`}</span>
                 </a>
               </li>
             ))}
