@@ -66,8 +66,7 @@ const values = [
 //
 // Dr. Pamela Tambini is on the list and sits apart from the rest: her medical
 // oversight is network-wide rather than Hillside's or California's, so she is in
-// the Quadrant Health Group group and her profile canonicalises to the QHG
-// original (lib/content.ts, CANONICAL_AT_PARENT).
+// the Quadrant Health Group group. Her profile is self-canonical like the rest.
 //
 // BJ Thome's directory heading reads "Alumni Coordinator | California". The
 // "| California" is scope, which the California leadership group already states,

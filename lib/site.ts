@@ -49,3 +49,13 @@ export const site = {
 } as const;
 
 export type Site = typeof site;
+
+// The sitemap and robots.txt hand this host to crawlers, so an apex or http
+// value would submit every URL as a redirect. Both are prerendered at build,
+// so a wrong site.url fails `next build` here instead of shipping.
+export function crawlHost(): string {
+  if (!site.url.startsWith("https://www.")) {
+    throw new Error(`site.url must be the https://www. host, got ${site.url}`);
+  }
+  return site.url;
+}

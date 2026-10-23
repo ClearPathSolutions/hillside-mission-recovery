@@ -64,15 +64,6 @@ export const HANDBUILT = new Set([
 // Kept here so app/sitemap.ts and the catch-all metadata agree on one list.
 export const NOINDEX_SLUGS = new Set(["thank-you"]);
 
-// Pages whose text is published first by Quadrant Health Group and syndicated
-// verbatim to every facility site. Thirteen near-identical copies otherwise
-// compete with each other, so these point their canonical at the QHG original
-// instead of at themselves. Keyed by full doc slug — a slug that is absent
-// (every other staff profile included) keeps its own self-canonical.
-export const CANONICAL_AT_PARENT: Record<string, string> = {
-  "staff/pamela-tambini": "https://www.quadranthealthgroup.com/team/pamela-tambini/",
-};
-
 export function keyToSlug(key: string): string {
   return key === "home" ? "" : key;
 }
@@ -136,8 +127,8 @@ export function deriveCategory(doc: Doc): string {
 
 export const CATEGORIES = ["Addiction", "Recovery", "Treatment", "Mental Health", "Paying for Rehab"];
 
-// V0061 — blog pagination arithmetic, shared by /blog, /blog/page/[page] and
-// the sitemap so no post falls between the index and the archive.
+// V0061 — blog pagination arithmetic, shared by /blog and /blog/page/[page]
+// so no post falls between the index and the archive.
 //
 // /blog server-renders INDEX_COUNT posts (1 featured + BLOG_LIST_INITIAL cards
 // in BlogList); the archive picks up from there at PER_PAGE per page.

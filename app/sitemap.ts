@@ -1,24 +1,21 @@
 import type { MetadataRoute } from "next";
 import raw from "@/data/content.json";
-import { CANONICAL_AT_PARENT, NOINDEX_SLUGS, archiveTotalPages, getAllPosts } from "@/lib/content";
+import { NOINDEX_SLUGS } from "@/lib/content";
 import { getClarionPosts } from "@/lib/clarion";
-import { site } from "@/lib/site";
+import { crawlHost } from "@/lib/site";
 import { editorialPolicyReady, EDITORIAL_POLICY_PATH } from "@/lib/editorial";
 
 type DocLite = { slug: string; type: string; date: string | null; modified: string | null };
 
-const abs = (slug: string) => `${site.url}/${slug}`.replace(/\/$/, "") || site.url;
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const host = crawlHost();
+  const abs = (slug: string) => `${host}/${slug}`.replace(/\/$/, "");
   const docs = Object.values(raw as unknown as Record<string, DocLite>);
 
   const pages: MetadataRoute.Sitemap = docs
     .filter((d) => d.slug !== "404-2")
     // A6 — noindex pages don't belong in the sitemap.
     .filter((d) => !NOINDEX_SLUGS.has(d.slug))
-    // Pages canonicalised to quadranthealthgroup.com are not this site's URLs to
-    // list; a sitemap entry whose canonical points elsewhere is an audit error.
-    .filter((d) => !(d.slug in CANONICAL_AT_PARENT))
     .map((d) => ({
       url: abs(d.slug),
       lastModified: d.modified || d.date || undefined,
@@ -36,18 +33,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  // V0061 — the server-rendered blog archive pages.
-  const totalPages = archiveTotalPages(getAllPosts().length + clarion.length);
-  const archive: MetadataRoute.Sitemap = Array.from({ length: totalPages - 1 }, (_, i) => ({
-    url: abs(`blog/page/${i + 2}`),
-    changeFrequency: "weekly",
-    priority: 0.3,
-  }));
+  // The /blog/page/N archive pages are left out: every post they link to is
+  // listed above, and paginated lists are thin pages not worth submitting.
 
   // Bespoke route with no content.json doc; listed only once it may be indexed.
   const editorialEntries: MetadataRoute.Sitemap = editorialPolicyReady
     ? [{ url: abs(EDITORIAL_POLICY_PATH.slice(1)), changeFrequency: "yearly", priority: 0.3 }]
     : [];
 
-  return [...pages, ...clarionEntries, ...archive, ...editorialEntries];
+  return [...pages, ...clarionEntries, ...editorialEntries];
 }

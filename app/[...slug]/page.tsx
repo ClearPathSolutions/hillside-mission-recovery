@@ -8,7 +8,6 @@ import {
   getRelatedPosts,
   deriveCategory,
   NOINDEX_SLUGS,
-  CANONICAL_AT_PARENT,
   metaTitle,
   getStaffDocs,
   getByline,
@@ -50,7 +49,7 @@ export async function generateMetadata({
       images: [doc.ogImage || defaultOgImage],
       type: doc.type === "post" ? "article" : "website",
     },
-    alternates: { canonical: CANONICAL_AT_PARENT[doc.slug] ?? `/${doc.slug}` },
+    alternates: { canonical: `/${doc.slug}` },
     // A6 — /thank-you is a conversion page; keep it out of the index.
     ...(NOINDEX_SLUGS.has(doc.slug) ? { robots: { index: false, follow: true } } : {}),
   };
