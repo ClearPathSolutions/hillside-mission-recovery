@@ -51,6 +51,7 @@ const FIELDS: Record<string, string> = {
   LEGAL_ENTITY_LINE: "",
   // site.address.state is the postal code; the NPP and terms name the state in full.
   STATE_NAME: "California",
+  STATE_NAME_CAPS: "CALIFORNIA",
   PP_LAST_UPDATED: EFFECTIVE,
   SMS_LAST_UPDATED: EFFECTIVE,
   NPP_EFFECTIVE_DATE: EFFECTIVE,
