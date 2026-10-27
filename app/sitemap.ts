@@ -4,6 +4,7 @@ import { NOINDEX_SLUGS } from "@/lib/content";
 import { getClarionPosts } from "@/lib/clarion";
 import { crawlHost } from "@/lib/site";
 import { editorialPolicyReady, EDITORIAL_POLICY_PATH } from "@/lib/editorial";
+import { LEGAL_PAGES } from "@/lib/legal";
 
 type DocLite = { slug: string; type: string; date: string | null; modified: string | null };
 
@@ -41,5 +42,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ? [{ url: abs(EDITORIAL_POLICY_PATH.slice(1)), changeFrequency: "yearly", priority: 0.3 }]
     : [];
 
-  return [...pages, ...clarionEntries, ...editorialEntries];
+  // Privacy policy, NPP and SMS terms: bespoke routes with no content.json doc.
+  const legalEntries: MetadataRoute.Sitemap = Object.values(LEGAL_PAGES).map((l) => ({
+    url: abs(l.path.slice(1)),
+    changeFrequency: "yearly",
+    priority: 0.3,
+  }));
+
+  return [...pages, ...legalEntries, ...clarionEntries, ...editorialEntries];
 }

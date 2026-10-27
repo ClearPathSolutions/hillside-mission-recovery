@@ -143,6 +143,8 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <Link href="/privacy-policy" className="hover:text-cream">Privacy Policy</Link>
+            <Link href="/notice-of-privacy-practices" className="hover:text-cream">Notice of Privacy Practices</Link>
+            <Link href="/sms-terms" className="hover:text-cream">SMS Terms</Link>
             {editorialPolicyServed && (
               <Link href={EDITORIAL_POLICY_PATH} className="hover:text-cream">Editorial Policy</Link>
             )}
