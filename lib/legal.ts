@@ -40,6 +40,8 @@ const escapeHtml = (s: string) =>
 const FIELDS: Record<string, string> = {
   // The brand as the footer shows it.
   FACILITY_NAME: escapeHtml(site.fullName),
+  // The name inside the terms' ALL-CAPS paragraphs.
+  FACILITY_NAME_CAPS: escapeHtml(site.fullName.toUpperCase()),
   DOMAIN: new URL(site.url).hostname.replace(/^www\./, ""),
   PHONE: `<a href="${site.phoneHref}">${escapeHtml(site.phone)}</a>`,
   PRIVACY_EMAIL: `<a href="mailto:${site.email}">${escapeHtml(site.email)}</a>`,
