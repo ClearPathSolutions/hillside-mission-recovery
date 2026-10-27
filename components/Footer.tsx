@@ -148,6 +148,7 @@ export default function Footer() {
             {editorialPolicyServed && (
               <Link href={EDITORIAL_POLICY_PATH} className="hover:text-cream">Editorial Policy</Link>
             )}
+            <Link href="/terms-of-service" className="hover:text-cream">Terms of Service</Link>
             <Link href="/admissions#verify-insurance" className="hover:text-cream">Verify Insurance</Link>
             <Link href="/contact" className="hover:text-cream">Contact</Link>
           </div>

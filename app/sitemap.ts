@@ -42,7 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ? [{ url: abs(EDITORIAL_POLICY_PATH.slice(1)), changeFrequency: "yearly", priority: 0.3 }]
     : [];
 
-  // Privacy policy, NPP and SMS terms: bespoke routes with no content.json doc.
+  // Privacy policy, NPP, SMS terms and terms of service: bespoke routes with no content.json doc.
   const legalEntries: MetadataRoute.Sitemap = Object.values(LEGAL_PAGES).map((l) => ({
     url: abs(l.path.slice(1)),
     changeFrequency: "yearly",
