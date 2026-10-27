@@ -87,6 +87,13 @@ export default function Footer() {
               Accredited by The Joint Commission — verify our record
             </span>
           </a>
+          <p className="mt-4 max-w-xs text-xs leading-relaxed text-cream/60">
+            Licensed by the California Department of Health Care Services · {site.license} · Expires{" "}
+            {site.licenseExpires} ·{" "}
+            <a href={site.licenseVerifyUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-teal-bright">
+              Verify on DHCS website
+            </a>
+          </p>
 
           <ul className="mt-7 flex items-center gap-3">
             {[

@@ -27,6 +27,13 @@ export const site = {
     instagram: "https://www.instagram.com/hillsidemissionrecovery/",
     facebook: "https://www.facebook.com/hillsidemissionrecovery",
   },
+  // DHCS BHIN 22-022: license number, expiry, and a link to the DHCS page that
+  // lists both must be shown on the site. The GIS Data Hub table is DHCS's
+  // public register of licensed SUD facilities (number + expiration columns).
+  license: "DHCS License #300427AP",
+  licenseExpires: "9/30/2027",
+  licenseVerifyUrl:
+    "https://gis.dhcs.ca.gov/datasets/CADHCS::sud-recovery-treatment-facilities/explore?showTable=true",
   establishedYear: 2020,
   peopleHelped: "1,000+",
   beds: 6,
