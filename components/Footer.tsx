@@ -87,6 +87,28 @@ export default function Footer() {
               Accredited by The Joint Commission — verify our record
             </span>
           </a>
+          {/* LegitScript's embed code, kept as issued: the seal is served from their
+              host at its native 73×79 (they advise against scaling it), so it is a
+              plain <img> rather than next/image. Its host is allowed in img-src. */}
+          <a
+            href="https://www.legitscript.com/websites/?checker_keywords=hillsidemission.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Verify LegitScript Approval for www.hillsidemission.com"
+            className="mt-4 flex w-fit items-center gap-3 transition-opacity hover:opacity-100 focus-visible:opacity-100 opacity-90"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://static.legitscript.com/seals/3920687.png"
+              alt="Verify Approval for www.hillsidemission.com"
+              width={73}
+              height={79}
+              className="shrink-0"
+            />
+            <span className="max-w-[10rem] text-xs leading-snug text-cream/60">
+              LegitScript Certified — verify our approval
+            </span>
+          </a>
           <p className="mt-4 max-w-xs text-xs leading-relaxed text-cream/60">
             Licensed by the California Department of Health Care Services · {site.license} · Expires{" "}
             {site.licenseExpires} ·{" "}

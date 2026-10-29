@@ -44,7 +44,7 @@ const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
   "style-src 'self' 'unsafe-inline'",
-  `img-src 'self' data: blob: ${CLARION_API} ${CLARION_MEDIA} https://images.unsplash.com ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY} ${BING}`,
+  `img-src 'self' data: blob: ${CLARION_API} ${CLARION_MEDIA} https://images.unsplash.com https://static.legitscript.com ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY} ${BING}`,
   "font-src 'self' data:",
   `connect-src 'self' ${CLARION} ${CTM} ${GTM} ${GOOGLE_ANALYTICS} ${GOOGLE_ADS} ${CLARITY}`,
   `frame-src 'self' ${CLARION} ${GTM} https://www.google.com https://td.doubleclick.net`,
