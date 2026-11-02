@@ -181,5 +181,6 @@ export const staffPhotos: Record<string, string> = {
   "angela-angie-taylor": "/images/staff/angela-angie-taylor.jpg",
   // Quadrant Health Group — network-wide, not tied to a single facility
   "pamela-tambini": "/images/staff/pamela-tambini.jpg",
+  "casey-hyatt": "/images/staff/casey-hyatt.jpg",
   "bj-thome": "/images/staff/bj-thome.jpg",
 };
