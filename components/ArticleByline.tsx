@@ -14,8 +14,10 @@ function formatDate(iso: string): string {
 
 /**
  * Article byline, from editorial-policy-dev-package/templates/article-byline.html.
- * Sits directly under the post's H1. Each line renders only when its data
- * exists; getByline() has already dropped a reviewer that has no review date.
+ * Sits directly under the post's H1. The medical reviewer line always renders
+ * (the client asked for a default reviewer on every post, overriding the
+ * package's "no default reviewer" rule; see lib/reviewer.ts). The review date
+ * shows only when the post has a real one.
  */
 export default function ArticleByline({ byline }: { byline: Byline }) {
   const { author, reviewer, lastReviewed, modified } = byline;
@@ -38,27 +40,34 @@ export default function ArticleByline({ byline }: { byline: Byline }) {
     ),
   ].filter(Boolean);
 
-  if (!author && meta.length === 0) return null;
-
   return (
     <div className="article-byline">
       {author && (
         <p className="byline-line">
           Written by{" "}
-          <Link href={author.bioPath} rel="author">
-            {author.name}
-          </Link>
+          {author.bioPath ? (
+            <Link href={author.bioPath} rel="author">
+              {author.name}
+            </Link>
+          ) : (
+            author.name
+          )}
         </p>
       )}
-      {reviewer && (
-        <p className="byline-line">
-          Clinically reviewed by{" "}
-          <Link href={reviewer.bioPath}>
+      <p className="byline-line">
+        Medically reviewed by{" "}
+        {reviewer.path ? (
+          // A bio on this site: an ordinary same-tab internal link.
+          <Link href={reviewer.path}>{reviewer.name}</Link>
+        ) : reviewer.url ? (
+          <a href={reviewer.url} target="_blank" rel="noopener noreferrer">
             {reviewer.name}
-            {reviewer.credentials && `, ${reviewer.credentials}`}
-          </Link>
-        </p>
-      )}
+          </a>
+        ) : (
+          reviewer.name
+        )}
+        {reviewer.credentials && `, ${reviewer.credentials}`}
+      </p>
       {meta.length > 0 && (
         <p className="byline-meta">
           {meta.flatMap((m, i) => (i === 0 ? [m] : [" · ", m]))}

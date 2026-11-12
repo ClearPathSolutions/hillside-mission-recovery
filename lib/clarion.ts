@@ -65,6 +65,10 @@ export type ClarionFeedPost = {
 
 export type ClarionFullPost = ClarionFeedPost & {
   body_html: string;
+  /** Sent by the post endpoint (not the feed); resolved via lib/reviewer.ts. */
+  medically_reviewed_by?: string | null;
+  medically_reviewed_by_credentials?: string | null;
+  medically_reviewed_by_url?: string | null;
 };
 
 /** Rough read-time estimate from HTML/text length (~200 wpm). */

@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getClarionPost, getClarionPosts, clarionCategory, processBodyHtml } from "@/lib/clarion";
-import { getAllPosts, getDoc, metaTitle } from "@/lib/content";
+import { getAllPosts, getDoc, metaTitle, EDITORIAL_TEAM, type Byline } from "@/lib/content";
+import { resolveReviewer, reviewerSchema } from "@/lib/reviewer";
 import { cleanCmsHtml } from "@/lib/cmsHtml";
 import { isOptimizableImage } from "@/lib/image-hosts";
 import { site } from "@/lib/site";
@@ -11,6 +12,7 @@ import PostCard from "@/components/PostCard";
 import { ContentSidebar } from "@/components/Sidebar";
 import { InsuranceBand } from "@/components/CTABands";
 import { IconClock, IconArrow } from "@/components/Icons";
+import ArticleByline from "@/components/ArticleByline";
 
 // Clarion posts are fetched on demand; allow slugs not known at build time.
 export const dynamicParams = true;
@@ -77,7 +79,29 @@ export default async function ClarionArticlePage({
   // that first. Links to posts that exist on sister sites but not here (e.g.
   // /blog/what-to-expect-first-30-days-of-treatment, a 404) go to the blog.
   const clarionSlugs = new Set(clarionPosts.map((p) => `/${p.slug}`));
-  const cleaned = cleanCmsHtml(post.body_html, {
+  // Same byline as the content.json posts. Each reviewer field Clarion leaves
+  // empty is filled from the site default (lib/reviewer.ts).
+  const authorName = post.author_name?.trim() || EDITORIAL_TEAM;
+  const byline: Byline = {
+    author: { name: authorName, bioPath: null },
+    reviewer: resolveReviewer({
+      name: post.medically_reviewed_by,
+      credentials: post.medically_reviewed_by_credentials,
+      url: post.medically_reviewed_by_url,
+    }),
+    lastReviewed: null,
+    modified: null,
+  };
+  // The byline already shows the reviewer; drop a reviewer paragraph that a
+  // body may carry so it never appears twice.
+  const bodyNoReviewer = post.body_html.replace(
+    /<p\b[^>]*>\s*(?:<[^>]+>\s*)*Medically reviewed by[\s\S]*?<\/p>/gi,
+    "",
+  );
+  const url = `${site.url}/blog/${slug}`;
+  const orgRef = { "@id": `${site.url}/#organization` };
+
+  const cleaned = cleanCmsHtml(bodyNoReviewer, {
     siteUrl: site.url,
     trailingSlash: false,
     fallbackAlt: post.title,
@@ -93,6 +117,36 @@ export default async function ClarionArticlePage({
 
   return (
     <>
+      {/* Same shape as the content.json posts' ArticleSchema: a MedicalWebPage
+          carrying the review, with the BlogPosting as its main entity. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MedicalWebPage",
+                "@id": `${url}#webpage`,
+                url,
+                name: post.title,
+                reviewedBy: reviewerSchema(byline.reviewer),
+                publisher: orgRef,
+              },
+              {
+                "@type": "BlogPosting",
+                "@id": `${url}#article`,
+                headline: post.title,
+                mainEntityOfPage: { "@id": `${url}#webpage` },
+                ...(post.published_at ? { datePublished: post.published_at } : {}),
+                ...(post.cover_image_url ? { image: post.cover_image_url } : {}),
+                author: { "@type": "Organization", name: authorName },
+                publisher: orgRef,
+              },
+            ],
+          }),
+        }}
+      />
       {/* Article header — matches the curated article layout */}
       <section className="relative isolate overflow-hidden bg-ink text-white">
         {post.cover_image_url && (
@@ -134,6 +188,9 @@ export default async function ClarionArticlePage({
             {category}
           </span>
           <h1 className="mt-4 max-w-4xl text-3xl leading-[1.08] md:text-5xl">{post.title}</h1>
+          <div className="max-w-4xl text-cream/85">
+            <ArticleByline byline={byline} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-cream/70">
             {dateLabel && <span>{dateLabel}</span>}
             <span className="flex items-center gap-1.5">

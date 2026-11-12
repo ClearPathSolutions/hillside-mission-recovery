@@ -1,4 +1,5 @@
 import raw from "@/data/content.json";
+import { DEFAULT_REVIEWER, resolveReviewer, type Reviewer } from "@/lib/reviewer";
 
 export type Block =
   | { type: "heading"; level: number; text: string }
@@ -44,8 +45,9 @@ export type Doc = {
   sameAs?: string[];
   /**
    * Posts only — the editorial policy's per-post fields. Both people are staff
-   * slugs (the part after staff/), so every name links to a bio page. A missing
-   * value means no line: there is never a site-wide default reviewer.
+   * slugs (the part after staff/), so every name links to a bio page. Leave
+   * them unset for the defaults: the Editorial Team as author and
+   * DEFAULT_REVIEWER (lib/reviewer.ts) as medical reviewer, on every post.
    */
   writtenBy?: string;
   reviewedBy?: string;
@@ -276,10 +278,15 @@ export function getPerson(slug: string): Person {
   };
 }
 
+/** Author line used when a post names no staff writer (matches Clarion's author_name). */
+export const EDITORIAL_TEAM = "Hillside Mission Editorial Team";
+
 export type Byline = {
-  author: Person | null;
-  /** Set only when the post has both a reviewer and a review date. */
-  reviewer: Person | null;
+  /** bioPath is null for the Editorial Team, which has no bio page. */
+  author: { name: string; bioPath: string | null } | null;
+  /** Always set: every post shows a medical reviewer (lib/reviewer.ts). */
+  reviewer: Reviewer;
+  /** Only a real review date; never invented. */
   lastReviewed: string | null;
   modified: string | null;
 };
@@ -288,13 +295,17 @@ export function getByline(doc: Doc): Byline {
   if (doc.lastReviewed && !/^\d{4}-\d{2}-\d{2}$/.test(doc.lastReviewed)) {
     throw new Error(`${doc.slug}: lastReviewed must be YYYY-MM-DD, got "${doc.lastReviewed}"`);
   }
-  const lastReviewed = doc.lastReviewed || null;
-  // Resolved even when undated, so a typo'd slug still fails the build.
-  const reviewer = doc.reviewedBy ? getPerson(doc.reviewedBy) : null;
+  // Resolved so a missing bio page fails the build.
+  const reviewerSlug = doc.reviewedBy || DEFAULT_REVIEWER.staffSlug;
+  const person = getPerson(reviewerSlug);
+  const reviewer =
+    reviewerSlug === DEFAULT_REVIEWER.staffSlug
+      ? resolveReviewer()
+      : { ...resolveReviewer({ name: person.name, url: person.bioPath }), credentials: person.credentials };
   return {
-    author: doc.writtenBy ? getPerson(doc.writtenBy) : null,
-    reviewer: lastReviewed ? reviewer : null,
-    lastReviewed,
+    author: doc.writtenBy ? getPerson(doc.writtenBy) : { name: EDITORIAL_TEAM, bioPath: null },
+    reviewer,
+    lastReviewed: doc.lastReviewed || null,
     modified: doc.modified,
   };
 }

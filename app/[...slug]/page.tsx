@@ -15,6 +15,7 @@ import {
   type Doc,
 } from "@/lib/content";
 import { site } from "@/lib/site";
+import { reviewerSchema } from "@/lib/reviewer";
 import { staffPhotos, defaultOgImage } from "@/lib/media";
 import PageHero from "@/components/PageHero";
 import ContentBlocks, { getTOC } from "@/components/ContentBlocks";
@@ -280,10 +281,10 @@ function ArticleSchema({ doc, byline }: { doc: Doc; byline: Byline }) {
             "@id": `${url}#webpage`,
             url,
             name: doc.title,
-            // Only with a reviewer: never a default one (README "No default reviewer").
-            ...(byline.reviewer
-              ? { lastReviewed: byline.lastReviewed, reviewedBy: { "@id": personId(byline.reviewer.bioPath) } }
-              : {}),
+            // Every post carries the medical reviewer (lib/reviewer.ts, the
+            // client's default). lastReviewed only with a real review date.
+            reviewedBy: reviewerSchema(byline.reviewer),
+            ...(byline.lastReviewed ? { lastReviewed: byline.lastReviewed } : {}),
             publisher: orgRef,
           },
           {
@@ -293,7 +294,7 @@ function ArticleSchema({ doc, byline }: { doc: Doc; byline: Byline }) {
             mainEntityOfPage: { "@id": `${url}#webpage` },
             ...(doc.date ? { datePublished: doc.date } : {}),
             ...(doc.modified ? { dateModified: doc.modified } : {}),
-            ...(byline.author ? { author: { "@id": personId(byline.author.bioPath) } } : {}),
+            author: byline.author?.bioPath ? { "@id": personId(byline.author.bioPath) } : orgRef,
             publisher: orgRef,
           },
         ],
