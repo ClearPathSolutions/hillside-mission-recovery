@@ -127,6 +127,39 @@ const nextConfig = {
         destination: "/about",
         statusCode: 301,
       },
+      // Found 2026-11-11 from the Wayback Machine: indexed WordPress staff bios
+      // that 404'd after cutover. Current staff go to their bio; people no
+      // longer on the roster go to /about, never to another person's bio.
+      {
+        source: "/staff/shawn-young-cadc-ii",
+        destination: "/staff/shawn-young",
+        statusCode: 301,
+      },
+      ...[
+        "ashlea-ryder",
+        "ashley-young-cadc-i",
+        "daniel-salisbury",
+        "david-gutman-m-a",
+        "david-kirchhevel",
+        "elizabeth-scott",
+        "jasmine-orf",
+        "melanie-duenez",
+        "richard-calmet",
+        "shameca-womack-cadc-ii",
+        "tracy-chamberlain",
+      ].map((slug) => ({
+        source: `/staff/${slug}`,
+        destination: "/about",
+        statusCode: 301,
+      })),
+      // The family guide was republished under /blog with a new slug.
+      {
+        source: "/supporting-a-loved-one-through-addiction-a-guide-by-hillside-mission-recovery",
+        destination: "/blog/rehab-orange-county-ca-support-loved-one-through",
+        statusCode: 301,
+      },
+      // WordPress numbered blog pages -> this build's pagination.
+      { source: "/blog/:n(\\d+)", destination: "/blog/page/:n", statusCode: 301 },
       // VIS-SLUG — inherited "detoc" typo, live on production and indexed.
       {
         source: "/how-to-detoc-from-xanax",
