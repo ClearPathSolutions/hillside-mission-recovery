@@ -15,6 +15,7 @@
  * `__ctmid` cookie lasts 30 days, so a shorter window here would under-attribute
  * relative to the call tracking it is supposed to line up with.
  */
+import { latestReferrer, rememberReferrer } from "./latest-referrer";
 
 const CAMPAIGN_KEY = "hmr.campaign.v1";
 const VISIT_KEY = "hmr.visit.v1";
@@ -174,6 +175,7 @@ function touchVisit(now: number, countPageview: boolean): VisitRecord {
  */
 export function recordPageview(): void {
   if (typeof window === "undefined") return;
+  rememberReferrer();
   const now = Date.now();
   captureCampaign(now);
   touchVisit(now, true);
@@ -253,7 +255,7 @@ export function attributionForSubmit(): Attribution {
     // clicked an ad on Monday and returned directly on Wednesday should still
     // credit the ad's landing page.
     landingPageUrl: campaign?.landingPageUrl ?? visit?.landingPageUrl ?? location.href,
-    referrer: campaign?.referrer ?? visit?.referrer ?? null,
+    referrer: latestReferrer() ?? campaign?.referrer ?? visit?.referrer ?? null,
     utm: Object.keys(utm).length ? utm : null,
     // wbraid/gbraid are gclid substitutes, so they belong in the same field
     // rather than one Clarion has never been asked to read.
