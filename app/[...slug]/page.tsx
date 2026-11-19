@@ -113,7 +113,7 @@ function ArticlePage({ doc }: { doc: Doc }) {
       <section className="relative isolate overflow-hidden bg-ink text-white">
         {doc.ogImage && (
           <>
-            <Image src={doc.ogImage} alt="" fill priority sizes="100vw" className="object-cover opacity-25" />
+            <Image src={doc.ogImage} alt={doc.title} fill priority sizes="100vw" className="object-cover opacity-25" />
             <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/80 to-ink" />
           </>
         )}

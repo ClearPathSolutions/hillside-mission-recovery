@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getClarionPost, getClarionPosts, clarionCategory, processBodyHtml } from "@/lib/clarion";
+import { getClarionPost, getClarionPosts, clarionCategory, processBodyHtml, coverAlt, ownOrigin } from "@/lib/clarion";
 import { getAllPosts, getDoc, metaTitle, EDITORIAL_TEAM, type Byline } from "@/lib/content";
 import { resolveReviewer, reviewerSchema } from "@/lib/reviewer";
 import { cleanCmsHtml } from "@/lib/cmsHtml";
@@ -33,7 +33,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      images: post.cover_image_url ? [post.cover_image_url] : undefined,
+      images: post.cover_image_url ? [{ url: ownOrigin(post.cover_image_url), alt: coverAlt(post) }] : undefined,
       type: "article",
     },
     alternates: { canonical: `/blog/${slug}` },
@@ -139,7 +139,7 @@ export default async function ClarionArticlePage({
                 headline: post.title,
                 mainEntityOfPage: { "@id": `${url}#webpage` },
                 ...(post.published_at ? { datePublished: post.published_at } : {}),
-                ...(post.cover_image_url ? { image: post.cover_image_url } : {}),
+                ...(post.cover_image_url ? { image: ownOrigin(post.cover_image_url) } : {}),
                 author: { "@type": "Organization", name: authorName },
                 publisher: orgRef,
               },
@@ -154,7 +154,7 @@ export default async function ClarionArticlePage({
             {isOptimizableImage(post.cover_image_url) ? (
               <Image
                 src={post.cover_image_url}
-                alt=""
+                alt={coverAlt(post)}
                 fill
                 priority
                 sizes="100vw"
@@ -165,7 +165,7 @@ export default async function ClarionArticlePage({
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={post.cover_image_url}
-                alt=""
+                alt={coverAlt(post)}
                 className="absolute inset-0 h-full w-full object-cover opacity-25"
               />
             )}

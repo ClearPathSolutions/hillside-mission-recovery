@@ -14,7 +14,7 @@ export default function PostCard({ post, priority = false }: { post: PostMeta; p
         {post.ogImage && isOptimizableImage(post.ogImage) ? (
           <Image
             src={post.ogImage}
-            alt={post.title}
+            alt={post.ogImageAlt || post.title}
             fill
             sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
             priority={priority}
@@ -25,7 +25,7 @@ export default function PostCard({ post, priority = false }: { post: PostMeta; p
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={post.ogImage}
-            alt={post.title}
+            alt={post.ogImageAlt || post.title}
             className="absolute inset-0 h-full w-full object-contain"
           />
         ) : (

@@ -53,11 +53,46 @@ async function withTimeout<T>(p: Promise<T>, label: string): Promise<T | null> {
   }
 }
 
+/**
+ * Blog images on this site's own domain. Clarion stores them and hands out
+ * `https://api.clarionlabs.ai/blog/public/image/<key>` (or, once Clarion is told
+ * this site proxies them, `<this site>/blog-images/<key>`). Both become
+ * `/blog-images/<key>`, which next.config.mjs rewrites to Clarion's bytes route,
+ * so the address a visitor, Google Images or a social card sees is this site's.
+ */
+export const IMAGE_PATH = "/blog-images";
+const CLARION_IMAGE = `${api}/blog/public/image/`;
+const OWN_IMAGE = new RegExp(
+  `https://(?:www\\.)?${new URL(site.url).hostname.replace(/^www\./, "").replace(/\./g, "\\.")}(?=${IMAGE_PATH}/)`,
+  "g",
+);
+
+export function onSiteImage(src: string): string {
+  if (src.startsWith(CLARION_IMAGE)) return `${IMAGE_PATH}/${src.slice(CLARION_IMAGE.length)}`;
+  return src.replace(OWN_IMAGE, "");
+}
+
+function onSiteImages(html: string): string {
+  return html.split(CLARION_IMAGE).join(`${IMAGE_PATH}/`).replace(OWN_IMAGE, "");
+}
+
+/** A site-relative image path (/blog-images/...) on this site's origin; other URLs untouched. */
+export function ownOrigin(src: string): string {
+  return src.startsWith("/") ? `${site.url.replace(/\/+$/, "")}${src}` : src;
+}
+
+/** Cover alt text: the author's from Clarion, else the post title. Never empty. */
+export function coverAlt(post: { title: string; cover_image_alt?: string | null }): string {
+  return post.cover_image_alt?.trim() || post.title;
+}
+
 export type ClarionFeedPost = {
   slug: string;
   title: string;
   excerpt: string;
   cover_image_url: string | null;
+  /** The author's alt text for the cover; empty means none was written. */
+  cover_image_alt?: string | null;
   author_name: string | null;
   published_at: string | null;
   seo_meta?: { title?: string; description?: string };
@@ -103,6 +138,7 @@ function toMeta(p: ClarionFeedPost, bodyForEstimate = ""): PostMeta {
         })
       : "",
     ogImage: p.cover_image_url,
+    ogImageAlt: coverAlt(p),
     category: deriveClarionCategory(`${p.title} ${p.excerpt} ${p.slug}`),
     readMins: estimateReadMins(bodyForEstimate || p.excerpt),
   };
@@ -128,7 +164,9 @@ function toMeta(p: ClarionFeedPost, bodyForEstimate = ""): PostMeta {
  * host there if Clarion ever starts serving from a new CDN.
  */
 function withAuthorCover<T extends ClarionFeedPost>(p: T): T {
-  return p.cover_image_url ? p : { ...p, cover_image_url: facilityPhotoFor(p.slug) };
+  return p.cover_image_url
+    ? { ...p, cover_image_url: onSiteImage(p.cover_image_url) }
+    : { ...p, cover_image_url: facilityPhotoFor(p.slug) };
 }
 
 /** Fetch the Clarion feed and normalize to the site's PostMeta shape. Never throws. */
@@ -159,7 +197,8 @@ export async function getClarionPost(slug: string): Promise<ClarionFullPost | nu
       `post ${slug}`,
     );
     if (!res || !res.ok) return null;
-    return withAuthorCover((await res.json()) as ClarionFullPost);
+    const post = withAuthorCover((await res.json()) as ClarionFullPost);
+    return typeof post.body_html === "string" ? { ...post, body_html: onSiteImages(post.body_html) } : post;
   } catch {
     return null;
   }

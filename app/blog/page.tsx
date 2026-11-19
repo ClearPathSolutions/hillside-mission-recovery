@@ -55,7 +55,7 @@ export default async function BlogPage() {
                 {featured.ogImage && (
                   <Image
                     src={featured.ogImage}
-                    alt={featured.title}
+                    alt={featured.ogImageAlt || featured.title}
                     fill
                     priority
                     sizes="(min-width:1024px) 50vw, 100vw"
