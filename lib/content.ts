@@ -156,6 +156,8 @@ export type PostMeta = {
   date: string | null;
   dateLabel: string;
   ogImage: string | null;
+  /** Alt text for the cover; absent means use the title. */
+  ogImageAlt?: string;
   category: string;
   readMins: number;
 };
